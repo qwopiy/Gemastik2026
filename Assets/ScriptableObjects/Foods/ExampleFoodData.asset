@@ -12,17 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b677af556cddcd4a8e36095423a9e8c, type: 3}
   m_Name: ExampleFoodData
   m_EditorClassIdentifier: Assembly-CSharp::FoodData
-  FoodId: 1
+  FoodId: 0
   FoodPrefab: {fileID: 0}
   Components:
-  - ComponentType: Sajian
-    AttributeFields:
-    - FieldId: sajian
-      FieldName: Sajian per kemasan
-      Value: 4
-    - FieldId: kalori
-      FieldName: Kalori per sajian
-      Value: 200
   - ComponentType: Tabel Nutrisi
     AttributeFields:
     - FieldId: sugar
@@ -31,5 +23,18 @@ MonoBehaviour:
     - FieldId: sugar
       FieldName: Fruktosa
       Value: 20
+  - ComponentType: Sajian
+    AttributeFields:
+    - FieldId: sajian
+      FieldName: Sajian per kemasan
+      Value: 4
+    - FieldId: kalori
+      FieldName: Kalori per sajian
+      Value: 200
+  - ComponentType: Komposisi
+    AttributeFields:
+    - FieldId: komposisi
+      FieldName: Komposisi
+      Value: air (90%), gula, garam, monosodium glutamate
   ShouldBeApproved: 0
-  InvalidReason: 
+  InvalidReason: Makanan macam apa ini
