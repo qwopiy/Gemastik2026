@@ -3,19 +3,18 @@ using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 
-public class NutritionText : MonoBehaviour
+public class NutritionValue : MonoBehaviour
 {
-    public TextMeshProUGUI label;
-    public TextMeshProUGUI value;
+    public TextMeshProUGUI TMPObj;
+    public float value;
     public TextMeshProUGUI AKG;
-    private float akgValue; // TODO: Set this value based on the specific nutrient's AKG
+    public float akgValue; // TODO: Set this value based on the specific nutrient's AKG
 
-    public void SetNutrition(string labelText, string valueText)
+    public void SetNutrition()
     {
-        label.text = labelText;
-        value.text = valueText;
+        TMPObj.text = $"{value}";
         
-        AKG.text = $"({GetAKGPercentage(valueText)}%)";
+        AKG.text = $"({GetAKGPercentage(value)}%)";
     }
 
     public float GetAKGPercentage(string valueText)

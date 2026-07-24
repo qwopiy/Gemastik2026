@@ -34,15 +34,14 @@ public class FoodItem : MonoBehaviour
         }
     }
 
-    private Transform GetParentForField(string fieldId)
+    private Transform GetParentForField(FoodAttributeFieldId fieldId)
     {
         return fieldId switch
         {
-            "fat" => fatParent,
-            "carbs" => carbsParent,
-
-            "sugar" => sugarParent,
-            "sodium" => sodiumParent,
+            FoodAttributeFieldId.TotalFat => fatParent,
+            FoodAttributeFieldId.Carbohydrates => carbsParent,
+            FoodAttributeFieldId.Sugar => sugarParent,
+            FoodAttributeFieldId.Sodium => sodiumParent,
             _ => throw new ArgumentException("Unknown field ID"),
         };
     }
