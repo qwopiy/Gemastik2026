@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(RectTransform))]
 [RequireComponent(typeof(CanvasGroup))]
-public class DraggableDocument : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DraggableFood : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [Header("Desk Boundaries (Optional)")]
     [SerializeField] private GameObjectAnchorSO deskArea; // Assign parent workspace bounds

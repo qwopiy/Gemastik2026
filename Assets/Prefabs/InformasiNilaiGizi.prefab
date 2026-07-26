@@ -3207,7 +3207,7 @@ MonoBehaviour:
   FoodData: {fileID: 11400000, guid: c6328d69864324a418dd9a9c88cdc2d0, type: 2}
   portionText: {fileID: 1168989951703878864}
   portionPerPcsText: {fileID: 5237211662792754084}
-  caloriesText: {fileID: 5237211662792754084}
+  caloriesText: {fileID: 8529740648425363327}
   totalFatText: {fileID: 2141776051022150777}
   saturatedFatText: {fileID: 3466725650711567752}
   proteinText: {fileID: 1874660317916045622}
