@@ -5,13 +5,18 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(CanvasGroup))]
 public class DraggableFood : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    [Header("Desk Boundaries (Optional)")]
-    [SerializeField] private GameObjectAnchorSO deskArea; // Assign parent workspace bounds
+    [Header("Desk Bounds & Storage")]
+    [SerializeField] private GameObjectAnchorSO deskArea; // ScriptableObject anchor containing desk RectTransform
+    [SerializeField] private RectTransform CompactView; // Primary item visual
+    [SerializeField] private RectTransform DeskView; // Small/stowed visual
 
     private RectTransform rectTransform;
     private Canvas canvas;
     private CanvasGroup canvasGroup;
     private Vector2 dragOffset;
+
+    private bool isCompact = false;
+    private float leftThresholdX;
 
     private void Awake()
     {
@@ -68,12 +73,39 @@ public class DraggableFood : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
 
         Vector3 pos = rectTransform.localPosition;
         RectTransform deskRect = deskArea.value.GetComponent<RectTransform>();
-        Vector3 minBounds = deskRect.rect.min - rectTransform.rect.min;
-        Vector3 maxBounds = deskRect.rect.max - rectTransform.rect.max;
+        float minX = deskRect.rect.min.x + deskRect.anchoredPosition.x;
+        float maxX = deskRect.rect.max.x - rectTransform.rect.max.x + deskRect.anchoredPosition.x;
+        float minY = deskRect.rect.min.y - rectTransform.rect.min.y;
+        float maxY = deskRect.rect.max.y - rectTransform.rect.max.y;
 
-        pos.x = Mathf.Clamp(pos.x, minBounds.x + deskRect.anchoredPosition.x, maxBounds.x + deskRect.anchoredPosition.x);
-        pos.y = Mathf.Clamp(pos.y, minBounds.y, maxBounds.y);
+        leftThresholdX = minX;
+
+        if (pos.x < leftThresholdX)
+        {
+            // Past left edge: Switch to compact visual, allow free drag past left bound
+            if (!isCompact) SetVisualState(true);
+        }
+        else
+        {
+            // Inside desk area: Full visual state
+            if (isCompact) SetVisualState(false);
+
+            // Clamp Left boundary ONLY when on desk
+            pos.x = Mathf.Max(pos.x, minX);
+        }
+
+        // 2. Clamp Right, Top, and Bottom strictly
+        pos.x = Mathf.Min(pos.x, maxX);
+        pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
         rectTransform.localPosition = pos;
+    }
+
+    private void SetVisualState(bool compact)
+    {
+        isCompact = compact;
+
+        if (CompactView != null) CompactView.gameObject.SetActive(compact);
+        if (DeskView != null) DeskView.gameObject.SetActive(!compact);
     }
 }

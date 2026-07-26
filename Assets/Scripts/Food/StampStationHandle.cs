@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
+public enum StampResult { Approved, Denied, Mixed, None }
 
 public class StampStationHandle : MonoBehaviour
 {
-    public enum StampResult { Approved, Denied }
 
     [Header("Stamp Configuration")]
     public StampResult stampType;
@@ -84,7 +83,8 @@ public class StampStationHandle : MonoBehaviour
             // Make sure your Food UI object has the "FoodItem" tag
             if (result.gameObject.CompareTag("FoodItem"))
             {
-                GameObject food = result.gameObject.GetComponentInParent<DraggableFood>().gameObject;
+                GameObject food = result.gameObject.GetComponentInParent<FoodInfo>().gameObject;
+                result.gameObject.GetComponentInParent<StampsOnFood>().SetStampResult(stampType);
                 ApplyMarkToFood(food, screenPoint);
                 break; // Stamp the top-most food item found
             }

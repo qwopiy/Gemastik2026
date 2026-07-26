@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - FoodItem
+  - Desk
+  - Drawer
+  - NotDesk
   layers:
   - Default
   - TransparentFX
