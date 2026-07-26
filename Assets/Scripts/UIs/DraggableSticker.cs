@@ -72,8 +72,18 @@ public class DraggableSticker : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         if (droppedOn != null)
         {
             // Stick to the food item!
-            Transform droppedOnParent = droppedOn.GetComponentInParent<RectTransform>().transform;
-            transform.SetParent(droppedOnParent);
+            if (droppedOn.CompareTag(foodTag))
+            {
+                // Snap to the food item's position
+                Transform food = droppedOn.GetComponentInParent<DraggableFood>().transform;
+                transform.SetParent(food);
+            }
+            else
+            {
+                Transform droppedOnParent = droppedOn.GetComponentInParent<RectTransform>().transform;
+                transform.SetParent(droppedOnParent);
+            }
+
 
             // Optional: Play a "slap/stick" sound effect here
         }

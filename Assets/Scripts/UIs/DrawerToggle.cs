@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class StampContainerToggle : MonoBehaviour
+public class DrawerToggle : MonoBehaviour
 {
     private static readonly int IsOpenHash = Animator.StringToHash("IsOpen");
     public Animator animator;
