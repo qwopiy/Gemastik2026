@@ -2,10 +2,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class FoodInfo : MonoBehaviour
+public class NutritionInfo : MonoBehaviour
 {
-    [Header("Temp SO")]
-    public FoodData FoodData;
     [Header("Sajian Elements")]
     public TextMeshProUGUI portionText;
     private int portionSize = 1;
@@ -30,10 +28,6 @@ public class FoodInfo : MonoBehaviour
     [Header("Komposisi Settings")]
     public TextMeshProUGUI compositionText;
     private string composition = "<b>Komposisi</b>";
-    private void Start()
-    {
-        SetNutrition(FoodData.Components);
-    }
     public void SetNutrition(List<FoodComponents> list)
     {
         foreach (var item in list)

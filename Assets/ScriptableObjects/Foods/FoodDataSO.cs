@@ -42,27 +42,13 @@ public class FoodComponents
     public List<AttributeField> AttributeFields;
 }
 [CreateAssetMenu(fileName = "NewFoodData", menuName = "ScriptableObjects/FoodData", order = 1)]
-public class FoodData : ScriptableObject
+public class FoodDataSO : ScriptableObject
 {
     public string FoodId;
     public GameObject FoodPrefab;
     public List<FoodComponents> Components = new List<FoodComponents>();
 
-    // Ground Truth set by the generator (hidden from player)
-    public bool ShouldBeApproved;
-    public string InvalidReason; // e.g., "Expired Food", "Sugar Too High"
-
-    public void SpawnFood(Transform parent)
-    {
-        if (FoodPrefab != null)
-        {
-            GameObject foodInstance = Instantiate(FoodPrefab, parent);
-            foodInstance.GetComponent<FoodInfo>().SetNutrition(Components);
-            foodInstance.name = FoodId;
-        }
-        else
-        {
-            Debug.LogWarning($"FoodPrefab is not assigned for FoodData: {FoodId}");
-        }
-    }
+    // Rules: actual stamp result and GGL rating that should be applied to this food item
+    public ApprovalResult Approval;
+    public GGLSticker GGLRating;
 }

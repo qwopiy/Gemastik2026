@@ -10,10 +10,8 @@ public class DraggableSticker : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     private Transform originalParent;
     private Vector3 initialPosition;
     private Vector2 dragOffset;
-
     [Header("Settings")]
     public string foodTag = "FoodItem"; // Make sure your Food UI object has this tag or component
-
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -73,7 +71,7 @@ public class DraggableSticker : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             if (droppedOn.CompareTag(foodTag))
             {
                 // Snap to the food item's position
-                Transform food = droppedOn.GetComponentInParent<FoodInfo>().transform;
+                Transform food = droppedOn.GetComponentInParent<NutritionInfo>().transform;
                 transform.SetParent(food);
             }
             else
@@ -92,4 +90,5 @@ public class DraggableSticker : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             rectTransform.position = initialPosition;
         }
     }
+
 }

@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4811599178904731894}
   - component: {fileID: 1371448799453530732}
-  - component: {fileID: 4970521434912244913}
+  - component: {fileID: 3733457721227046714}
   - component: {fileID: 5790619772982826118}
+  - component: {fileID: 1647397207933755861}
   m_Layer: 5
   m_Name: Food
   m_TagString: FoodItem
@@ -52,7 +53,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &4970521434912244913
+--- !u!114 &3733457721227046714
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,12 +62,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4417826435687172446}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dac229ab593022640ac1702a72a6b17f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a5ec2c2aeb6cb64bb28b92d19b77c6d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DraggableFood
+  m_EditorClassIdentifier: Assembly-CSharp::DraggableObject
   deskArea: {fileID: 11400000, guid: 7051965cce26e9946b0386850b61c1b0, type: 2}
   CompactView: {fileID: 7445806874460407687}
   DeskView: {fileID: 8158680652946739797}
+  allowedTags:
+  - Desk
+  - NotDesk
 --- !u!114 &5790619772982826118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,7 +83,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caec8a36c70200c4383a65a73234c299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StampsOnFood
-  stampResult: 3
+  approvalResult: 3
+  gglSticker: 0
+--- !u!114 &1647397207933755861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4417826435687172446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 721058af547393b40824bfb527a9c633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FoodItem
+  foodData: {fileID: 0}
 --- !u!1 &6668204156226948926
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +165,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2462584299165397720, guid: db09576fbb9bb4346a1185af4a11306c, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

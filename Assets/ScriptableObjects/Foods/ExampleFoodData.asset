@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b677af556cddcd4a8e36095423a9e8c, type: 3}
   m_Name: ExampleFoodData
   m_EditorClassIdentifier: Assembly-CSharp::FoodData
-  FoodId: 0
-  FoodPrefab: {fileID: 0}
+  FoodId: Example
+  FoodPrefab: {fileID: 4417826435687172446, guid: d4041a85af371084b8161234ae16bddc, type: 3}
   Components:
   - ComponentType: 0
     AttributeFields:
@@ -30,10 +30,10 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 3
       FieldName: Total Fat
-      Value: 12
+      Value: 4
     - FieldId: 4
       FieldName: Saturated Fat
-      Value: 4
+      Value: 2
     - FieldId: 5
       FieldName: Protein
       Value: 4
@@ -51,5 +51,5 @@ MonoBehaviour:
     - FieldId: 9
       FieldName: Komposisi
       Value: air (90%), gula, garam, monosodium glutamate
-  ShouldBeApproved: 1
-  InvalidReason: Makanan macam apa ini
+  Approval: 0
+  GGLRating: 3

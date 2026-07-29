@@ -13,10 +13,16 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     private Vector2 dragOffset;
     private Vector2 minBounds;
     private Vector2 maxBounds;
+    private bool isCompact = false;
+    private float threshold;
+
+    [Header("Desk Bounds & Storage")]
+    [SerializeField] private GameObjectAnchorSO deskArea; // ScriptableObject anchor containing desk RectTransform
+    [SerializeField] private RectTransform CompactView; // Primary item visual
+    [SerializeField] private RectTransform DeskView; // Small/stowed visual
 
     [Header("Settings")]
     public List<string> allowedTags;
-    public List<GameObject> borders;
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -64,6 +70,9 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             rectTransform.localPosition = localPoint - dragOffset;
         }
 
+        RectTransform deskRect = deskArea.value.GetComponent<RectTransform>();
+        threshold = deskRect.rect.max.y + deskRect.anchoredPosition.y; // Default threshold is the top boundary of the allowed area
+
         // Clamp the draggable object within the defined borders
         ClampToBorders();
     }
@@ -101,27 +110,40 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     private void GetBounds()
     {
-        if (borders != null && borders.Count > 0)
+        minBounds = new Vector2(float.MaxValue, float.MaxValue);
+        maxBounds = new Vector2(float.MinValue, float.MinValue);
+        if (canvas.TryGetComponent<RectTransform>(out var borderRect))
         {
-            minBounds = new Vector2(float.MaxValue, float.MaxValue);
-            maxBounds = new Vector2(float.MinValue, float.MinValue);
-            foreach (var obj in borders)
-            {
-                if (obj.TryGetComponent<RectTransform>(out var borderRect))
-                {
-                    minBounds = Vector2.Min(minBounds, borderRect.rect.min);
-                    maxBounds = Vector2.Max(maxBounds, borderRect.rect.max);
-                }
-            }
+            minBounds = Vector2.Min(minBounds, borderRect.rect.min);
+            maxBounds = Vector2.Max(maxBounds, borderRect.rect.max);
         }
     }
 
     private void ClampToBorders()
     {
-        if (borders == null || borders.Count == 0) return;
+        if (canvas == null) return;
         Vector3 pos = rectTransform.localPosition;
         pos.x = Mathf.Clamp(pos.x, minBounds.x, maxBounds.x);
         pos.y = Mathf.Clamp(pos.y, minBounds.y, maxBounds.y);
         rectTransform.localPosition = pos;
+
+        
+        if (pos.y > threshold)
+        {
+            if (!isCompact) SetVisualState(true);
+        }
+        else
+        {
+            // Inside desk area: Full visual state
+            if (isCompact) SetVisualState(false);
+        }
+    }
+
+    private void SetVisualState(bool compact)
+    {
+        isCompact = compact;
+
+        if (CompactView != null) CompactView.gameObject.SetActive(compact);
+        if (DeskView != null) DeskView.gameObject.SetActive(!compact);
     }
 }

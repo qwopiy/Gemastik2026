@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-public enum StampResult { Approved, Denied, Mixed, None }
+public enum ApprovalResult { Approved, Denied, Mixed, None }
+public enum GGLSticker {None, A, B, C, D, Mixed  }
 
 public class StampStationHandle : MonoBehaviour
 {
 
     [Header("Stamp Configuration")]
-    public StampResult stampType;
+    public ApprovalResult stampType;
     public GameObject markPrefab;         // Green Approved or Red Denied mark UI prefab
     public RectTransform strikePoint;     // Empty UI object showing where the ink hits the desk
 
@@ -83,7 +84,7 @@ public class StampStationHandle : MonoBehaviour
             // Make sure your Food UI object has the "FoodItem" tag
             if (result.gameObject.CompareTag("FoodItem"))
             {
-                GameObject food = result.gameObject.GetComponentInParent<FoodInfo>().gameObject;
+                GameObject food = result.gameObject.GetComponentInParent<NutritionInfo>().gameObject;
                 result.gameObject.GetComponentInParent<StampsOnFood>().SetStampResult(stampType);
                 ApplyMarkToFood(food, screenPoint);
                 break; // Stamp the top-most food item found

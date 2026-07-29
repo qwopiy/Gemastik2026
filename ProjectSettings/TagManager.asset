@@ -8,6 +8,7 @@ TagManager:
   - Desk
   - Drawer
   - NotDesk
+  - Sticker
   layers:
   - Default
   - TransparentFX
