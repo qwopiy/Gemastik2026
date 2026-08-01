@@ -71,7 +71,7 @@ public class DraggableSticker : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             if (droppedOn.CompareTag(foodTag))
             {
                 // Snap to the food item's position
-                Transform food = droppedOn.GetComponentInParent<NutritionInfo>().transform;
+                Transform food = droppedOn.GetComponentInParent<StampParent>().transform;
                 transform.SetParent(food);
             }
             else

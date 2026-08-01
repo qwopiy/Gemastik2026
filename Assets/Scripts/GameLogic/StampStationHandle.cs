@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-public enum ApprovalResult { Approved, Denied, Mixed, None }
+public enum ApprovalResult { Approved, Mixed, None }
 public enum GGLSticker {None, A, B, C, D, Mixed  }
 
 public class StampStationHandle : MonoBehaviour
@@ -84,7 +84,7 @@ public class StampStationHandle : MonoBehaviour
             // Make sure your Food UI object has the "FoodItem" tag
             if (result.gameObject.CompareTag("FoodItem"))
             {
-                GameObject food = result.gameObject.GetComponentInParent<NutritionInfo>().gameObject;
+                GameObject food = result.gameObject.GetComponentInParent<StampParent>().gameObject;
                 result.gameObject.GetComponentInParent<StampsOnFood>().SetStampResult(stampType);
                 ApplyMarkToFood(food, screenPoint);
                 break; // Stamp the top-most food item found

@@ -7,8 +7,9 @@ TagManager:
   - FoodItem
   - Desk
   - Drawer
-  - NotDesk
   - Sticker
+  - ClientView
+  - ZoomView
   layers:
   - Default
   - TransparentFX

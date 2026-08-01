@@ -15,6 +15,6 @@ public class DeskManager : MonoBehaviour
     /// </summary>
     public void BringToFront(RectTransform rectTransform)
     {
-        rectTransform.SetAsLastSibling();
+        rectTransform.SetSiblingIndex(3);
     }
 }
