@@ -32,6 +32,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     [Header("Settings")]
     public List<string> allowedTags;
+    public bool snapBack = true; // Whether to snap to the drop target or return to original position
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -115,7 +116,10 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         
         // If dropped in an invalid area, snap back to the sticker dispenser/tray
         transform.SetParent(originalParent);
-        rectTransform.position = initialPosition;
+        if (snapBack)
+        {
+            rectTransform.position = initialPosition;
+        }
     }
 
     private void GetBounds()

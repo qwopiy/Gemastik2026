@@ -361,6 +361,7 @@ MonoBehaviour:
   - Desk
   - ClientView
   - ZoomView
+  snapBack: 0
 --- !u!114 &5790619772982826118
 MonoBehaviour:
   m_ObjectHideFlags: 0

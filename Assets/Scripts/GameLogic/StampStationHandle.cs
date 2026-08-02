@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-public enum ApprovalResult { Approved, Mixed, None }
+public enum ApprovalResult { None, Approved, Mixed }
 public enum GGLSticker {None, A, B, C, D, Mixed  }
 
 public class StampStationHandle : MonoBehaviour
