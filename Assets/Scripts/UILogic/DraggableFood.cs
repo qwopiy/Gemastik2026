@@ -30,13 +30,6 @@ public class DraggableFood : DraggableObject, IBeginDragHandler
     {
         if (droppedOn == null) return;
 
-        if (droppedOn.CompareTag("TrashBin"))
-        {
-            // Destroy the food item if dropped on the trash bin
-            Destroy(gameObject);
-            return;
-        }
-
         foreach (var tag in allowedTags)
         {
             if (droppedOn.CompareTag(tag))
