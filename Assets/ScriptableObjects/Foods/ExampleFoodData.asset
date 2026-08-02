@@ -51,5 +51,5 @@ MonoBehaviour:
     - FieldId: 9
       FieldName: Komposisi
       Value: air (90%), gula, garam, monosodium glutamate
-  Approval: 0
-  GGLRating: 3
+  Approval: 1
+  GGLRating: 2

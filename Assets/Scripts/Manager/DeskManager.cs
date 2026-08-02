@@ -3,7 +3,7 @@ using UnityEngine;
 public class DeskManager : MonoBehaviour
 {
     public static DeskManager Instance { get; private set; }
-
+    public int siblingIndex = 3;
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -15,6 +15,6 @@ public class DeskManager : MonoBehaviour
     /// </summary>
     public void BringToFront(RectTransform rectTransform)
     {
-        rectTransform.SetSiblingIndex(3);
+        rectTransform.SetSiblingIndex(siblingIndex);
     }
 }

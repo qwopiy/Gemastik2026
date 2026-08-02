@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 public class StampsOnFood : MonoBehaviour
 {
     public ApprovalResult approvalResult = ApprovalResult.None;

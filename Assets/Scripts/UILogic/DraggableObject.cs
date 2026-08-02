@@ -10,42 +10,44 @@ public enum ObjectState
 [RequireComponent(typeof(CanvasGroup))]
 public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    private RectTransform rectTransform;
-    private Canvas canvas;
-    private CanvasGroup canvasGroup;
-    private Transform originalParent;
-    private Vector3 initialPosition;
-    private Vector2 dragOffset;
-    private Vector2 minBounds;
-    private Vector2 maxBounds;
+    protected RectTransform rectTransform;
+    protected Canvas canvas;
+    protected CanvasGroup canvasGroup;
+    protected Transform originalParent;
+    protected Vector3 initialPosition;
+    protected Vector2 dragOffset;
+    protected Vector2 minBounds;
+    protected Vector2 maxBounds;
+    protected ObjectState originalState;
     public ObjectState currentState;
-    private float thresholdY;
-    private float thresholdX;
+    protected float thresholdY;
+    protected float thresholdX;
 
 
     [Header("Desk Bounds & Storage")]
-    [SerializeField] private GameObjectAnchorSO deskArea; // ScriptableObject anchor containing desk RectTransform
-    [SerializeField] private GameObjectAnchorSO zoomArea; // ScriptableObject anchor containing zoom RectTransform
-    [SerializeField] private GameObjectAnchorSO clientArea; // ScriptableObject anchor containing client RectTransform
-    [SerializeField] private RectTransform ClientView; // Client item visual
-    [SerializeField] private RectTransform DeskView; // Small/stowed visual
+    [SerializeField] protected GameObjectAnchorSO deskArea; // ScriptableObject anchor containing desk RectTransform
+    [SerializeField] protected GameObjectAnchorSO zoomArea; // ScriptableObject anchor containing zoom RectTransform
+    [SerializeField] protected GameObjectAnchorSO clientArea; // ScriptableObject anchor containing client RectTransform
+    [SerializeField] protected RectTransform ObjInClientView; // Client item visual
+    [SerializeField] protected RectTransform ObjInDeskView; // Small/stowed visual
 
     [Header("Settings")]
     public List<string> allowedTags;
     public bool snapBack = true; // Whether to snap to the drop target or return to original position
-    private void Awake()
+    private void Start()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         canvas = GetComponentInParent<Canvas>();
     }
 
-    public void OnBeginDrag(PointerEventData eventData)
+    public virtual void OnBeginDrag(PointerEventData eventData)
     {
         initialPosition = rectTransform.position;
         originalParent = transform.parent;
+        originalState = currentState;
 
-        transform.parent = canvas.transform; // Move to top-level canvas to avoid clipping issues
+        transform.SetParent(canvas.transform); // Keep world position when changing parent
 
         // Block raycasts through this object so eventData.pointerCurrentRaycast 
         // can detect whatever is underneath the mouse (like the Food Item)
@@ -99,12 +101,12 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         CheckDropTarget(droppedOn);
     }
 
-    private void CheckDropTarget(GameObject droppedOn)
+    public virtual void CheckDropTarget(GameObject droppedOn)
     {
+        if (droppedOn == null) return;
 
         foreach (var tag in allowedTags)
         {
-            if (droppedOn == null) break;
             if (droppedOn.CompareTag(tag))
             {
                 // Snap to the obj's position
@@ -119,6 +121,10 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         if (snapBack)
         {
             rectTransform.position = initialPosition;
+            if (currentState != originalState)
+            {
+                SetVisualState(originalState); // Reset to original state when snapping back
+            }
         }
     }
 
@@ -165,7 +171,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
     }
 
-    private void SetVisualState(ObjectState state)
+    protected void SetVisualState(ObjectState state)
     {
         ObjectState previousState = currentState;
         currentState = state;
@@ -175,25 +181,25 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         switch (currentState) 
         {
             case ObjectState.ClientView:
-                if (ClientView != null) ClientView.gameObject.SetActive(true);
-                if (DeskView != null) DeskView.gameObject.SetActive(false);
+                if (ObjInClientView != null) ObjInClientView.gameObject.SetActive(true);
+                if (ObjInDeskView != null) ObjInDeskView.gameObject.SetActive(false);
 
                 
                 break;
             case ObjectState.DeskView:
-                if (ClientView != null) ClientView.gameObject.SetActive(false);
-                if (DeskView != null) 
+                if (ObjInClientView != null) ObjInClientView.gameObject.SetActive(false);
+                if (ObjInDeskView != null) 
                 { 
-                    DeskView.gameObject.SetActive(true);
-                    DeskView.transform.localScale = Vector3.one;
+                    ObjInDeskView.gameObject.SetActive(true);
+                    ObjInDeskView.transform.localScale = Vector3.one;
                 }
                 break;
             case ObjectState.ZoomView:
-                if (ClientView != null) ClientView.gameObject.SetActive(false);
-                if (DeskView != null)
+                if (ObjInClientView != null) ObjInClientView.gameObject.SetActive(false);
+                if (ObjInDeskView != null)
                 {
-                    DeskView.gameObject.SetActive(true);
-                    DeskView.transform.localScale = Vector3.one;
+                    ObjInDeskView.gameObject.SetActive(true);
+                    ObjInDeskView.transform.localScale = Vector3.one;
                 }
                 break;
         }
@@ -208,29 +214,29 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         switch (prevState)
         {
             case ObjectState.ClientView:
-                prevObjRect = ClientView;
+                prevObjRect = ObjInClientView;
                 break;
             case ObjectState.DeskView: 
-                prevObjRect = DeskView;
+                prevObjRect = ObjInDeskView;
                 break; 
             case ObjectState.ZoomView:
-                prevObjRect = DeskView;
+                prevObjRect = ObjInDeskView;
                 break;
             default:
-                prevObjRect = ClientView;
+                prevObjRect = ObjInClientView;
                 break;
         }
 
         switch (currentState)
         {
             case ObjectState.ClientView:
-                currentObjRect = ClientView;
+                currentObjRect = ObjInClientView;
                 break;
             case ObjectState.DeskView:
-                currentObjRect = DeskView;
+                currentObjRect = ObjInDeskView;
                 break;
             case ObjectState.ZoomView:
-                currentObjRect = DeskView;
+                currentObjRect = ObjInDeskView;
                 break;
             default: 
                 currentObjRect = null;
