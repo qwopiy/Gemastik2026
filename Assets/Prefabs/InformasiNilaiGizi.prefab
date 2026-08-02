@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8106121808070682171}
   m_Layer: 5
   m_Name: AKG
-  m_TagString: FoodItem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 8529740648425363327}
   m_Layer: 5
   m_Name: EnergiTotalValue
-  m_TagString: FoodItem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 7449354130414244746}
   m_Layer: 5
   m_Name: KomposisiPanel
-  m_TagString: FoodItem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -888,7 +888,7 @@ GameObject:
   - component: {fileID: 604150348093524824}
   m_Layer: 5
   m_Name: Value
-  m_TagString: FoodItem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -996,7 +996,7 @@ GameObject:
   - component: {fileID: 5237211662792754084}
   m_Layer: 5
   m_Name: SajianPerKemasanText
-  m_TagString: FoodItem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1133,7 +1133,7 @@ GameObject:
   - component: {fileID: 7143177873647912427}
   m_Layer: 5
   m_Name: TitleText
-  m_TagString: FoodItem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1271,7 +1271,7 @@ GameObject:
   - component: {fileID: 7195813992716878285}
   m_Layer: 5
   m_Name: Label
-  m_TagString: FoodItem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1791,7 +1791,7 @@ GameObject:
   - component: {fileID: 3649009302755657604}
   m_Layer: 5
   m_Name: NutrisiPanel
-  m_TagString: FoodItem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2169,7 +2169,7 @@ GameObject:
   - component: {fileID: 3947567456365367556}
   m_Layer: 5
   m_Name: KaloriPanel
-  m_TagString: FoodItem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2932,7 +2932,7 @@ GameObject:
   - component: {fileID: 7172687058606901135}
   m_Layer: 5
   m_Name: AKGDefinitionText
-  m_TagString: FoodItem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3191,7 +3191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea86bbeef485686418490f2e21e6f895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NutritionInfo
-  FoodData: {fileID: 11400000, guid: c6328d69864324a418dd9a9c88cdc2d0, type: 2}
   portionText: {fileID: 1168989951703878864}
   portionPerPcsText: {fileID: 5237211662792754084}
   caloriesText: {fileID: 8529740648425363327}
@@ -3352,7 +3351,7 @@ GameObject:
   - component: {fileID: 8174886968335444094}
   m_Layer: 5
   m_Name: TitleText
-  m_TagString: FoodItem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3626,7 +3625,7 @@ GameObject:
   - component: {fileID: 939118012432007119}
   m_Layer: 5
   m_Name: KomposisiText
-  m_TagString: FoodItem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3900,7 +3899,7 @@ GameObject:
   - component: {fileID: 8406775695655841876}
   m_Layer: 5
   m_Name: AKGDefinition
-  m_TagString: FoodItem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3976,7 +3975,7 @@ GameObject:
   - component: {fileID: 5732131930971600569}
   m_Layer: 5
   m_Name: EnergiTotalText
-  m_TagString: FoodItem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4559,7 +4558,7 @@ GameObject:
   - component: {fileID: 1168989951703878864}
   m_Layer: 5
   m_Name: TakaranSajiText
-  m_TagString: FoodItem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4696,7 +4695,7 @@ GameObject:
   - component: {fileID: 8266714450377234875}
   m_Layer: 5
   m_Name: SajianPanel
-  m_TagString: FoodItem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
