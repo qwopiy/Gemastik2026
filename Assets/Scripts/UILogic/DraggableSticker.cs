@@ -1,94 +1,43 @@
 ﻿using UnityEngine;
-using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(CanvasGroup))]
-public class DraggableSticker : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DraggableSticker : DraggableObject
 {
-    private RectTransform rectTransform;
-    private Canvas canvas;
-    private CanvasGroup canvasGroup;
-    private Transform originalParent;
-    private Vector3 initialPosition;
-    private Vector2 dragOffset;
-    [Header("Settings")]
-    public string foodTag = "FoodItem"; // Make sure your Food UI object has this tag or component
-    private void Awake()
+    public override void CheckDropTarget(GameObject droppedOn)
     {
-        rectTransform = GetComponent<RectTransform>();
-        canvasGroup = GetComponent<CanvasGroup>();
-        canvas = GetComponentInParent<Canvas>();
-    }
-
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        initialPosition = rectTransform.position;
-        originalParent = transform.parent;
-
-        transform.parent = canvas.transform; // Move to top-level canvas to avoid clipping issues
-
-        // Block raycasts through this object so eventData.pointerCurrentRaycast 
-        // can detect whatever is underneath the mouse (like the Food Item)
-        canvasGroup.blocksRaycasts = false;
-
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            rectTransform,
-            eventData.position,
-            eventData.pressEventCamera,
-            out dragOffset
-        );
-
-        // Bring to front while dragging
-        DeskManager.Instance.BringToFront(rectTransform);
-    }
-
-    public void OnDrag(PointerEventData eventData)
-    {
-        // Follow the mouse position
-        if (canvas == null) return;
-
-        // Convert screen coordinates to canvas local coordinates
-        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            canvas.transform as RectTransform,
-            eventData.position,
-            eventData.pressEventCamera,
-            out Vector2 localPoint))
+        if (droppedOn.CompareTag("TrashBin"))
         {
-            rectTransform.localPosition = localPoint - dragOffset;
+            // Destroy the food item if dropped on the trash bin
+            Destroy(gameObject);
+            return;
         }
-    }
 
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        canvasGroup.blocksRaycasts = true;
-
-        // Check what UI object is under the cursor when released
-        GameObject droppedOn = eventData.pointerCurrentRaycast.gameObject;
-        Debug.Log("Dropped on: " + (droppedOn != null ? droppedOn.name : "Nothing"));
-
-        if (droppedOn != null)
+        foreach (var tag in allowedTags)
         {
-            // Stick to the food item!
-            if (droppedOn.CompareTag(foodTag))
+            if (droppedOn == null) break;
+            if (droppedOn.CompareTag(tag))
             {
-                // Snap to the food item's position
-                Transform food = droppedOn.GetComponentInParent<StampParent>().transform;
-                transform.SetParent(food);
-            }
-            else
-            {
-                Transform droppedOnParent = droppedOn.GetComponentInParent<RectTransform>().transform;
-                transform.SetParent(droppedOnParent);
-            }
+                // Stick to the food item!
+                if (droppedOn.TryGetComponent(out StampParent stampParent))
+                {
+                    // Snap to the food item's position
+                    Transform food = stampParent.transform;
+                    transform.SetParent(food);
+                    return;
+                }
 
-
-            // Optional: Play a "slap/stick" sound effect here
+                // Snap to the obj's position
+                Transform obj = droppedOn.GetComponentInParent<RectTransform>().transform;
+                transform.SetParent(obj);
+                return;
+            }
         }
-        else
+
+        // If dropped in an invalid area, snap back to the sticker dispenser/tray
+        transform.SetParent(originalParent);
+        if (snapBack)
         {
-            // If dropped in an invalid area, snap back to the sticker dispenser/tray
-            transform.SetParent(originalParent);
             rectTransform.position = initialPosition;
         }
     }
-
 }

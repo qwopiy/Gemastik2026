@@ -81,10 +81,10 @@ public class StampStationHandle : MonoBehaviour
 
         foreach (RaycastResult result in results)
         {
-            // Make sure your Food UI object has the "FoodItem" tag
-            if (result.gameObject.CompareTag("FoodItem"))
+            // Make sure your Food UI object has the "Form" tag
+            if (result.gameObject.CompareTag("Form"))
             {
-                GameObject food = result.gameObject.GetComponentInParent<StampParent>().gameObject;
+                GameObject food = result.gameObject.GetComponentInChildren<StampParent>().gameObject;
                 result.gameObject.GetComponentInParent<StampsOnFood>().SetStampResult(stampType);
                 ApplyMarkToFood(food, screenPoint);
                 break; // Stamp the top-most food item found

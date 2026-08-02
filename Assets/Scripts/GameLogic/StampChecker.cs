@@ -3,31 +3,41 @@ using UnityEngine;
 
 public class StampChecker : MonoBehaviour
 {
-    public List<Transform>stampedObj;
+    public List<GameObject> pendingObjects;
+    public List<Transform> stampedObj;
 
+    public void AddPendingObject(GameObject obj)
+    {
+        if (!pendingObjects.Contains(obj))
+        {
+            pendingObjects.Add(obj);
+        }
+    }
     public void CheckStamps()
     {
-        stampedObj = new List<Transform>();
-        for (int i = 0; i < transform.childCount; i++)
+        if (pendingObjects.Count != LevelManager.Instance.FoodDataList[LevelManager.Instance.index - 1].FoodData.Count)
         {
-            stampedObj.Add(transform.GetChild(i));
+            Debug.LogWarning($"Not all food items have been stamped. Stamped: {pendingObjects.Count}, Expected: {LevelManager.Instance.FoodDataList[LevelManager.Instance.index - 1].FoodData.Count}");
+            return;
+        }
+
+        stampedObj = new List<Transform>();
+        for (int i = 0; i < pendingObjects.Count; i++)
+        {
+            stampedObj.Add(pendingObjects[i].transform);
         }
 
         if (stampedObj.Count == 0) return;
-        if (stampedObj.Count != LevelManager.Instance.FoodDataList[LevelManager.Instance.index - 1].FoodData.Count)
-        {
-            Debug.LogWarning($"Not all food items have been stamped. Stamped: {stampedObj.Count}, Expected: {LevelManager.Instance.FoodDataList[LevelManager.Instance.index - 1].FoodData.Count}");
-            return;
-        }
+        
 
         foreach (var foodObj in stampedObj)
         {
             FoodItem foodInfo = foodObj.GetComponent<FoodItem>();
-            StampsOnFood foodStamps = foodObj.GetComponent<StampsOnFood>();
+            StampsOnFood foodStamps = foodObj.GetComponentInChildren<StampsOnFood>(true);
 
             foodStamps.CheckForGGLStickers();
             
-            if (foodStamps.approvalResult == foodInfo.GetFoodData().Approval)
+            if (foodStamps.approvalResult == ApprovalResult.Approved)
             {
                 ScoreManager.Instance.AddScore(1);
             }
@@ -38,7 +48,6 @@ public class StampChecker : MonoBehaviour
 
             // TEMP
             Destroy(foodObj.gameObject);
-            LevelManager.Instance.SpawnNextFood();
 
             //// Debug Test Stamp and GGL
             //switch (foodStamps.approvalResult)
@@ -78,5 +87,15 @@ public class StampChecker : MonoBehaviour
             //        break;
             //}
         }
+
+        // Should only run when all checks are done, and all food items have been stamped
+        LevelManager.Instance.SpawnNextFood();
+        ClearObjs();
+    }
+
+    public void ClearObjs()
+    {
+        pendingObjects.Clear();
+        stampedObj.Clear();
     }
 }
