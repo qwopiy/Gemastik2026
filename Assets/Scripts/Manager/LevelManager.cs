@@ -5,6 +5,7 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
     [Header("Settings")]
+    public int Level = 0;
     public List<LevelFoodData> FoodDataList;
     public Transform FoodParent;
 
