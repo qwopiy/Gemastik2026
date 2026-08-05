@@ -20,6 +20,13 @@ public enum FoodAttributeFieldId
     Sodium,
     Composition
 }
+public enum GGLReason
+{
+    None,
+    Sugar,
+    Salt,
+    Fat,
+}
 
 // Individual attribute field that the player can inspect/click
 [System.Serializable]
@@ -48,7 +55,11 @@ public class FoodDataSO : ScriptableObject
     public GameObject FoodPrefab;
     public List<FoodComponents> Components = new List<FoodComponents>();
 
-    // Rules: actual stamp result and GGL rating that should be applied to this food item
+    [Header("Actual Results")]
     public ApprovalResult Approval;
     public GGLSticker GGLRating;
+    public List<GGLReason> GGLReasons = new List<GGLReason>();
+    public bool IsKadaluarsa;
+    public bool IsDefect;
+    public List<Claim> Claims;
 }

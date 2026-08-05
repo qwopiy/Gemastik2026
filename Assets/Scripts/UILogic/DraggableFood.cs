@@ -43,9 +43,9 @@ public class DraggableFood : DraggableObject, IBeginDragHandler
 
         if (droppedOn.CompareTag("ClientView") && isApproved)
         {
-            StampChecker stampChecker = droppedOn.GetComponent<StampChecker>();
+            FoodChecker stampChecker = droppedOn.GetComponent<FoodChecker>();
             stampChecker.AddPendingObject(gameObject);
-            stampChecker.CheckStamps();
+            stampChecker.CheckFood();
             gameObject.SetActive(false); // Hide the food item after stamping
             return;
         }

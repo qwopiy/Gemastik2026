@@ -149,7 +149,7 @@ MonoBehaviour:
   - Desk
   - ZoomView
   - FoodItem
-  snapBack: 0
+  snapBack: 1
   baseForm: {fileID: 4326594550188858264}
   compactedForm: {fileID: 4541339865369266670}
 --- !u!114 &7667143390420243267
