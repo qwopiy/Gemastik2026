@@ -7,8 +7,12 @@ TagManager:
   - FoodItem
   - Desk
   - Drawer
-  - NotDesk
   - Sticker
+  - ClientView
+  - ZoomView
+  - Rulebook
+  - Form
+  - TrashBin
   layers:
   - Default
   - TransparentFX

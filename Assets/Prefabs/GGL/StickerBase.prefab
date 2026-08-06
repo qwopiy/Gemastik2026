@@ -263,7 +263,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16efb047a92f0504db9538a98529e6ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableSticker
-  foodTag: FoodItem
+  currentState: 1
+  deskArea: {fileID: 11400000, guid: 7051965cce26e9946b0386850b61c1b0, type: 2}
+  zoomArea: {fileID: 11400000, guid: a8b92bf38483bf74dbe52ff238b67365, type: 2}
+  clientArea: {fileID: 11400000, guid: c523c6dc2a0fbca4886aa05245c2f00b, type: 2}
+  ObjInClientView: {fileID: 0}
+  ObjInDeskView: {fileID: 0}
+  allowedTags:
+  - Desk
+  - ZoomView
+  - Drawer
+  - Form
+  snapBack: 1
 --- !u!114 &4347659616029508581
 MonoBehaviour:
   m_ObjectHideFlags: 0
