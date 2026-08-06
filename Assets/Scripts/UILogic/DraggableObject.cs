@@ -3,13 +3,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 public enum ObjectState
 {
-    ClientView,
+    CompactView,
     DeskView,
     ZoomView
 }
 [RequireComponent(typeof(CanvasGroup))]
 public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    [Header("Debug Vars")]
     protected RectTransform rectTransform;
     protected Canvas canvas;
     protected CanvasGroup canvasGroup;
@@ -20,14 +21,10 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     protected Vector2 maxBounds;
     protected ObjectState originalState;
     public ObjectState currentState;
-    protected float thresholdY;
-    protected float thresholdX;
+    public GameObject ObjCurrentlyOn; // The object currently being dragged over
+    protected float maxDistance = 10f;
 
-
-    [Header("Desk Bounds & Storage")]
-    [SerializeField] protected GameObjectAnchorSO deskArea; // ScriptableObject anchor containing desk RectTransform
-    [SerializeField] protected GameObjectAnchorSO zoomArea; // ScriptableObject anchor containing zoom RectTransform
-    [SerializeField] protected GameObjectAnchorSO clientArea; // ScriptableObject anchor containing client RectTransform
+    [Header("References")]
     [SerializeField] protected RectTransform ObjInClientView; // Client item visual
     [SerializeField] protected RectTransform ObjInDeskView; // Small/stowed visual
 
@@ -51,7 +48,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         // Block raycasts through this object so eventData.pointerCurrentRaycast 
         // can detect whatever is underneath the mouse (like the Food Item)
-        canvasGroup.blocksRaycasts = false;
+        //canvasGroup.blocksRaycasts = false;
 
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
             rectTransform,
@@ -82,10 +79,9 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             rectTransform.localPosition = localPoint - dragOffset;
         }
 
-        RectTransform deskRect = deskArea.value.GetComponent<RectTransform>();
-        thresholdY = deskRect.rect.max.y + deskRect.anchoredPosition.y; // Default threshold is the top boundary of the allowed area
-        thresholdX = deskRect.rect.max.x + deskRect.anchoredPosition.x; // Default threshold is the right boundary of the allowed area
-
+        // Check for objects behind the draggable object
+        GetObjectBehind(eventData);
+        SetObjectState();
         // Clamp the draggable object within the defined borders
         ClampToBorders();
     }
@@ -94,11 +90,9 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     {
         canvasGroup.blocksRaycasts = true;
 
-        // Check what UI object is under the center of dragged object when released
-        GameObject droppedOn = eventData.pointerCurrentRaycast.gameObject;
-        Debug.Log("Dropped on: " + (droppedOn != null ? droppedOn.name : "Nothing"));
+        Debug.Log("Dropped on: " + (ObjCurrentlyOn != null ? ObjCurrentlyOn.name : "Nothing"));
 
-        CheckDropTarget(droppedOn);
+        CheckDropTarget(ObjCurrentlyOn);
     }
 
     public virtual void CheckDropTarget(GameObject droppedOn)
@@ -112,7 +106,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 // Snap to the obj's position
                 Transform obj = droppedOn.GetComponentInParent<RectTransform>().transform;
                 transform.SetParent(obj);
-                return;
+                return; // Exit after snapping to the first valid object
             }
         }
         
@@ -139,6 +133,33 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
     }
 
+    private void GetObjectBehind(PointerEventData eventData)
+    {
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, results);
+
+        ObjCurrentlyOn = null;
+
+        // Skip the first result (which is this draggable object) and look for allowed targets
+        for (int i = 1; i < results.Count; i++)
+        {
+            GameObject hitObject = results[i].gameObject;
+            Debug.Log("Hit UI Object: " + hitObject.name);
+
+            foreach (string tag in allowedTags)
+            {
+                if (hitObject.CompareTag(tag))
+                {
+                    ObjCurrentlyOn = hitObject;
+                    Debug.Log("Found object behind: " + hitObject.name);
+                    return; // Exit after finding the first valid object
+                }
+            }
+        }
+
+        Debug.Log("Currently on: " + (ObjCurrentlyOn != null ? ObjCurrentlyOn.name : "Nothing"));
+    }
+
     private void ClampToBorders()
     {
         if (canvas == null) return;
@@ -146,28 +167,30 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         pos.x = Mathf.Clamp(pos.x, minBounds.x, maxBounds.x);
         pos.y = Mathf.Clamp(pos.y, minBounds.y, maxBounds.y);
         rectTransform.localPosition = pos;
+    }
 
-        
-        if (pos.y + dragOffset.y > thresholdY) // Client View
+    public void SetObjectState()
+    {
+        if (ObjCurrentlyOn == null) 
         {
-            if (currentState != ObjectState.ClientView)
-            {
-                SetVisualState(ObjectState.ClientView);
-            }
+            SetVisualState(currentState);
+            return;
         }
-        else if (pos.x + dragOffset.x > thresholdX) // Zoom View
+
+        switch (ObjCurrentlyOn.tag)
         {
-            if (currentState != ObjectState.ZoomView)
-            {
-                SetVisualState(ObjectState.ZoomView);
-            }
-        }
-        else // Desk View
-        {
-            if (currentState != ObjectState.DeskView)
-            {
+            case "CompactView":
+                SetVisualState(ObjectState.CompactView);
+                break;
+            case "DeskView":
                 SetVisualState(ObjectState.DeskView);
-            }
+                break;
+            case "ZoomView":
+                SetVisualState(ObjectState.ZoomView);
+                break;
+            default:
+                Debug.LogWarning("Unknown tag: " + ObjCurrentlyOn.tag);
+                break;
         }
     }
 
@@ -180,11 +203,9 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         //if (DeskView != null) DeskView.gameObject.SetActive(state == ObjectState.Desk);
         switch (currentState) 
         {
-            case ObjectState.ClientView:
+            case ObjectState.CompactView:
                 if (ObjInClientView != null) ObjInClientView.gameObject.SetActive(true);
                 if (ObjInDeskView != null) ObjInDeskView.gameObject.SetActive(false);
-
-                
                 break;
             case ObjectState.DeskView:
                 if (ObjInClientView != null) ObjInClientView.gameObject.SetActive(false);
@@ -213,7 +234,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         switch (prevState)
         {
-            case ObjectState.ClientView:
+            case ObjectState.CompactView:
                 prevObjRect = ObjInClientView;
                 break;
             case ObjectState.DeskView: 
@@ -229,7 +250,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         switch (currentState)
         {
-            case ObjectState.ClientView:
+            case ObjectState.CompactView:
                 currentObjRect = ObjInClientView;
                 break;
             case ObjectState.DeskView:

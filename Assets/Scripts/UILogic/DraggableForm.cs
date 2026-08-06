@@ -6,8 +6,16 @@ public class DraggableForm : DraggableObject, IBeginDragHandler
     [Header("Form References")]
     [SerializeField] private RectTransform baseForm;
     [SerializeField] private RectTransform compactedForm;
+    [SerializeField] private bool hasBeenDragged = false;
+
     public override void OnBeginDrag(PointerEventData eventData)
     {
+        if (!hasBeenDragged) 
+        { 
+            compactedForm.gameObject.SetActive(false);
+            baseForm.gameObject.SetActive(true);
+            hasBeenDragged = true;
+        }
         ApprovalResult approval = ApprovalResult.None;
         try 
         { 

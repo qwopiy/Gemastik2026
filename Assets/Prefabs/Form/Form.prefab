@@ -140,18 +140,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableForm
   currentState: 1
-  deskArea: {fileID: 11400000, guid: 7051965cce26e9946b0386850b61c1b0, type: 2}
-  zoomArea: {fileID: 11400000, guid: a8b92bf38483bf74dbe52ff238b67365, type: 2}
-  clientArea: {fileID: 11400000, guid: c523c6dc2a0fbca4886aa05245c2f00b, type: 2}
+  ObjCurrentlyOn: {fileID: 0}
   ObjInClientView: {fileID: 0}
   ObjInDeskView: {fileID: 0}
   allowedTags:
-  - Desk
+  - DeskView
   - ZoomView
   - FoodItem
+  - TrashBin
   snapBack: 1
   baseForm: {fileID: 4326594550188858264}
   compactedForm: {fileID: 4541339865369266670}
+  hasBeenDragged: 0
 --- !u!114 &7667143390420243267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,7 +396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4326594550188858264
 RectTransform:
   m_ObjectHideFlags: 0
@@ -623,7 +623,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4541339865369266670
 RectTransform:
   m_ObjectHideFlags: 0

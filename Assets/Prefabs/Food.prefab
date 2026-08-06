@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9162363515279428260}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 382613916141632169}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4811599178904731894}
   - component: {fileID: 1371448799453530732}
-  - component: {fileID: 3733457721227046714}
   - component: {fileID: 4848895326697258158}
   - component: {fileID: 1647397207933755861}
   - component: {fileID: 5901451900983982755}
@@ -161,28 +160,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &3733457721227046714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4417826435687172446}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a5ec2c2aeb6cb64bb28b92d19b77c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DraggableObject
-  currentState: 1
-  deskArea: {fileID: 11400000, guid: 7051965cce26e9946b0386850b61c1b0, type: 2}
-  zoomArea: {fileID: 11400000, guid: a8b92bf38483bf74dbe52ff238b67365, type: 2}
-  clientArea: {fileID: 11400000, guid: c523c6dc2a0fbca4886aa05245c2f00b, type: 2}
-  ObjInClientView: {fileID: 7445806874460407687}
-  ObjInDeskView: {fileID: 2477175870701130029}
-  allowedTags:
-  - Desk
-  - ZoomView
-  snapBack: 0
 --- !u!114 &4848895326697258158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,14 +173,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableFood
   currentState: 1
-  deskArea: {fileID: 11400000, guid: 7051965cce26e9946b0386850b61c1b0, type: 2}
-  zoomArea: {fileID: 11400000, guid: a8b92bf38483bf74dbe52ff238b67365, type: 2}
-  clientArea: {fileID: 11400000, guid: c523c6dc2a0fbca4886aa05245c2f00b, type: 2}
+  ObjCurrentlyOn: {fileID: 0}
   ObjInClientView: {fileID: 7445806874460407687}
   ObjInDeskView: {fileID: 2477175870701130029}
   allowedTags:
-  - Desk
+  - DeskView
   - ZoomView
+  - CompactView
   snapBack: 1
   isApproved: 0
 --- !u!114 &1647397207933755861
