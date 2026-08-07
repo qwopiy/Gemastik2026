@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ae148a6966df73349b1774f42cea265e
+guid: 834ed35e64d7d4748801091f95646bca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1445162941103161031
-    second: Dev2_0
+      213: 4988434766169764168
+    second: Dev2 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,20 +116,20 @@ TextureImporter:
       name: Dev2_0
       rect:
         serializedVersion: 2
-        x: 40
+        x: 0
         y: 0
-        width: 426
+        width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 931ccfc36ffb1fbe0800000000000000
-      internalID: -1445162941103161031
+      spriteID: 2fe44e622221ca246a89deaab8d9705f
+      internalID: 1811517597
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: aad805b4ef34bc4488d2634e183fd4d8
     internalID: 0
     vertices: []
     indices: 
@@ -146,9 +146,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":512.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Dev2_0: -1445162941103161031
+      Dev2_0: 1811517597
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

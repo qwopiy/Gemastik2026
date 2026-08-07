@@ -6,16 +6,24 @@ public class DraggableForm : DraggableObject, IBeginDragHandler
     [Header("Form References")]
     [SerializeField] private RectTransform baseForm;
     [SerializeField] private RectTransform compactedForm;
+    [SerializeField] private bool hasBeenDragged = false;
+
     public override void OnBeginDrag(PointerEventData eventData)
     {
+        if (!hasBeenDragged) 
+        { 
+            compactedForm.gameObject.SetActive(false);
+            baseForm.gameObject.SetActive(true);
+            hasBeenDragged = true;
+        }
         ApprovalResult approval = ApprovalResult.None;
         try 
         { 
             approval = GetComponent<StampsOnFood>().approvalResult;
         }
-        catch (System.Exception e)
+        catch (System.Exception)
         {
-            Debug.LogError(e);
+            Debug.Log("No approval found.");
         }
 
         if (approval != ApprovalResult.None)
@@ -30,16 +38,5 @@ public class DraggableForm : DraggableObject, IBeginDragHandler
         }
 
         base.OnBeginDrag(eventData);
-    }
-
-    public override void CheckDropTarget(GameObject droppedOn)
-    {
-        if (droppedOn.CompareTag("TrashBin"))
-        {
-            // Destroy the food item if dropped on the trash bin
-            Destroy(gameObject);
-            return;
-        }
-        base.CheckDropTarget(droppedOn);
     }
 }

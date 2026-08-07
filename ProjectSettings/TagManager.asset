@@ -5,23 +5,23 @@ TagManager:
   serializedVersion: 3
   tags:
   - FoodItem
-  - Desk
   - Drawer
   - Sticker
-  - ClientView
   - ZoomView
   - Rulebook
   - Form
   - TrashBin
+  - CompactView
+  - DeskView
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Interactable
   - Water
   - UI
-  - 
-  - 
+  - CompactView
+  - DeskView
   - 
   - 
   - 
