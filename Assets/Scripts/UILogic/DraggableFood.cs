@@ -8,14 +8,15 @@ public class DraggableFood : DraggableObject, IBeginDragHandler
     public override void OnBeginDrag(PointerEventData eventData)
     {
         ApprovalResult approval = ApprovalResult.None;
+        isApproved = false; // so user wont exploit using same form for different foods
         try
         {
-            approval = GetComponentInChildren<StampsOnFood>().approvalResult;
+            approval = GetComponentInChildren<StampsOnFood>(true).approvalResult;
         }
-        catch (System.Exception e)
+        catch (System.Exception)
         {
             approval = ApprovalResult.None;
-            Debug.LogError(e);
+            Debug.Log("No approval found.");
         }
 
         if (approval != ApprovalResult.None)
@@ -28,7 +29,28 @@ public class DraggableFood : DraggableObject, IBeginDragHandler
 
     public override void CheckDropTarget(GameObject droppedOn)
     {
-        if (droppedOn == null) return;
+        if (droppedOn == null)
+        {
+            // If dropped in an invalid area, snap back to the sticker dispenser/tray
+            transform.SetParent(originalParent);
+            if (snapBack)
+            {
+                rectTransform.position = initialPosition;
+                if (currentState != originalState)
+                {
+                    SetVisualState(originalState); // Reset to original state when snapping back
+                }
+            }
+        }
+
+        if (droppedOn.CompareTag("CompactView") && isApproved)
+        {
+            FoodChecker stampChecker = droppedOn.GetComponent<FoodChecker>();
+            stampChecker.AddPendingObject(gameObject);
+            stampChecker.CheckFood();
+            gameObject.SetActive(false); // Hide the food item after stamping
+            return;
+        }
 
         foreach (var tag in allowedTags)
         {
@@ -41,25 +63,6 @@ public class DraggableFood : DraggableObject, IBeginDragHandler
             }
         }
 
-        if (droppedOn.CompareTag("ClientView") && isApproved)
-        {
-            FoodChecker stampChecker = droppedOn.GetComponent<FoodChecker>();
-            stampChecker.AddPendingObject(gameObject);
-            stampChecker.CheckFood();
-            gameObject.SetActive(false); // Hide the food item after stamping
-            return;
-        }
-
-        // If dropped in an invalid area, snap back to the sticker dispenser/tray
-        transform.SetParent(originalParent);
-        if (snapBack)
-        {
-            rectTransform.position = initialPosition;
-            if (currentState != originalState)
-            {
-                SetVisualState(originalState); // Reset to original state when snapping back
-            }
-        }
     }
 }
 

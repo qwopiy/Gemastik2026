@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 8918278764718022916}
   - component: {fileID: 2855101355054468452}
   - component: {fileID: 7667143390420243267}
+  - component: {fileID: -7498975121391084726}
   m_Layer: 5
   m_Name: Form
   m_TagString: Form
@@ -139,19 +140,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 708ba816afd59fc4aad5f09a74899cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableForm
-  currentState: 1
-  deskArea: {fileID: 11400000, guid: 7051965cce26e9946b0386850b61c1b0, type: 2}
-  zoomArea: {fileID: 11400000, guid: a8b92bf38483bf74dbe52ff238b67365, type: 2}
-  clientArea: {fileID: 11400000, guid: c523c6dc2a0fbca4886aa05245c2f00b, type: 2}
+  currentState: 0
+  ObjCurrentlyOn: {fileID: 0}
   ObjInClientView: {fileID: 0}
   ObjInDeskView: {fileID: 0}
   allowedTags:
-  - Desk
+  - DeskView
   - ZoomView
   - FoodItem
+  - TrashBin
   snapBack: 1
+  isTrashable: 1
   baseForm: {fileID: 4326594550188858264}
   compactedForm: {fileID: 4541339865369266670}
+  hasBeenDragged: 0
 --- !u!114 &7667143390420243267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,6 +168,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StampsOnFood
   approvalResult: 0
   gglSticker: 0
+--- !u!114 &-7498975121391084726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2980148358721325468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.LayoutElement
+  m_IgnoreLayout: 1
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1 &3256457635077115989
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4326594550188858264
 RectTransform:
   m_ObjectHideFlags: 0
@@ -623,7 +645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4541339865369266670
 RectTransform:
   m_ObjectHideFlags: 0

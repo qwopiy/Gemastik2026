@@ -792,7 +792,7 @@ GameObject:
   - component: {fileID: 7709019721145306673}
   m_Layer: 5
   m_Name: RuleBook
-  m_TagString: Untagged
+  m_TagString: Rulebook
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -871,11 +871,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5ec2c2aeb6cb64bb28b92d19b77c6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableObject
-  currentState: 0
-  deskArea: {fileID: 11400000, guid: 7051965cce26e9946b0386850b61c1b0, type: 2}
-  zoomArea: {fileID: 11400000, guid: a8b92bf38483bf74dbe52ff238b67365, type: 2}
-  clientArea: {fileID: 11400000, guid: c523c6dc2a0fbca4886aa05245c2f00b, type: 2}
+  currentState: 1
+  ObjCurrentlyOn: {fileID: 0}
+  ObjInClientView: {fileID: 0}
+  ObjInDeskView: {fileID: 0}
   allowedTags:
-  - Desk
+  - DeskView
   - ZoomView
-  snapBack: 0
+  snapBack: 1
+  isTrashable: 0

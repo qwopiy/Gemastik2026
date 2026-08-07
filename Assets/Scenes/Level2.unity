@@ -240,7 +240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -818, y: -513.26}
+  m_AnchoredPosition: {x: -883, y: -513.26}
   m_SizeDelta: {x: 160, y: 53.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &248641995
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc915e2150b1e08478c638f997f94eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FormButtonController
-  formPrefab: {fileID: 2980148358721325468, guid: 94de410745c39eb449a78c0e37dfe905, type: 3}
+  formPrefab: {fileID: 7227158144626145923, guid: 3468a0c97e5b90c44944e766d018511d, type: 3}
   formParent: {fileID: 4182192264165955697}
 --- !u!1 &261029772
 GameObject:
@@ -3590,7 +3590,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 617645200489051514, guid: 1e1fa0e6befdfdd45b1bcf99881ded32, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -550
+      value: -699
       objectReference: {fileID: 0}
     - target: {fileID: 617645200489051514, guid: 1e1fa0e6befdfdd45b1bcf99881ded32, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3974,7 +3974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1480117742365030470, guid: dfbb59ae192afb54f81c740da2729d8f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -320
+      value: -469
       objectReference: {fileID: 0}
     - target: {fileID: 1480117742365030470, guid: dfbb59ae192afb54f81c740da2729d8f, type: 3}
       propertyPath: m_AnchoredPosition.y
