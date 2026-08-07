@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30b7c14c4135bc499d188a463aafd1f, type: 3}
+  m_Name: JusTomatSehat
+  m_EditorClassIdentifier: Assembly-CSharp::FoodDisplaySO
+  itemName: Jus Tomat Sehat
+  ExpiredDate: 
+  BrandClaim: 
+  baseSprite: {fileID: -6285152726911732614, guid: 74282ccfd21b72a499992c7dc5203bbc, type: 3}
+  maskSprite: {fileID: -6476228541363724580, guid: 9bf14c5190a651c4092b4fc2f1badf9d, type: 3}
+  brandSprite: {fileID: -589760911, guid: d632a6297db002348a5ee49f4e291e5c, type: 3}
+  conditionSprite: {fileID: 0}
+  primaryColor: {r: 0.8392157, g: 0.15686275, b: 0.15686275, a: 1}
+  secondaryColor: {r: 0, g: 0.1882353, b: 0.28627452, a: 1}
+  tertiaryColor: {r: 0.99215686, g: 0.9411765, b: 0.8352941, a: 1}
