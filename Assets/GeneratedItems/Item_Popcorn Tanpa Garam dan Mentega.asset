@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b677af556cddcd4a8e36095423a9e8c, type: 3}
+  m_Name: Item_Popcorn Tanpa Garam dan Mentega
+  m_EditorClassIdentifier: Assembly-CSharp::FoodDataSO
+  FoodId: Popcorn Tanpa Garam dan Mentega
+  FoodPrefab: {fileID: 0}
+  Components:
+  - ComponentType: 0
+    AttributeFields:
+    - FieldId: 0
+      FieldName: Takaran Saji
+      Value: 25 g
+    - FieldId: 1
+      FieldName: Sajian per Kemasan
+      Value: 1
+    - FieldId: 2
+      FieldName: Kalori per Sajian
+      Value: 90
+  - ComponentType: 1
+    AttributeFields:
+    - FieldId: 3
+      FieldName: Lemak Total
+      Value: 1
+    - FieldId: 4
+      FieldName: Lemak Jenuh
+      Value: 0.2
+    - FieldId: 5
+      FieldName: Protein
+      Value: 3
+    - FieldId: 6
+      FieldName: Karbohidrat
+      Value: 17
+    - FieldId: 7
+      FieldName: Gula
+      Value: 0
+    - FieldId: 8
+      FieldName: Natrium
+      Value: 1
+  - ComponentType: 2
+    AttributeFields:
+    - FieldId: 9
+      FieldName: Komposisi
+      Value: A
+  Approval: 1
+  GGLRating: 1
+  GGLReasons: 
+  IsKadaluarsa: 0
+  IsDefect: 0
+  Claims: []
