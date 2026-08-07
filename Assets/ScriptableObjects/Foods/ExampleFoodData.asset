@@ -56,8 +56,4 @@ MonoBehaviour:
   GGLReasons: 0200000003000000
   IsKadaluarsa: 0
   IsDefect: 0
-  Claims:
-  - claimType: 1
-    isCorrect: 0
-  - claimType: 4
-    isCorrect: 1
+  Claims: []
