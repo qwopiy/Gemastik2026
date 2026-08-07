@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class FoodDisplayHandler : MonoBehaviour
 {
@@ -6,27 +8,28 @@ public class FoodDisplayHandler : MonoBehaviour
     [SerializeField] private FoodDisplaySO itemData;
 
     [Header("Child Renderers")]
-    [SerializeField] private SpriteRenderer brandRenderer;
-    [SerializeField] private SpriteRenderer conditionRenderer;
+    [SerializeField] private Image baseImage;
+    [SerializeField] private Image brandImage;
+    [SerializeField] private Image conditionImage;
+    [SerializeField] private TextMeshProUGUI FoodName;
+    [SerializeField] private TextMeshProUGUI ExpiredDate;
+    [SerializeField] private TextMeshProUGUI BrandClaim;
 
-    private SpriteRenderer spriteRenderer;
-    private MaterialPropertyBlock propertyBlock;
+    [Header("List Item Data")]
+    [SerializeField] private FoodDisplaySO[] itemDataList;
 
     private static readonly int PrimaryColorID = Shader.PropertyToID("_PrimaryColor");
     private static readonly int SecondaryColorID = Shader.PropertyToID("_SecondaryColor");
     private static readonly int TertiaryColorID = Shader.PropertyToID("_TertiaryColor");
     private static readonly int MaskTexID = Shader.PropertyToID("_MaskTex");
 
-    private void Awake()
-    {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        propertyBlock = new MaterialPropertyBlock();
-    }
 
     private void Start()
     {
-        if (itemData != null)
+        if (itemDataList != null && itemDataList.Length > 0)
         {
+            int randomIndex = Random.Range(0, itemDataList.Length);
+            itemData = itemDataList[randomIndex];
             ApplyItemData(itemData);
         }
     }
@@ -37,31 +40,63 @@ public class FoodDisplayHandler : MonoBehaviour
 
         if (itemData == null) return;
 
-        spriteRenderer.sprite = itemData.baseSprite;
+        baseImage.sprite = itemData.baseSprite;
 
-        spriteRenderer.GetPropertyBlock(propertyBlock);
+        // Ensure this Image has its own material instance so we don't modify shared materials
+        Material mat = baseImage.material;
+        if (mat == null)
+        {
+            // Try to grab the rendering material (may return a usable instance) otherwise fall back to UI default
+            var renderMat = baseImage.materialForRendering;
+            mat = renderMat != null ? Instantiate(renderMat) : new Material(Shader.Find("UI/Default"));
+            baseImage.material = mat;
+        }
+        else
+        {
+            // Instantiate to avoid editing a shared material
+            baseImage.material = Instantiate(mat);
+            mat = baseImage.material;
+        }
 
-        propertyBlock.SetColor(PrimaryColorID, itemData.primaryColor);
-        propertyBlock.SetColor(SecondaryColorID, itemData.secondaryColor);
-        propertyBlock.SetColor(TertiaryColorID, itemData.tertiaryColor);
+        // Set shader properties on the material instance
+        mat.SetColor(PrimaryColorID, itemData.primaryColor);
+        mat.SetColor(SecondaryColorID, itemData.secondaryColor);
+        mat.SetColor(TertiaryColorID, itemData.tertiaryColor);
 
         if (itemData.maskSprite != null)
         {
-            propertyBlock.SetTexture(MaskTexID, itemData.maskSprite.texture);
+            mat.SetTexture(MaskTexID, itemData.maskSprite.texture);
+        }
+        else
+        {
+            mat.SetTexture(MaskTexID, null);
         }
 
-        spriteRenderer.SetPropertyBlock(propertyBlock);
-
-        if (brandRenderer != null)
+        if (brandImage != null)
         {
-            brandRenderer.sprite = itemData.brandSprite;
-            brandRenderer.gameObject.SetActive(itemData.brandSprite != null);
+            brandImage.sprite = itemData.brandSprite;
+            brandImage.gameObject.SetActive(itemData.brandSprite != null);
         }
 
-        if (conditionRenderer != null)
+        if (conditionImage != null)
         {
-            conditionRenderer.sprite = itemData.conditionSprite;
-            conditionRenderer.gameObject.SetActive(itemData.conditionSprite != null);
+            conditionImage.sprite = itemData.conditionSprite;
+            conditionImage.gameObject.SetActive(itemData.conditionSprite != null);
+        }
+
+        if (FoodName != null)
+        {
+            FoodName.text = itemData.itemName;
+        }
+
+        if(ExpiredDate != null)
+        {
+            ExpiredDate.text = itemData.ExpiredDate;
+        }
+
+        if(BrandClaim != null)
+        {
+            BrandClaim.text = itemData.BrandClaim;
         }
     }
 }

@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DraggableFood : DraggableObject, IBeginDragHandler
+[RequireComponent(typeof(FoodUIController))]
+public class DraggableFood : DraggableObject, IBeginDragHandler, IPointerClickHandler
 {
+    private bool _isDragging;
     [Header("Food Settings")]
     public bool isApproved = false; // Whether the food has been approved
     public override void OnBeginDrag(PointerEventData eventData)
@@ -24,11 +26,14 @@ public class DraggableFood : DraggableObject, IBeginDragHandler
             isApproved = true;
         }
 
+        _isDragging = true;
+
         base.OnBeginDrag(eventData);
     }
 
     public override void CheckDropTarget(GameObject droppedOn)
     {
+        _isDragging = false;
         if (droppedOn == null)
         {
             // If dropped in an invalid area, snap back to the sticker dispenser/tray
@@ -62,7 +67,14 @@ public class DraggableFood : DraggableObject, IBeginDragHandler
                 return;
             }
         }
+    }
 
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (eventData.button == PointerEventData.InputButton.Right && _isDragging) 
+        { 
+            GetComponent<FoodUIController>().ToggleView();
+        }
     }
 }
 
