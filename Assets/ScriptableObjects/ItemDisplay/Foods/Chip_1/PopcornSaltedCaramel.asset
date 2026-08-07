@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30b7c14c4135bc499d188a463aafd1f, type: 3}
+  m_Name: PopcornSaltedCaramel
+  m_EditorClassIdentifier: Assembly-CSharp::FoodDisplaySO
+  itemName: Popcorn Salted Caramel
+  ExpiredDate: 
+  BrandClaim: 
+  baseSprite: {fileID: -8614197644560359002, guid: 966b75e681149ec48998beb5acb54cac, type: 3}
+  maskSprite: {fileID: 5223184424257369207, guid: 0ed64ce01f2a478479aa38ae3903d3b8, type: 3}
+  brandSprite: {fileID: -1461760709, guid: d632a6297db002348a5ee49f4e291e5c, type: 3}
+  conditionSprite: {fileID: 0}
+  primaryColor: {r: 0.9137255, g: 0.76862746, b: 0.41568628, a: 1}
+  secondaryColor: {r: 0.14901961, g: 0.27450982, b: 0.3254902, a: 1}
+  tertiaryColor: {r: 0.95686275, g: 0.63529414, b: 0.38039216, a: 1}
