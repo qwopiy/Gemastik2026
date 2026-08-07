@@ -10,13 +10,7 @@ public class RulebookController : MonoBehaviour
         public string PageTitle;
         public Sprite LeftPage;
         public Sprite RightPage;
-
-        public RulebookPages(string title, Sprite left, Sprite right)
-        {
-            PageTitle = title;
-            LeftPage = left;
-            RightPage = right;
-        }
+        public List<GameObject> PageObjects;
     }
 
     [Header("Rulebook Pages")]
@@ -31,9 +25,6 @@ public class RulebookController : MonoBehaviour
 
     private void Start()
     {
-        leftButton.onClick.AddListener(PreviousPage);
-        rightButton.onClick.AddListener(NextPage);
-
         currentPageIndex = 0;
         DisplayPage(currentPageIndex);
     }
@@ -62,9 +53,8 @@ public class RulebookController : MonoBehaviour
         {
             leftPage.gameObject.SetActive(false);
             rightPage.sprite = rules[pageIndex].RightPage;
-        }
-
-        if (pageIndex >= 1 && pageIndex < rules.Count)
+        } 
+        else if (pageIndex >= 1 && pageIndex < rules.Count)
         {
             leftPage.gameObject.SetActive(true);
             rightPage.gameObject.SetActive(true);
@@ -76,6 +66,9 @@ public class RulebookController : MonoBehaviour
         {
             Debug.LogWarning("Invalid page index: " + pageIndex);
         }
+
+        DeactivateAllPageObjects();
+        ActivatePageObjects(pageIndex);
 
         leftButton.interactable = HasPreviousPage();
         rightButton.interactable = HasNextPage();
@@ -89,5 +82,45 @@ public class RulebookController : MonoBehaviour
     private bool HasPreviousPage()
     {
         return currentPageIndex > 0;
+    }
+
+    private void DeactivateAllPageObjects()
+    {
+        foreach (var rule in rules)
+        {
+            foreach (var obj in rule.PageObjects)
+            {
+                if (obj != null)
+                {
+                    obj.SetActive(false);
+                }
+            }
+        }
+    }
+    private void ActivatePageObjects(int pageIndex)
+    {
+        if (pageIndex >= 0 && pageIndex < rules.Count)
+        {
+            foreach (var obj in rules[pageIndex].PageObjects)
+            {
+                if (obj != null)
+                {
+                    obj.SetActive(true);
+                }
+            }
+        }
+    }
+
+    public void Goto(int pageIndex)
+    {
+        if (pageIndex >= 0 && pageIndex < rules.Count)
+        {
+            currentPageIndex = pageIndex;
+            DisplayPage(currentPageIndex);
+        }
+        else
+        {
+            Debug.LogWarning("Invalid page index: " + pageIndex);
+        }
     }
 }
