@@ -3,8 +3,10 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     [Header("Audio Sources")]
-    [SerializeField] private AudioSource musicSource;
-    [SerializeField] private AudioSource sfxSource;
+    [SerializeField] private AudioSource BGMSource;
+    [SerializeField] private AudioSource SFXSource;
+    [SerializeField] private AudioSource AmbienceSource;
+
 
     [Header("BGM")]
     public AudioClip MainMenu;
@@ -53,13 +55,13 @@ public class AudioManager : MonoBehaviour
         if (clip == null)
             return;
 
-        if (musicSource.clip == clip && musicSource.isPlaying)
+        if (BGMSource.clip == clip && BGMSource.isPlaying)
             return;
 
-        musicSource.Stop();
-        musicSource.clip = clip;
-        musicSource.loop = true;
-        musicSource.Play();
+        BGMSource.Stop();
+        BGMSource.clip = clip;
+        BGMSource.loop = true;
+        BGMSource.Play();
     }
 
     public void PlaySFX(AudioClip clip)
@@ -67,6 +69,18 @@ public class AudioManager : MonoBehaviour
         if (clip == null)
             return;
 
-        sfxSource.PlayOneShot(clip);
+        SFXSource.PlayOneShot(clip);
+    }
+
+    public void PlayAmbience(AudioClip clip)
+    {
+        if (clip == null)
+            return;
+        if (AmbienceSource.clip == clip && AmbienceSource.isPlaying)
+            return;
+        AmbienceSource.Stop();
+        AmbienceSource.clip = clip;
+        AmbienceSource.loop = true;
+        AmbienceSource.Play();
     }
 }
