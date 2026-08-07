@@ -792,7 +792,7 @@ GameObject:
   - component: {fileID: 7709019721145306673}
   m_Layer: 5
   m_Name: RuleBook
-  m_TagString: Untagged
+  m_TagString: Rulebook
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -878,4 +878,5 @@ MonoBehaviour:
   allowedTags:
   - DeskView
   - ZoomView
-  snapBack: 0
+  snapBack: 1
+  isTrashable: 0

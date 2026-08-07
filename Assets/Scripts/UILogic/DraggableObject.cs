@@ -31,6 +31,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     [Header("Settings")]
     public List<string> allowedTags;
     public bool snapBack = true; // Whether to snap to the drop target or return to original position
+    public bool isTrashable = false; // Whether the object can be trashed
     private void Start()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -97,7 +98,23 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public virtual void CheckDropTarget(GameObject droppedOn)
     {
-        if (droppedOn == null) return;
+        if (droppedOn == null)
+        {
+            // If dropped in an invalid area, snap back to the sticker dispenser/tray
+            transform.SetParent(originalParent);
+            if (snapBack)
+            {
+                rectTransform.position = initialPosition;
+            }
+            return;
+        }
+
+        if (isTrashable && droppedOn.CompareTag("TrashBin"))
+        {
+            // Destroy the food item if dropped on the trash bin
+            Destroy(gameObject);
+            return;
+        }
 
         foreach (var tag in allowedTags)
         {
@@ -107,17 +124,6 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 Transform obj = droppedOn.GetComponentInParent<RectTransform>().transform;
                 transform.SetParent(obj);
                 return; // Exit after snapping to the first valid object
-            }
-        }
-        
-        // If dropped in an invalid area, snap back to the sticker dispenser/tray
-        transform.SetParent(originalParent);
-        if (snapBack)
-        {
-            rectTransform.position = initialPosition;
-            if (currentState != originalState)
-            {
-                SetVisualState(originalState); // Reset to original state when snapping back
             }
         }
     }
@@ -229,6 +235,8 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     private void CalculateDragOffset(ObjectState prevState)
     {
+        if (ObjInClientView == null || ObjInDeskView == null) return;
+
         RectTransform prevObjRect;
         RectTransform currentObjRect;
 

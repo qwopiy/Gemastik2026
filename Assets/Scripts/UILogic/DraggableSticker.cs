@@ -5,6 +5,17 @@ public class DraggableSticker : DraggableObject
 {
     public override void CheckDropTarget(GameObject droppedOn)
     {
+        if (droppedOn == null)
+        {
+            // If dropped in an invalid area, snap back to the sticker dispenser/tray
+            transform.SetParent(originalParent);
+            if (snapBack)
+            {
+                rectTransform.position = initialPosition;
+            }
+            return;
+        }
+
         if (droppedOn.CompareTag("TrashBin"))
         {
             // Destroy the food item if dropped on the trash bin
@@ -31,13 +42,6 @@ public class DraggableSticker : DraggableObject
                 transform.SetParent(obj);
                 return;
             }
-        }
-
-        // If dropped in an invalid area, snap back to the sticker dispenser/tray
-        transform.SetParent(originalParent);
-        if (snapBack)
-        {
-            rectTransform.position = initialPosition;
         }
     }
 }

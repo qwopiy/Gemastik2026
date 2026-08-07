@@ -21,9 +21,9 @@ public class DraggableForm : DraggableObject, IBeginDragHandler
         { 
             approval = GetComponent<StampsOnFood>().approvalResult;
         }
-        catch (System.Exception e)
+        catch (System.Exception)
         {
-            Debug.LogError(e);
+            Debug.Log("No approval found.");
         }
 
         if (approval != ApprovalResult.None)
@@ -38,16 +38,5 @@ public class DraggableForm : DraggableObject, IBeginDragHandler
         }
 
         base.OnBeginDrag(eventData);
-    }
-
-    public override void CheckDropTarget(GameObject droppedOn)
-    {
-        if (droppedOn.CompareTag("TrashBin"))
-        {
-            // Destroy the food item if dropped on the trash bin
-            Destroy(gameObject);
-            return;
-        }
-        base.CheckDropTarget(droppedOn);
     }
 }

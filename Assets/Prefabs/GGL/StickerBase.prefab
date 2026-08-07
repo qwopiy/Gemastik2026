@@ -274,6 +274,7 @@ MonoBehaviour:
   - Form
   - TrashBin
   snapBack: 1
+  isTrashable: 1
 --- !u!114 &4347659616029508581
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 261029773}
   - component: {fileID: 261029774}
   m_Layer: 0
-  m_Name: ScoreManager
+  m_Name: EndingManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -424,7 +424,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9aa9e95391c924498b627fa430645ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
-  score: 0
+  corrects: 0
+  mistakes: 0
+  mistakeTypes: 
+  currentEnding: 0
 --- !u!1 &268799665
 GameObject:
   m_ObjectHideFlags: 0
@@ -3386,17 +3389,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7709019721145306673, guid: a3cac5e90be9e30448748eebd8f3c24d, type: 3}
-      propertyPath: snapBack
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9103740293658742928, guid: a3cac5e90be9e30448748eebd8f3c24d, type: 3}
       propertyPath: m_Name
       value: RuleBook
-      objectReference: {fileID: 0}
-    - target: {fileID: 9103740293658742928, guid: a3cac5e90be9e30448748eebd8f3c24d, type: 3}
-      propertyPath: m_TagString
-      value: Rulebook
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
