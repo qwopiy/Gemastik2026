@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 public enum ObjectState
@@ -10,6 +11,7 @@ public enum ObjectState
 [RequireComponent(typeof(CanvasGroup))]
 public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    private static WaitForSeconds _waitForSeconds0_16 = new WaitForSeconds(0.16f);
     [Header("Debug Vars")]
     protected RectTransform rectTransform;
     protected Canvas canvas;
@@ -23,6 +25,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public ObjectState currentState;
     public GameObject ObjCurrentlyOn; // The object currently being dragged over
     protected float maxDistance = 10f;
+    protected float snapduration = 0.2f; // Duration of the snap-back animation
 
     [Header("References")]
     [SerializeField] protected RectTransform ObjInClientView; // Client item visual
@@ -104,7 +107,8 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             transform.SetParent(originalParent);
             if (snapBack)
             {
-                rectTransform.position = initialPosition;
+                //rectTransform.position = initialPosition;
+                StartCoroutine(MoveRoutine(initialPosition, snapduration));
             }
             return;
         }
@@ -126,6 +130,29 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 return; // Exit after snapping to the first valid object
             }
         }
+    }
+
+    protected IEnumerator MoveRoutine(Vector3 target, float duration)
+    {
+        Vector3 startPosition = rectTransform.position;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+
+            // Calculates the percentage of completion (0.0 to 1.0)
+            float percentageComplete = elapsedTime / duration;
+
+            // Smoothly interpolates between start and target
+            rectTransform.position = Vector3.Lerp(startPosition, target, percentageComplete);
+
+            // Waits until the next frame
+            yield return null;
+        }
+
+        // Ensures the object snaps precisely to the final position
+        rectTransform.position = target;
     }
 
     private void GetBounds()
