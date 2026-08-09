@@ -43,7 +43,7 @@ public class FoodChecker : MonoBehaviour
         }
 
         // Should only run when all checks are done, and all food items have been stamped
-        LevelManager.Instance.SpawnNextFood();
+        DialogueEventManager.Instance.TriggerFoodSubmitted();
         EndingManager.Instance.CalculateEnding();
         ClearObjs();
     }

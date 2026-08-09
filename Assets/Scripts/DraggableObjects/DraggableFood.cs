@@ -40,7 +40,8 @@ public class DraggableFood : DraggableObject, IBeginDragHandler, IPointerClickHa
             transform.SetParent(originalParent);
             if (snapBack)
             {
-                rectTransform.position = initialPosition;
+                //rectTransform.position = initialPosition;
+                StartCoroutine(MoveRoutine(initialPosition, snapduration));
                 if (currentState != originalState)
                 {
                     SetVisualState(originalState); // Reset to original state when snapping back

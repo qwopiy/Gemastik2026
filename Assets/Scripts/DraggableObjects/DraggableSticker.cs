@@ -11,7 +11,8 @@ public class DraggableSticker : DraggableObject
             transform.SetParent(originalParent);
             if (snapBack)
             {
-                rectTransform.position = initialPosition;
+                //rectTransform.position = initialPosition;
+                StartCoroutine(MoveRoutine(initialPosition, snapduration));
             }
             return;
         }
