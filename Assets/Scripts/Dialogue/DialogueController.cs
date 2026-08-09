@@ -21,10 +21,8 @@ public class DialogueController : MonoBehaviour
         clientController = GetComponentInChildren<ClientController>(true);
         speechBubbleController = GetComponentInChildren<SpeechBubbleController>(true);
 
-        //LevelManager.Instance.OnDialogueTriggered += SetDialogue;
+        LevelManager.Instance.OnDialogueTriggered += SetDialogue;
         DialogueEventManager.Instance.StartGameEvent += SetDialogue;
-
-        DialogueEventManager.Instance.OnClientEntered += SetClientImage;
         DialogueEventManager.Instance.OnDialogueStarted += StartDialogue;
         DialogueEventManager.Instance.OnDialogueCompleted += EndDialogue;
         DialogueEventManager.Instance.OnDialogueContinued += ContinueDialogue;
@@ -34,10 +32,8 @@ public class DialogueController : MonoBehaviour
 
     private void OnDisable()
     {
-        //LevelManager.Instance.OnDialogueTriggered -= SetDialogue;
+        LevelManager.Instance.OnDialogueTriggered -= SetDialogue;
         DialogueEventManager.Instance.StartGameEvent -= SetDialogue;
-
-        DialogueEventManager.Instance.OnClientEntered -= SetClientImage;
         DialogueEventManager.Instance.OnDialogueStarted -= StartDialogue;
         DialogueEventManager.Instance.OnDialogueCompleted -= EndDialogue;
         DialogueEventManager.Instance.OnDialogueContinued -= ContinueDialogue;
@@ -56,14 +52,6 @@ public class DialogueController : MonoBehaviour
     {
         currentDialogue = dialogue;
         dialogueIndex = 0;
-    }
-
-    private void SetClientImage()
-    {
-        if (clientController != null)
-        {
-            clientController.SetClientImage(currentDialogue.GetSprite());
-        }
     }
 
     public void StartDialogue()
