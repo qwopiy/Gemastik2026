@@ -727,43 +727,45 @@ MonoBehaviour:
   FoodDataList:
   - Dialogue:
       speakersName: Sekret
-      speakersSprite: {fileID: 4594101485688967996, guid: 6442a04260350f14a99417326c8b1675, type: 3}
+      speakersSprite: {fileID: 1492349440, guid: 3821a3a7392c9bf4e97976482a51b967, type: 3}
       voiceClip: {fileID: 0}
       startingLines:
-      - aaa
-      - bbb
+      - saya sekretaris
+      - periksa makanan ku dong
       endingLines:
-      - ccc
-      - ddd
+      - makasik wok
+      - wasalamualaikum
       randomChatter: []
       isFirstDialogue: 1
     FoodData:
-    - {fileID: 11400000, guid: c6328d69864324a418dd9a9c88cdc2d0, type: 2}
-    - {fileID: 11400000, guid: c6328d69864324a418dd9a9c88cdc2d0, type: 2}
+    - {fileID: 11400000, guid: af8b9d9b1d64f9149baf638432d7b604, type: 2}
+    - {fileID: 11400000, guid: 1634121f930a7184694e34c52c7f9c3c, type: 2}
   - Dialogue:
       speakersName: 
       speakersSprite: {fileID: 7604034355035013067, guid: 4fc5eb16943ebe14299b749fc3f1e31d, type: 3}
       voiceClip: {fileID: 0}
       startingLines:
-      - a
+      - ariq dongo
+      - aku cerai
       endingLines:
-      - b
+      - makasih ya wok
       randomChatter: []
       isFirstDialogue: 1
     FoodData:
-    - {fileID: 11400000, guid: c6328d69864324a418dd9a9c88cdc2d0, type: 2}
+    - {fileID: 11400000, guid: 3470af79b3bb7e042851c8e7e1b95d93, type: 2}
   - Dialogue:
       speakersName: 
       speakersSprite: {fileID: -4755883517356793760, guid: 5dc046bf1c6750748b4f84d6861a25c6, type: 3}
       voiceClip: {fileID: 0}
       startingLines:
-      - 1
+      - assalamualaikum warahmatullahi wabarakatuh
       endingLines:
-      - 2
+      - wassalamualaikum warahmatullahi wabarakatuh
       randomChatter: []
       isFirstDialogue: 1
     FoodData:
-    - {fileID: 11400000, guid: c6328d69864324a418dd9a9c88cdc2d0, type: 2}
+    - {fileID: 11400000, guid: 618a369842b07df49bd2e36b32d17bc6, type: 2}
+    - {fileID: 11400000, guid: 51b2563f5a7e3804d8910290c3815b12, type: 2}
   FoodParent: {fileID: 4182192264165955697}
   delayBetweenClients: 0.5
   index: 0
@@ -3397,7 +3399,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4594101485688967996, guid: 6442a04260350f14a99417326c8b1675, type: 3}
+  m_Sprite: {fileID: 1492349440, guid: 3821a3a7392c9bf4e97976482a51b967, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3940,6 +3942,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4182192264165955697}
     m_Modifications:
+    - target: {fileID: 946585755397429150, guid: a3cac5e90be9e30448748eebd8f3c24d, type: 3}
+      propertyPath: rules.Array.data[2].LeftPage
+      value: 
+      objectReference: {fileID: -8707180747815748851, guid: 25fec76c1c513874a9a9398f389a344b, type: 3}
     - target: {fileID: 6024561961673493453, guid: a3cac5e90be9e30448748eebd8f3c24d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

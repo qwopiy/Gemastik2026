@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item_Roti Coklat Mini Light
   m_EditorClassIdentifier: Assembly-CSharp::FoodDataSO
   FoodId: Roti Coklat Mini Light
-  FoodPrefab: {fileID: 0}
+  FoodPrefab: {fileID: 4417826435687172446, guid: a64869e8ddd0d2a4b8a73b3a5cb7d05a, type: 3}
   Components:
   - ComponentType: 0
     AttributeFields:

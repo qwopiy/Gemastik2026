@@ -49,7 +49,7 @@ public class LevelManager : MonoBehaviour
             {
                 GameObject foodInstance = Instantiate(foodData.FoodData[i].FoodPrefab, parent);
                 foodInstance.GetComponent<FoodItem>().SetFoodData(foodData.FoodData[i]);
-                foodInstance.GetComponentInChildren<NutritionInfo>().SetNutrition(foodData.FoodData[i].Components);
+                foodInstance.GetComponentInChildren<NutritionInfo>(true).SetNutrition(foodData.FoodData[i].Components);
                 foodInstance.name = foodData.FoodData[i].FoodId;
             }
         }
