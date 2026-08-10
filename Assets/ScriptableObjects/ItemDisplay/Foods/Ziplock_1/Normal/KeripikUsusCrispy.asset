@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30b7c14c4135bc499d188a463aafd1f, type: 3}
+  m_Name: KeripikUsusCrispy
+  m_EditorClassIdentifier: Assembly-CSharp::FoodDisplaySO
+  itemName: Keripik Usus Crispy
+  ExpiredDate: 
+  BrandClaim: 
+  baseSprite: {fileID: -6463920165915375310, guid: c5b87e85ee737ee4b8cb339624df71c6, type: 3}
+  maskSprite: {fileID: -2713691491796616006, guid: bc3c3f7dfb6b4c44295052e61fd2c8e0, type: 3}
+  brandSprite: {fileID: -522549031, guid: d632a6297db002348a5ee49f4e291e5c, type: 3}
+  conditionSprite: {fileID: -2095629471, guid: d632a6297db002348a5ee49f4e291e5c, type: 3}
+  primaryColor: {r: 0.95686275, g: 0.63529414, b: 0.38039216, a: 1}
+  secondaryColor: {r: 0.16470589, g: 0.6156863, b: 0.56078434, a: 1}
+  tertiaryColor: {r: 0.90588236, g: 0.43529412, b: 0.31764707, a: 1}
