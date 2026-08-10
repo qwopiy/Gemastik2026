@@ -23,9 +23,4 @@ public class MainMenu : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
-
-    public void LevelSelect()
-    {
-        SceneManager.LoadSceneAsync("LevelSelect");
-    }
 }
