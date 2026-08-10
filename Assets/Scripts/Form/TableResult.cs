@@ -43,16 +43,16 @@ public class TableResult : MonoBehaviour
         defectNCheckmark.SetActive(!value);
     }
 
-    public bool CheckTableResult(int index)
-    {
-        if (isKadaluarsa == LevelManager.Instance.FoodDataList[LevelManager.Instance.index - 1].FoodData[index].IsKadaluarsa &&
-            isDefect == LevelManager.Instance.FoodDataList[LevelManager.Instance.index - 1].FoodData[index].IsDefect)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
+    //public bool CheckTableResult(int index)
+    //{
+    //    if (isKadaluarsa == LevelManager.Instance.FoodToSpawn[LevelManager.Instance.index - 1].IsKadaluarsa &&
+    //        isDefect == LevelManager.Instance.FoodToSpawn[LevelManager.Instance.index - 1].IsDefect)
+    //    {
+    //        return true;
+    //    }
+    //    else
+    //    {
+    //        return false;
+    //    }
+    //}
 }

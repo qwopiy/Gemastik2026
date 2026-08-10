@@ -6,6 +6,7 @@ public class DraggableForm : DraggableObject, IBeginDragHandler
     [Header("Form References")]
     [SerializeField] private RectTransform baseForm;
     [SerializeField] private RectTransform compactedForm;
+    [SerializeField] private RectTransform compactedApprovedForm;
     [SerializeField] private bool hasBeenDragged = false;
 
     public override void OnBeginDrag(PointerEventData eventData)
@@ -29,7 +30,7 @@ public class DraggableForm : DraggableObject, IBeginDragHandler
         if (approval != ApprovalResult.None)
         {
             baseForm.gameObject.SetActive(false);
-            compactedForm.gameObject.SetActive(true);
+            compactedApprovedForm.gameObject.SetActive(true);
 
             if (!allowedTags.Contains("FoodItem"))
             {
