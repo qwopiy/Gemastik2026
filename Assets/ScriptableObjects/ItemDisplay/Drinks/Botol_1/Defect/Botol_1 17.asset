@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30b7c14c4135bc499d188a463aafd1f, type: 3}
+  m_Name: Botol_1 17
+  m_EditorClassIdentifier: Assembly-CSharp::FoodDisplaySO
+  itemName: Matcha Latte
+  ExpiredDate: 
+  BrandClaim: 
+  baseSprite: {fileID: -2706032089496790927, guid: 6880957d023abf342834415e7e9578ec, type: 3}
+  maskSprite: {fileID: -2195008558084607018, guid: 119f77fb26af36d4c9324732d5df5697, type: 3}
+  brandSprite: {fileID: -124101209, guid: d632a6297db002348a5ee49f4e291e5c, type: 3}
+  conditionSprite: {fileID: 1903612553, guid: d632a6297db002348a5ee49f4e291e5c, type: 3}
+  primaryColor: {r: 0.53333336, g: 0.6901961, b: 0.29411766, a: 1}
+  secondaryColor: {r: 0.99215686, g: 0.9411765, b: 0.8352941, a: 1}
+  tertiaryColor: {r: 0.1764706, g: 0.2901961, b: 0.15294118, a: 1}
