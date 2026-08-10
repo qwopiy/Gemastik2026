@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -31,6 +32,7 @@ public class AudioManager : MonoBehaviour
 
 
     public static AudioManager Instance;
+    public event Action<AudioClip> PlaySoundEffect;
 
     private void Awake()
     {
@@ -48,6 +50,12 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         PlayMusic(MainMenu);
+        PlaySoundEffect += PlaySFX;
+    }
+
+    private void OnDisable()
+    {
+        PlaySoundEffect -= PlaySFX;
     }
 
     public void PlayMusic(AudioClip clip)
@@ -82,5 +90,9 @@ public class AudioManager : MonoBehaviour
         AmbienceSource.clip = clip;
         AmbienceSource.loop = true;
         AmbienceSource.Play();
+    }
+    public void TriggerPlaySoundEffect(AudioClip clip)
+    {
+        PlaySoundEffect?.Invoke(clip);
     }
 }

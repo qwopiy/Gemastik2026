@@ -56,7 +56,7 @@ public class LevelManager : MonoBehaviour
 
             for (int i = 0; i < FoodToSpawn.Count; i++)
             {
-                GameObject foodInstance = Instantiate(FoodToSpawn[i].FoodPrefab, parent);
+                GameObject foodInstance = Instantiate(FoodToSpawn[i].GetRandomPrefab(), parent);
                 foodInstance.GetComponent<FoodItem>().SetFoodData(FoodToSpawn[i]);
                 foodInstance.GetComponentInChildren<NutritionInfo>(true).SetNutrition(FoodToSpawn[i].Components);
                 foodInstance.name = FoodToSpawn[i].FoodId;

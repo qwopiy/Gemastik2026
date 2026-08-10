@@ -94,7 +94,7 @@ public class FoodComponents
 public class FoodDataSO : ScriptableObject
 {
     public string FoodId;
-    public GameObject FoodPrefab;
+    public List<GameObject> FoodPrefab;
     public List<FoodComponents> Components = new List<FoodComponents>();
 
     [Header("Actual Results")]
@@ -121,5 +121,11 @@ public class FoodDataSO : ScriptableObject
             "D" => GGLSticker.D,
             _ => GGLSticker.A,
         };
+    }
+
+    public GameObject GetRandomPrefab()
+    {
+        int randomIndex = Random.Range(0, FoodPrefab.Count);
+        return FoodPrefab[randomIndex];
     }
 }

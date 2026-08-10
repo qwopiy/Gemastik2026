@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -10,6 +9,7 @@ public class SpeechBubbleController : MonoBehaviour, IPointerClickHandler
     private static readonly int ShowHash = Animator.StringToHash("Show");
     public float delayBeforeDialogue = 1.0f; // Delay before starting the dialogue
     private Animator animator;
+    private bool isDialogueActive = false;
 
 
     public void Start()
@@ -21,6 +21,7 @@ public class SpeechBubbleController : MonoBehaviour, IPointerClickHandler
     {
         // show the speech bubble
         animator.SetTrigger(ShowHash);
+        isDialogueActive = true;
 
         yield return new WaitForSeconds(delayBeforeDialogue);
         // start dialogue
@@ -30,12 +31,14 @@ public class SpeechBubbleController : MonoBehaviour, IPointerClickHandler
     {
         // hide the speech bubble
         animator.SetTrigger(HideHash);
+        isDialogueActive = false;
         // end dialogue
         yield return new WaitForSeconds(delayBeforeDialogue);
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        DialogueEventManager.Instance.TriggerDialogueContinued();
+        if (isDialogueActive) 
+            DialogueEventManager.Instance.TriggerDialogueContinued();
     }
 }

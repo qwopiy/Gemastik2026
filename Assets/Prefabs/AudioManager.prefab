@@ -309,17 +309,17 @@ MonoBehaviour:
   SFXSource: {fileID: 363510487531942902}
   AmbienceSource: {fileID: 1633790270093107506}
   MainMenu: {fileID: 8300000, guid: 11a026578270a344697b55a809714a05, type: 3}
-  CFD: {fileID: 0}
-  Kantin: {fileID: 0}
-  EventCosplay: {fileID: 0}
-  Kantor: {fileID: 0}
+  CFD: {fileID: 8300000, guid: 11a026578270a344697b55a809714a05, type: 3}
+  Kantin: {fileID: 8300000, guid: 409bf422eca0fa242b60ff0c41fb4ae1, type: 3}
+  EventCosplay: {fileID: 8300000, guid: 3a41a036be0a10a458e73eda7907f24f, type: 3}
+  Kantor: {fileID: 8300000, guid: 1e173f74f59e395478c895c23a2e6a86, type: 3}
   Drag: {fileID: 0}
   Drop: {fileID: 0}
   Trashbin: {fileID: 0}
   PaperFold: {fileID: 0}
   Footsteps: {fileID: 0}
   Stamps: {fileID: 0}
-  Click: {fileID: 0}
+  Click: {fileID: 8300000, guid: dc8303cfbe62f2f419d0f30dc3e2dbbc, type: 3}
   CrowdSound: {fileID: 0}
 --- !u!1 &8334348957662838733
 GameObject:
