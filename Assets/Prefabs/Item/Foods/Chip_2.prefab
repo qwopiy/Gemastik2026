@@ -1234,7 +1234,10 @@ MonoBehaviour:
   conditionImage: {fileID: 8997773358191156024}
   FoodName: {fileID: 2093449578576265583}
   ExpiredDate: {fileID: 3984355169655504924}
-  BrandClaim: {fileID: 1219973198790146209}
+  BrandClaim:
+  - {fileID: 1219973198790146209}
+  - {fileID: 8040923073211026375}
+  - {fileID: 3531691876479716356}
   itemDataList:
   - {fileID: 11400000, guid: da6d5f81e0cd17f40a6d3fc9cae3aad8, type: 2}
   - {fileID: 11400000, guid: 2513f4a60f744e04eb778707777b1164, type: 2}
@@ -1246,6 +1249,27 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 64884ed273f8d8f47a22f23d7910521e, type: 2}
   - {fileID: 11400000, guid: 75f9e61b5565ea94f9da80f36aa9b3a8, type: 2}
   - {fileID: 11400000, guid: 14d2b8b6e63867347a17773e109f68f4, type: 2}
+  DefectedDataList:
+  - {fileID: 11400000, guid: 840b56249a6ca974180c1a9ddd2cdc46, type: 2}
+  - {fileID: 11400000, guid: cdd9c2a404faa024d9fa172f1cc70976, type: 2}
+  - {fileID: 11400000, guid: 65d4124eb1da4164d98f960dbc87dc1a, type: 2}
+  - {fileID: 11400000, guid: fa240783e56d80440bdab8199014b4cf, type: 2}
+  - {fileID: 11400000, guid: c5cb65ec821c313409212ab2538f19f2, type: 2}
+  - {fileID: 11400000, guid: 54db82bb46fd8ef4694f229bd5d79830, type: 2}
+  - {fileID: 11400000, guid: 498a53ee3091cfb4abdbe74c74f3efb4, type: 2}
+  - {fileID: 11400000, guid: d2318ef18d972274d83a6aa22b0a5af3, type: 2}
+  - {fileID: 11400000, guid: 5fd2c5c38a7e80a4ab632e9e9702eb8c, type: 2}
+  - {fileID: 11400000, guid: dfca88d63e67a6c47a8e86069d1bc7bf, type: 2}
+  - {fileID: 11400000, guid: 3e500709dc098fb43a2f831268885233, type: 2}
+  - {fileID: 11400000, guid: 72523e00b2dfe514d828cddec4c60380, type: 2}
+  - {fileID: 11400000, guid: a4d22edd610f15047af713b8d46dd3fc, type: 2}
+  - {fileID: 11400000, guid: 434a0051a5a72f24c9e36e056511eb05, type: 2}
+  - {fileID: 11400000, guid: b048bb0598dbcc842bbb12682d8c4227, type: 2}
+  - {fileID: 11400000, guid: 6fb935b8b37ec6a42b5a41e6e0a50f42, type: 2}
+  - {fileID: 11400000, guid: d45a8f23c0da4274abd4eb8033cc2f16, type: 2}
+  - {fileID: 11400000, guid: e236c9759224ac9498ceb4bdd182cc90, type: 2}
+  - {fileID: 11400000, guid: 3e038a1345bf2324f9d8fed31cfed265, type: 2}
+  - {fileID: 11400000, guid: 431e055e49867664fa168ccfca6535d2, type: 2}
 --- !u!1 &8499950805614393357
 GameObject:
   m_ObjectHideFlags: 0

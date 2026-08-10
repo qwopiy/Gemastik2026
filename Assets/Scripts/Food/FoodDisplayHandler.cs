@@ -1,9 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class FoodDisplayHandler : MonoBehaviour
 {
+    [Header("Food Item Reference")]
+    private FoodItem foodItem;
+
     [Header("Item Data")]
     [SerializeField] private FoodDisplaySO itemData;
 
@@ -13,10 +17,11 @@ public class FoodDisplayHandler : MonoBehaviour
     [SerializeField] private Image conditionImage;
     [SerializeField] private TextMeshProUGUI FoodName;
     [SerializeField] private TextMeshProUGUI ExpiredDate;
-    [SerializeField] private TextMeshProUGUI BrandClaim;
+    [SerializeField] private TextMeshProUGUI[] BrandClaim;
 
     [Header("List Item Data")]
     [SerializeField] private FoodDisplaySO[] itemDataList;
+    [SerializeField] private FoodDisplaySO[] DefectedDataList;
 
     private static readonly int PrimaryColorID = Shader.PropertyToID("_PrimaryColor");
     private static readonly int SecondaryColorID = Shader.PropertyToID("_SecondaryColor");
@@ -26,12 +31,30 @@ public class FoodDisplayHandler : MonoBehaviour
 
     private void Start()
     {
+        foodItem = GetComponentInParent<FoodItem>();
+
+        if(foodItem == null || foodItem.foodData == null)
+        {
+            return;
+        }
+
+        if(foodItem.foodData.IsDefect)
+        {
+            itemDataList = DefectedDataList;
+        }
+
+        for(int i = 0; i< BrandClaim.Length; i++)
+        {
+            BrandClaim[i].text = "";
+        }
+
         if (itemDataList != null && itemDataList.Length > 0)
         {
             int randomIndex = Random.Range(0, itemDataList.Length);
             itemData = itemDataList[randomIndex];
             ApplyItemData(itemData);
         }
+
     }
 
     public void ApplyItemData(FoodDisplaySO newItemData)
@@ -96,7 +119,13 @@ public class FoodDisplayHandler : MonoBehaviour
 
         if(BrandClaim != null)
         {
-            BrandClaim.text = itemData.BrandClaim;
+            for(int i = 0; i < foodItem.foodData.Claims.Count; i++)
+            {
+                if(BrandClaim[i] != null)
+                {
+                    BrandClaim[i].text = foodItem.foodData.Claims[i].claimDescription;
+                }
+            }
         }
     }
 }
