@@ -39,6 +39,7 @@ public class TutorialController : MonoBehaviour, IPointerClickHandler
         {
             tutorialObjects[index].SetActive(false);
             tutorialPanel.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 }
