@@ -1159,7 +1159,10 @@ MonoBehaviour:
   conditionImage: {fileID: 8997773358191156024}
   FoodName: {fileID: 2093449578576265583}
   ExpiredDate: {fileID: 3984355169655504924}
-  BrandClaim: {fileID: 1219973198790146209}
+  BrandClaim:
+  - {fileID: 4229681342049659262}
+  - {fileID: 1219973198790146209}
+  - {fileID: 4014542485366648651}
   itemDataList:
   - {fileID: 11400000, guid: 65fd9d6d539446e4aa3dafb21ca55dd1, type: 2}
   - {fileID: 11400000, guid: 5eb3e78caa0de2449bbbf93bf3b4b04c, type: 2}
@@ -1171,6 +1174,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4e588fd55fbdf324dbc8b644dcd82860, type: 2}
   - {fileID: 11400000, guid: 47b448e393e71a64b83be6ab70ce3b37, type: 2}
   - {fileID: 11400000, guid: f0f4f6a7b6c20614e80232424366dacb, type: 2}
+  DefectedDataList: []
 --- !u!1 &8499950805614393357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,6 +1186,7 @@ GameObject:
   - component: {fileID: 7171044717064832575}
   - component: {fileID: 8903705799133014233}
   - component: {fileID: 8997773358191156024}
+  - component: {fileID: 5138650128294165100}
   m_Layer: 8
   m_Name: Defect
   m_TagString: Untagged
@@ -1246,6 +1251,30 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!223 &5138650128294165100
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8499950805614393357}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_UseReflectionProbes: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &8522761405293848244
 GameObject:
   m_ObjectHideFlags: 0
