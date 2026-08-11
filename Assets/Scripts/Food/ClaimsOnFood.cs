@@ -4,10 +4,17 @@ using UnityEngine;
 public enum ClaimType
 {
     None,
-    GGL,
-    Kadaluarsa,
-    Defect,
-    Halal
+    CalorieFree, // < 5 calories per serving
+    HighProtein, // > 10g protein per serving
+    LowCarbohydrate, // < 15g carbohydrates per serving
+    SugarFree, // < 0.5g sugar per serving
+    LowSugar, // < 5g sugar per serving
+    LowSalt, // <= 120mg salt per serving
+    LowTotalFat, // < 3g of total fat per serving
+    GGL, // Must be correct GGL sticker
+    Healthy, // GGL must be A
+    NoPreservative, // no preservative added
+    Composition, // Must be correct composition
 }
 [System.Serializable]
 public struct Claim
@@ -19,7 +26,7 @@ public struct Claim
     {
         claimType = type;
         claimDescription = description;
-        this.isValid = isCorrect;
+        isValid = isCorrect;
     }
 
     public bool CompareClaim(Claim thisClaim, Claim otherClaim)

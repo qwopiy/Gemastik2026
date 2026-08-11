@@ -95,4 +95,33 @@ public class AudioManager : MonoBehaviour
     {
         PlaySoundEffect?.Invoke(clip);
     }
+
+    public void TriggerClick()
+    {
+        TriggerPlaySoundEffect(Click);
+    }
+    public void TriggerDrag()
+    {
+        TriggerPlaySoundEffect(Drag);
+    }
+    public void TriggerDrop()
+    {
+        TriggerPlaySoundEffect(Drop);
+    }
+    public void TriggerTrashbin()
+    {
+        TriggerPlaySoundEffect(Trashbin);
+    }
+    public void TriggerPaperFold()
+    {
+        TriggerPlaySoundEffect(PaperFold);
+    }
+    public void TriggerFootsteps()
+    {
+        TriggerPlaySoundEffect(Footsteps);
+    }
+    public void TriggerStamps()
+    {
+        TriggerPlaySoundEffect(Stamps);
+    }
 }

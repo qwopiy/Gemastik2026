@@ -114,7 +114,7 @@ public class FoodDisplayHandler : MonoBehaviour
 
         if(ExpiredDate != null)
         {
-            ExpiredDate.text = itemData.ExpiredDate;
+            ExpiredDate.text = foodItem.foodData.ExpiryDate.GetDateString();
         }
 
         if(BrandClaim != null)
