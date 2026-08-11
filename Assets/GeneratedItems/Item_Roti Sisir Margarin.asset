@@ -62,7 +62,7 @@ MonoBehaviour:
       Value: C
   Approval: 1
   GGLRating: 3
-  GGLReasons: 
+  GGLReasons: 010000000200000003000000
   IsKadaluarsa: 0
   IsDefect: 0
   Claims: []

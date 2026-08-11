@@ -101,7 +101,8 @@ public class FoodDataSO : ScriptableObject
     public ApprovalResult Approval;
     public GGLSticker GGLRating;
     public List<GGLReason> GGLReasons = new List<GGLReason>();
-    public bool IsKadaluarsa;
+    public Date ExpiryDate;
+    public bool IsExpired;
     public bool IsDefect;
     public List<Claim> Claims;
 
@@ -127,5 +128,18 @@ public class FoodDataSO : ScriptableObject
     {
         int randomIndex = Random.Range(0, FoodPrefab.Count);
         return FoodPrefab[randomIndex];
+    }
+
+    public void CopyValues(FoodDataSO other)
+    {
+        FoodId = other.FoodId;
+        FoodPrefab = new List<GameObject>(other.FoodPrefab);
+        Components = new List<FoodComponents>(other.Components);
+        Approval = other.Approval;
+        GGLRating = other.GGLRating;
+        GGLReasons = new List<GGLReason>(other.GGLReasons);
+        IsExpired = other.IsExpired;
+        IsDefect = other.IsDefect;
+        Claims = new List<Claim>(other.Claims);
     }
 }

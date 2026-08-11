@@ -12,6 +12,11 @@ public struct Date
         this.month = month;
         this.year = year;
     }
+
+    public readonly string GetDateString()
+    {
+        return $"{day}/{month}/{year}";
+    }
 }
 public class Calendar : MonoBehaviour
 {
@@ -33,7 +38,7 @@ public class Calendar : MonoBehaviour
 
     public string GetDateString()
     {
-        return $"{date.day}/{date.month}/{date.year}";
+        return date.GetDateString();
     }
 
     public void SetDate()
@@ -41,7 +46,7 @@ public class Calendar : MonoBehaviour
         date = new(LevelManager.Instance.Level + 1, 12, 2026);
     }
 
-    public Date GetRandomDate(bool isExpired)
+    public static Date GetRandomDate(bool isExpired)
     {
         int randomDay;
         int randomMonth;
