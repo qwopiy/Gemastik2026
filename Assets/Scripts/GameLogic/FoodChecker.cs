@@ -43,7 +43,7 @@ public class FoodChecker : MonoBehaviour
         }
 
         // Should only run when all checks are done, and all food items have been stamped
-        LevelManager.Instance.SpawnNextFood();
+        DialogueEventManager.Instance.TriggerFoodSubmitted();
         EndingManager.Instance.CalculateEnding();
         ClearObjs();
     }
@@ -111,7 +111,7 @@ public class FoodChecker : MonoBehaviour
     {
         TableResult tableResult = tr.GetComponentInChildren<TableResult>(true);
 
-        bool isKadaluarsaCorrect = tableResult.isKadaluarsa == foodInfo.GetFoodData().IsKadaluarsa;
+        bool isKadaluarsaCorrect = tableResult.isKadaluarsa == foodInfo.GetFoodData().IsExpired;
         bool isDefectCorrect = tableResult.isDefect == foodInfo.GetFoodData().IsDefect;
 
         if (isKadaluarsaCorrect && isDefectCorrect)
@@ -148,16 +148,19 @@ public class FoodChecker : MonoBehaviour
             {
                 switch (claim.claimType)
                 {
+                    case ClaimType.CalorieFree:
+                    case ClaimType.LowTotalFat:
+                    case ClaimType.HighProtein:
+                    case ClaimType.LowCarbohydrate:
+                    case ClaimType.SugarFree:
+                    case ClaimType.LowSugar:
+                    case ClaimType.LowSalt:
+                    case ClaimType.Healthy:
                     case ClaimType.GGL:
                         EndingManager.Instance.AddMistake(MistakeType.WrongNutritionClaim);
                         break;
-                    case ClaimType.Kadaluarsa:
-                        EndingManager.Instance.AddMistake(MistakeType.WrongCompositionClaim);
-                        break;
-                    case ClaimType.Defect:
-                        EndingManager.Instance.AddMistake(MistakeType.WrongCompositionClaim);
-                        break;
-                    case ClaimType.Halal:
+                    case ClaimType.NoPreservative:
+                    case ClaimType.Composition:
                         EndingManager.Instance.AddMistake(MistakeType.WrongCompositionClaim);
                         break;
                 }

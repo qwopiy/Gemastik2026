@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30b7c14c4135bc499d188a463aafd1f, type: 3}
+  m_Name: CadburyDairyMilk
+  m_EditorClassIdentifier: Assembly-CSharp::FoodDisplaySO
+  itemName: Cokelat Susu
+  ExpiredDate: 
+  BrandClaim: 
+  baseSprite: {fileID: 4265584670644305303, guid: 9aaf09f9691f87d42becced8ad20b0e1, type: 3}
+  maskSprite: {fileID: -4862630684395502987, guid: ecc67377ba2dfad408cd2105c20230fd, type: 3}
+  brandSprite: {fileID: -1461760709, guid: d632a6297db002348a5ee49f4e291e5c, type: 3}
+  conditionSprite: {fileID: -1276601814, guid: d632a6297db002348a5ee49f4e291e5c, type: 3}
+  primaryColor: {r: 0.22745098, g: 0.047058824, b: 0.6392157, a: 1}
+  secondaryColor: {r: 0.83137256, g: 0.6862745, b: 0.21568628, a: 1}
+  tertiaryColor: {r: 0.0627451, g: 0, b: 0.16862746, a: 1}

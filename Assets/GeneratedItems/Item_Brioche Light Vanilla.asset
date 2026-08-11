@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Item_Brioche Light Vanilla
   m_EditorClassIdentifier: Assembly-CSharp::FoodDataSO
   FoodId: Brioche Light Vanilla
-  FoodPrefab: {fileID: 0}
+  FoodPrefab:
+  - {fileID: 4417826435687172446, guid: e3fd86f2d6f260142a6563bcb8e3cc6c, type: 3}
   Components:
   - ComponentType: 0
     AttributeFields:
@@ -53,7 +54,10 @@ MonoBehaviour:
       Value: B
   Approval: 1
   GGLRating: 2
-  GGLReasons: 
+  GGLReasons: 010000000200000003000000
   IsKadaluarsa: 0
-  IsDefect: 0
-  Claims: []
+  IsDefect: 1
+  Claims:
+  - claimType: 1
+    claimDescription: rendah gula
+    isValid: 1
