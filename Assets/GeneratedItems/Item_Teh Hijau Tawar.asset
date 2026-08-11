@@ -13,7 +13,16 @@ MonoBehaviour:
   m_Name: Item_Teh Hijau Tawar
   m_EditorClassIdentifier: Assembly-CSharp::FoodDataSO
   FoodId: Teh Hijau Tawar
-  FoodPrefab: {fileID: 0}
+  FoodPrefab:
+  - {fileID: 4417826435687172446, guid: 162844a65537b1541af938ce3486f1a7, type: 3}
+  - {fileID: 4417826435687172446, guid: 2e663d2cdb4aebe4685f873cc1041d37, type: 3}
+  - {fileID: 4417826435687172446, guid: ef85a370111630142bce78b5180a1c45, type: 3}
+  - {fileID: 4417826435687172446, guid: 4c2e4f7479145f54dae833ef6e641f4a, type: 3}
+  - {fileID: 4417826435687172446, guid: 63ff93823553b754e93c673d0811ab0e, type: 3}
+  - {fileID: 4417826435687172446, guid: 7a53c30a61d45a14c96274f595cc43d3, type: 3}
+  - {fileID: 4417826435687172446, guid: 5dd8f5c1ad5c0b3439e8d4fc6d45755b, type: 3}
+  - {fileID: 4417826435687172446, guid: c78d036b5d387374281ae7f0ac25b999, type: 3}
+  - {fileID: 4417826435687172446, guid: 93d4c3ce5afcc274ebab311894176a6d, type: 3}
   Components:
   - ComponentType: 0
     AttributeFields:

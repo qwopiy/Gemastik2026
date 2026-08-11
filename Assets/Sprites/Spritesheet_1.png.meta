@@ -345,7 +345,7 @@ TextureImporter:
         height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 88}
       customData: 
       outline: []
       physicsShape: []
@@ -361,13 +361,13 @@ TextureImporter:
       name: Spritesheet_1_7
       rect:
         serializedVersion: 2
-        x: 1792
+        x: 1832
         y: 768
-        width: 256
+        width: 216
         height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 26, w: 0}
       customData: 
       outline: []
       physicsShape: []
@@ -518,7 +518,7 @@ TextureImporter:
         x: 1536
         y: 512
         width: 256
-        height: 256
+        height: 188
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -537,10 +537,10 @@ TextureImporter:
       name: Spritesheet_1_15
       rect:
         serializedVersion: 2
-        x: 1792
+        x: 1791
         y: 512
         width: 256
-        height: 256
+        height: 188
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

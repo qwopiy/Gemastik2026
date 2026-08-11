@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 2244277717764862853}
   m_Layer: 6
   m_Name: Container
-  m_TagString: CompactView
+  m_TagString: Drawer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

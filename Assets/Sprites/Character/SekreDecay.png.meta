@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 6442a04260350f14a99417326c8b1675
+guid: 3821a3a7392c9bf4e97976482a51b967
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4594101485688967996
-    second: SekreDecay_0
-  - first:
-      213: 2676059403054877047
-    second: SekreDecay_1
+      213: -3765277468612625056
+    second: SekreDecay 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -78,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,42 +116,20 @@ TextureImporter:
       name: SekreDecay_0
       rect:
         serializedVersion: 2
-        x: 6
+        x: 0
         y: 0
-        width: 500
+        width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c33d59ce5f681cf30800000000000000
-      internalID: 4594101485688967996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SekreDecay_1
-      rect:
-        serializedVersion: 2
-        x: 462
-        y: 96
-        width: 46
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7790ee449d5432520800000000000000
-      internalID: 2676059403054877047
+      spriteID: 02bfdc8fe0cb59a43a59ddf0173f7c37
+      internalID: 1492349440
       vertices: []
       indices: 
       edges: []
@@ -163,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3abfdbc7633a19246b526bd0c47c190e
     internalID: 0
     vertices: []
     indices: 
@@ -171,10 +146,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":512.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      SekreDecay_0: 4594101485688967996
-      SekreDecay_1: 2676059403054877047
+      SekreDecay_0: 1492349440
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

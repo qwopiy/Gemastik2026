@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30b7c14c4135bc499d188a463aafd1f, type: 3}
+  m_Name: EsBungaRosella
+  m_EditorClassIdentifier: Assembly-CSharp::FoodDisplaySO
+  itemName: Es Bunga Rosella
+  ExpiredDate: 
+  BrandClaim: 
+  baseSprite: {fileID: -5562123036859912818, guid: 94fa567d9dcb5e64e9944382aa3b5eaa, type: 3}
+  maskSprite: {fileID: 6304381808101600743, guid: 17f8edadd1d580046a1ddc9d0088c9f0, type: 3}
+  brandSprite: {fileID: -589760911, guid: d632a6297db002348a5ee49f4e291e5c, type: 3}
+  conditionSprite: {fileID: -63471845, guid: d632a6297db002348a5ee49f4e291e5c, type: 3}
+  primaryColor: {r: 0.78039217, g: 0.08235294, b: 0.52156866, a: 1}
+  secondaryColor: {r: 0.1254902, g: 0.69803923, b: 0.6666667, a: 1}
+  tertiaryColor: {r: 1, g: 0.4117647, b: 0.7058824, a: 1}

@@ -28,8 +28,9 @@ public class ClientController : MonoBehaviour
         DialogueEventManager.Instance.OnClientExited -= OnClientExit;
     }
 
-    public void SetClientImage(Sprite sprite)
+    public void SetClientImage()
     {
+        Sprite sprite = LevelManager.Instance.FoodDataList[LevelManager.Instance.index].Dialogue.speakersSprite;
         if (clientImage == null)
         {
             clientImage = GetComponent<Image>();
@@ -56,9 +57,11 @@ public class ClientController : MonoBehaviour
     {
         yield return new WaitForSeconds(LevelManager.Instance.delayBetweenClients);
 
+        Debug.Log("Started Next Client Dialogue");
         if (LevelManager.Instance.index < LevelManager.Instance.FoodDataList.Count)
         {
             LevelManager.Instance.TriggerDialogue(LevelManager.Instance.index);
+            DialogueEventManager.Instance.TriggerClientEnter();
         }
         else
         {

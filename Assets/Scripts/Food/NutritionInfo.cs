@@ -6,24 +6,15 @@ public class NutritionInfo : MonoBehaviour
 {
     [Header("Sajian Elements")]
     public TextMeshProUGUI portionText;
-    private int portionSize = 1;
     public TextMeshProUGUI portionPerPcsText;
-    private int portionPerPcs = 1;
     public TextMeshProUGUI caloriesText;
-    private int totalCalories = 1;
     [Header("Tabel Nutrisi Elements")]
     public TextMeshProUGUI totalFatText;
-    private int totalFat = 1;
     public TextMeshProUGUI saturatedFatText;
-    private int saturatedFat = 1;
     public TextMeshProUGUI proteinText;
-    private int protein = 1;
     public TextMeshProUGUI totalCarbohydratesText;
-    private int totalCarbohydrates = 1;
     public TextMeshProUGUI sugarText;
-    private int sugar = 1;
     public TextMeshProUGUI sodiumText;
-    private int sodium = 1;
 
     [Header("Komposisi Settings")]
     public TextMeshProUGUI compositionText;
@@ -40,16 +31,13 @@ public class NutritionInfo : MonoBehaviour
                         switch (attribute.FieldId)
                         {
                             case FoodAttributeFieldId.ServingSize:
-                                portionSize = int.Parse(attribute.Value);
-                                portionText.text = $"Takaran Saji {portionSize}g";
+                                portionText.text = $"Takaran Saji {attribute.Value}";
                                 break;
                             case FoodAttributeFieldId.ServingCount:
-                                portionPerPcs = int.Parse(attribute.Value);
-                                portionPerPcsText.text = $"{portionPerPcs} Sajian per Kemasan";
+                                portionPerPcsText.text = $"{attribute.Value} Sajian per Kemasan";
                                 break;
                             case FoodAttributeFieldId.Calories:
-                                totalCalories = int.Parse(attribute.Value);
-                                caloriesText.text = $"{totalCalories} kkal";
+                                caloriesText.text = $"{attribute.Value} kkal";
                                 break;
                         }
                     }
@@ -61,29 +49,22 @@ public class NutritionInfo : MonoBehaviour
                         switch (attribute.FieldId)
                         {
                             case FoodAttributeFieldId.TotalFat:
-                                totalFat = int.Parse(attribute.Value);
-                                totalFatText.text = $"{totalFat}g";
-                                Debug.Log("Total Fat: " + totalFat);
+                                totalFatText.text = $"{attribute.Value}g";
                                 break;
                             case FoodAttributeFieldId.SaturatedFat:
-                                saturatedFat = int.Parse(attribute.Value);
-                                saturatedFatText.text = $"{saturatedFat}g";
+                                saturatedFatText.text = $"{attribute.Value}g";
                                 break;
                             case FoodAttributeFieldId.Protein:
-                                protein = int.Parse(attribute.Value);
-                                proteinText.text = $"{protein}g";
+                                proteinText.text = $"{attribute.Value}g";
                                 break;
                             case FoodAttributeFieldId.Carbohydrates:
-                                totalCarbohydrates = int.Parse(attribute.Value);
-                                totalCarbohydratesText.text = $"{totalCarbohydrates}g";
+                                totalCarbohydratesText.text = $"{attribute.Value}g";
                                 break;
                             case FoodAttributeFieldId.Sugar:
-                                sugar = int.Parse(attribute.Value);
-                                sugarText.text = $"{sugar}g";
+                                sugarText.text = $"{attribute.Value}g";
                                 break;
                             case FoodAttributeFieldId.Sodium:
-                                sodium = int.Parse(attribute.Value);
-                                sodiumText.text = $"{sodium}mg";
+                                sodiumText.text = $"{attribute.Value}mg";
                                 break;
                         }
                     }
