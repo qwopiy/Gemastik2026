@@ -44,7 +44,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 9064396904449658364, guid: 2ba2a25d8063a864c818cee1e1f240c6, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -173,7 +173,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 6851794359670005685, guid: 2ba2a25d8063a864c818cee1e1f240c6, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -318,8 +318,12 @@ MonoBehaviour:
   Trashbin: {fileID: 0}
   PaperFold: {fileID: 0}
   Footsteps: {fileID: 0}
-  Stamps: {fileID: 0}
-  Click: {fileID: 8300000, guid: dc8303cfbe62f2f419d0f30dc3e2dbbc, type: 3}
+  Stamp: {fileID: 8300000, guid: f6347db686eae4c4ba006261257cc4ac, type: 3}
+  Click: {fileID: 8300000, guid: 0ef7fd287a1e3774eb1b195d3e1c8ca4, type: 3}
+  DrawerOpen: {fileID: 0}
+  DrawerClose: {fileID: 0}
+  PageFlip: {fileID: 0}
+  MagnifierSound: {fileID: 0}
   CrowdSound: {fileID: 0}
 --- !u!1 &8334348957662838733
 GameObject:
@@ -368,7 +372,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

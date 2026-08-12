@@ -11,7 +11,6 @@ public enum ObjectState
 [RequireComponent(typeof(CanvasGroup))]
 public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    private static WaitForSeconds _waitForSeconds0_16 = new WaitForSeconds(0.16f);
     [Header("Debug Vars")]
     protected RectTransform rectTransform;
     protected Canvas canvas;
@@ -66,6 +65,8 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         // Calculate the bounds of the allowed drop area based on the borders
         GetBounds();
+
+        AudioManager.Instance.TriggerDrag();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -97,6 +98,8 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         Debug.Log("Dropped on: " + (ObjCurrentlyOn != null ? ObjCurrentlyOn.name : "Nothing"));
 
         CheckDropTarget(ObjCurrentlyOn);
+
+        AudioManager.Instance.TriggerDrop();
     }
 
     public virtual void CheckDropTarget(GameObject droppedOn)
@@ -116,6 +119,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         if (isTrashable && droppedOn.CompareTag("TrashBin"))
         {
             // Destroy the food item if dropped on the trash bin
+            AudioManager.Instance.TriggerTrashbin();
             Destroy(gameObject);
             return;
         }

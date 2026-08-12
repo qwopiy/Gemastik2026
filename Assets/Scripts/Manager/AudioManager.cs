@@ -22,9 +22,12 @@ public class AudioManager : MonoBehaviour
     public AudioClip Trashbin;
     public AudioClip PaperFold;
     public AudioClip Footsteps;
-    public AudioClip Stamps;
+    public AudioClip Stamp;
     public AudioClip Click;
-
+    public AudioClip DrawerOpen;
+    public AudioClip DrawerClose;
+    public AudioClip PageFlip;
+    public AudioClip MagnifierSound;
 
 
     [Header("Ambience")]
@@ -120,8 +123,24 @@ public class AudioManager : MonoBehaviour
     {
         TriggerPlaySoundEffect(Footsteps);
     }
-    public void TriggerStamps()
+    public void TriggerStamp()
     {
-        TriggerPlaySoundEffect(Stamps);
+        TriggerPlaySoundEffect(Stamp);
+    }
+    public void TriggerDrawerOpen()
+    {
+        TriggerPlaySoundEffect(DrawerOpen);
+    }
+    public void TriggerDrawerClose()
+    {
+        TriggerPlaySoundEffect(DrawerClose);
+    }
+    public void TriggerPageFlip()
+    {
+        TriggerPlaySoundEffect(PageFlip);
+    }
+    public void TriggerMagnifierSound()
+    {
+        TriggerPlaySoundEffect(MagnifierSound);
     }
 }
