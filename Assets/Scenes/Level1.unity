@@ -1269,6 +1269,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 991379302}
+        m_TargetAssemblyTypeName: GameStarter, Assembly-CSharp
+        m_MethodName: HideBox
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &306471180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2402,6 +2414,18 @@ MonoBehaviour:
       - m_Target: {fileID: 991379302}
         m_TargetAssemblyTypeName: GameStarter, Assembly-CSharp
         m_MethodName: EndDay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 991379302}
+        m_TargetAssemblyTypeName: GameStarter, Assembly-CSharp
+        m_MethodName: HideBox
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10838,10 +10862,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6024561961673493453, guid: a3cac5e90be9e30448748eebd8f3c24d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6649345434974650225, guid: a3cac5e90be9e30448748eebd8f3c24d, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9103740293658742928, guid: a3cac5e90be9e30448748eebd8f3c24d, type: 3}
