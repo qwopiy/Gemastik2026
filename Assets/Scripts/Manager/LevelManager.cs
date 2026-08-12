@@ -18,6 +18,7 @@ public class LevelManager : MonoBehaviour
 
     public event Action<Dialogues> OnDialogueTriggered;
     public event Action SendFoodEvent;
+    public event Action LevelStartedEvent;
     public event Action LevelCompletedEvent;
 
     private void Awake()
@@ -77,6 +78,7 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
+            TriggerLevelCompletedEvent();
             Debug.Log("All food items have been spawned.");
         }
     }
@@ -103,6 +105,10 @@ public class LevelManager : MonoBehaviour
         SendFoodEvent?.Invoke();
     }
 
+    public void TriggerLevelStartedEvent()
+    {
+        LevelStartedEvent?.Invoke();
+    }
     public void TriggerLevelCompletedEvent()
     {
         LevelCompletedEvent?.Invoke();
