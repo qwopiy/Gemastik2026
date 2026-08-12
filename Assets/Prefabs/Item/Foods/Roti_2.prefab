@@ -1112,7 +1112,37 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 217f6fe011462284d98881da0a2dde2b, type: 2}
   - {fileID: 11400000, guid: 8b331e84ee5f92c41a0daec06599b520, type: 2}
   - {fileID: 11400000, guid: db60ba026e622bd42a634105e9ef6860, type: 2}
-  DefectedDataList: []
+  DefectedDataList:
+  - {fileID: 11400000, guid: 4f1aa7d15724b064091a4422047f1397, type: 2}
+  - {fileID: 11400000, guid: dc59898667791ad438a99d8f57fd6240, type: 2}
+  - {fileID: 11400000, guid: 3fdc4a70498b1d9408c46a3d0f997914, type: 2}
+  - {fileID: 11400000, guid: 1e05fda4f732cc6498f0c7adf4747d15, type: 2}
+  - {fileID: 11400000, guid: 5253a9e434bab624fa95db6d550c4438, type: 2}
+  - {fileID: 11400000, guid: 07106debd6be2b943bc726d3ba4e0f63, type: 2}
+  - {fileID: 11400000, guid: 3f88af4e20d684f4f997ec2691d50dca, type: 2}
+  - {fileID: 11400000, guid: 39d2923ada657ab43b1a81eeca9ec234, type: 2}
+  - {fileID: 11400000, guid: fe0fc345cb857e74d8eefca47454e873, type: 2}
+  - {fileID: 11400000, guid: 67d958fea233f4e46b7bab13614a737d, type: 2}
+  - {fileID: 11400000, guid: 9abf25b79ece60f409da763219192b17, type: 2}
+  - {fileID: 11400000, guid: 15b4d57f23061014ab038f669651a3b9, type: 2}
+  - {fileID: 11400000, guid: 26489e44bdad0a04bb8270ce55faf7fd, type: 2}
+  - {fileID: 11400000, guid: 9f3384f6e06c4fa4c89d326997222400, type: 2}
+  - {fileID: 11400000, guid: 7902c6790de3a4a4681d2add103ad31f, type: 2}
+  - {fileID: 11400000, guid: 373fdad6e28ebb241ab01c2c626a3263, type: 2}
+  - {fileID: 11400000, guid: 112764efe34cb3b459540295b4bc3452, type: 2}
+  - {fileID: 11400000, guid: ad4278a9c1f09bd4ea2012a49a5ce840, type: 2}
+  - {fileID: 11400000, guid: 91548dc7526c0ea49a97ddd150f2c4b8, type: 2}
+  - {fileID: 11400000, guid: d89e8cd1c0d37cf4388b8b139c14e251, type: 2}
+  - {fileID: 11400000, guid: cf8795b9953c4104ebd05ee1d274ab5c, type: 2}
+  - {fileID: 11400000, guid: d5b7a92adbb2e9941859461c0b7717da, type: 2}
+  - {fileID: 11400000, guid: 866a7b7155b2b764c8e9b1f37ab63db2, type: 2}
+  - {fileID: 11400000, guid: 3101cc7f84628fe40a1eb28d774fb1b4, type: 2}
+  - {fileID: 11400000, guid: 36562cccb671d024d90ed66f0fcb0015, type: 2}
+  - {fileID: 11400000, guid: 990151f28ce076446829baa30d675484, type: 2}
+  - {fileID: 11400000, guid: 321508a317d91c24083b61a2f08e8e44, type: 2}
+  - {fileID: 11400000, guid: 0368bbfe69b22d6408c8ede8295d8a45, type: 2}
+  - {fileID: 11400000, guid: e9583292b872e4348bd682643cf38c4d, type: 2}
+  - {fileID: 11400000, guid: 32818adebf2815c4c804566165ac68ef, type: 2}
 --- !u!1 &7814790535284018831
 GameObject:
   m_ObjectHideFlags: 0
