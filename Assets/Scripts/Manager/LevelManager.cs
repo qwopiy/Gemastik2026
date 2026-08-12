@@ -78,6 +78,7 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
+            EndingManager.Instance.CheckProgress();
             TriggerLevelCompletedEvent();
             Debug.Log("All food items have been spawned.");
         }

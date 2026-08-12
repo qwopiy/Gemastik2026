@@ -21,6 +21,7 @@ public class EndingManager : MonoBehaviour
     public float timeLimit = 60f; // Example time limit in seconds
     public float elapsedTime = 0f;
     public bool isTimerRunning = false;
+
     [Header("Ending Variables")]
     public int corrects = 0;
     public int mistakes = 0;
@@ -148,6 +149,18 @@ public class EndingManager : MonoBehaviour
     public void AddMistakeType(MistakeType type)
     {
         mistakeTypes.Add(type);
+    }
+
+    public void CheckProgress()
+    {
+        int progress = GameDataManager.gameData.levelProgress;
+        int currentLevel = LevelManager.Instance.Level;
+        int foodCount = LevelManager.Instance.FoodDataList.Count;
+
+        if (currentLevel > progress && corrects == foodCount)
+        {
+            GameDataManager.gameData.IncreaseLevelProgress();
+        }
     }
 
     private int Max(List<int> list, out MistakeType maxType)

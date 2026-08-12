@@ -4,6 +4,7 @@ public class GameStarter : MonoBehaviour
     private static readonly int HideBoxHash = Animator.StringToHash("HideBox");
     private static readonly int ShowBoxHash = Animator.StringToHash("ShowBox");
     public Animator animator;
+    public GameObject levelCompletePanel;
 
     private void Start()
     {
@@ -32,6 +33,7 @@ public class GameStarter : MonoBehaviour
 
     public void EndDay()
     {
-        TransitionManager.Instance.GoToScene("MainMenu");
+        TransitionManager.Instance.TransitionToGameObject(levelCompletePanel);
+        levelCompletePanel.GetComponent<LevelCompleteController>().SetStats();
     }
 }
