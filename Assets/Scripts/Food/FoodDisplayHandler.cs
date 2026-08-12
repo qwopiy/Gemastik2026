@@ -65,23 +65,19 @@ public class FoodDisplayHandler : MonoBehaviour
 
         baseImage.sprite = itemData.baseSprite;
 
-        // Ensure this Image has its own material instance so we don't modify shared materials
         Material mat = baseImage.material;
         if (mat == null)
         {
-            // Try to grab the rendering material (may return a usable instance) otherwise fall back to UI default
             var renderMat = baseImage.materialForRendering;
             mat = renderMat != null ? Instantiate(renderMat) : new Material(Shader.Find("UI/Default"));
             baseImage.material = mat;
         }
         else
         {
-            // Instantiate to avoid editing a shared material
             baseImage.material = Instantiate(mat);
             mat = baseImage.material;
         }
 
-        // Set shader properties on the material instance
         mat.SetColor(PrimaryColorID, itemData.primaryColor);
         mat.SetColor(SecondaryColorID, itemData.secondaryColor);
         mat.SetColor(TertiaryColorID, itemData.tertiaryColor);

@@ -588,7 +588,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -300, y: 0}
-  m_SizeDelta: {x: 300, y: 400}
+  m_SizeDelta: {x: 384, y: 512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2970964398064886464
 CanvasRenderer:
@@ -1196,8 +1196,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 400}
+  m_AnchoredPosition: {x: 84, y: 0}
+  m_SizeDelta: {x: 384, y: 512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2793199454797984846
 CanvasRenderer:
@@ -1562,31 +1562,76 @@ MonoBehaviour:
   rules:
   - PageTitle: Cover
     LeftPage: {fileID: 0}
-    RightPage: {fileID: -8672492875515090611, guid: 764ed81dd90fa714bbd6491cfe947157, type: 3}
+    RightPage: {fileID: -1599630515, guid: 2a31ba3f01c71a44cb526b41f9376a28, type: 3}
     PageObjects: []
   - PageTitle: Daftar Isi
-    LeftPage: {fileID: -58903192, guid: 1c5a042dd8ee42a41b9a3eb2e7d8222d, type: 3}
-    RightPage: {fileID: 968800177, guid: 1c5a042dd8ee42a41b9a3eb2e7d8222d, type: 3}
+    LeftPage: {fileID: 7993520667055627734, guid: 5e6ceecb1bf62df4988fde950e941cf5, type: 3}
+    RightPage: {fileID: 1362828288, guid: 5e6ceecb1bf62df4988fde950e941cf5, type: 3}
     PageObjects:
     - {fileID: 2962370285958249538}
-  - PageTitle: General
-    LeftPage: {fileID: -8707180747815748851, guid: 25fec76c1c513874a9a9398f389a344b, type: 3}
-    RightPage: {fileID: -358741077169394348, guid: f5ebdadab1f7bef4e985bc297926afad, type: 3}
+  - PageTitle: General_1
+    LeftPage: {fileID: -6741041473948645348, guid: 6f27105cc5568f24ab64a0fb3779695f, type: 3}
+    RightPage: {fileID: -117145681, guid: 6f27105cc5568f24ab64a0fb3779695f, type: 3}
     PageObjects:
     - {fileID: 1840030740352020612}
-  - PageTitle: NutriLevel
-    LeftPage: {fileID: -5552235038892527940, guid: 9819e50d17cbb5c4ca66e8b05b9ea0f2, type: 3}
-    RightPage: {fileID: -5552235038892527940, guid: 9819e50d17cbb5c4ca66e8b05b9ea0f2, type: 3}
+  - PageTitle: General_2
+    LeftPage: {fileID: -5492895811935090390, guid: bc940ee6f7aca2644b761dba18bed80c, type: 3}
+    RightPage: {fileID: 1842244243, guid: bc940ee6f7aca2644b761dba18bed80c, type: 3}
     PageObjects:
     - {fileID: 1840030740352020612}
-  - PageTitle: ExpirationDefect
-    LeftPage: {fileID: -353201152214648803, guid: a9aa091463b006449a9921951bcb31a8, type: 3}
-    RightPage: {fileID: -353201152214648803, guid: a9aa091463b006449a9921951bcb31a8, type: 3}
+  - PageTitle: General_3
+    LeftPage: {fileID: -8549354696002115576, guid: c41c550a0a8a0fe44bcb4f1e85bebc93, type: 3}
+    RightPage: {fileID: -1302404646, guid: c41c550a0a8a0fe44bcb4f1e85bebc93, type: 3}
     PageObjects:
     - {fileID: 1840030740352020612}
-  - PageTitle: Composition
-    LeftPage: {fileID: 9002669602560848678, guid: b246c19fab4ebe24c9032a07ba101c74, type: 3}
-    RightPage: {fileID: 9002669602560848678, guid: b246c19fab4ebe24c9032a07ba101c74, type: 3}
+  - PageTitle: General_4
+    LeftPage: {fileID: 1854625239058199239, guid: ebcb3bb433531f54087d266e6ca54c29, type: 3}
+    RightPage: {fileID: -618330249, guid: ebcb3bb433531f54087d266e6ca54c29, type: 3}
+    PageObjects:
+    - {fileID: 1840030740352020612}
+  - PageTitle: General_5
+    LeftPage: {fileID: 9154317040459460214, guid: df8d1db4f6ef4ea48bd05f69185d36df, type: 3}
+    RightPage: {fileID: -1483844318, guid: df8d1db4f6ef4ea48bd05f69185d36df, type: 3}
+    PageObjects:
+    - {fileID: 1840030740352020612}
+  - PageTitle: General_6
+    LeftPage: {fileID: -6647942536289137211, guid: a74965bd983096e4598b50cf78fc283e, type: 3}
+    RightPage: {fileID: 1669488796, guid: a74965bd983096e4598b50cf78fc283e, type: 3}
+    PageObjects:
+    - {fileID: 1840030740352020612}
+  - PageTitle: NutriLevel_1
+    LeftPage: {fileID: -2162477637246815368, guid: 7e881d2a173d05944916b2eab1732837, type: 3}
+    RightPage: {fileID: 204211749, guid: 7e881d2a173d05944916b2eab1732837, type: 3}
+    PageObjects:
+    - {fileID: 1840030740352020612}
+  - PageTitle: NutriLevel_2
+    LeftPage: {fileID: -4832710473252348533, guid: dbeb403f006217d44babf50ac95640ea, type: 3}
+    RightPage: {fileID: 827735877, guid: dbeb403f006217d44babf50ac95640ea, type: 3}
+    PageObjects:
+    - {fileID: 1840030740352020612}
+  - PageTitle: ExpirationDefect_1
+    LeftPage: {fileID: -1578314098415330756, guid: 22ad7c3278335324fb387b61d35a92bd, type: 3}
+    RightPage: {fileID: -1311813104, guid: 22ad7c3278335324fb387b61d35a92bd, type: 3}
+    PageObjects:
+    - {fileID: 1840030740352020612}
+  - PageTitle: ExpirationDefect_2
+    LeftPage: {fileID: -8366030588998641722, guid: ac50072ea8631694b9ab8a2ae9113b08, type: 3}
+    RightPage: {fileID: 1513916650, guid: ac50072ea8631694b9ab8a2ae9113b08, type: 3}
+    PageObjects:
+    - {fileID: 1840030740352020612}
+  - PageTitle: Klaim_1
+    LeftPage: {fileID: 3386395391774520834, guid: 32c609ef429f1d3479fe659f17fe265f, type: 3}
+    RightPage: {fileID: -733132887, guid: 32c609ef429f1d3479fe659f17fe265f, type: 3}
+    PageObjects:
+    - {fileID: 1840030740352020612}
+  - PageTitle: Klaim_2
+    LeftPage: {fileID: -3819252362092484696, guid: 02adb96958443d94badd82dc893b2a48, type: 3}
+    RightPage: {fileID: 204360423, guid: 02adb96958443d94badd82dc893b2a48, type: 3}
+    PageObjects:
+    - {fileID: 1840030740352020612}
+  - PageTitle: Klaim_3
+    LeftPage: {fileID: 4348048581325450888, guid: 4a834d0ee4380ca44b85c60b6aa109cd, type: 3}
+    RightPage: {fileID: 916912431, guid: 4a834d0ee4380ca44b85c60b6aa109cd, type: 3}
     PageObjects:
     - {fileID: 1840030740352020612}
   leftPage: {fileID: 157234058582999292}
