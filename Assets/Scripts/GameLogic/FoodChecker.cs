@@ -163,7 +163,7 @@ public class FoodChecker : MonoBehaviour
                     case ClaimType.LowSugar:
                     case ClaimType.LowSalt:
                     case ClaimType.Healthy:
-                    case ClaimType.GGL:
+                    case ClaimType.NutriLevel:
                         EndingManager.Instance.AddMistakeType(MistakeType.WrongNutritionClaim);
                         break;
                     case ClaimType.NoPreservative:

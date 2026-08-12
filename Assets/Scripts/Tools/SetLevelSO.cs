@@ -183,7 +183,7 @@ public class SetLevelSO : EditorWindow
                 return float.Parse(so.Components[1].AttributeFields[5].Value) <= 120f * servingSize / 100f;
             case ClaimType.LowTotalFat:
                 return float.Parse(so.Components[1].AttributeFields[1].Value) < 3f * servingSize / 100f;
-            case ClaimType.GGL:
+            case ClaimType.NutriLevel:
                 return so.GGLRating.ToString() == description[^1].ToString();
             case ClaimType.Healthy:
                 return so.GGLRating == GGLSticker.A;
