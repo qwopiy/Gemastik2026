@@ -59,6 +59,11 @@ public class GameDataManager : MonoBehaviour
             ReadData();
         }
     }
+
+    public void OnApplicationQuit()
+    {
+        SaveData();
+    }
 }
 public enum Endings
 {
@@ -71,6 +76,7 @@ public enum Endings
     ExpiredOrDefect,
     WrongNutritionClaim,
     WrongCompositionClaim,
+    PerfectSpeedrunner,
 }
 
 [Serializable]
@@ -88,5 +94,47 @@ public class GameData
     public bool defectOrExpiredEndingUnlocked = false;
     public bool wrongNutritionClaimEndingUnlocked = false;
     public bool wrongCompositionClaimEndingUnlocked = false;
+    public bool perfectSpeedrunnerEndingUnlocked = false;
 
+    public void IncreaseLevelProgress()
+    {
+        levelProgress++;
+    }
+
+    public void UnlockEnding(Endings ending)
+    {
+        switch (ending)
+        {
+            case Endings.Neutral:
+                neutralEndingUnlocked = true;
+                break;
+            case Endings.AllMistake:
+                allMistakeEndingUnlocked = true;
+                break;
+            case Endings.AllCorrect:
+                allCorrectEndingUnlocked = true;
+                break;
+            case Endings.Sugar:
+                sugarEndingUnlocked = true;
+                break;
+            case Endings.Salt:
+                saltEndingUnlocked = true;
+                break;
+            case Endings.Fat:
+                fatEndingUnlocked = true;
+                break;
+            case Endings.ExpiredOrDefect:
+                defectOrExpiredEndingUnlocked = true;
+                break;
+            case Endings.WrongNutritionClaim:
+                wrongNutritionClaimEndingUnlocked = true;
+                break;
+            case Endings.WrongCompositionClaim:
+                wrongCompositionClaimEndingUnlocked = true;
+                break;
+            case Endings.PerfectSpeedrunner:
+                perfectSpeedrunnerEndingUnlocked = true;
+                break;
+        }
+    }
 }

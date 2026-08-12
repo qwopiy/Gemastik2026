@@ -35,6 +35,7 @@ public class RulebookController : MonoBehaviour
         {
             currentPageIndex++;
             DisplayPage(currentPageIndex);
+            AudioManager.Instance.TriggerPageFlip();
         }
     }
 
@@ -44,6 +45,7 @@ public class RulebookController : MonoBehaviour
         {
             currentPageIndex--;
             DisplayPage(currentPageIndex);
+            AudioManager.Instance.TriggerPageFlip();
         }
     }
 
