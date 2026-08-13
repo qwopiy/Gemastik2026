@@ -17,8 +17,6 @@ public class StampStationHandle : MonoBehaviour
     public RectTransform stampArm;        // The moving physical handle graphic
     public float pressDistance = 25f;     // How far down the arm moves on click
     public float pressSpeed = 0.08f;      // Down/Up animation duration
-    public AudioSource audioSource;
-    public AudioClip stampThudSound;
 
     private bool isStamping = false;
     private Vector2 originalArmPos;
