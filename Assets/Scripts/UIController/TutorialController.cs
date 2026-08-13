@@ -17,6 +17,7 @@ public class TutorialController : MonoBehaviour, IPointerClickHandler
 
         if (tutorialObjects.Count > 0)
         {
+            tutorialPanel.SetActive(true);
             tutorialObjects[0].SetActive(true);
             index = 0;
         }

@@ -10,7 +10,7 @@ public class LevelManager : MonoBehaviour
     public List<LevelFoodData> FoodDataList;
     public List<FoodDataSO> FoodToSpawn;
     [HideInInspector] public List<FoodDataSO> FoodSpawned;
-    public Transform FoodParent;
+    public GameObjectAnchorSO FoodParent;
     public float delayBetweenClients = 0.5f;
 
     [Header("Debug")]
@@ -18,6 +18,7 @@ public class LevelManager : MonoBehaviour
 
     public event Action<Dialogues> OnDialogueTriggered;
     public event Action SendFoodEvent;
+    public event Action LevelStartedEvent;
     public event Action LevelCompletedEvent;
 
     private void Awake()
@@ -35,6 +36,10 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        foreach (var foodList in FoodDataList)
+        {
+            foodList.LoadFoodDataFromFolder();
+        }
         SendFoodEvent += SpawnNextFood;
     }
 
@@ -48,9 +53,9 @@ public class LevelManager : MonoBehaviour
         FoodToSpawn.Clear();
         if (foodData.FoodData != null)
         {
-            for (int i = 0; i < foodData.FoodData.Count; i++)
+            for (int i = 0; i < foodData.AmountToSpawn; i++)
             {
-                FoodDataSO foodDataSO = foodData.FoodData[i].GetRandomFood();
+                FoodDataSO foodDataSO = foodData.GetRandomFood();
                 FoodToSpawn.Add(foodDataSO);
             }
 
@@ -72,11 +77,13 @@ public class LevelManager : MonoBehaviour
     {
         if (index < FoodDataList.Count)
         {
-            SpawnFood(FoodDataList[index], FoodParent);
+            SpawnFood(FoodDataList[index], FoodParent.value.transform);
             index++;
         }
         else
         {
+            EndingManager.Instance.CheckProgress();
+            TriggerLevelCompletedEvent();
             Debug.Log("All food items have been spawned.");
         }
     }
@@ -103,6 +110,10 @@ public class LevelManager : MonoBehaviour
         SendFoodEvent?.Invoke();
     }
 
+    public void TriggerLevelStartedEvent()
+    {
+        LevelStartedEvent?.Invoke();
+    }
     public void TriggerLevelCompletedEvent()
     {
         LevelCompletedEvent?.Invoke();
@@ -113,67 +124,93 @@ public class LevelManager : MonoBehaviour
 public class LevelFoodData
 {
     public Dialogues Dialogue;
-    public List<FoodLevelList> FoodData;
-}
+    public int AmountToSpawn = 3;
+    [Tooltip("Folder path relative to the Resources folder, e.g., Assets/Resources + 'FoodData/Level1'")]
+    public string foodFolder = "FoodData/Level1";
+    public List<FoodDataSO> FoodData;
 
-[Serializable]
-public class FoodLevelList
-{
-    [Serializable]
-    public struct FoodChance
+    public void LoadFoodDataFromFolder()
     {
-        public FoodDataSO FoodData;
-        public float Chance;
-        public FoodChance(FoodDataSO foodData, float chance)
+        if (foodFolder != null)
         {
-            FoodData = foodData;
-            Chance = chance;
+            FoodData = new List<FoodDataSO>(Resources.LoadAll<FoodDataSO>(foodFolder));
+        }
+        else
+        {
+            Debug.LogWarning("Food folder is not assigned.");
         }
     }
-    public List<FoodChance> foodChances;
+
     public FoodDataSO GetRandomFood()
     {
-        if (foodChances == null || foodChances.Count == 0)
+        if (FoodData == null || FoodData.Count == 0)
+        {
+            Debug.LogWarning("FoodData list is empty or not assigned.");
             return null;
-        List<float> chances = new List<float>();
-        foreach (var chance in foodChances)
-        {
-            chances.Add(chance.Chance);
         }
-        int randomIndex = GetRandomUpgradeIndex(chances);
-        return randomIndex >= 0 ? foodChances[randomIndex].FoodData : null;
-    }
-
-    public int GetRandomUpgradeIndex(List<float> chances)
-    {
-        if (chances == null || chances.Count == 0)
-            return -1; // Or return 0 depending on your error fallback design
-
-        // 1. Calculate total sum of all weights
-        float totalWeight = 0f;
-        for (int i = 0; i < chances.Count; i++)
-        {
-            totalWeight += chances[i];
-        }
-
-        if (totalWeight <= 0f)
-            return 0;
-
-        // 2. Roll a random number between 0 (inclusive) and totalWeight (exclusive)
-        float roll = UnityEngine.Random.Range(0f, totalWeight);
-
-        // 3. Step through items using index 'i' directly
-        float cumulativeWeight = 0f;
-        for (int i = 0; i < chances.Count; i++)
-        {
-            cumulativeWeight += chances[i];
-            if (roll < cumulativeWeight)
-            {
-                return i; // Directly returns the correct index, even with equal values!
-            }
-        }
-
-        // Fallback case due to floating point rounding precision
-        return chances.Count - 1;
+        int randomIndex = UnityEngine.Random.Range(0, FoodData.Count);
+        return FoodData[randomIndex];
     }
 }
+
+//[Serializable]
+//public class FoodLevelList
+//{
+//    [Serializable]
+//    public struct FoodChance
+//    {
+//        public FoodDataSO FoodData;
+//        public float Chance;
+//        public FoodChance(FoodDataSO foodData, float chance)
+//        {
+//            FoodData = foodData;
+//            Chance = chance;
+//        }
+//    }
+//    public List<FoodChance> foodChances;
+//    public FoodDataSO GetRandomFood()
+//    {
+//        if (foodChances == null || foodChances.Count == 0)
+//            return null;
+//        List<float> chances = new List<float>();
+//        foreach (var chance in foodChances)
+//        {
+//            chances.Add(chance.Chance);
+//        }
+//        int randomIndex = GetRandomUpgradeIndex(chances);
+//        return randomIndex >= 0 ? foodChances[randomIndex].FoodData : null;
+//    }
+
+//    public int GetRandomUpgradeIndex(List<float> chances)
+//    {
+//        if (chances == null || chances.Count == 0)
+//            return -1; // Or return 0 depending on your error fallback design
+
+//        // 1. Calculate total sum of all weights
+//        float totalWeight = 0f;
+//        for (int i = 0; i < chances.Count; i++)
+//        {
+//            totalWeight += chances[i];
+//        }
+
+//        if (totalWeight <= 0f)
+//            return 0;
+
+//        // 2. Roll a random number between 0 (inclusive) and totalWeight (exclusive)
+//        float roll = UnityEngine.Random.Range(0f, totalWeight);
+
+//        // 3. Step through items using index 'i' directly
+//        float cumulativeWeight = 0f;
+//        for (int i = 0; i < chances.Count; i++)
+//        {
+//            cumulativeWeight += chances[i];
+//            if (roll < cumulativeWeight)
+//            {
+//                return i; // Directly returns the correct index, even with equal values!
+//            }
+//        }
+
+//        // Fallback case due to floating point rounding precision
+//        return chances.Count - 1;
+//    }
+//}

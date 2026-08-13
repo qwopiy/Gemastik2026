@@ -35,7 +35,7 @@ public static class ClaimStringsDatabase
         new(ClaimType.LowSalt, new List<string> { "Rendah Garam", "Low in salt", "Reduced salt content" }),
         new(ClaimType.Healthy, new List<string> { "Sehat", "Sehat untuk badan", "Good for your health" }),
         new(ClaimType.NoPreservative, new List<string> { "100% Alami", "Tanpa Pengawet", "No Preservatives", "Preservative-free" }),
-        new(ClaimType.GGL, new List<string> { "Nutri-Level A", "Nutri-Level B", "Nutri-Level C", "Nutri-Level D" }),
+        new(ClaimType.NutriLevel, new List<string> { "Nutri-Level A", "Nutri-Level B", "Nutri-Level C", "Nutri-Level D" }),
         new(ClaimType.Composition, new List<string> {}),
     };
     public static string GetRandomDescription(ClaimType claimType)

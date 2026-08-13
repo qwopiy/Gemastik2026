@@ -511,7 +511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DraggableFood
   currentState: 1
   ObjCurrentlyOn: {fileID: 0}
-  ObjInClientView: {fileID: 7445806874460407687}
+  ObjInClientView: {fileID: 0}
   ObjInDeskView: {fileID: 2477175870701130029}
   allowedTags:
   - DeskView
@@ -1249,7 +1249,27 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 38c2a3fbb5315fa4c867594047ab9543, type: 2}
   - {fileID: 11400000, guid: 8d394a78addbcb045ab6ad7ba364ee1a, type: 2}
   - {fileID: 11400000, guid: 1fd5e27c0e159f648aa032d58f443827, type: 2}
-  DefectedDataList: []
+  DefectedDataList:
+  - {fileID: 11400000, guid: 9751e8d295c79994c804e723cf5fe2a2, type: 2}
+  - {fileID: 11400000, guid: f1b4a7d04942d324b9a065f9797a9124, type: 2}
+  - {fileID: 11400000, guid: b0d70b65f45f2504883b2dae4a83078f, type: 2}
+  - {fileID: 11400000, guid: 263ea0146ee2b7f4abee125d8d6959c8, type: 2}
+  - {fileID: 11400000, guid: 5b1941615f53cd542a33f24536413700, type: 2}
+  - {fileID: 11400000, guid: ac63445c9887da249bde21dd825c0d91, type: 2}
+  - {fileID: 11400000, guid: b83fc1d0b7e7279429f9255c2aeddc40, type: 2}
+  - {fileID: 11400000, guid: 5fee9d3976fa61f45b65a452af151854, type: 2}
+  - {fileID: 11400000, guid: bb3fa503ca25c954cab54e91e0202d43, type: 2}
+  - {fileID: 11400000, guid: c353c247bdf9b284db201bbaa18b54ed, type: 2}
+  - {fileID: 11400000, guid: 95ec76e73f091f0409f1aedf1c8eda9a, type: 2}
+  - {fileID: 11400000, guid: 6e7dc3da803b41040b41b6b18d0c08c6, type: 2}
+  - {fileID: 11400000, guid: edc73194782e08f40a528617ba4e83e9, type: 2}
+  - {fileID: 11400000, guid: fa170dc58c9fd7f419052219a340b331, type: 2}
+  - {fileID: 11400000, guid: 63f3ef887bebfde4b82882f7071c54c5, type: 2}
+  - {fileID: 11400000, guid: 5995141f267ffcd4cbe0242867a3f290, type: 2}
+  - {fileID: 11400000, guid: 9c4f7b6000ed83b48b390b3870906151, type: 2}
+  - {fileID: 11400000, guid: a114de93c6d4c5c45ac3353ffaaa45b3, type: 2}
+  - {fileID: 11400000, guid: 6d6c93d72ba1d674889024c041a224e9, type: 2}
+  - {fileID: 11400000, guid: e388a07b51a1e8847a65846bdc38df85, type: 2}
 --- !u!1 &8499950805614393357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,7 +1577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 989524062856523302, guid: 0731b01527a54a74d9901d02ef2599cd, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 400
+      value: 274
       objectReference: {fileID: 0}
     - target: {fileID: 989524062856523302, guid: 0731b01527a54a74d9901d02ef2599cd, type: 3}
       propertyPath: m_LocalScale.x

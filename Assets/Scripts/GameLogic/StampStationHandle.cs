@@ -32,6 +32,7 @@ public class StampStationHandle : MonoBehaviour
     public void OnStampClicked()
     {
         if (isStamping) return;
+        AudioManager.Instance.TriggerStamp();
         StartCoroutine(PressStampSequence());
     }
 

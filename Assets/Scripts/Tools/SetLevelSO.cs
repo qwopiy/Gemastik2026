@@ -58,6 +58,7 @@ public class SetLevelSO : EditorWindow
             Directory.CreateDirectory(folderPath);
         }
 
+        int index = 0;
         // 3. Iterate over every file found
         foreach (string guid in randomGuids)
         {
@@ -83,10 +84,11 @@ public class SetLevelSO : EditorWindow
                 AddSOToLevel(newAsset, levelToSet); // Set the level for the new asset)
 
                 // Save the asset file to the project
-                string newAssetPath = $"{folderPath}/Level_{levelToSet}/Item_{newAsset.FoodId}.asset";
+                string newAssetPath = $"{folderPath}/Item_{index}_L{levelToSet}_ID{newAsset.FoodId}.asset";
                 //Debug.Log(newAssetPath);
                 AssetDatabase.CreateAsset(newAsset, newAssetPath);
 
+                index++;
                 //Debug.Log($"Iterating file: {childAsset.name} | Type: {childAsset.GetType()} | Path: {assetPath}");
             }
         }
@@ -183,7 +185,7 @@ public class SetLevelSO : EditorWindow
                 return float.Parse(so.Components[1].AttributeFields[5].Value) <= 120f * servingSize / 100f;
             case ClaimType.LowTotalFat:
                 return float.Parse(so.Components[1].AttributeFields[1].Value) < 3f * servingSize / 100f;
-            case ClaimType.GGL:
+            case ClaimType.NutriLevel:
                 return so.GGLRating.ToString() == description[^1].ToString();
             case ClaimType.Healthy:
                 return so.GGLRating == GGLSticker.A;

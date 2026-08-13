@@ -11,7 +11,7 @@ public enum ClaimType
     LowSugar, // < 5g sugar per serving
     LowSalt, // <= 120mg salt per serving
     LowTotalFat, // < 3g of total fat per serving
-    GGL, // Must be correct GGL sticker
+    NutriLevel, // Must be correct GGL sticker
     Healthy, // GGL must be A
     NoPreservative, // no preservative added
     Composition, // Must be correct composition

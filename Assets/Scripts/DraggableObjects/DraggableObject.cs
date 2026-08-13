@@ -11,7 +11,6 @@ public enum ObjectState
 [RequireComponent(typeof(CanvasGroup))]
 public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    private static WaitForSeconds _waitForSeconds0_16 = new WaitForSeconds(0.16f);
     [Header("Debug Vars")]
     protected RectTransform rectTransform;
     protected Canvas canvas;
@@ -66,6 +65,8 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         // Calculate the bounds of the allowed drop area based on the borders
         GetBounds();
+
+        AudioManager.Instance.TriggerDrag();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -97,6 +98,8 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         Debug.Log("Dropped on: " + (ObjCurrentlyOn != null ? ObjCurrentlyOn.name : "Nothing"));
 
         CheckDropTarget(ObjCurrentlyOn);
+
+        AudioManager.Instance.TriggerDrop();
     }
 
     public virtual void CheckDropTarget(GameObject droppedOn)
@@ -116,6 +119,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         if (isTrashable && droppedOn.CompareTag("TrashBin"))
         {
             // Destroy the food item if dropped on the trash bin
+            AudioManager.Instance.TriggerTrashbin();
             Destroy(gameObject);
             return;
         }
@@ -257,54 +261,54 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 }
                 break;
         }
-        CalculateDragOffset(previousState);
+        //CalculateDragOffset(previousState);
     }
 
-    private void CalculateDragOffset(ObjectState prevState)
-    {
-        if (ObjInClientView == null || ObjInDeskView == null) return;
+    //private void CalculateDragOffset(ObjectState prevState)
+    //{
+    //    if (ObjInClientView == null || ObjInDeskView == null) return;
 
-        RectTransform prevObjRect;
-        RectTransform currentObjRect;
+    //    RectTransform prevObjRect;
+    //    RectTransform currentObjRect;
 
-        switch (prevState)
-        {
-            case ObjectState.CompactView:
-                prevObjRect = ObjInClientView;
-                break;
-            case ObjectState.DeskView: 
-                prevObjRect = ObjInDeskView;
-                break; 
-            case ObjectState.ZoomView:
-                prevObjRect = ObjInDeskView;
-                break;
-            default:
-                prevObjRect = ObjInClientView;
-                break;
-        }
+    //    switch (prevState)
+    //    {
+    //        case ObjectState.CompactView:
+    //            prevObjRect = ObjInClientView;
+    //            break;
+    //        case ObjectState.DeskView: 
+    //            prevObjRect = ObjInDeskView;
+    //            break; 
+    //        case ObjectState.ZoomView:
+    //            prevObjRect = ObjInDeskView;
+    //            break;
+    //        default:
+    //            prevObjRect = ObjInClientView;
+    //            break;
+    //    }
 
-        switch (currentState)
-        {
-            case ObjectState.CompactView:
-                currentObjRect = ObjInClientView;
-                break;
-            case ObjectState.DeskView:
-                currentObjRect = ObjInDeskView;
-                break;
-            case ObjectState.ZoomView:
-                currentObjRect = ObjInDeskView;
-                break;
-            default: 
-                currentObjRect = null;
-                break;
-        }
+    //    switch (currentState)
+    //    {
+    //        case ObjectState.CompactView:
+    //            currentObjRect = ObjInClientView;
+    //            break;
+    //        case ObjectState.DeskView:
+    //            currentObjRect = ObjInDeskView;
+    //            break;
+    //        case ObjectState.ZoomView:
+    //            currentObjRect = ObjInDeskView;
+    //            break;
+    //        default: 
+    //            currentObjRect = null;
+    //            break;
+    //    }
 
-        Vector2 scaleDifference;
-        scaleDifference = new Vector2(
-            currentObjRect.rect.width / prevObjRect.rect.width,
-            currentObjRect.rect.height / prevObjRect.rect.height
-        );
+    //    Vector2 scaleDifference;
+    //    scaleDifference = new Vector2(
+    //        currentObjRect.rect.width / prevObjRect.rect.width,
+    //        currentObjRect.rect.height / prevObjRect.rect.height
+    //    );
 
-        dragOffset *= scaleDifference;
-    }
+    //    dragOffset *= scaleDifference;
+    //}
 }

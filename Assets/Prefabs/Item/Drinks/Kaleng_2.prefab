@@ -573,7 +573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DraggableFood
   currentState: 1
   ObjCurrentlyOn: {fileID: 0}
-  ObjInClientView: {fileID: 7445806874460407687}
+  ObjInClientView: {fileID: 0}
   ObjInDeskView: {fileID: 2477175870701130029}
   allowedTags:
   - DeskView
@@ -1557,11 +1557,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 989524062856523302, guid: 0731b01527a54a74d9901d02ef2599cd, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 400
+      value: 274
       objectReference: {fileID: 0}
     - target: {fileID: 989524062856523302, guid: 0731b01527a54a74d9901d02ef2599cd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.93
+      value: 0.83
       objectReference: {fileID: 0}
     - target: {fileID: 989524062856523302, guid: 0731b01527a54a74d9901d02ef2599cd, type: 3}
       propertyPath: m_LocalScale.y

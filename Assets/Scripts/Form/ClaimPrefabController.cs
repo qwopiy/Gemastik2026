@@ -50,11 +50,9 @@ public class ClaimPrefabController : MonoBehaviour
     public void ConfirmClaim(int value)
     {
         selectedClaim = (ClaimType)value;
-        Debug.Log("Selected Claim: " + selectedClaim);
+        //Debug.Log("Selected Claim: " + selectedClaim);
 
-        // Remove the selected option from the dropdown options in ClaimUIController
-        claimText.text = "Selected Claim: " + selectedClaim.ToString();
-        //claimUIController.RemoveOption(selectedClaim);
+        claimText.text = claimUIController.GetClaimTypeStringInIndo(value);
 
         // Destroy this prefab after confirming the choice
         dropdown.gameObject.SetActive(false);

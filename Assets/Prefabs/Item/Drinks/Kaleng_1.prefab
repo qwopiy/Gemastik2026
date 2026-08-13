@@ -436,7 +436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DraggableFood
   currentState: 1
   ObjCurrentlyOn: {fileID: 0}
-  ObjInClientView: {fileID: 7445806874460407687}
+  ObjInClientView: {fileID: 0}
   ObjInDeskView: {fileID: 2477175870701130029}
   allowedTags:
   - DeskView
@@ -1249,7 +1249,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cd2b8624f18ef044ea1bd9c8267cfa7f, type: 2}
   - {fileID: 11400000, guid: f776f3b3a28b8f94a97e91f20b6db0b0, type: 2}
   - {fileID: 11400000, guid: 8c9efd88a08afad41a6db365bf1f2e66, type: 2}
-  DefectedDataList: []
+  DefectedDataList:
+  - {fileID: 11400000, guid: c35dac55629934f4daba046cc2b20a77, type: 2}
+  - {fileID: 11400000, guid: 98c65e72ab4f64a4b9720b7f685b6c3d, type: 2}
+  - {fileID: 11400000, guid: 3762049907e60f6488f9d925b940b9be, type: 2}
+  - {fileID: 11400000, guid: 255715d168d7bdf45bdba4dd541531e7, type: 2}
+  - {fileID: 11400000, guid: fb64a9a11bc20c64a9b9f1683fd68dcf, type: 2}
+  - {fileID: 11400000, guid: a8aacf2042009734f999dc6599fbfcf4, type: 2}
+  - {fileID: 11400000, guid: 3667168c9cc62644abd5701ee2b57672, type: 2}
+  - {fileID: 11400000, guid: 2d4107d00f1616d408e969607801ca60, type: 2}
+  - {fileID: 11400000, guid: 2579fa8fbcdae1a4b8fc44aae5830355, type: 2}
+  - {fileID: 11400000, guid: 9bdc316f461467f428d804fbb7bf4fdf, type: 2}
 --- !u!1 &8499950805614393357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,11 +1567,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 989524062856523302, guid: 0731b01527a54a74d9901d02ef2599cd, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 400
+      value: 274
       objectReference: {fileID: 0}
     - target: {fileID: 989524062856523302, guid: 0731b01527a54a74d9901d02ef2599cd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 989524062856523302, guid: 0731b01527a54a74d9901d02ef2599cd, type: 3}
       propertyPath: m_LocalScale.y

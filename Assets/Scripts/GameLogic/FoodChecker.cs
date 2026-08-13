@@ -15,7 +15,7 @@ public class FoodChecker : MonoBehaviour
     }
     public void CheckFood()
     {
-        if (pendingObjects.Count != LevelManager.Instance.FoodDataList[LevelManager.Instance.index - 1].FoodData.Count)
+        if (pendingObjects.Count != LevelManager.Instance.FoodDataList[LevelManager.Instance.index - 1].AmountToSpawn)
         {
             Debug.LogWarning($"Not all food items have been stamped. Stamped: {pendingObjects.Count}, Expected: {LevelManager.Instance.FoodDataList[LevelManager.Instance.index - 1].FoodData.Count}");
             return;
@@ -33,10 +33,17 @@ public class FoodChecker : MonoBehaviour
         foreach (var foodObj in stampedObj)
         {
             FoodItem foodInfo = foodObj.GetComponent<FoodItem>();
-            
-            CheckLevel1(foodObj, foodInfo);
-            CheckLevel2(foodObj, foodInfo);
-            CheckLevel3(foodObj, foodInfo);
+
+            CheckFood(foodObj, foodInfo, out bool isCorrect);
+
+            if (isCorrect)
+            {
+                EndingManager.Instance.AddCorrect();
+            }
+            else
+            {
+                EndingManager.Instance.AddMistake();
+            }
 
             // TEMP
             Destroy(foodObj.gameObject);
@@ -54,60 +61,54 @@ public class FoodChecker : MonoBehaviour
         stampedObj.Clear();
     }
 
-    private void CheckLevel1(Transform tr, FoodItem foodInfo)
+    private void CheckFood(Transform tr, FoodItem foodInfo, out bool isCorrect)
     {
-        if (tr == null || LevelManager.Instance.Level < 0)
-            return;
-
-        CompareFoodGGL(tr, foodInfo);
+        isCorrect = false;
+        if (tr == null && LevelManager.Instance.Level < 1)
+        {
+            CompareFoodGGL(tr, foodInfo, out isCorrect);
+        }
+        if (LevelManager.Instance.Level < 2)
+        {
+            CompareFoodTable(tr, foodInfo, out isCorrect);
+        }
+        if (LevelManager.Instance.Level < 3)
+        {
+            CompareFoodClaims(tr, foodInfo, out isCorrect);
+        }
     }
 
-    private void CheckLevel2(Transform tr, FoodItem foodInfo)
-    {
-        if (tr == null || LevelManager.Instance.Level < 1)
-            return;
-
-        CompareFoodTable(tr, foodInfo);
-    }
-
-    private void CheckLevel3(Transform tr, FoodItem foodInfo)
-    {
-        if (tr == null || LevelManager.Instance.Level < 2)
-            return;
-
-        CompareFoodClaims(tr, foodInfo);
-    }
-
-    private void CompareFoodGGL(Transform tr, FoodItem foodInfo)
+    private void CompareFoodGGL(Transform tr, FoodItem foodInfo, out bool isCorrect)
     {
         StampsOnFood foodStamps = tr.GetComponentInChildren<StampsOnFood>(true);
         foodStamps.CheckForGGLStickers();
 
         if (foodStamps.gglSticker != foodInfo.GetFoodData().GGLRating)
         {
+            isCorrect = false;
             foreach (var reason in foodInfo.GetFoodData().GGLReasons)
             {
                 switch (reason)
                 {
                     case GGLReason.Sugar:
-                        EndingManager.Instance.AddMistake(MistakeType.Sugar);
+                        EndingManager.Instance.AddMistakeType(MistakeType.Sugar);
                         break;
                     case GGLReason.Salt:
-                        EndingManager.Instance.AddMistake(MistakeType.Salt);
+                        EndingManager.Instance.AddMistakeType(MistakeType.Salt);
                         break;
                     case GGLReason.Fat:
-                        EndingManager.Instance.AddMistake(MistakeType.Fat);
+                        EndingManager.Instance.AddMistakeType(MistakeType.Fat);
                         break;
                 }
             }
         } 
         else
         {
-            EndingManager.Instance.AddCorrect();
+            isCorrect = true;
         }
     }
 
-    private void CompareFoodTable(Transform tr, FoodItem foodInfo)
+    private void CompareFoodTable(Transform tr, FoodItem foodInfo, out bool isCorrect)
     {
         TableResult tableResult = tr.GetComponentInChildren<TableResult>(true);
 
@@ -116,21 +117,24 @@ public class FoodChecker : MonoBehaviour
 
         if (isKadaluarsaCorrect && isDefectCorrect)
         {
-            EndingManager.Instance.AddCorrect();
+            isCorrect = true;
             return;
+        } else
+        {
+            isCorrect = false;
         }
 
         if (!isKadaluarsaCorrect)
         {
-            EndingManager.Instance.AddMistake(MistakeType.Expired);
+            EndingManager.Instance.AddMistakeType(MistakeType.Expired);
         }
         if (!isDefectCorrect)
         {
-            EndingManager.Instance.AddMistake(MistakeType.Defect);
+            EndingManager.Instance.AddMistakeType(MistakeType.Defect);
         }
     }
 
-    private void CompareFoodClaims(Transform tr, FoodItem foodInfo)
+    private void CompareFoodClaims(Transform tr, FoodItem foodInfo, out bool isCorrect)
     {
         ClaimsOnFood claimsOnFood = tr.GetComponentInChildren<ClaimsOnFood>(true);
         List<Claim> foodClaims = foodInfo.GetFoodData().Claims;
@@ -138,8 +142,11 @@ public class FoodChecker : MonoBehaviour
         bool allClaimsMatch = claimsOnFood.CompareClaims(foodInfo);
         if (allClaimsMatch) 
         {
-            EndingManager.Instance.AddCorrect();
+            isCorrect = true;
             return;
+        } else
+        {
+            isCorrect = false;
         }
 
         foreach (var claim in claimsOnFood.claims)
@@ -156,12 +163,12 @@ public class FoodChecker : MonoBehaviour
                     case ClaimType.LowSugar:
                     case ClaimType.LowSalt:
                     case ClaimType.Healthy:
-                    case ClaimType.GGL:
-                        EndingManager.Instance.AddMistake(MistakeType.WrongNutritionClaim);
+                    case ClaimType.NutriLevel:
+                        EndingManager.Instance.AddMistakeType(MistakeType.WrongNutritionClaim);
                         break;
                     case ClaimType.NoPreservative:
                     case ClaimType.Composition:
-                        EndingManager.Instance.AddMistake(MistakeType.WrongCompositionClaim);
+                        EndingManager.Instance.AddMistakeType(MistakeType.WrongCompositionClaim);
                         break;
                 }
             }

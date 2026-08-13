@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class AudioManager : MonoBehaviour
 {
@@ -20,11 +21,13 @@ public class AudioManager : MonoBehaviour
     public AudioClip Drag;
     public AudioClip Drop;
     public AudioClip Trashbin;
-    public AudioClip PaperFold;
     public AudioClip Footsteps;
-    public AudioClip Stamps;
+    public AudioClip Stamp;
     public AudioClip Click;
-
+    public AudioClip DrawerOpen;
+    public AudioClip DrawerClose;
+    public AudioClip PageFlip;
+    public AudioClip MagnifierSound;
 
 
     [Header("Ambience")]
@@ -51,6 +54,14 @@ public class AudioManager : MonoBehaviour
     {
         PlayMusic(MainMenu);
         PlaySoundEffect += PlaySFX;
+    }
+
+    private void Update()
+    {
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            TriggerClick();
+        }
     }
 
     private void OnDisable()
@@ -112,16 +123,28 @@ public class AudioManager : MonoBehaviour
     {
         TriggerPlaySoundEffect(Trashbin);
     }
-    public void TriggerPaperFold()
-    {
-        TriggerPlaySoundEffect(PaperFold);
-    }
     public void TriggerFootsteps()
     {
         TriggerPlaySoundEffect(Footsteps);
     }
-    public void TriggerStamps()
+    public void TriggerStamp()
     {
-        TriggerPlaySoundEffect(Stamps);
+        TriggerPlaySoundEffect(Stamp);
+    }
+    public void TriggerDrawerOpen()
+    {
+        TriggerPlaySoundEffect(DrawerOpen);
+    }
+    public void TriggerDrawerClose()
+    {
+        TriggerPlaySoundEffect(DrawerClose);
+    }
+    public void TriggerPageFlip()
+    {
+        TriggerPlaySoundEffect(PageFlip);
+    }
+    public void TriggerMagnifierSound()
+    {
+        TriggerPlaySoundEffect(MagnifierSound);
     }
 }
