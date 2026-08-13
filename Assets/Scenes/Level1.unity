@@ -371,11 +371,11 @@ RectTransform:
   m_LocalScale: {x: 0.53, y: 0.53, z: 0.53}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 5333316861950353287}
+  m_Father: {fileID: 447480928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -568, y: 266}
+  m_AnchoredPosition: {x: -568, y: 286}
   m_SizeDelta: {x: 500, y: 512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &213067804
@@ -1160,7 +1160,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &447480928
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1174,6 +1174,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 277484148}
+  - {fileID: 213067803}
   - {fileID: 1009700010}
   - {fileID: 1368538804}
   m_Father: {fileID: 5333316861950353286}
@@ -4944,9 +4945,6 @@ PrefabInstance:
     - {fileID: 2981529139620330489, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
     - {fileID: 3746391621618465894, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 482328524706038944, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 213067803}
     - targetCorrespondingSourceObject: {fileID: 9099701815296303196, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1268897746}
@@ -5016,11 +5014,6 @@ RectTransform:
 --- !u!224 &5333316861950353286 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5467520746463376794, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
-  m_PrefabInstance: {fileID: 5333316861950353277}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &5333316861950353287 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 482328524706038944, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
   m_PrefabInstance: {fileID: 5333316861950353277}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5472441921314698879
