@@ -34,35 +34,42 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 90
+      Value: 100
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 3
+      Value: 4.0
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 0.4
+      Value: 0.0
     - FieldId: 5
       FieldName: Protein
-      Value: 2
+      Value: 0
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 14
+      Value: 20
     - FieldId: 7
       FieldName: Gula
       Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 5
+      Value: 0
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: A
+      Value: 
   Approval: 1
   GGLRating: 1
   GGLReasons: 010000000200000003000000
-  IsKadaluarsa: 0
+  ExpiryDate:
+    day: 0
+    month: 0
+    year: 0
+  IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 9
+    claimDescription: Sehat untuk badan
+    isValid: 1

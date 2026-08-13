@@ -59,10 +59,17 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: B
+      Value: 
   Approval: 1
-  GGLRating: 4
-  GGLReasons: 03000000
-  IsKadaluarsa: 0
+  GGLRating: 2
+  GGLReasons: 01000000
+  ExpiryDate:
+    day: 0
+    month: 0
+    year: 0
+  IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 10
+    claimDescription: 100% Alami
+    isValid: 1

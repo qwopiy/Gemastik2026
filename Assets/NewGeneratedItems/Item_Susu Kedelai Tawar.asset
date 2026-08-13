@@ -39,30 +39,43 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 3
+      Value: 3.0
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 0.5
+      Value: 1.0
     - FieldId: 5
       FieldName: Protein
-      Value: 7
+      Value: 10
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 6
+      Value: 10
     - FieldId: 7
       FieldName: Gula
       Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 4
+      Value: 0
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: A
+      Value: 
   Approval: 1
   GGLRating: 1
   GGLReasons: 010000000200000003000000
-  IsKadaluarsa: 0
+  ExpiryDate:
+    day: 0
+    month: 0
+    year: 0
+  IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 6
+    claimDescription: Rendah Garam
+    isValid: 1
+  - claimType: 1
+    claimDescription: Tanpa Kalori
+    isValid: 0
+  - claimType: 11
+    claimDescription: 
+    isValid: 1

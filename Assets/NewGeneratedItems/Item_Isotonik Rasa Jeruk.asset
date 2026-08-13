@@ -28,13 +28,13 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 350 mL
+      Value: 25 mL
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 80
+      Value: 6
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -48,21 +48,28 @@ MonoBehaviour:
       Value: 0
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 20
+      Value: 2
     - FieldId: 7
       FieldName: Gula
-      Value: 7
+      Value: 1
     - FieldId: 8
       FieldName: Natrium
-      Value: 150
+      Value: 11
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: C
+      Value: 
   Approval: 1
-  GGLRating: 2
-  GGLReasons: 0100000002000000
-  IsKadaluarsa: 0
+  GGLRating: 1
+  GGLReasons: 03000000
+  ExpiryDate:
+    day: 0
+    month: 0
+    year: 0
+  IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 5
+    claimDescription: Low in sugar
+    isValid: 1
