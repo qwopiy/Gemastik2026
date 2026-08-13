@@ -315,14 +315,13 @@ MonoBehaviour:
   Kantor: {fileID: 8300000, guid: 1e173f74f59e395478c895c23a2e6a86, type: 3}
   Drag: {fileID: 0}
   Drop: {fileID: 0}
-  Trashbin: {fileID: 0}
-  PaperFold: {fileID: 0}
+  Trashbin: {fileID: 8300000, guid: af68ac7cf2a85374194052d98d37fe86, type: 3}
   Footsteps: {fileID: 0}
   Stamp: {fileID: 8300000, guid: f6347db686eae4c4ba006261257cc4ac, type: 3}
   Click: {fileID: 8300000, guid: 0ef7fd287a1e3774eb1b195d3e1c8ca4, type: 3}
-  DrawerOpen: {fileID: 0}
-  DrawerClose: {fileID: 0}
-  PageFlip: {fileID: 0}
+  DrawerOpen: {fileID: 8300000, guid: 2c9cb3b5dc74ef24d910a437db30246e, type: 3}
+  DrawerClose: {fileID: 8300000, guid: 1874d3209a1c63d47866298f0998e943, type: 3}
+  PageFlip: {fileID: 8300000, guid: ae7e0c6cdddadb540b3407d03782e132, type: 3}
   MagnifierSound: {fileID: 0}
   CrowdSound: {fileID: 0}
 --- !u!1 &8334348957662838733

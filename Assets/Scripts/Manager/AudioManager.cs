@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class AudioManager : MonoBehaviour
 {
@@ -20,7 +21,6 @@ public class AudioManager : MonoBehaviour
     public AudioClip Drag;
     public AudioClip Drop;
     public AudioClip Trashbin;
-    public AudioClip PaperFold;
     public AudioClip Footsteps;
     public AudioClip Stamp;
     public AudioClip Click;
@@ -54,6 +54,14 @@ public class AudioManager : MonoBehaviour
     {
         PlayMusic(MainMenu);
         PlaySoundEffect += PlaySFX;
+    }
+
+    private void Update()
+    {
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            TriggerClick();
+        }
     }
 
     private void OnDisable()
@@ -114,10 +122,6 @@ public class AudioManager : MonoBehaviour
     public void TriggerTrashbin()
     {
         TriggerPlaySoundEffect(Trashbin);
-    }
-    public void TriggerPaperFold()
-    {
-        TriggerPlaySoundEffect(PaperFold);
     }
     public void TriggerFootsteps()
     {

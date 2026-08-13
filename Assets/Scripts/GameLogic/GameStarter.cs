@@ -1,4 +1,5 @@
-﻿using UnityEngine; 
+﻿using System.Collections;
+using UnityEngine; 
 public class GameStarter : MonoBehaviour
 {
     private static readonly int HideBoxHash = Animator.StringToHash("HideBox");
@@ -35,5 +36,15 @@ public class GameStarter : MonoBehaviour
     {
         TransitionManager.Instance.TransitionToGameObject(levelCompletePanel);
         levelCompletePanel.GetComponent<LevelCompleteController>().SetStats();
+    }
+
+    public void DisableButton(GameObject button)
+    {
+        StartCoroutine(DisableButtonCoroutine(button));
+    }
+    private IEnumerator DisableButtonCoroutine(GameObject button)
+    {
+        yield return new WaitForSeconds(1f);
+        button.SetActive(false);
     }
 }

@@ -12,7 +12,7 @@ public class LevelCompleteController : MonoBehaviour
     private bool isLevel4;
     private void Start()
     {
-        isLevel4 = LevelManager.Instance.Level == 4;
+        isLevel4 = LevelManager.Instance.Level == 3;
     }
 
     public void SetStats()
@@ -35,10 +35,41 @@ public class LevelCompleteController : MonoBehaviour
     {
         if (isLevel4) 
         {
-            //TransitionManager.Instance.GoToScene("EndingScene"); // TODO: Change to specific ending scenes
+            string endingSceneName = GetEndingName();
+            TransitionManager.Instance.GoToScene(endingSceneName);
             return;
         }
 
         TransitionManager.Instance.GoToScene("LevelSelect");
+    }
+
+    private string GetEndingName() // TODO: Change to specific ending scenes
+    {
+        Endings ending = EndingManager.Instance.currentEnding;
+
+        switch (ending)
+        {
+            case Endings.AllCorrect:
+                return "EndingAllCorrect";
+            case Endings.AllMistake:
+                return "EndingAllMistake";
+            case Endings.Sugar:
+                return "EndingSugar";
+            case Endings.Salt:
+                return "EndingSalt";
+            case Endings.Fat:
+                return "EndingFat";
+            case Endings.ExpiredOrDefect:
+                return "EndingExpiredOrDefect";
+            case Endings.WrongNutritionClaim:
+                return "EndingWrongNutritionClaim";
+            case Endings.WrongCompositionClaim:
+                return "EndingWrongCompositionClaim";
+            case Endings.PerfectSpeedrunner:
+                return "EndingPerfectSpeedrunner";
+            default:
+                Debug.LogError("Unknown ending: " + ending);
+                return "LevelSelect"; // Fallback to LevelSelect if unknown
+        }
     }
 }

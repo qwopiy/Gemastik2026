@@ -510,7 +510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DraggableFood
   currentState: 1
   ObjCurrentlyOn: {fileID: 0}
-  ObjInClientView: {fileID: 7445806874460407687}
+  ObjInClientView: {fileID: 0}
   ObjInDeskView: {fileID: 2477175870701130029}
   allowedTags:
   - DeskView
