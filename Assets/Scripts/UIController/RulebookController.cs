@@ -51,18 +51,23 @@ public class RulebookController : MonoBehaviour
 
     private void DisplayPage(int pageIndex)
     {
-        if (pageIndex == 0)
+        if (pageIndex >= 0 && pageIndex < rules.Count)
         {
-            leftPage.gameObject.SetActive(false);
-            rightPage.sprite = rules[pageIndex].RightPage;
-        } 
-        else if (pageIndex >= 1 && pageIndex < rules.Count)
-        {
-            leftPage.gameObject.SetActive(true);
-            rightPage.gameObject.SetActive(true);
+            if (rules[pageIndex].LeftPage != null)
+            {
+                leftPage.gameObject.SetActive(true);
+                leftPage.sprite = rules[pageIndex].LeftPage;
+            }
+            else
+                leftPage.gameObject.SetActive(false);
 
-            leftPage.sprite = rules[pageIndex].LeftPage;
-            rightPage.sprite = rules[pageIndex].RightPage;
+            if (rules[pageIndex].RightPage != null)
+            {
+                rightPage.gameObject.SetActive(true);
+                rightPage.sprite = rules[pageIndex].RightPage;
+            }
+            else
+                rightPage.gameObject.SetActive(false);
         }
         else
         {
