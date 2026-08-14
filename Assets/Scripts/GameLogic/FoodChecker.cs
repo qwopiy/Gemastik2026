@@ -17,7 +17,7 @@ public class FoodChecker : MonoBehaviour
     {
         if (pendingObjects.Count != LevelManager.Instance.FoodDataList[LevelManager.Instance.index - 1].AmountToSpawn)
         {
-            Debug.LogWarning($"Not all food items have been stamped. Stamped: {pendingObjects.Count}, Expected: {LevelManager.Instance.FoodDataList[LevelManager.Instance.index - 1].FoodData.Count}");
+            Debug.LogWarning($"Not all food items have been stamped. Stamped: {pendingObjects.Count}, Expected: {LevelManager.Instance.FoodDataList[LevelManager.Instance.index - 1].AmountToSpawn}");
             return;
         }
 
