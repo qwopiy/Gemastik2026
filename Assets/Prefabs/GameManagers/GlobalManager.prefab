@@ -121,7 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TransitionManager
   transitionAnimator: {fileID: 6321884464388227530}
-  transitionDuration: 1.5
+  transitionSceneDuration: 1
+  transitionObjDuration: 0.5
 --- !u!1 &944501610187956831
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,7 +932,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 9999
   m_TargetDisplay: 0
 --- !u!114 &8850919799844356177
 MonoBehaviour:
@@ -1106,6 +1107,7 @@ Transform:
   - {fileID: 430234290752892060}
   - {fileID: 7353637292087602234}
   - {fileID: 936991479033941170}
+  - {fileID: 1404465386845985988}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7678487743240598673
@@ -1271,6 +1273,56 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &9040360945756374480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1404465386845985988}
+  - component: {fileID: 5903218781135326428}
+  m_Layer: 0
+  m_Name: CursorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1404465386845985988
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9040360945756374480}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.47299, y: 5.28434, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2002533130244651149}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5903218781135326428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9040360945756374480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1da5e9578e8bd044a30327cb5fb4247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorManager
+  targetCanvas: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: d09cef7790eceb640af534c4c633fcb8, type: 3}
+  pointerCursor: {fileID: 2800000, guid: c80c9ee5c9f53b643bad4c5de264105e, type: 3}
+  handCursor: {fileID: 2800000, guid: 92c3d2816b981484999ef2d429805fd0, type: 3}
+  dragCursor: {fileID: 2800000, guid: bf7ab12c2c4bd97418ccac63a9a21b29, type: 3}
+  hotSpot: {x: 0, y: 0}
 --- !u!1001 &3691164257807342979
 PrefabInstance:
   m_ObjectHideFlags: 0

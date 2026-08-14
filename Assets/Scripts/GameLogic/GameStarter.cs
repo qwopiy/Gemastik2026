@@ -34,7 +34,7 @@ public class GameStarter : MonoBehaviour
 
     public void EndDay()
     {
-        TransitionManager.Instance.TransitionToGameObject(levelCompletePanel);
+        TransitionManager.Instance.TransitionToGameObject(gameObject, levelCompletePanel);
         levelCompletePanel.GetComponent<LevelCompleteController>().SetStats();
     }
 

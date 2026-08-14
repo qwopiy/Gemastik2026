@@ -8,7 +8,8 @@ public class TransitionManager : MonoBehaviour
     private static readonly int StartHash = Animator.StringToHash("Start");
     private static readonly int EndHash = Animator.StringToHash("End");
     public Animator transitionAnimator;
-    public float transitionDuration = 1f;
+    public float transitionSceneDuration = 1f;
+    public float transitionObjDuration = .5f;
     public static TransitionManager Instance;
     private void Awake()
     {
@@ -32,15 +33,15 @@ public class TransitionManager : MonoBehaviour
         StartCoroutine(TransitionNormal());
     }
 
-    public void TransitionToGameObject(GameObject targetObject)
+    public void TransitionToGameObject(GameObject sourceObject, GameObject targetObject)
     {
-        StartCoroutine(TransitionCoroutineToGameObject(targetObject));
+        StartCoroutine(TransitionCoroutineToGameObject(sourceObject, targetObject));
     }
 
     private IEnumerator TransitionCoroutineToScene(string sceneName)
     {
         transitionAnimator.SetTrigger(EndHash);
-        yield return new WaitForSeconds(transitionDuration);
+        yield return new WaitForSeconds(transitionSceneDuration);
         yield return LoadSceneCoroutine(sceneName);
         transitionAnimator.SetTrigger(StartHash);
     }
@@ -48,14 +49,15 @@ public class TransitionManager : MonoBehaviour
     private IEnumerator TransitionNormal()
     {
         transitionAnimator.SetTrigger(EndHash);
-        yield return new WaitForSeconds(transitionDuration);
+        yield return new WaitForSeconds(transitionObjDuration);
         transitionAnimator.SetTrigger(StartHash);
     }
 
-    private IEnumerator TransitionCoroutineToGameObject(GameObject targetObject)
+    private IEnumerator TransitionCoroutineToGameObject(GameObject sourceObject, GameObject targetObject)
     {
         transitionAnimator.SetTrigger(EndHash);
-        yield return new WaitForSeconds(transitionDuration);
+        yield return new WaitForSeconds(transitionObjDuration);
+        sourceObject.SetActive(false);
         targetObject.SetActive(true);
         transitionAnimator.SetTrigger(StartHash);
     }
