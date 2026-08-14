@@ -26,7 +26,7 @@ public class ClaimUIController : MonoBehaviour
         //    claimOptions.options.Add(new TMP_Dropdown.OptionData(claim.ToString()));
         //}
 
-        for (int i = 1; i < 12; i++)
+        for (int i = 0; i < 12; i++)
         {
             claimOptions.options.Add(new TMP_Dropdown.OptionData(GetClaimTypeStringInIndo(i)));
         }
@@ -35,33 +35,21 @@ public class ClaimUIController : MonoBehaviour
     public string GetClaimTypeStringInIndo(int index)
     {
         ClaimType claimType = (ClaimType)index;
-        switch (claimType)
+        return claimType switch
         {
-            case ClaimType.CalorieFree:
-                return "Bebas Kalori";
-            case ClaimType.HighProtein:
-                return "Tinggi Protein";
-            case ClaimType.LowCarbohydrate:
-                return "Rendah Karbohidrat";
-            case ClaimType.SugarFree:
-                return "Bebas Gula";
-            case ClaimType.LowSugar:
-                return "Rendah Gula";
-            case ClaimType.LowSalt:
-                return "Rendah Garam";
-            case ClaimType.LowTotalFat:
-                return "Rendah Lemak Total";
-            case ClaimType.NutriLevel:
-                return "NutriLevel";
-            case ClaimType.Healthy:
-                return "Sehat";
-            case ClaimType.NoPreservative:
-                return "Tanpa Pengawet";
-            case ClaimType.Composition:
-                return "Komposisi";
-            default:
-                return claimType.ToString();
-        }
+            ClaimType.CalorieFree => "Bebas Kalori",
+            ClaimType.HighProtein => "Tinggi Protein",
+            ClaimType.LowCarbohydrate => "Rendah Karbohidrat",
+            ClaimType.SugarFree => "Bebas Gula",
+            ClaimType.LowSugar => "Rendah Gula",
+            ClaimType.LowSalt => "Rendah Garam",
+            ClaimType.LowTotalFat => "Rendah Lemak Total",
+            ClaimType.NutriLevel => "NutriLevel",
+            ClaimType.Healthy => "Sehat",
+            ClaimType.NoPreservative => "Tanpa Pengawet",
+            ClaimType.Composition => "Komposisi",
+            _ => claimType.ToString(),
+        };
     }
 
     public void RemoveOption(ClaimType claimType)

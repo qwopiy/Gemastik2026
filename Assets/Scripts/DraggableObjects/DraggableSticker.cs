@@ -43,6 +43,21 @@ public class DraggableSticker : DraggableObject
                 transform.SetParent(obj);
                 return;
             }
+            else
+            {
+                // If dropped in an invalid area, snap back to the sticker dispenser/tray
+                transform.SetParent(originalParent);
+                if (snapBack)
+                {
+                    //rectTransform.position = initialPosition;
+                    StartCoroutine(MoveRoutine(initialPosition, snapduration));
+                    if (currentState != originalState)
+                    {
+                        SetVisualState(originalState); // Reset to original state when snapping back
+                    }
+                }
+                return;
+            }
         }
     }
 }

@@ -41,6 +41,18 @@ public class UpdateFoodSO : EditorWindow
                 Debug.LogError("Please assign a folder first!");
             }
         }
+
+        if (GUILayout.Button("Remove Duplicate Claims"))
+        {
+            if (folderAsset != null)
+            {
+                RemoveDuplicateClaims();
+            }
+            else
+            {
+                Debug.LogError("Please assign a folder first!");
+            }
+        }
     }
 
     private void Process()
@@ -112,6 +124,53 @@ public class UpdateFoodSO : EditorWindow
         //Debug.Log("ScriptableObjects created successfully in " + folderPath);
     }
 
+    private void RemoveDuplicateClaims()
+    {
+        // 1. Get the project-relative path of the folder (e.g., "Assets/MyFolder")
+        string ItemToProcessPath = AssetDatabase.GetAssetPath(folderAsset);
+
+        // 2. Find all assets inside that specific folder path
+        // "t:FoodDataSO" grabs only FoodDataSO assets
+        string[] assetGuids = AssetDatabase.FindAssets("t:FoodDataSO", new[] { ItemToProcessPath });
+
+        // 3. Iterate over every file found
+        foreach (string guid in assetGuids)
+        {
+            // 4. Convert the unique ID back into a string path
+            string assetPath = AssetDatabase.GUIDToAssetPath(guid);
+
+            // 5. Skip the root folder asset itself (AssetDatabase includes it in the search)
+            if (assetPath == ItemToProcessPath) continue;
+
+            // 6. Optional: Load the asset if you need to inspect or modify its properties
+            FoodDataSO childAsset = AssetDatabase.LoadAssetAtPath<FoodDataSO>(assetPath);
+
+
+            if (childAsset != null)
+            {
+                RemoveDuplicateClaimsFromSO(childAsset);
+            }
+        }
+
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+        //Debug.Log("ScriptableObjects created successfully in " + folderPath);
+    }
+
+    private void RemoveDuplicateClaimsFromSO(FoodDataSO so)
+    {
+        HashSet<ClaimType> uniqueClaimTypes = new HashSet<ClaimType>();
+        List<Claim> uniqueClaims = new List<Claim>();
+        foreach (var claim in so.Claims)
+        {
+            if (!uniqueClaimTypes.Contains(claim.claimType))
+            {
+                uniqueClaimTypes.Add(claim.claimType);
+                uniqueClaims.Add(claim);
+            }
+        }
+        so.Claims = uniqueClaims;
+    }
     private void NormalizeNutritionTo100gml(FoodDataSO so)
     {
         int validServingSize = 100; // Normalize to 100 ml or g
