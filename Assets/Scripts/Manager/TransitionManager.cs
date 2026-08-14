@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class TransitionManager : MonoBehaviour
 {
+    private static WaitForSeconds _waitForSeconds0_2 = new WaitForSeconds(0.2f);
     private static readonly int StartHash = Animator.StringToHash("Start");
     private static readonly int EndHash = Animator.StringToHash("End");
     public Animator transitionAnimator;
@@ -61,6 +62,8 @@ public class TransitionManager : MonoBehaviour
 
             yield return null; // Wait until the next frame
         }
+
+        yield return _waitForSeconds0_2; // Optional: Small delay to ensure scene is fully initialized
 
         // Code executed here runs immediately AFTER the scene has fully loaded
         Debug.Log("Scene fully loaded!");
