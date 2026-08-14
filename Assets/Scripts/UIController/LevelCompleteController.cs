@@ -18,7 +18,12 @@ public class LevelCompleteController : MonoBehaviour
     public void SetStats()
     {
         int corrects = EndingManager.Instance.corrects;
-        int foodAmount = LevelManager.Instance.FoodDataList.Count;
+        int foodAmount = 0;
+
+        foreach (var foodList in LevelManager.Instance.FoodDataList)
+        {
+            foodAmount += foodList.AmountToSpawn;
+        }
 
         statText.text = $"Jumlah makanan yang benar: {corrects}/{foodAmount}";
 
@@ -40,7 +45,7 @@ public class LevelCompleteController : MonoBehaviour
             return;
         }
 
-        TransitionManager.Instance.GoToScene("LevelSelect");
+        TransitionManager.Instance.GoToScene("MainMenu");
     }
 
     private string GetEndingName() // TODO: Change to specific ending scenes
