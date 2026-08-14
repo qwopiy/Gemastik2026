@@ -59,7 +59,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Kacang.
   Approval: 1
   GGLRating: 2
   GGLReasons: 01000000

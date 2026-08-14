@@ -59,7 +59,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: 100% Susu Segar
   Approval: 1
   GGLRating: 2
   GGLReasons: 010000000200000003000000
@@ -71,5 +71,5 @@ MonoBehaviour:
   IsDefect: 0
   Claims:
   - claimType: 11
-    claimDescription: 
+    claimDescription: Susu Sapi
     isValid: 1

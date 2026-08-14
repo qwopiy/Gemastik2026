@@ -20,7 +20,8 @@ public class CursorManager : MonoBehaviour
     public Texture2D dragCursor;
 
     [Header("Hotspot Settings")]
-    public Vector2 hotSpot = Vector2.zero;
+    public Vector2 topLeftHotSpot = Vector2.zero;
+    public Vector2 centerHotSpot = new(16,16);
 
     private GraphicRaycaster raycaster;
     private PointerEventData pointerEventData;
@@ -58,7 +59,7 @@ public class CursorManager : MonoBehaviour
     {
         FindActiveCanvas();
         eventSystem = EventSystem.current;
-        SetCustomCursor(defaultCursor);
+        SetCustomCursor(defaultCursor, topLeftHotSpot);
     }
 
     void FindActiveCanvas()
@@ -111,18 +112,18 @@ public class CursorManager : MonoBehaviour
             if (btn != null && btn.interactable)
             {
                 // Automatically switches to button cursor if the button is active
-                SetCustomCursor(pointerCursor);
+                SetCustomCursor(pointerCursor, topLeftHotSpot);
             }
             else if (draggableObject != null)
             {
                 // Switch to drag cursor if the object is draggable
                 if (!Mouse.current.leftButton.isPressed)
                 {
-                    SetCustomCursor(handCursor);
+                    SetCustomCursor(handCursor, centerHotSpot);
                 }
                 else
                 {
-                    SetCustomCursor(dragCursor);
+                    SetCustomCursor(dragCursor, centerHotSpot);
                 }
             }
             else
@@ -134,7 +135,7 @@ public class CursorManager : MonoBehaviour
         else
         {
             // Reset to default if the mouse is over empty screen space
-            SetCustomCursor(defaultCursor);
+            SetCustomCursor(defaultCursor, topLeftHotSpot);
         }
     }
 
@@ -143,16 +144,16 @@ public class CursorManager : MonoBehaviour
         switch (objectTag)
         {
             case "Interactible":
-                SetCustomCursor(pointerCursor);
+                SetCustomCursor(pointerCursor, topLeftHotSpot);
                 break;
             default:
-                SetCustomCursor(defaultCursor);
+                SetCustomCursor(defaultCursor, topLeftHotSpot);
                 break;
         }
     }
 
-    void SetCustomCursor(Texture2D cursorTexture)
+    void SetCustomCursor(Texture2D cursorTexture, Vector2 hotspot)
     {
-        Cursor.SetCursor(cursorTexture, hotSpot, CursorMode.Auto);
+        Cursor.SetCursor(cursorTexture, hotspot, CursorMode.Auto);
     }
 }

@@ -133,6 +133,21 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 transform.SetParent(obj);
                 return; // Exit after snapping to the first valid object
             }
+            else
+            {
+                // If dropped in an invalid area, snap back to the sticker dispenser/tray
+                transform.SetParent(originalParent);
+                if (snapBack)
+                {
+                    //rectTransform.position = initialPosition;
+                    StartCoroutine(MoveRoutine(initialPosition, snapduration));
+                    if (currentState != originalState)
+                    {
+                        SetVisualState(originalState); // Reset to original state when snapping back
+                    }
+                }
+                return;
+            }
         }
     }
 
