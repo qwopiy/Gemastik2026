@@ -27,6 +27,11 @@ public class TransitionManager : MonoBehaviour
         StartCoroutine(TransitionCoroutineToScene(sceneName));
     }
 
+    public void TriggerTransition()
+    {
+        StartCoroutine(TransitionNormal());
+    }
+
     public void TransitionToGameObject(GameObject targetObject)
     {
         StartCoroutine(TransitionCoroutineToGameObject(targetObject));
@@ -37,6 +42,13 @@ public class TransitionManager : MonoBehaviour
         transitionAnimator.SetTrigger(EndHash);
         yield return new WaitForSeconds(transitionDuration);
         yield return LoadSceneCoroutine(sceneName);
+        transitionAnimator.SetTrigger(StartHash);
+    }
+
+    private IEnumerator TransitionNormal()
+    {
+        transitionAnimator.SetTrigger(EndHash);
+        yield return new WaitForSeconds(transitionDuration);
         transitionAnimator.SetTrigger(StartHash);
     }
 
