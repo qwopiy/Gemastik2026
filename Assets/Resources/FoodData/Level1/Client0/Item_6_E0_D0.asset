@@ -22,7 +22,6 @@ MonoBehaviour:
   - {fileID: 4417826435687172446, guid: 7a53c30a61d45a14c96274f595cc43d3, type: 3}
   - {fileID: 4417826435687172446, guid: 5dd8f5c1ad5c0b3439e8d4fc6d45755b, type: 3}
   - {fileID: 4417826435687172446, guid: c78d036b5d387374281ae7f0ac25b999, type: 3}
-  - {fileID: 4417826435687172446, guid: 93d4c3ce5afcc274ebab311894176a6d, type: 3}
   Components:
   - ComponentType: 0
     AttributeFields:

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b677af556cddcd4a8e36095423a9e8c, type: 3}
   m_Name: Item_17_E1_D1
   m_EditorClassIdentifier: Assembly-CSharp::FoodDataSO
-  FoodId: Granola Cokelat Keju Extra Sweet
+  FoodId: 'Granola Cokelat Keju '
   FoodPrefab:
   - {fileID: 4417826435687172446, guid: a64869e8ddd0d2a4b8a73b3a5cb7d05a, type: 3}
   - {fileID: 4417826435687172446, guid: e3fd86f2d6f260142a6563bcb8e3cc6c, type: 3}

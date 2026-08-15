@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b677af556cddcd4a8e36095423a9e8c, type: 3}
   m_Name: Item_12_E0_D1
   m_EditorClassIdentifier: Assembly-CSharp::FoodDataSO
-  FoodId: Teh Manis Kemasan Botol
+  FoodId: Teh Manis Botol
   FoodPrefab:
   - {fileID: 4417826435687172446, guid: 162844a65537b1541af938ce3486f1a7, type: 3}
   - {fileID: 4417826435687172446, guid: 2e663d2cdb4aebe4685f873cc1041d37, type: 3}
