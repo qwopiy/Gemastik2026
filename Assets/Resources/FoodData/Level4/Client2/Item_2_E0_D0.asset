@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b677af556cddcd4a8e36095423a9e8c, type: 3}
+  m_Name: Item_2_E0_D0
+  m_EditorClassIdentifier: Assembly-CSharp::FoodDataSO
+  FoodId: Roti Horn Krim Vanilla
+  FoodPrefab:
+  - {fileID: 4417826435687172446, guid: cfa20d8d44c3e0145824443d41dbdc22, type: 3}
+  - {fileID: 4417826435687172446, guid: 01d9a68c6dc5d794a8f84e9df792f978, type: 3}
+  - {fileID: 4417826435687172446, guid: a6cfe449969a643458a7aeff1da60ee4, type: 3}
+  - {fileID: 4417826435687172446, guid: 15c19b380b9d7824092ce82eef805943, type: 3}
+  Components:
+  - ComponentType: 0
+    AttributeFields:
+    - FieldId: 0
+      FieldName: Takaran Saji
+      Value: 200 g
+    - FieldId: 1
+      FieldName: Sajian per Kemasan
+      Value: 1
+    - FieldId: 2
+      FieldName: Kalori per Sajian
+      Value: 660
+  - ComponentType: 1
+    AttributeFields:
+    - FieldId: 3
+      FieldName: Lemak Total
+      Value: 22.0
+    - FieldId: 4
+      FieldName: Lemak Jenuh
+      Value: 11.0
+    - FieldId: 5
+      FieldName: Protein
+      Value: 20
+    - FieldId: 6
+      FieldName: Karbohidrat
+      Value: 100
+    - FieldId: 7
+      FieldName: Gula
+      Value: 40
+    - FieldId: 8
+      FieldName: Natrium
+      Value: 420
+  - ComponentType: 2
+    AttributeFields:
+    - FieldId: 9
+      FieldName: Komposisi
+      Value: 
+  Approval: 1
+  GGLRating: 3
+  GGLReasons: 02000000
+  ExpiryDate:
+    day: 1
+    month: 8
+    year: 2027
+  IsExpired: 0
+  IsDefect: 0
+  Claims:
+  - claimType: 8
+    claimDescription: Nutri-Level B
+    isValid: 0
+  - claimType: 1
+    claimDescription: Tanpa Kalori
+    isValid: 0
+  - claimType: 2
+    claimDescription: Tinggi Protein
+    isValid: 1

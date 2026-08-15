@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b677af556cddcd4a8e36095423a9e8c, type: 3}
+  m_Name: Item_15_E0_D1
+  m_EditorClassIdentifier: Assembly-CSharp::FoodDataSO
+  FoodId: Roti Tawar Konjac
+  FoodPrefab:
+  - {fileID: 4417826435687172446, guid: cfa20d8d44c3e0145824443d41dbdc22, type: 3}
+  - {fileID: 4417826435687172446, guid: 01d9a68c6dc5d794a8f84e9df792f978, type: 3}
+  - {fileID: 4417826435687172446, guid: a6cfe449969a643458a7aeff1da60ee4, type: 3}
+  - {fileID: 4417826435687172446, guid: 15c19b380b9d7824092ce82eef805943, type: 3}
+  Components:
+  - ComponentType: 0
+    AttributeFields:
+    - FieldId: 0
+      FieldName: Takaran Saji
+      Value: 100 g
+    - FieldId: 1
+      FieldName: Sajian per Kemasan
+      Value: 1
+    - FieldId: 2
+      FieldName: Kalori per Sajian
+      Value: 130
+  - ComponentType: 1
+    AttributeFields:
+    - FieldId: 3
+      FieldName: Lemak Total
+      Value: 0.0
+    - FieldId: 4
+      FieldName: Lemak Jenuh
+      Value: 0.0
+    - FieldId: 5
+      FieldName: Protein
+      Value: 10
+    - FieldId: 6
+      FieldName: Karbohidrat
+      Value: 30
+    - FieldId: 7
+      FieldName: Gula
+      Value: 0
+    - FieldId: 8
+      FieldName: Natrium
+      Value: 10
+  - ComponentType: 2
+    AttributeFields:
+    - FieldId: 9
+      FieldName: Komposisi
+      Value: 
+  Approval: 1
+  GGLRating: 1
+  GGLReasons: 0100000003000000
+  ExpiryDate:
+    day: 10
+    month: 8
+    year: 2028
+  IsExpired: 0
+  IsDefect: 1
+  Claims:
+  - claimType: 9
+    claimDescription: Sehat
+    isValid: 1
+  - claimType: 5
+    claimDescription: Rendah Gula
+    isValid: 1
