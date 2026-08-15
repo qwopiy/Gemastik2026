@@ -75,11 +75,15 @@ public class EndingPageData
     {
         isUnlocked = true;
         endingImage.sprite = endingSprite;
+        pageTitleTMP.text = pageTitleUnlocked;
+        pageContentTMP.text = pageContentUnlocked;
     }
 
     public void LockPage()
     {
         isUnlocked = false;
         endingImage.sprite = endingSpriteLocked;
+        pageTitleTMP.text = pageTitleLocked;
+        pageContentTMP.text = pageContentLocked;
     }
 }

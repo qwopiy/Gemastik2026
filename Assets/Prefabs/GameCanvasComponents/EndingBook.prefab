@@ -716,7 +716,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &9119190922046827441
 RectTransform:
   m_ObjectHideFlags: 0
@@ -765,7 +765,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 1601469058, guid: 1c5a042dd8ee42a41b9a3eb2e7d8222d, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1396,7 +1396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &9013444202312573923
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1445,7 +1445,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 1601469058, guid: 1c5a042dd8ee42a41b9a3eb2e7d8222d, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2005,7 +2005,6 @@ MonoBehaviour:
     LeftPage: {fileID: -1355055918976158221, guid: 9d546e74eb019a24ba5fb7ef0cfd4328, type: 3}
     RightPage: {fileID: 1981518741, guid: 9d546e74eb019a24ba5fb7ef0cfd4328, type: 3}
     PageObjects:
-    - {fileID: 4154854692083973528}
     - {fileID: 2930066373228193737}
     - {fileID: 3870194242713483379}
     - {fileID: 3700886647525822745}
@@ -2013,7 +2012,6 @@ MonoBehaviour:
     LeftPage: {fileID: -1355055918976158221, guid: 9d546e74eb019a24ba5fb7ef0cfd4328, type: 3}
     RightPage: {fileID: 1981518741, guid: 9d546e74eb019a24ba5fb7ef0cfd4328, type: 3}
     PageObjects:
-    - {fileID: 4154854692083973528}
     - {fileID: 5162676882312099381}
     - {fileID: 7003417808314119035}
     - {fileID: 3700886647525822745}
@@ -2022,7 +2020,6 @@ MonoBehaviour:
     LeftPage: {fileID: -1355055918976158221, guid: 9d546e74eb019a24ba5fb7ef0cfd4328, type: 3}
     RightPage: {fileID: 1981518741, guid: 9d546e74eb019a24ba5fb7ef0cfd4328, type: 3}
     PageObjects:
-    - {fileID: 4154854692083973528}
     - {fileID: 4056819436042228988}
     - {fileID: 1077071823482896327}
     - {fileID: 3700886647525822745}
@@ -2031,7 +2028,6 @@ MonoBehaviour:
     LeftPage: {fileID: -1355055918976158221, guid: 9d546e74eb019a24ba5fb7ef0cfd4328, type: 3}
     RightPage: {fileID: 1981518741, guid: 9d546e74eb019a24ba5fb7ef0cfd4328, type: 3}
     PageObjects:
-    - {fileID: 4154854692083973528}
     - {fileID: 3236464752993221757}
     - {fileID: 4340740397100770469}
     - {fileID: 3700886647525822745}
@@ -2040,7 +2036,6 @@ MonoBehaviour:
     LeftPage: {fileID: -1355055918976158221, guid: 9d546e74eb019a24ba5fb7ef0cfd4328, type: 3}
     RightPage: {fileID: 1981518741, guid: 9d546e74eb019a24ba5fb7ef0cfd4328, type: 3}
     PageObjects:
-    - {fileID: 4154854692083973528}
     - {fileID: 604212277666571053}
     - {fileID: 3219921053611247001}
     - {fileID: 5265076071774517554}
@@ -2172,8 +2167,8 @@ MonoBehaviour:
       ada, menghantui dirimu disetiap malam
     pageContentLocked: Selesaikan level 4 dengan mendapati 2 atau lebih tipe kesalahan
       yang berbeda. Jumlah kesalahan masing-masong tipe harus sama besar.
-    endingSprite: {fileID: 0}
-    endingSpriteLocked: {fileID: 0}
+    endingSprite: {fileID: -1665005419801507747, guid: cd28bbc3d00bdc14abc4aa2a92bda09e, type: 3}
+    endingSpriteLocked: {fileID: -5600115015953745579, guid: 645088d53b3a2ba4297a91df67aeaee8, type: 3}
     endingImage: {fileID: 7080878447805966520}
     isUnlocked: 0
   - type: 1
@@ -2516,7 +2511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8720014374817354536
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3368,7 +3363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1930819161910762348, guid: 179a591631193094c8da54e0b7d94722, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2449545432358347435, guid: 179a591631193094c8da54e0b7d94722, type: 3}
       propertyPath: m_Pivot.x
@@ -4215,7 +4210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1930819161910762348, guid: 179a591631193094c8da54e0b7d94722, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2449545432358347435, guid: 179a591631193094c8da54e0b7d94722, type: 3}
       propertyPath: m_Pivot.x
