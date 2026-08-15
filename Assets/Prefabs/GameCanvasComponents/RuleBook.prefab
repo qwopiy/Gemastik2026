@@ -2474,7 +2474,7 @@ MonoBehaviour:
     - {fileID: 1404041909923470341}
   - PageTitle: Klaim_2
     LeftPage: {fileID: -3819252362092484696, guid: 02adb96958443d94badd82dc893b2a48, type: 3}
-    RightPage: {fileID: 204360423, guid: 02adb96958443d94badd82dc893b2a48, type: 3}
+    RightPage: {fileID: 173468517, guid: 02adb96958443d94badd82dc893b2a48, type: 3}
     PageObjects:
     - {fileID: 1840030740352020612}
     - {fileID: 1404041909923470341}

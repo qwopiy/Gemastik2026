@@ -65,18 +65,21 @@ public class EndingPageData
     public string pageContentLocked;
 
     [Header("Page Settings")]
-    public Image endingImageOverlay;
+
+    public Sprite endingSprite;
+    public Sprite endingSpriteLocked;
+    public Image endingImage;
     public bool isUnlocked;
 
     public void UnlockPage()
     {
         isUnlocked = true;
-        endingImageOverlay.gameObject.SetActive(false);
+        endingImage.sprite = endingSprite;
     }
 
     public void LockPage()
     {
         isUnlocked = false;
-        endingImageOverlay.gameObject.SetActive(true);
+        endingImage.sprite = endingSpriteLocked;
     }
 }
