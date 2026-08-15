@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65af9cae2b8dabb42b44f30eac6131a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PausePanelController
-  pausePanel: {fileID: 0}
+  pausePanel: {fileID: 326696129279861988}
 --- !u!1 &326696129279861988
 GameObject:
   m_ObjectHideFlags: 0
