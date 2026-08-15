@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GlobalManager : MonoBehaviour
 {
@@ -17,4 +19,15 @@ public class GlobalManager : MonoBehaviour
     }
 
     public Endings CurrentEnding;
+
+    // Global Events
+    public event Action EscapePressedEvent;
+
+    public void Update()
+    {
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            EscapePressedEvent?.Invoke();
+        }
+    }
 }

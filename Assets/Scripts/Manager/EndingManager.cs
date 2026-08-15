@@ -49,12 +49,12 @@ public class EndingManager : MonoBehaviour
             elapsedTime += Time.deltaTime;  
     }
 
-    private void StartTimer()
+    public void StartTimer()
     {
         isTimerRunning = true;
     }
 
-    private void StopTimer()
+    public void StopTimer()
     {
         isTimerRunning = false;
     }
