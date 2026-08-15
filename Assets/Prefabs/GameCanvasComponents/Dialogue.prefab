@@ -180,9 +180,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2178474404293901624}
     m_Modifications:
+    - target: {fileID: 999685657783828138, guid: 8d13a155596e70f43ac5c5afd90a0d80, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2089163150739250856, guid: 8d13a155596e70f43ac5c5afd90a0d80, type: 3}
       propertyPath: m_Name
       value: SpeechBubble
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089163150739250856, guid: 8d13a155596e70f43ac5c5afd90a0d80, type: 3}
+      propertyPath: m_TagString
+      value: Interactible
       objectReference: {fileID: 0}
     - target: {fileID: 5427351737448083566, guid: 8d13a155596e70f43ac5c5afd90a0d80, type: 3}
       propertyPath: m_Pivot.x
@@ -262,6 +270,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5427351737448083566, guid: 8d13a155596e70f43ac5c5afd90a0d80, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789289019959211008, guid: 8d13a155596e70f43ac5c5afd90a0d80, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

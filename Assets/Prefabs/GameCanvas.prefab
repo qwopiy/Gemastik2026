@@ -675,7 +675,7 @@ GameObject:
   - component: {fileID: 2619895009337555724}
   m_Layer: 5
   m_Name: TutorialController
-  m_TagString: Untagged
+  m_TagString: Interactible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
