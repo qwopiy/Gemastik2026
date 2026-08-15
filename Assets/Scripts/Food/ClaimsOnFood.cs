@@ -7,7 +7,6 @@ public enum ClaimType
     CalorieFree, // < 5 calories per serving
     HighProtein, // > 10g protein per serving
     LowCarbohydrate, // < 15g carbohydrates per serving
-    SugarFree, // < 0.5g sugar per serving
     LowSugar, // < 5g sugar per serving
     LowSalt, // <= 120mg salt per serving
     LowTotalFat, // < 3g of total fat per serving

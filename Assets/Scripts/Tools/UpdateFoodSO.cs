@@ -305,7 +305,7 @@ public class UpdateFoodSO : EditorWindow
         // prevents duplicate claims by checking if the claim already exists in the list
         while (randomClaims.Count < claimCount)
         {
-            int randomClaimType = Random.Range(1, 12); // 1 to 11 
+            int randomClaimType = Random.Range(1, 11); // 1 to 10
             string claimDescription = ClaimStringsDatabase.GetRandomDescription((ClaimType)randomClaimType);
 
             Claim newClaim = new((ClaimType)randomClaimType, claimDescription, CheckValidity(so, (ClaimType)randomClaimType, claimDescription));
@@ -327,8 +327,6 @@ public class UpdateFoodSO : EditorWindow
                 return float.Parse(so.Components[1].AttributeFields[2].Value) > 10f;
             case ClaimType.LowCarbohydrate:
                 return float.Parse(so.Components[1].AttributeFields[3].Value) < 15f;
-            case ClaimType.SugarFree:
-                return float.Parse(so.Components[1].AttributeFields[4].Value) < 0.5f;
             case ClaimType.LowSugar:
                 return float.Parse(so.Components[1].AttributeFields[4].Value) < 5f;
             case ClaimType.LowSalt:
@@ -378,14 +376,14 @@ public class UpdateFoodSO : EditorWindow
         GGLSticker saltGGL = GetGGL(salt, GGLReason.Salt, servingSize);
         GGLSticker fatGGL = GetGGL(fat, GGLReason.Fat, servingSize);
 
-        GGLSticker minGGL = (GGLSticker)Mathf.Min((int)sugarGGL, Mathf.Min((int)saltGGL, (int)fatGGL));
+        GGLSticker maxGGL = (GGLSticker)Mathf.Max((int)sugarGGL, Mathf.Max((int)saltGGL, (int)fatGGL));
 
         List<GGLReason> reasons = new List<GGLReason>();
-        if (minGGL == sugarGGL) reasons.Add(GGLReason.Sugar);
-        if (minGGL == saltGGL) reasons.Add(GGLReason.Salt);
-        if (minGGL == fatGGL) reasons.Add(GGLReason.Fat);
+        if (maxGGL == sugarGGL) reasons.Add(GGLReason.Sugar);
+        if (maxGGL == saltGGL) reasons.Add(GGLReason.Salt);
+        if (maxGGL == fatGGL) reasons.Add(GGLReason.Fat);
 
-        asset.GGLRating = minGGL;
+        asset.GGLRating = maxGGL;
         asset.GGLReasons = reasons;
     }
 }

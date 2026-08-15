@@ -30,7 +30,6 @@ public static class ClaimStringsDatabase
         new(ClaimType.LowTotalFat, new List<string> { "Rendah Lemak", "Low in fat", "Reduced fat content" }),
         new(ClaimType.HighProtein, new List<string> { "Tinggi Protein", "High in protein", "Protein-rich", "Cocok untuk olahraga", "Pembangun Otot!" }),
         new(ClaimType.LowCarbohydrate, new List<string> { "Rendah Karbohidrat", "Low in carbohydrates", "Reduced carb content" }),
-        new(ClaimType.SugarFree, new List<string> { "Tanpa Gula", "Sugar-free", "No sugar", "Aman untuk penderita diabetes" }),
         new(ClaimType.LowSugar, new List<string> { "Rendah Gula", "Low in sugar", "Reduced sugar content" }),
         new(ClaimType.LowSalt, new List<string> { "Rendah Garam", "Low in salt", "Reduced salt content" }),
         new(ClaimType.Healthy, new List<string> { "Sehat", "Sehat untuk badan", "Good for your health" }),

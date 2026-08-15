@@ -161,7 +161,6 @@ public class FoodChecker : MonoBehaviour
                     case ClaimType.LowTotalFat:
                     case ClaimType.HighProtein:
                     case ClaimType.LowCarbohydrate:
-                    case ClaimType.SugarFree:
                     case ClaimType.LowSugar:
                     case ClaimType.LowSalt:
                     case ClaimType.Healthy:
