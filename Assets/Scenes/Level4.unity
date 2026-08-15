@@ -613,6 +613,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 2619895009337555724, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
+      propertyPath: tutorialObjects.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4305622427916493053, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
       propertyPath: m_Name
       value: GameCanvas
@@ -701,8 +705,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9137335793406437929, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6188139410036478625, guid: b806d58a156e79145a74e57117635548, type: 3}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1079112898046649724, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
+    - {fileID: 7604274390303797731, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
+    - {fileID: 7531264249893099272, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
+    - {fileID: 1611400953715641437, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
+    - {fileID: 4808281347949973593, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
+    - {fileID: 2054915516322613312, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
+    - {fileID: 5551633835296146590, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
+    - {fileID: 2490188575970520772, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
+    - {fileID: 1302544942509092873, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
+    - {fileID: 7913327047549420239, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
+    - {fileID: 3123807428693316898, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
+    - {fileID: 3500772892750440422, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 9099701815296303196, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
       insertIndex: -1
