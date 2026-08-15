@@ -990,7 +990,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4723647849688478576
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2007,35 +2007,43 @@ MonoBehaviour:
     PageObjects:
     - {fileID: 4154854692083973528}
     - {fileID: 2930066373228193737}
-    - {fileID: 7003417808314119035}
+    - {fileID: 3870194242713483379}
+    - {fileID: 3700886647525822745}
   - PageTitle: General_2
     LeftPage: {fileID: -1355055918976158221, guid: 9d546e74eb019a24ba5fb7ef0cfd4328, type: 3}
     RightPage: {fileID: 1981518741, guid: 9d546e74eb019a24ba5fb7ef0cfd4328, type: 3}
     PageObjects:
     - {fileID: 4154854692083973528}
     - {fileID: 5162676882312099381}
-    - {fileID: 1077071823482896327}
+    - {fileID: 7003417808314119035}
+    - {fileID: 3700886647525822745}
+    - {fileID: 5265076071774517554}
   - PageTitle: General_3
     LeftPage: {fileID: -1355055918976158221, guid: 9d546e74eb019a24ba5fb7ef0cfd4328, type: 3}
     RightPage: {fileID: 1981518741, guid: 9d546e74eb019a24ba5fb7ef0cfd4328, type: 3}
     PageObjects:
     - {fileID: 4154854692083973528}
     - {fileID: 4056819436042228988}
-    - {fileID: 4340740397100770469}
+    - {fileID: 1077071823482896327}
+    - {fileID: 3700886647525822745}
+    - {fileID: 5265076071774517554}
   - PageTitle: General_4
     LeftPage: {fileID: -1355055918976158221, guid: 9d546e74eb019a24ba5fb7ef0cfd4328, type: 3}
     RightPage: {fileID: 1981518741, guid: 9d546e74eb019a24ba5fb7ef0cfd4328, type: 3}
     PageObjects:
     - {fileID: 4154854692083973528}
     - {fileID: 3236464752993221757}
-    - {fileID: 3219921053611247001}
+    - {fileID: 4340740397100770469}
+    - {fileID: 3700886647525822745}
+    - {fileID: 5265076071774517554}
   - PageTitle: General_5
     LeftPage: {fileID: -1355055918976158221, guid: 9d546e74eb019a24ba5fb7ef0cfd4328, type: 3}
     RightPage: {fileID: 1981518741, guid: 9d546e74eb019a24ba5fb7ef0cfd4328, type: 3}
     PageObjects:
     - {fileID: 4154854692083973528}
     - {fileID: 604212277666571053}
-    - {fileID: 0}
+    - {fileID: 3219921053611247001}
+    - {fileID: 5265076071774517554}
   leftPage: {fileID: 2454043890979851744}
   rightPage: {fileID: 5849406164798584616}
   rightButton: {fileID: 8496680682894518614}
@@ -2508,7 +2516,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8720014374817354536
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3975,6 +3983,11 @@ PrefabInstance:
 --- !u!224 &1045007131476083124 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2449545432358347435, guid: 179a591631193094c8da54e0b7d94722, type: 3}
+  m_PrefabInstance: {fileID: 3422195739143938847}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3870194242713483379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1930819161910762348, guid: 179a591631193094c8da54e0b7d94722, type: 3}
   m_PrefabInstance: {fileID: 3422195739143938847}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &5341103055672563524 stripped
