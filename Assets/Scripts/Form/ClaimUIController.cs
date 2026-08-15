@@ -1,4 +1,3 @@
-using System.Security.Claims;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +9,7 @@ public class ClaimUIController : MonoBehaviour
     public Button addClaimButton;
     public TMP_Dropdown.OptionDataList claimOptions;
 
+    private int claimCount = 0;
     private void Start()
     {
         claimsOnFood = GetComponent<ClaimsOnFood>();
@@ -63,5 +63,10 @@ public class ClaimUIController : MonoBehaviour
 
         GameObject newClaimDropdown = Instantiate(claimDropdownPrefab, addClaimButton.transform.parent);
         newClaimDropdown.transform.SetSiblingIndex(index - 1);
+        claimCount++;
+        if (claimCount >= 3)
+        {
+            addClaimButton.gameObject.SetActive(false);
+        }
     }
 }

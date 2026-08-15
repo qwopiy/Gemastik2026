@@ -1874,6 +1874,10 @@ PrefabInstance:
       propertyPath: 'tutorialObjects.Array.data[2]'
       value: 
       objectReference: {fileID: 146276691}
+    - target: {fileID: 2867003255374210913, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 3199376634782242836, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1992,6 +1996,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9137335793406437929, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1568251606657615099, guid: b17604aa0c7da5845b3436a9844d8698, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1079112898046649724, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
