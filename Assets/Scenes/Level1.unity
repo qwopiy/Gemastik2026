@@ -2952,6 +2952,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrashButton
       objectReference: {fileID: 0}
+    - target: {fileID: 7645592090587996336, guid: 31c8d297938e2724fb46e1bddae7f0b2, type: 3}
+      propertyPath: redStripe
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1780353138103298521, guid: 31c8d297938e2724fb46e1bddae7f0b2, type: 3}
@@ -4079,7 +4083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3199376634782242836, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3260146349167150970, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
       propertyPath: m_AnchorMax.y

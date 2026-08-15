@@ -299,5 +299,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MagnifierController
   zoomCamera: {fileID: 0}
   magnifierCanvas: {fileID: 0}
-  RedStripe: {fileID: 992740881091903117}
+  redStripe: {fileID: 992740881091903117}
   animator: {fileID: 0}
