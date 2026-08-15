@@ -279,14 +279,20 @@ public class UpdateFoodSO : EditorWindow
         so.Claims.Clear(); // Clear existing claims before adding new ones
         int randomClaimCount = Random.Range(1, 4); // 1 to 3 claims
 
-        for (int i = 0; i < randomClaimCount; i++)
+        List<Claim> randomClaims = new();
+
+        // prevents duplicate claims by checking if the claim already exists in the list
+        do
         {
             int randomClaimType = Random.Range(1, 12); // 1 to 11 
             string claimDescription = ClaimStringsDatabase.GetRandomDescription((ClaimType)randomClaimType);
 
             Claim newClaim = new((ClaimType)randomClaimType, claimDescription, CheckValidity(so, (ClaimType)randomClaimType, claimDescription));
-            so.Claims.Add(newClaim);
-        }
+            if (!newClaim.ContainsClaimInList(randomClaims))
+            {
+                randomClaims.Add(newClaim);
+            }
+        } while (randomClaims.Count < randomClaimCount);
     }
     private bool CheckValidity(FoodDataSO so, ClaimType claim, string description = "A")
     {
