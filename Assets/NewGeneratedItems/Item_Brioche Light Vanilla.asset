@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FoodDataSO
   FoodId: Brioche Light Vanilla
   FoodPrefab:
-  - {fileID: 4417826435687172446, guid: e3fd86f2d6f260142a6563bcb8e3cc6c, type: 3}
+  - {fileID: 4417826435687172446, guid: a6cfe449969a643458a7aeff1da60ee4, type: 3}
+  - {fileID: 4417826435687172446, guid: 15c19b380b9d7824092ce82eef805943, type: 3}
+  - {fileID: 4417826435687172446, guid: 86b025ff64425df41b82c4c3b439d6de, type: 3}
   Components:
   - ComponentType: 0
     AttributeFields:

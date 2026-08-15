@@ -73,6 +73,3 @@ MonoBehaviour:
   - claimType: 8
     claimDescription: Nutri-Level A
     isValid: 0
-  - claimType: 8
-    claimDescription: Nutri-Level B
-    isValid: 1
