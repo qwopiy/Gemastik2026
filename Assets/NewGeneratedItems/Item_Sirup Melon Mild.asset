@@ -34,7 +34,7 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 36
+      Value: 40
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -48,21 +48,34 @@ MonoBehaviour:
       Value: 0
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 9
+      Value: 0
     - FieldId: 7
       FieldName: Gula
-      Value: 9
+      Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 15
+      Value: 24
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: C
+      Value: 
   Approval: 1
-  GGLRating: 2
-  GGLReasons: 0100000002000000
-  IsKadaluarsa: 0
+  GGLRating: 1
+  GGLReasons: 0100000003000000
+  ExpiryDate:
+    day: 0
+    month: 0
+    year: 0
+  IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 6
+    claimDescription: Rendah Garam
+    isValid: 1
+  - claimType: 11
+    claimDescription: 
+    isValid: 1
+  - claimType: 3
+    claimDescription: Reduced carb content
+    isValid: 1

@@ -17,7 +17,7 @@ public class FoodChecker : MonoBehaviour
     {
         if (pendingObjects.Count != LevelManager.Instance.FoodDataList[LevelManager.Instance.index - 1].AmountToSpawn)
         {
-            Debug.LogWarning($"Not all food items have been stamped. Stamped: {pendingObjects.Count}, Expected: {LevelManager.Instance.FoodDataList[LevelManager.Instance.index - 1].FoodData.Count}");
+            Debug.LogWarning($"Not all food items have been stamped. Stamped: {pendingObjects.Count}, Expected: {LevelManager.Instance.FoodDataList[LevelManager.Instance.index - 1].AmountToSpawn}");
             return;
         }
 
@@ -64,15 +64,15 @@ public class FoodChecker : MonoBehaviour
     private void CheckFood(Transform tr, FoodItem foodInfo, out bool isCorrect)
     {
         isCorrect = false;
-        if (tr == null && LevelManager.Instance.Level < 1)
+        if (tr != null && LevelManager.Instance.Level >= 0)
         {
             CompareFoodGGL(tr, foodInfo, out isCorrect);
         }
-        if (LevelManager.Instance.Level < 2)
+        if (LevelManager.Instance.Level >= 1)
         {
             CompareFoodTable(tr, foodInfo, out isCorrect);
         }
-        if (LevelManager.Instance.Level < 3)
+        if (LevelManager.Instance.Level >= 2)
         {
             CompareFoodClaims(tr, foodInfo, out isCorrect);
         }
@@ -82,6 +82,8 @@ public class FoodChecker : MonoBehaviour
     {
         StampsOnFood foodStamps = tr.GetComponentInChildren<StampsOnFood>(true);
         foodStamps.CheckForGGLStickers();
+
+        Debug.Log($"Food: {foodInfo.GetFoodData().FoodId}, GGL Sticker: {foodStamps.gglSticker}, Expected GGL: {foodInfo.GetFoodData().GGLRating}");
 
         if (foodStamps.gglSticker != foodInfo.GetFoodData().GGLRating)
         {

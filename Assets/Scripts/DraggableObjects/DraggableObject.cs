@@ -95,7 +95,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     {
         canvasGroup.blocksRaycasts = true;
 
-        Debug.Log("Dropped on: " + (ObjCurrentlyOn != null ? ObjCurrentlyOn.name : "Nothing"));
+        Debug.Log("Dropped on: " + (ObjCurrentlyOn != null ? ObjCurrentlyOn.name + " (" + ObjCurrentlyOn.tag + ")" : "Nothing"));
 
         CheckDropTarget(ObjCurrentlyOn);
 
@@ -132,6 +132,18 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 Transform obj = droppedOn.GetComponentInParent<RectTransform>().transform;
                 transform.SetParent(obj);
                 return; // Exit after snapping to the first valid object
+            }
+        }
+
+        // If dropped in an invalid area, snap back to the sticker dispenser/tray
+        transform.SetParent(originalParent);
+        if (snapBack)
+        {
+            //rectTransform.position = initialPosition;
+            StartCoroutine(MoveRoutine(initialPosition, snapduration));
+            if (currentState != originalState)
+            {
+                SetVisualState(originalState); // Reset to original state when snapping back
             }
         }
     }
@@ -181,14 +193,14 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         for (int i = 1; i < results.Count; i++)
         {
             GameObject hitObject = results[i].gameObject;
-            Debug.Log("Hit UI Object: " + hitObject.name);
+            //Debug.Log("Hit UI Object: " + hitObject.name);
 
             foreach (string tag in allowedTags)
             {
                 if (hitObject.CompareTag(tag))
                 {
                     ObjCurrentlyOn = hitObject;
-                    Debug.Log("Found object behind: " + hitObject.name);
+                    //Debug.Log("Found object behind: " + hitObject.name);
                     return; // Exit after finding the first valid object
                 }
             }
@@ -208,6 +220,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void SetObjectState()
     {
+        if (ObjInClientView == null || ObjInDeskView == null) return;
         if (ObjCurrentlyOn == null) 
         {
             SetVisualState(currentState);
@@ -233,6 +246,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     protected void SetVisualState(ObjectState state)
     {
+        if (ObjInClientView == null || ObjInDeskView == null) return;
         ObjectState previousState = currentState;
         currentState = state;
 

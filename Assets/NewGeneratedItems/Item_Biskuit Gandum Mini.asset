@@ -39,10 +39,10 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 2.5
+      Value: 2.6
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 0.9
+      Value: 1.0
     - FieldId: 5
       FieldName: Protein
       Value: 2
@@ -51,18 +51,31 @@ MonoBehaviour:
       Value: 14
     - FieldId: 7
       FieldName: Gula
-      Value: 3
+      Value: 4
     - FieldId: 8
       FieldName: Natrium
-      Value: 55
+      Value: 56
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: B
+      Value: 
   Approval: 1
-  GGLRating: 4
-  GGLReasons: 0100000003000000
-  IsKadaluarsa: 0
+  GGLRating: 3
+  GGLReasons: 02000000
+  ExpiryDate:
+    day: 0
+    month: 0
+    year: 0
+  IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 5
+    claimDescription: Reduced sugar content
+    isValid: 1
+  - claimType: 9
+    claimDescription: Good for your health
+    isValid: 0
+  - claimType: 8
+    claimDescription: Nutri-Level D
+    isValid: 0

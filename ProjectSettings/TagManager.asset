@@ -13,6 +13,8 @@ TagManager:
   - TrashBin
   - CompactView
   - DeskView
+  - GameCanvas
+  - Interactible
   layers:
   - Default
   - TransparentFX

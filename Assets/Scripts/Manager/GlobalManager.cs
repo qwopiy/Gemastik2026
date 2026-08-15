@@ -15,4 +15,6 @@ public class GlobalManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public Endings CurrentEnding;
 }

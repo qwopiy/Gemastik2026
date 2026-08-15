@@ -5,11 +5,11 @@ using UnityEngine;
 public class SetLevelSO : EditorWindow
 {
     private DefaultAsset folderAsset;
-    private string folderPath = "Assets/GeneratedItems";
-    private int randomObjCount = 10;
-    private int levelToSet = 1; // Default level to set for the ScriptableObjects
-    private bool isExpired = false;
-    private bool isDefect = false;
+    private string folderPath = "Assets/Resources/FoodData/";
+    private int isNormalAmount = 0;
+    private int isExpiredAmount = 0;
+    private int isDefectAmount = 0;
+    private int isBothAmount = 0;
 
 
     private int[] GGLCounter = new int[4] { 0, 0, 0, 0 };
@@ -24,11 +24,11 @@ public class SetLevelSO : EditorWindow
     {
         GUILayout.Label("Set Level for ScriptableObjects", EditorStyles.boldLabel);
         folderAsset = (DefaultAsset)EditorGUILayout.ObjectField("Folder to Process", folderAsset, typeof(DefaultAsset), false);
-        randomObjCount = EditorGUILayout.IntField("Random Object Count", randomObjCount);
         folderPath = EditorGUILayout.TextField("Save Folder Path", folderPath);
-        levelToSet = EditorGUILayout.IntField("Level to Set", levelToSet);
-        isExpired = EditorGUILayout.Toggle("Set Expired", isExpired);
-        isDefect = EditorGUILayout.Toggle("Set Defective", isDefect);
+        isNormalAmount = EditorGUILayout.IntField("Normal Items", isNormalAmount);
+        isExpiredAmount = EditorGUILayout.IntField("Expired Items", isExpiredAmount);
+        isDefectAmount = EditorGUILayout.IntField("Defective Items", isDefectAmount);
+        isBothAmount = EditorGUILayout.IntField("Both Expired and Defective", isBothAmount);
 
         if (GUILayout.Button("Process and Create SOs"))
         {
@@ -51,6 +51,8 @@ public class SetLevelSO : EditorWindow
         // 2. Find all assets inside that specific folder path
         // "t:FoodDataSO" grabs only FoodDataSO assets
         string[] assetGuids = AssetDatabase.FindAssets("t:FoodDataSO", new[] { ItemToProcessPath });
+
+        int randomObjCount = isNormalAmount + isExpiredAmount + isDefectAmount + isBothAmount;
         string[] randomGuids = GetRandomElements(assetGuids, randomObjCount);
 
         if (!Directory.Exists(folderPath))
@@ -60,37 +62,25 @@ public class SetLevelSO : EditorWindow
 
         int index = 0;
         // 3. Iterate over every file found
-        foreach (string guid in randomGuids)
+        for (int i = 0; i < isNormalAmount; i++)
         {
-            // 4. Convert the unique ID back into a string path
-            string assetPath = AssetDatabase.GUIDToAssetPath(guid);
-
-            // 5. Skip the root folder asset itself (AssetDatabase includes it in the search)
-            if (assetPath == ItemToProcessPath) continue;
-
-            // 6. Optional: Load the asset if you need to inspect or modify its properties
-            FoodDataSO childAsset = AssetDatabase.LoadAssetAtPath<FoodDataSO>(assetPath);
-
-
-            if (childAsset != null)
-            {
-                // Do your custom work here
-
-                // Create a new instance of the ScriptableObject
-                FoodDataSO newAsset = CreateInstance<FoodDataSO>();
-
-                newAsset.CopyValues(childAsset); // Copy properties from the existing asset
-
-                AddSOToLevel(newAsset, levelToSet); // Set the level for the new asset)
-
-                // Save the asset file to the project
-                string newAssetPath = $"{folderPath}/Item_{index}_L{levelToSet}_ID{newAsset.FoodId}.asset";
-                //Debug.Log(newAssetPath);
-                AssetDatabase.CreateAsset(newAsset, newAssetPath);
-
-                index++;
-                //Debug.Log($"Iterating file: {childAsset.name} | Type: {childAsset.GetType()} | Path: {assetPath}");
-            }
+            AddSO(index, ItemToProcessPath, randomGuids, isExpired: false, isDefect: false);
+            index++;
+        }
+        for (int i = 0; i < isExpiredAmount; i++)
+        {
+            AddSO(index, ItemToProcessPath, randomGuids, isExpired: true, isDefect: false);
+            index++;
+        }
+        for (int i = 0; i < isDefectAmount; i++)
+        {
+            AddSO(index, ItemToProcessPath, randomGuids, isExpired: false, isDefect: true);
+            index++;
+        }
+        for (int i = 0; i < isBothAmount; i++)
+        {
+            AddSO(index, ItemToProcessPath, randomGuids, isExpired: true, isDefect: true);
+            index++;
         }
 
         AssetDatabase.SaveAssets();
@@ -100,108 +90,50 @@ public class SetLevelSO : EditorWindow
         Debug.Log($"GGL Sticker Count: A: {GGLCounter[0]}, B: {GGLCounter[1]}, C: {GGLCounter[2]}, D: {GGLCounter[3]}");
     }
 
-    private void AddSOToLevel(FoodDataSO so, int level)
+    private void AddSO(int index, string ItemToProcessPath, string[] randomGuids, bool isExpired, bool isDefect)
     {
-        AddToGGLCounter(so.GGLRating);
-        switch (level) 
+        string guid = randomGuids[index];
+        // 4. Convert the unique ID back into a string path
+        string assetPath = AssetDatabase.GUIDToAssetPath(guid);
+
+        // 5. Skip the root folder asset itself (AssetDatabase includes it in the search)
+        if (assetPath == ItemToProcessPath) return;
+
+        // 6. Optional: Load the asset if you need to inspect or modify its properties
+        FoodDataSO childAsset = AssetDatabase.LoadAssetAtPath<FoodDataSO>(assetPath);
+
+
+        if (childAsset != null)
         {
-            case 1:
-                // Add logic for level 1
-                NormalizeGGL(so);
-                break;
-            case 2:
-                SetExpiryAndDefect(so);
-                break;
-            case 3:
-            case 4:
-                SetExpiryAndDefect(so);
-                SetRandomClaimToSO(so);
-                break;
-            default:
-                throw new System.ArgumentException("Invalid level specified. Level must be 1, 2, 3, or 4.");
+            // Do your custom work here
+
+            // Create a new instance of the ScriptableObject
+            FoodDataSO newAsset = CreateInstance<FoodDataSO>();
+
+            newAsset.CopyValues(childAsset); // Copy properties from the existing asset
+
+            newAsset.IsExpired = isExpired;
+            newAsset.IsDefect = isDefect;
+            AddSOToLevel(newAsset); // Set the level for the new asset)
+
+            // Save the asset file to the project
+            string newAssetPath = $"{folderPath}/Item_{index}_E{(newAsset.IsExpired? 1 : 0)}_D{(newAsset.IsDefect? 1 : 0)}.asset";
+            //Debug.Log(newAssetPath);
+            AssetDatabase.CreateAsset(newAsset, newAssetPath);
+
+            //Debug.Log($"Iterating file: {childAsset.name} | Type: {childAsset.GetType()} | Path: {assetPath}");
         }
     }
-
-    private void NormalizeGGL(FoodDataSO so)
+    private void AddSOToLevel(FoodDataSO so)
     {
-        if (so == null) return;
-
-        bool isGram = so.Components[0].AttributeFields[0].Value.Contains(" g");
-        float servingSize = float.Parse(so.Components[0].AttributeFields[0].Value.Replace(" g", "").Replace(" mL", ""));
-
-        float newServingSizeRatio = servingSize / 100f;
-
-        string unit = isGram ? "g" : "mL";
-        so.Components[0].AttributeFields[0].Value = $"100 {unit}"; // Set the serving size to 100g
-
-        // Normalize GGL values based on the new serving size ratio
-        float sugar = float.Parse(so.Components[1].AttributeFields[4].Value);
-        float salt = float.Parse(so.Components[1].AttributeFields[5].Value);
-        float fat = float.Parse(so.Components[1].AttributeFields[1].Value);
-
-        so.Components[1].AttributeFields[4].Value = (sugar * newServingSizeRatio).ToString("F0");
-        so.Components[1].AttributeFields[5].Value = (salt * newServingSizeRatio).ToString("F0");
-        so.Components[1].AttributeFields[1].Value = (fat * newServingSizeRatio).ToString("F1");
+        AddToGGLCounter(so.GGLRating);
+        SetExpiryAndDefect(so);
     }
+
 
     private void SetExpiryAndDefect(FoodDataSO so)
     {
-        so.ExpiryDate = Calendar.GetRandomDate(isExpired);
-
-        so.IsExpired = isExpired;
-        so.IsDefect = isDefect;
-    }
-
-    private void SetRandomClaimToSO(FoodDataSO so)
-    {
-        int randomClaimCount = Random.Range(1, 4); // 1 to 3 claims
-
-        for (int i = 0; i < randomClaimCount; i++) 
-        {
-            int randomClaimType = Random.Range(1, 13); // 1 to 12 
-            string claimDescription = ClaimStringsDatabase.GetRandomDescription((ClaimType)randomClaimType);
-
-            Claim newClaim = new ((ClaimType)randomClaimType, claimDescription, CheckValidity(so, (ClaimType)randomClaimType, claimDescription));
-            so.Claims.Add(newClaim);
-        }
-    }
-
-    private bool CheckValidity(FoodDataSO so, ClaimType claim, string description = "A")
-    {
-        float servingSize = float.Parse(so.Components[0].AttributeFields[0].Value.Replace(" g", "").Replace(" mL", ""));
-        switch (claim)
-        {
-            case ClaimType.CalorieFree:
-                return float.Parse(so.Components[0].AttributeFields[1].Value) < 5f * servingSize / 100f;
-            case ClaimType.HighProtein:
-                return float.Parse(so.Components[1].AttributeFields[2].Value) > 10f * servingSize / 100f;
-            case ClaimType.LowCarbohydrate:
-                return float.Parse(so.Components[1].AttributeFields[3].Value) < 15f * servingSize / 100f;
-            case ClaimType.SugarFree:
-                return float.Parse(so.Components[1].AttributeFields[4].Value) < 0.5f * servingSize / 100f;
-            case ClaimType.LowSugar:
-                return float.Parse(so.Components[1].AttributeFields[4].Value) < 5f * servingSize / 100f;
-            case ClaimType.LowSalt:
-                return float.Parse(so.Components[1].AttributeFields[5].Value) <= 120f * servingSize / 100f;
-            case ClaimType.LowTotalFat:
-                return float.Parse(so.Components[1].AttributeFields[1].Value) < 3f * servingSize / 100f;
-            case ClaimType.NutriLevel:
-                return so.GGLRating.ToString() == description[^1].ToString();
-            case ClaimType.Healthy:
-                return so.GGLRating == GGLSticker.A;
-            case ClaimType.NoPreservative:
-            case ClaimType.Composition:
-                return true; // masukin manual
-            case ClaimType.None:
-                return false;
-        }
-        return false;
-    }
-
-    private GGLSticker GetRandomGGL()
-    {
-        int randomValue = Random.Range(1, 5); // 1 to 4
-        return (GGLSticker)randomValue;
+        so.ExpiryDate = Calendar.GetRandomDate(so.IsExpired);
     }
 
     private string[] GetRandomElements(string[] source, int count)

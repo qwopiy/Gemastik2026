@@ -103,9 +103,9 @@ public class FoodDisplayHandler : MonoBehaviour
             conditionImage.gameObject.SetActive(itemData.conditionSprite != null);
         }
 
-        if (FoodName != null)
+        if (foodItem.foodData.FoodId != null)
         {
-            FoodName.text = itemData.itemName;
+            FoodName.text = foodItem.foodData.FoodId;
         }
 
         if(ExpiredDate != null)

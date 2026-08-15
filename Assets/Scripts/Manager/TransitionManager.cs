@@ -4,10 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class TransitionManager : MonoBehaviour
 {
+    private static WaitForSeconds _waitForSeconds0_2 = new WaitForSeconds(0.2f);
     private static readonly int StartHash = Animator.StringToHash("Start");
     private static readonly int EndHash = Animator.StringToHash("End");
     public Animator transitionAnimator;
-    public float transitionDuration = 1f;
+    public float transitionSceneDuration = 1f;
+    public float transitionObjDuration = .5f;
     public static TransitionManager Instance;
     private void Awake()
     {
@@ -26,23 +28,36 @@ public class TransitionManager : MonoBehaviour
         StartCoroutine(TransitionCoroutineToScene(sceneName));
     }
 
-    public void TransitionToGameObject(GameObject targetObject)
+    public void TriggerTransition()
     {
-        StartCoroutine(TransitionCoroutineToGameObject(targetObject));
+        StartCoroutine(TransitionNormal());
+    }
+
+    public void TransitionToGameObject(GameObject sourceObject, GameObject targetObject)
+    {
+        StartCoroutine(TransitionCoroutineToGameObject(sourceObject, targetObject));
     }
 
     private IEnumerator TransitionCoroutineToScene(string sceneName)
     {
         transitionAnimator.SetTrigger(EndHash);
-        yield return new WaitForSeconds(transitionDuration);
+        yield return new WaitForSeconds(transitionSceneDuration);
         yield return LoadSceneCoroutine(sceneName);
         transitionAnimator.SetTrigger(StartHash);
     }
 
-    private IEnumerator TransitionCoroutineToGameObject(GameObject targetObject)
+    private IEnumerator TransitionNormal()
     {
         transitionAnimator.SetTrigger(EndHash);
-        yield return new WaitForSeconds(transitionDuration);
+        yield return new WaitForSeconds(transitionObjDuration);
+        transitionAnimator.SetTrigger(StartHash);
+    }
+
+    private IEnumerator TransitionCoroutineToGameObject(GameObject sourceObject, GameObject targetObject)
+    {
+        transitionAnimator.SetTrigger(EndHash);
+        yield return new WaitForSeconds(transitionObjDuration);
+        sourceObject.SetActive(false);
         targetObject.SetActive(true);
         transitionAnimator.SetTrigger(StartHash);
     }
@@ -61,6 +76,8 @@ public class TransitionManager : MonoBehaviour
 
             yield return null; // Wait until the next frame
         }
+
+        yield return _waitForSeconds0_2; // Optional: Small delay to ensure scene is fully initialized
 
         // Code executed here runs immediately AFTER the scene has fully loaded
         Debug.Log("Scene fully loaded!");

@@ -34,6 +34,7 @@ public class DraggableFood : DraggableObject, IBeginDragHandler, IPointerClickHa
     public override void CheckDropTarget(GameObject droppedOn)
     {
         _isDragging = false;
+
         if (droppedOn == null)
         {
             // If dropped in an invalid area, snap back to the sticker dispenser/tray
@@ -47,8 +48,8 @@ public class DraggableFood : DraggableObject, IBeginDragHandler, IPointerClickHa
                     SetVisualState(originalState); // Reset to original state when snapping back
                 }
             }
+            return;
         }
-
         if (droppedOn.CompareTag("CompactView") && isApproved)
         {
             FoodChecker stampChecker = droppedOn.GetComponent<FoodChecker>();
@@ -56,7 +57,8 @@ public class DraggableFood : DraggableObject, IBeginDragHandler, IPointerClickHa
             stampChecker.CheckFood();
             gameObject.SetActive(false); // Hide the food item after stamping
             return;
-        }
+        } 
+
 
         foreach (var tag in allowedTags)
         {
@@ -66,8 +68,20 @@ public class DraggableFood : DraggableObject, IBeginDragHandler, IPointerClickHa
                 Transform obj = droppedOn.GetComponentInParent<RectTransform>().transform;
                 transform.SetParent(obj);
                 return;
+            } 
+        }
+        // If dropped in an invalid area, snap back to the sticker dispenser/tray
+        transform.SetParent(originalParent);
+        if (snapBack)
+        {
+            //rectTransform.position = initialPosition;
+            StartCoroutine(MoveRoutine(initialPosition, snapduration));
+            if (currentState != originalState)
+            {
+                SetVisualState(originalState); // Reset to original state when snapping back
             }
         }
+        return;
     }
 
     public void OnPointerClick(PointerEventData eventData)

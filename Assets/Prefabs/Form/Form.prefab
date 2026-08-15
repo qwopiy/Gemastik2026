@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 256, y: 172.8054}
+  m_SizeDelta: {x: 142.7, y: 140.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4460822674866943813
 CanvasRenderer:
@@ -67,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -1794597875, guid: 1c5a042dd8ee42a41b9a3eb2e7d8222d, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -375,7 +375,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 256, y: 172.8054}
+  m_SizeDelta: {x: 142.7, y: 140.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5006927957103586672
 CanvasRenderer:
@@ -407,7 +407,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 885618807, guid: 1c5a042dd8ee42a41b9a3eb2e7d8222d, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -586,7 +586,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 80}
+  m_SizeDelta: {x: 142.7, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5649178152823251996
 GameObject:
@@ -853,7 +853,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 80}
+  m_SizeDelta: {x: 142.7, y: 140.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7768760482640155628
 GameObject:
