@@ -20,7 +20,7 @@ public class LevelCompleteController : MonoBehaviour
         int corrects = EndingManager.Instance.corrects;
         int foodAmount = 0;
 
-        foreach (var foodList in LevelManager.Instance.FoodDataList)
+        foreach (var foodList in LevelManager.Instance.ClientDataList)
         {
             foodAmount += foodList.AmountToSpawn;
         }

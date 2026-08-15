@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class DialogueController : MonoBehaviour
 {
     [Header("Text Settings")]
@@ -9,6 +10,10 @@ public class DialogueController : MonoBehaviour
     public GameObject speechBubble;
     public TextMeshProUGUI textbox;
     public Dialogues currentDialogue;
+
+    [Header("Sound Settings")]
+    public AudioClip typingSound;
+    public AudioSource audioSource;
 
     private int dialogueIndex;
     private ClientController clientController;
@@ -20,6 +25,9 @@ public class DialogueController : MonoBehaviour
     {
         clientController = GetComponentInChildren<ClientController>(true);
         speechBubbleController = GetComponentInChildren<SpeechBubbleController>(true);
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = typingSound;
 
         LevelManager.Instance.OnDialogueTriggered += SetDialogue;
         DialogueEventManager.Instance.StartGameEvent += SetDialogue;
@@ -43,15 +51,16 @@ public class DialogueController : MonoBehaviour
 
     public void SetDialogue()
     {
-        if (LevelManager.Instance.index < LevelManager.Instance.FoodDataList.Count)
+        if (LevelManager.Instance.index < LevelManager.Instance.ClientDataList.Count)
         {
-            SetDialogue(LevelManager.Instance.FoodDataList[LevelManager.Instance.index].Dialogue);
+            SetDialogue(LevelManager.Instance.ClientDataList[LevelManager.Instance.index].Dialogue);
         }
     }
     private void SetDialogue(Dialogues dialogue)
     {
         currentDialogue = dialogue;
         dialogueIndex = 0;
+        typingSound = currentDialogue.voiceClip;
     }
 
     public void StartDialogue()
@@ -96,11 +105,13 @@ public class DialogueController : MonoBehaviour
     }
     private IEnumerator TypeLinesCoroutine(string text)
     {
+        StartVoiceClip();
         foreach (char c in text.ToCharArray())
         {
             textbox.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
+        StopVoiceClip();
     }
 
     public void ContinueDialogue()
@@ -118,6 +129,7 @@ public class DialogueController : MonoBehaviour
         else
         {
             StopAllCoroutines();
+            StopVoiceClip();
             textbox.text = currentDialogue.GetLine(dialogueIndex);
         }
     }
@@ -147,5 +159,22 @@ public class DialogueController : MonoBehaviour
         dialogueIndex = 0;
 
         DialogueEventManager.Instance.TriggerDialogueStart();
+    }
+
+    private void StartVoiceClip()
+    {
+        if (audioSource != null && typingSound != null)
+        {
+            audioSource.clip = typingSound;
+            audioSource.Play();
+        }
+    }
+
+    private void StopVoiceClip()
+    {
+        if (audioSource != null)
+        {
+            audioSource.Stop();
+        }
     }
 }

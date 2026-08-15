@@ -12,17 +12,7 @@ public class Dialogues
     [Header("Dialogue Lines")]
     public List<string> startingLines;
     public List<string> endingLines;
-    public List<string> randomChatter;
-
     public bool isFirstDialogue = true;
-
-    public string GetRandomChatter()
-    {
-        if (randomChatter.Count == 0)
-            return string.Empty;
-        int randomIndex = Random.Range(0, randomChatter.Count);
-        return randomChatter[randomIndex];
-    }
 
     public string GetLine(int index)
     {

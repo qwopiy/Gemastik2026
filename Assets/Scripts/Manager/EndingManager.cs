@@ -155,7 +155,7 @@ public class EndingManager : MonoBehaviour
     {
         int progress = GameDataManager.gameData.levelProgress;
         int currentLevel = LevelManager.Instance.Level;
-        int foodCount = LevelManager.Instance.FoodDataList.Count;
+        int foodCount = LevelManager.Instance.ClientDataList.Count;
 
         if (currentLevel > progress && corrects == foodCount)
         {
