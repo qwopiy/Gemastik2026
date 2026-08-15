@@ -9,6 +9,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
+      propertyPath: ClientDataList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
+      propertyPath: 'ClientDataList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 7efcc931fe52b944b94bd4c7e629478a, type: 2}
+    - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
       propertyPath: FoodDataList.Array.data[0].AmountToSpawn
       value: 1
       objectReference: {fileID: 0}

@@ -1037,7 +1037,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 289f03fa43b8c48488d2bf32e8c954fc, type: 2}
   - {fileID: 11400000, guid: 1633475f3f6c93641b74b48ef85c0a52, type: 2}
   - {fileID: 11400000, guid: 7622dd29cd2a9754ea804ba42011a10b, type: 2}
-  DefectedDataList: []
+  DefectedDataList:
+  - {fileID: 11400000, guid: a9ddd6900d88980408e9a27a6945701d, type: 2}
+  - {fileID: 11400000, guid: dd40b420f03e243428d84a82c122b94f, type: 2}
+  - {fileID: 11400000, guid: 724168e6469a46248bed58705a34eaad, type: 2}
+  - {fileID: 11400000, guid: 4b75a79d2f3b5e743823ccf3b9924b84, type: 2}
+  - {fileID: 11400000, guid: 5b005e8ba0ef5184f9a5e1dbd09339ae, type: 2}
+  - {fileID: 11400000, guid: be3f1e36c01bf9b49a9836106486e5dc, type: 2}
+  - {fileID: 11400000, guid: e49d4f096f57da444a68ac9f99b2af67, type: 2}
+  - {fileID: 11400000, guid: c4248173de051e74a95fab1914066172, type: 2}
+  - {fileID: 11400000, guid: 5dff88b77e8d1004ab35351e666ea72a, type: 2}
+  - {fileID: 11400000, guid: 386cff4f30257cb4280407a3bec34ea8, type: 2}
 --- !u!1 &8129808478666759800
 GameObject:
   m_ObjectHideFlags: 0

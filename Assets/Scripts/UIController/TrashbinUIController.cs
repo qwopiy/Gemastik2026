@@ -5,10 +5,16 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Animator))]
 public class TrashbinUIController : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    private static readonly int EnabledHash = Animator.StringToHash("Enabled");
     private static readonly int IsHoveredHash = Animator.StringToHash("isHovered");
-    private Animator animator;
+
+    public GameObject redStripe;
+    public Animator trashAnimator;
     public bool isHovered = false;
     public bool isMouseDown = false;
+
+    private Animator animator;
+    private bool isTrashActive = false;
 
     private void Start()
     {
@@ -60,5 +66,14 @@ public class TrashbinUIController : MonoBehaviour, IPointerEnterHandler, IPointe
         isHovered = hover;
 
         animator.SetBool(IsHoveredHash, hover);
+    }
+
+    public void ToggleTrash()
+    {
+        isTrashActive = !isTrashActive;
+        redStripe.SetActive(isTrashActive);
+        trashAnimator.SetBool(EnabledHash, isTrashActive);
+
+        AudioManager.Instance.TriggerMagnifierSound();
     }
 }
