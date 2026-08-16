@@ -15,6 +15,7 @@ public class LevelManager : MonoBehaviour
 
     [Header("Debug")]
     public int index = 0;
+    public int randomIndex;
     public List<FoodDataSO> FoodToSpawn;
     public List<int> ClientServedIndex;
 
@@ -79,17 +80,9 @@ public class LevelManager : MonoBehaviour
     {
         if (index < TotalClients)
         {
-            int randomIndex;
-            do
-            {
-                randomIndex = UnityEngine.Random.Range(0, ClientDataList.Count);
-
-            } while (ClientServedIndex.Contains(randomIndex));
-
             Debug.Log("Spawning food for client index: " + randomIndex);
             SpawnFood(ClientDataList[randomIndex], FoodParent.value.transform);
 
-            ClientServedIndex.Add(randomIndex);
             index++;
         }
         else
@@ -129,5 +122,15 @@ public class LevelManager : MonoBehaviour
     public void TriggerLevelCompletedEvent()
     {
         LevelCompletedEvent?.Invoke();
+    }
+
+    public void GetRandomIndex()
+    {
+        do
+        {
+            randomIndex = UnityEngine.Random.Range(0, ClientDataList.Count);
+
+        } while (ClientServedIndex.Contains(randomIndex));
+        ClientServedIndex.Add(randomIndex);
     }
 }

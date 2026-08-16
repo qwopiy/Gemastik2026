@@ -52,9 +52,10 @@ public class DialogueController : MonoBehaviour
 
     public void SetDialogue()
     {
-        if (LevelManager.Instance.index < LevelManager.Instance.ClientDataList.Count)
+        if (LevelManager.Instance.index < LevelManager.Instance.TotalClients)
         {
-            SetDialogue(LevelManager.Instance.ClientDataList[LevelManager.Instance.index].Dialogue);
+            Debug.Log(LevelManager.Instance.randomIndex);
+            SetDialogue(LevelManager.Instance.ClientDataList[LevelManager.Instance.randomIndex].Dialogue);
         }
     }
     private void SetDialogue(Dialogues dialogue)
@@ -92,6 +93,7 @@ public class DialogueController : MonoBehaviour
         {
             isFirstDialogue = true;
             DialogueEventManager.Instance.TriggerClientExit();
+            LevelManager.Instance.GetRandomIndex();
         }
     }
 

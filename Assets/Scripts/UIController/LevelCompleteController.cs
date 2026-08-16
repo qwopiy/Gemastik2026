@@ -20,9 +20,12 @@ public class LevelCompleteController : MonoBehaviour
         int corrects = EndingManager.Instance.corrects;
         int foodAmount = 0;
 
-        foreach (var foodList in LevelManager.Instance.ClientDataList)
+        // Remove the last served client index from the list to avoid double counting
+        LevelManager.Instance.ClientServedIndex.RemoveAt(LevelManager.Instance.ClientServedIndex.Count - 1);
+
+        foreach (var foodList in LevelManager.Instance.ClientServedIndex)
         {
-            foodAmount += foodList.AmountToSpawn;
+            foodAmount += LevelManager.Instance.ClientDataList[foodList].AmountToSpawn;
         }
 
         statText.text = $"Jumlah makanan yang benar: {corrects}/{foodAmount}";

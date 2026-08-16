@@ -30,7 +30,7 @@ public class ClientController : MonoBehaviour
 
     public void SetClientImage()
     {
-        Sprite sprite = LevelManager.Instance.ClientDataList[LevelManager.Instance.index].Dialogue.speakersSprite;
+        Sprite sprite = LevelManager.Instance.ClientDataList[LevelManager.Instance.randomIndex].Dialogue.speakersSprite;
         if (clientImage == null)
         {
             clientImage = GetComponent<Image>();
@@ -58,9 +58,9 @@ public class ClientController : MonoBehaviour
         yield return new WaitForSeconds(LevelManager.Instance.delayBetweenClients);
 
         Debug.Log("Started Next Client Dialogue");
-        if (LevelManager.Instance.index < LevelManager.Instance.ClientDataList.Count)
+        if (LevelManager.Instance.index < LevelManager.Instance.TotalClients)
         {
-            LevelManager.Instance.TriggerDialogue(LevelManager.Instance.index);
+            LevelManager.Instance.TriggerDialogue(LevelManager.Instance.randomIndex);
             DialogueEventManager.Instance.TriggerClientEnter();
         }
         else
@@ -74,7 +74,7 @@ public class ClientController : MonoBehaviour
         Debug.Log("Dialogue Started");
         if (DialogueEventManager.Instance != null)
         {
-            LevelManager.Instance.TriggerDialogue(LevelManager.Instance.index);
+            LevelManager.Instance.TriggerDialogue(LevelManager.Instance.randomIndex);
             DialogueEventManager.Instance.TriggerDialogueStart();
         }
     }
