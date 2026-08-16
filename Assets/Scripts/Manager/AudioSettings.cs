@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Audio;
 
 public class AudioSettings : MonoBehaviour
@@ -7,13 +6,14 @@ public class AudioSettings : MonoBehaviour
     [Header("Audio Mixer")]
     [SerializeField] public AudioMixer audioMixer;
 
-    [Header("Icons")]
-    [SerializeField] public Image BGMIcon;
-    [SerializeField] public Image SFXIcon;
-    [SerializeField] public Image AmbienceIcon;
+    [Header("Icons GameObjects")]
+    [SerializeField] private GameObject BGMOn;
+    [SerializeField] private GameObject BGMOff;
+    [SerializeField] private GameObject SFXOn;
+    [SerializeField] private GameObject SFXOff;
+    [SerializeField] private GameObject AmbienceOn;
+    [SerializeField] private GameObject AmbienceOff;
 
-    [SerializeField] public Sprite soundOn;
-    [SerializeField] public Sprite soundOff;
 
 
 
@@ -58,12 +58,14 @@ public class AudioSettings : MonoBehaviour
         if (BGMMuted)
         {
             audioMixer.SetFloat("BGMVolume", -80f);
-            BGMIcon.sprite = soundOff;
+            BGMOn.SetActive(!BGMMuted);
+            BGMOff.SetActive(BGMMuted);
         }
         else
         {
             audioMixer.SetFloat("BGMVolume", -20f);
-            BGMIcon.sprite = soundOn;
+            BGMOn.SetActive(!BGMMuted);
+            BGMOff.SetActive(BGMMuted);
         }
     }
 
@@ -72,12 +74,14 @@ public class AudioSettings : MonoBehaviour
         if (SFXMuted)
         {
             audioMixer.SetFloat("SFXVolume", -80f);
-            SFXIcon.sprite = soundOff;
+            SFXOn.SetActive(!SFXMuted);
+            SFXOff.SetActive(SFXMuted);
         }
         else
         {
             audioMixer.SetFloat("SFXVolume", 0f);
-            SFXIcon.sprite = soundOn;
+            SFXOn.SetActive(!SFXMuted);
+            SFXOff.SetActive(SFXMuted);
         }
     }
 
@@ -94,12 +98,14 @@ public class AudioSettings : MonoBehaviour
         if (AmbienceMuted)
         {
             audioMixer.SetFloat("AmbienceVolume", -80f);
-            AmbienceIcon.sprite = soundOff;
+            AmbienceOn.SetActive(!AmbienceMuted);
+            AmbienceOff.SetActive(AmbienceMuted);
         }
         else
         {
             audioMixer.SetFloat("AmbienceVolume", 0f);
-            AmbienceIcon.sprite = soundOn;
+            AmbienceOn.SetActive(!AmbienceMuted);
+            AmbienceOff.SetActive(AmbienceMuted);
         }
     }
 }

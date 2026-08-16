@@ -56,14 +56,6 @@ public class AudioManager : MonoBehaviour
         PlaySoundEffect += PlaySFX;
     }
 
-    private void Update()
-    {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            TriggerClick();
-        }
-    }
-
     private void OnDisable()
     {
         PlaySoundEffect -= PlaySFX;
