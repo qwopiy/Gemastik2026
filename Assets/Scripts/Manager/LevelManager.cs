@@ -86,6 +86,7 @@ public class LevelManager : MonoBehaviour
 
             } while (ClientServedIndex.Contains(randomIndex));
 
+            Debug.Log("Spawning food for client index: " + randomIndex);
             SpawnFood(ClientDataList[randomIndex], FoodParent.value.transform);
 
             ClientServedIndex.Add(randomIndex);

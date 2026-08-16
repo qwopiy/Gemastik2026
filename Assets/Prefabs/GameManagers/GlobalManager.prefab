@@ -1318,11 +1318,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CursorManager
   targetCanvas: {fileID: 0}
-  defaultCursor: {fileID: 2800000, guid: d09cef7790eceb640af534c4c633fcb8, type: 3}
+  defaultCursor: {fileID: 2800000, guid: 81e9acecca2a0c249a26aa0efd30b74d, type: 3}
   pointerCursor: {fileID: 2800000, guid: c80c9ee5c9f53b643bad4c5de264105e, type: 3}
   handCursor: {fileID: 2800000, guid: 92c3d2816b981484999ef2d429805fd0, type: 3}
   dragCursor: {fileID: 2800000, guid: bf7ab12c2c4bd97418ccac63a9a21b29, type: 3}
-  hotSpot: {x: 0, y: 0}
+  topLeftHotSpot: {x: 0, y: 0}
+  centerHotSpot: {x: 16, y: 16}
 --- !u!1001 &3691164257807342979
 PrefabInstance:
   m_ObjectHideFlags: 0

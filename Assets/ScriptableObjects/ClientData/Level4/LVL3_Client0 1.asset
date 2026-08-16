@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 396512e7fc64e944c881da66c2604f9b, type: 3}
+  m_Name: LVL3_Client0 1
+  m_EditorClassIdentifier: Assembly-CSharp::ClientDataSO
+  Dialogue:
+    speakersName: Kunti
+    speakersSprite: {fileID: -4311121877062469133, guid: 68d0648071e011d4a8e95317c5b847c2, type: 3}
+    voiceClip: {fileID: 8300000, guid: 05c9c56614e793f4aa621d2ceb9521b4, type: 3}
+    startingLines:
+    - Halo bang~ masih belum berubah jadi zombie kan?
+    endingLines:
+    - Ok makasih ya bang~ ingat! jangan jadi zombie
+  AmountToSpawn: 1
+  foodFolder: FoodData/Level4/Client2
+  FoodData: []

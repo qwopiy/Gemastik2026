@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 396512e7fc64e944c881da66c2604f9b, type: 3}
+  m_Name: LVL1_Client0 2
+  m_EditorClassIdentifier: Assembly-CSharp::ClientDataSO
+  Dialogue:
+    speakersName: Pisang
+    speakersSprite: {fileID: 1150175596270093533, guid: 3494f099cab82ac40a31b5521a146ba7, type: 3}
+    voiceClip: {fileID: 8300000, guid: 05c9c56614e793f4aa621d2ceb9521b4, type: 3}
+    startingLines:
+    - Pisang bagus dijadiin sarapan sebelum olahraga
+    - tapi saya gabawa pisang sih. Tapi mau olahraga, jadi...
+    - tolong periksa ini dulu
+    endingLines:
+    - Terima Kasih. jangan lupa olahraga
+  AmountToSpawn: 1
+  foodFolder: FoodData/Level1/Client0
+  FoodData: []

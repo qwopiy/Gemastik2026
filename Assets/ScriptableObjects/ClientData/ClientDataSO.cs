@@ -9,7 +9,7 @@ public class ClientDataSO : ScriptableObject
     [Tooltip("Folder path relative to the Resources folder, e.g., Assets/Resources + 'FoodData/Level1'")]
     public string foodFolder = "FoodData/Level1";
 
-    [HideInInspector]
+    //[HideInInspector]
     public List<FoodDataSO> FoodData;
 
     public void LoadFoodDataFromFolder()

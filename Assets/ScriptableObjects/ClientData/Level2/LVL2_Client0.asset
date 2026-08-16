@@ -13,14 +13,16 @@ MonoBehaviour:
   m_Name: LVL2_Client0
   m_EditorClassIdentifier: Assembly-CSharp::ClientDataSO
   Dialogue:
-    speakersName: AnakDecay
+    speakersName: Putri
     speakersSprite: {fileID: -4755883517356793760, guid: 5dc046bf1c6750748b4f84d6861a25c6, type: 3}
     voiceClip: {fileID: 8300000, guid: 05c9c56614e793f4aa621d2ceb9521b4, type: 3}
     startingLines:
-    - Selamat pagi pak
+    - Wah... Keren.. ada ahli gizi disekolah
+    - keren bang. Saya mau jadi kaya abang nantinya
+    - untuk sekarang. Boleh dong bang.. periksa ini
     endingLines:
-    - 
-    isFirstDialogue: 1
-  AmountToSpawn: 3
+    - 'Makasih bang. '
+    - nanti kalau ada bapak saya. jangan bilang saya kesini ya
+  AmountToSpawn: 1
   foodFolder: FoodData/Level2/Client0
   FoodData: []

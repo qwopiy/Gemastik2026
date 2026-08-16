@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
       propertyPath: TotalClients
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
       propertyPath: ClientDataList.Array.size
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
       propertyPath: 'ClientDataList.Array.data[0]'
@@ -23,11 +23,35 @@ PrefabInstance:
     - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
       propertyPath: 'ClientDataList.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: 7efcc931fe52b944b94bd4c7e629478a, type: 2}
+      objectReference: {fileID: 11400000, guid: b83358fe3da68a64c9467e03d1ee6153, type: 2}
     - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
       propertyPath: 'ClientDataList.Array.data[2]'
       value: 
-      objectReference: {fileID: 11400000, guid: 7efcc931fe52b944b94bd4c7e629478a, type: 2}
+      objectReference: {fileID: 11400000, guid: 21169a8e34929094ba3431d651b9705b, type: 2}
+    - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
+      propertyPath: 'ClientDataList.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 43e0c49a8ef63d14b91ff7d00af78363, type: 2}
+    - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
+      propertyPath: 'ClientDataList.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: b2b245345a1b8ce41ba5ee44ba16f27c, type: 2}
+    - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
+      propertyPath: 'ClientDataList.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b505d7026fa12e4ca645fe71f2e3a34, type: 2}
+    - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
+      propertyPath: 'ClientDataList.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: a320f64a8b0704c438e85fddda4222ed, type: 2}
+    - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
+      propertyPath: 'ClientDataList.Array.data[7]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 9b870b90f1368ad4b932de8827047515, type: 2}
+    - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
+      propertyPath: 'ClientDataList.Array.data[8]'
+      value: 
+      objectReference: {fileID: 11400000, guid: a3e8382894a7c534d994ea6e0c711570, type: 2}
     - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
       propertyPath: FoodDataList.Array.data[0].AmountToSpawn
       value: 1

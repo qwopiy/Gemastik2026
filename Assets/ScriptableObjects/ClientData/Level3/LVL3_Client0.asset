@@ -17,10 +17,12 @@ MonoBehaviour:
     speakersSprite: {fileID: 6475163515946179864, guid: 308a4ac83766ffe44abfc915909e1e51, type: 3}
     voiceClip: {fileID: 8300000, guid: 05c9c56614e793f4aa621d2ceb9521b4, type: 3}
     startingLines:
-    - Selamat pagi pak
+    - Bagus ga dek baju saya?
+    - kemarin saya disuruh beli baju baru mulu sama warga sekitar
+    - tapi saya takut kelihatan buncit pas pake baju baru
+    - jadinya tolong periksa ini ya. Mudah mudahan gabikin saya tambah buncit
     endingLines:
-    - 
-    isFirstDialogue: 1
-  AmountToSpawn: 3
+    - Makasih ya dek. eh.. tapi saya ga kelihatan buncit kan?
+  AmountToSpawn: 2
   foodFolder: FoodData/Level3/Client0
   FoodData: []

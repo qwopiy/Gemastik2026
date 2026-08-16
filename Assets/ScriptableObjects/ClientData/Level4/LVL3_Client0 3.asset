@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 396512e7fc64e944c881da66c2604f9b, type: 3}
+  m_Name: LVL3_Client0 3
+  m_EditorClassIdentifier: Assembly-CSharp::ClientDataSO
+  Dialogue:
+    speakersName: Waifu Pair Play
+    speakersSprite: {fileID: -3371123368795815966, guid: 114bdc86f9f27164d980a2c307bf6f89, type: 3}
+    voiceClip: {fileID: 8300000, guid: 05c9c56614e793f4aa621d2ceb9521b4, type: 3}
+    startingLines:
+    - tolong dong bang periksa ini. saya udah lapar banget, tapi takut ga sehat kalau
+      langsung dimakan
+    endingLines:
+    - makasih ya bang. saya pergi makan dulu ya
+  AmountToSpawn: 2
+  foodFolder: FoodData/Level4/Client2
+  FoodData: []
