@@ -2,6 +2,10 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
     private GameObject currentPanel;
+    private void Start()
+    {
+        GameDataManager.ReadData();
+    }
     public void QuitGame()
     {
         Application.Quit();

@@ -1,4 +1,5 @@
 using System;
+using UnityEditor.Overlays;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -136,5 +137,6 @@ public class GameData
                 perfectSpeedrunnerEndingUnlocked = true;
                 break;
         }
+        GameDataManager.SaveData();
     }
 }

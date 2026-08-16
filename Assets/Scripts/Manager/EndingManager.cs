@@ -160,6 +160,7 @@ public class EndingManager : MonoBehaviour
         if (currentLevel > progress && corrects == foodCount)
         {
             GameDataManager.gameData.IncreaseLevelProgress();
+            GameDataManager.SaveData();
         }
     }
 
