@@ -17,6 +17,18 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
+      propertyPath: ClientDataList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
+      propertyPath: 'ClientDataList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: db7afd5163c5190438e81307528822b3, type: 2}
+    - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
+      propertyPath: 'ClientDataList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: db7afd5163c5190438e81307528822b3, type: 2}
+    - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
       propertyPath: FoodDataList.Array.data[0].foodFolder
       value: FoodData/Level3/Client0
       objectReference: {fileID: 0}

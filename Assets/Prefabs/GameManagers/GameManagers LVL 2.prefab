@@ -13,9 +13,25 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
+      propertyPath: FoodToSpawn.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
       propertyPath: FoodDataList.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
+      propertyPath: ClientDataList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
+      propertyPath: 'ClientDataList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 46167070ae1d3144c80d42a39fdf70f6, type: 2}
+    - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
+      propertyPath: 'ClientDataList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 46167070ae1d3144c80d42a39fdf70f6, type: 2}
     - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
       propertyPath: FoodDataList.Array.data[0].foodFolder
       value: FoodData/Level2/Client0
