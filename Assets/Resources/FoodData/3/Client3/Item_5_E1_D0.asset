@@ -53,7 +53,8 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Oat, gula, bubuk kakao, susu bubuk, krimer nabati, garam, perisa coklat,
+        pengemulsi, dan penguat rasa.
   Approval: 1
   GGLRating: 4
   GGLReasons: 0100000003000000
@@ -69,7 +70,7 @@ MonoBehaviour:
     isValid: 0
   - claimType: 9
     claimDescription: Preservative-free
-    isValid: 1
+    isValid: 0
   - claimType: 8
     claimDescription: Good for your health
     isValid: 0

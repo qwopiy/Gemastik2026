@@ -55,7 +55,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Air, ekstrak buah beri, perisa alami beri, asam sitrat, pemanis
   Approval: 1
   GGLRating: 1
   GGLReasons: 010000000200000003000000

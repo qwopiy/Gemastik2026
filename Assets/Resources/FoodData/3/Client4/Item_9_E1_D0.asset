@@ -53,7 +53,8 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Air, susu, gula, teh hitam, krimer nabati, boba (tepung tapioka, air,
+        gula), perisa milk tea, penstabil, pengemulsi, dan pengawet.
   Approval: 1
   GGLRating: 3
   GGLReasons: 0100000003000000
@@ -68,5 +69,5 @@ MonoBehaviour:
     claimDescription: Nutri-Level B
     isValid: 0
   - claimType: 10
-    claimDescription: 
+    claimDescription: Susu Asli
     isValid: 1

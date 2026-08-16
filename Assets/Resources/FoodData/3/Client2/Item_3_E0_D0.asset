@@ -53,7 +53,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Air, tepung konjak, pengatur keasaman, penstabil, pengawet makanan
   Approval: 1
   GGLRating: 1
   GGLReasons: 010000000200000003000000
@@ -66,7 +66,7 @@ MonoBehaviour:
   Claims:
   - claimType: 9
     claimDescription: Tanpa Pengawet
-    isValid: 1
+    isValid: 0
   - claimType: 2
     claimDescription: Pembangun Otot!
     isValid: 0

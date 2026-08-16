@@ -51,7 +51,9 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Sayuran Kering 40% (Wortel, Daun Bawang, Seledri, Kubis), Garam, Gula,
+        Bawang Putih Bubuk, Bawang Merah Bubuk, Ekstrak Kaldu Sayur, Lada Bubuk,
+        Maltodekstrin, Minyak Nabati.
   Approval: 1
   GGLRating: 1
   GGLReasons: 010000000200000003000000

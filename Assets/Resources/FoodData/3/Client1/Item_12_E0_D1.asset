@@ -53,7 +53,9 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Tepung terigu, air, minyak nabati, susu bubuk, keju bubuk, gula, garam,
+        penguat rasa, bawang putih, rempah-rempah, pengatur keasaman, pengemulsi,
+        antioksidan, dan pewarna.
   Approval: 1
   GGLRating: 4
   GGLReasons: 0200000003000000

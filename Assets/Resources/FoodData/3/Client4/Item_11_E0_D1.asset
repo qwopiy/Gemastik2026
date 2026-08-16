@@ -53,7 +53,8 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Jagung, gula, tepung jagung, madu, garam, sirup glukosa, perisa madu,
+        vitamin, mineral dan pengawet makanan.
   Approval: 1
   GGLRating: 4
   GGLReasons: 0100000002000000

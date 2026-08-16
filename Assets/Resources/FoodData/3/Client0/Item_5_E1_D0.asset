@@ -53,7 +53,9 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Beras, Bumbu Rasa Ayam (Mengandung Garam, Gula, Bawang Putih Bubuk,
+        Bawang Merah Bubuk, Lada Bubuk, Ekstrak Ayam, Penguat Rasa Mononatrium L-Glutamat),
+        Minyak Nabati, Maltodekstrin, Daun Bawang Kering, Perisa Sintetik Ayam.
   Approval: 1
   GGLRating: 3
   GGLReasons: 02000000
@@ -68,5 +70,5 @@ MonoBehaviour:
     claimDescription: Pembangun Otot!
     isValid: 0
   - claimType: 10
-    claimDescription: 
+    claimDescription: Beras Asli
     isValid: 1

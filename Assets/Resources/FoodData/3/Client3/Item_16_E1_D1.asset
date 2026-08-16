@@ -54,7 +54,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Pisang, minyak nabati, gula, garam, dan perisa.
   Approval: 1
   GGLRating: 2
   GGLReasons: 02000000

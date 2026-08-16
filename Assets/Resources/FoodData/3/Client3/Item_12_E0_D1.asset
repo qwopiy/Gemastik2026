@@ -51,7 +51,9 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Tepung terigu, krimer nabati, susu bubuk, ayam bubuk, minyak nabati,
+        garam, gula, penguat rasa, bawang putih, lada, rempah-rempah, pengental,
+        pengemulsi, pengawet makanan, dan perisa ayam.
   Approval: 1
   GGLRating: 4
   GGLReasons: 0200000003000000
@@ -64,7 +66,7 @@ MonoBehaviour:
   Claims:
   - claimType: 9
     claimDescription: No Preservatives
-    isValid: 1
+    isValid: 0
   - claimType: 8
     claimDescription: Good for your health
     isValid: 0

@@ -54,7 +54,8 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Singkong, minyak nabati, garam, bumbu, penguat rasa (mononatrium glutamat),
+        rempah-rempah
   Approval: 1
   GGLRating: 4
   GGLReasons: 03000000
@@ -66,5 +67,5 @@ MonoBehaviour:
   IsDefect: 0
   Claims:
   - claimType: 10
-    claimDescription: 
+    claimDescription: Singkong Asli
     isValid: 1

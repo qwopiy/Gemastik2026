@@ -53,7 +53,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Air, tepung konjak, pengatur keasaman, penstabil
   Approval: 1
   GGLRating: 1
   GGLReasons: 010000000200000003000000
