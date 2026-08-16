@@ -63,13 +63,4 @@ MonoBehaviour:
     year: 2030
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 2
-    claimDescription: Tinggi Protein
-    isValid: 0
-  - claimType: 3
-    claimDescription: Low in carbohydrates
-    isValid: 0
-  - claimType: 7
-    claimDescription: Nutri-Level B
-    isValid: 0
+  Claims: []

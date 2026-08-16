@@ -24,13 +24,13 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 200 mL
+      Value: 50 mL
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 24
+      Value: 6
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -50,7 +50,7 @@ MonoBehaviour:
       Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 32
+      Value: 8
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
@@ -65,4 +65,10 @@ MonoBehaviour:
     year: 2028
   IsExpired: 0
   IsDefect: 1
-  Claims: []
+  Claims:
+  - claimType: 3
+    claimDescription: Rendah Karbohidrat
+    isValid: 1
+  - claimType: 9
+    claimDescription: No Preservatives
+    isValid: 1

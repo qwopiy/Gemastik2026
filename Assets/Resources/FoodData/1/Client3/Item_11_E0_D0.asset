@@ -28,7 +28,7 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 16
+      Value: 15
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -42,13 +42,13 @@ MonoBehaviour:
       Value: 0
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 4
+      Value: 5
     - FieldId: 7
       FieldName: Gula
       Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 4
+      Value: 5
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
@@ -63,10 +63,4 @@ MonoBehaviour:
     year: 2030
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 8
-    claimDescription: Good for your health
-    isValid: 1
-  - claimType: 3
-    claimDescription: Low in carbohydrates
-    isValid: 1
+  Claims: []

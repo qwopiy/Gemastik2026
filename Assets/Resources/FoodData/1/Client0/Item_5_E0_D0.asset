@@ -64,4 +64,7 @@ MonoBehaviour:
     year: 2027
   IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 8
+    claimDescription: Good for your health
+    isValid: 0

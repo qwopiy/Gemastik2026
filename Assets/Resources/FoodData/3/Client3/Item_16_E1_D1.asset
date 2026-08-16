@@ -65,12 +65,9 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 1
   Claims:
-  - claimType: 4
-    claimDescription: Rendah Gula
+  - claimType: 9
+    claimDescription: No Preservatives
     isValid: 1
   - claimType: 6
-    claimDescription: Reduced fat content
+    claimDescription: Low in fat
     isValid: 1
-  - claimType: 7
-    claimDescription: Nutri-Level A
-    isValid: 0

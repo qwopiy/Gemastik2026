@@ -69,4 +69,10 @@ MonoBehaviour:
     year: 2030
   IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 10
+    claimDescription: 
+    isValid: 1
+  - claimType: 4
+    claimDescription: Low in sugar
+    isValid: 0

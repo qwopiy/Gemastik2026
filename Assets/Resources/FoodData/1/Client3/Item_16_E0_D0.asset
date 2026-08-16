@@ -65,12 +65,9 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 5
-    claimDescription: Reduced salt content
-    isValid: 0
   - claimType: 1
-    claimDescription: Zero calories
+    claimDescription: Calorie-free
     isValid: 0
-  - claimType: 4
-    claimDescription: Low in sugar
+  - claimType: 8
+    claimDescription: Sehat
     isValid: 0

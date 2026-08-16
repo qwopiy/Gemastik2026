@@ -29,7 +29,7 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 130
+      Value: 132
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -40,16 +40,16 @@ MonoBehaviour:
       Value: 0.0
     - FieldId: 5
       FieldName: Protein
-      Value: 10
+      Value: 12
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 30
+      Value: 32
     - FieldId: 7
       FieldName: Gula
       Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 10
+      Value: 12
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
@@ -64,4 +64,10 @@ MonoBehaviour:
     year: 2028
   IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 2
+    claimDescription: Pembangun Otot!
+    isValid: 0
+  - claimType: 3
+    claimDescription: Reduced carb content
+    isValid: 1

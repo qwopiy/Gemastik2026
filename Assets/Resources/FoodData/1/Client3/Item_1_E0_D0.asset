@@ -62,7 +62,4 @@ MonoBehaviour:
     year: 2030
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 9
-    claimDescription: Preservative-free
-    isValid: 1
+  Claims: []

@@ -69,6 +69,9 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 2
-    claimDescription: Tinggi Protein
+  - claimType: 8
+    claimDescription: Sehat
     isValid: 0
+  - claimType: 1
+    claimDescription: Calorie-free
+    isValid: 1

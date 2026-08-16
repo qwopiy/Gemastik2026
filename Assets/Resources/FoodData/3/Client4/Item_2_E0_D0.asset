@@ -64,6 +64,9 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 6
-    claimDescription: Reduced fat content
+  - claimType: 4
+    claimDescription: Low in sugar
+    isValid: 0
+  - claimType: 2
+    claimDescription: High in protein
     isValid: 0

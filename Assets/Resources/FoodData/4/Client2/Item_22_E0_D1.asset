@@ -64,10 +64,4 @@ MonoBehaviour:
     year: 2028
   IsExpired: 0
   IsDefect: 1
-  Claims:
-  - claimType: 10
-    claimDescription: 
-    isValid: 1
-  - claimType: 5
-    claimDescription: Reduced salt content
-    isValid: 1
+  Claims: []

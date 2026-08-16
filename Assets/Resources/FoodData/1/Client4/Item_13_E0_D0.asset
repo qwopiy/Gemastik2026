@@ -67,4 +67,10 @@ MonoBehaviour:
     year: 2027
   IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 2
+    claimDescription: Protein-rich
+    isValid: 0
+  - claimType: 6
+    claimDescription: Reduced fat content
+    isValid: 1

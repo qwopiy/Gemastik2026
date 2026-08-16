@@ -62,12 +62,9 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 1
   Claims:
-  - claimType: 6
-    claimDescription: Low in fat
-    isValid: 1
+  - claimType: 2
+    claimDescription: Tinggi Protein
+    isValid: 0
   - claimType: 3
     claimDescription: Reduced carb content
-    isValid: 1
-  - claimType: 4
-    claimDescription: Low in sugar
     isValid: 1

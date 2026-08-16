@@ -64,12 +64,12 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 0
   Claims:
-  - claimType: 6
-    claimDescription: Reduced fat content
-    isValid: 0
   - claimType: 10
     claimDescription: 
     isValid: 1
-  - claimType: 3
-    claimDescription: Reduced carb content
+  - claimType: 2
+    claimDescription: Cocok untuk olahraga
+    isValid: 1
+  - claimType: 1
+    claimDescription: Tanpa Kalori
     isValid: 0

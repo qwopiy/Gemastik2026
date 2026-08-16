@@ -25,7 +25,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 10 mL
+      Value: 100 mL
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
@@ -66,7 +66,4 @@ MonoBehaviour:
     year: 2027
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 5
-    claimDescription: Rendah Garam
-    isValid: 1
+  Claims: []

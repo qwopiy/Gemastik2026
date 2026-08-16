@@ -22,33 +22,33 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 50 g
+      Value: 25 g
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 215
+      Value: 108
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 8.0
+      Value: 4.0
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 3.5
+      Value: 1.8
     - FieldId: 5
       FieldName: Protein
-      Value: 5
+      Value: 3
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 30
+      Value: 15
     - FieldId: 7
       FieldName: Gula
       Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 835
+      Value: 418
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
@@ -65,8 +65,5 @@ MonoBehaviour:
   IsDefect: 0
   Claims:
   - claimType: 6
-    claimDescription: Reduced fat content
-    isValid: 0
-  - claimType: 7
-    claimDescription: Nutri-Level C
+    claimDescription: Rendah Lemak
     isValid: 0

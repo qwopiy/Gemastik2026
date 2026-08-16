@@ -64,9 +64,6 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 0
   Claims:
-  - claimType: 3
-    claimDescription: Rendah Karbohidrat
-    isValid: 1
-  - claimType: 5
-    claimDescription: Rendah Garam
+  - claimType: 7
+    claimDescription: Nutri-Level D
     isValid: 1

@@ -67,10 +67,4 @@ MonoBehaviour:
     year: 2028
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 6
-    claimDescription: Reduced fat content
-    isValid: 1
-  - claimType: 4
-    claimDescription: Rendah Gula
-    isValid: 1
+  Claims: []

@@ -63,4 +63,7 @@ MonoBehaviour:
     year: 2030
   IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 1
+    claimDescription: Calorie-free
+    isValid: 0

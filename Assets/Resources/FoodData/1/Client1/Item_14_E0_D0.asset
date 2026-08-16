@@ -28,7 +28,7 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 352
+      Value: 350
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -39,10 +39,10 @@ MonoBehaviour:
       Value: 2.0
     - FieldId: 5
       FieldName: Protein
-      Value: 12
+      Value: 10
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 72
+      Value: 70
     - FieldId: 7
       FieldName: Gula
       Value: 0
@@ -63,10 +63,4 @@ MonoBehaviour:
     year: 2030
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 10
-    claimDescription: 
-    isValid: 1
-  - claimType: 2
-    claimDescription: Tinggi Protein
-    isValid: 0
+  Claims: []

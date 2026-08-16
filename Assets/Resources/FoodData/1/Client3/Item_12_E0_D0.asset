@@ -64,6 +64,6 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 7
-    claimDescription: Nutri-Level C
+  - claimType: 2
+    claimDescription: Tinggi Protein
     isValid: 0

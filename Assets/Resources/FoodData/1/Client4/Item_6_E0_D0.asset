@@ -65,12 +65,12 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 9
-    claimDescription: No Preservatives
-    isValid: 1
-  - claimType: 2
-    claimDescription: High in protein
+  - claimType: 4
+    claimDescription: Reduced sugar content
     isValid: 0
-  - claimType: 8
-    claimDescription: Sehat
+  - claimType: 9
+    claimDescription: Preservative-free
+    isValid: 1
+  - claimType: 1
+    claimDescription: Calorie-free
     isValid: 0

@@ -66,8 +66,5 @@ MonoBehaviour:
   IsDefect: 0
   Claims:
   - claimType: 9
-    claimDescription: 100% Alami
-    isValid: 1
-  - claimType: 4
-    claimDescription: Low in sugar
+    claimDescription: No Preservatives
     isValid: 1

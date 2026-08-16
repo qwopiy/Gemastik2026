@@ -24,7 +24,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 10 mL
+      Value: 50 mL
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
@@ -65,10 +65,4 @@ MonoBehaviour:
     year: 2021
   IsExpired: 1
   IsDefect: 1
-  Claims:
-  - claimType: 3
-    claimDescription: Low in carbohydrates
-    isValid: 1
-  - claimType: 1
-    claimDescription: Calorie-free
-    isValid: 1
+  Claims: []

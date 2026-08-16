@@ -63,7 +63,4 @@ MonoBehaviour:
     year: 2025
   IsExpired: 1
   IsDefect: 0
-  Claims:
-  - claimType: 6
-    claimDescription: Low in fat
-    isValid: 1
+  Claims: []

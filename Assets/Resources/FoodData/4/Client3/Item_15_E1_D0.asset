@@ -62,4 +62,7 @@ MonoBehaviour:
     year: 2021
   IsExpired: 1
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 2
+    claimDescription: Protein-rich
+    isValid: 0

@@ -65,9 +65,12 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 0
   Claims:
-  - claimType: 2
-    claimDescription: High in protein
-    isValid: 0
-  - claimType: 10
-    claimDescription: 
+  - claimType: 9
+    claimDescription: No Preservatives
     isValid: 1
+  - claimType: 7
+    claimDescription: Nutri-Level A
+    isValid: 0
+  - claimType: 8
+    claimDescription: Sehat
+    isValid: 0

@@ -64,4 +64,10 @@ MonoBehaviour:
     year: 2028
   IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 1
+    claimDescription: Tanpa Kalori
+    isValid: 0
+  - claimType: 5
+    claimDescription: Reduced salt content
+    isValid: 1

@@ -63,6 +63,9 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 1
   Claims:
-  - claimType: 10
-    claimDescription: 
+  - claimType: 9
+    claimDescription: Preservative-free
+    isValid: 1
+  - claimType: 4
+    claimDescription: Reduced sugar content
     isValid: 1

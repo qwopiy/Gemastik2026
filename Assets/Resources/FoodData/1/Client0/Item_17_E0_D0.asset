@@ -67,6 +67,9 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 6
-    claimDescription: Low in fat
-    isValid: 1
+  - claimType: 8
+    claimDescription: Sehat
+    isValid: 0
+  - claimType: 4
+    claimDescription: Rendah Gula
+    isValid: 0

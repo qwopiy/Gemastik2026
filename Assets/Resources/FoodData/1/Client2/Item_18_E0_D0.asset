@@ -39,16 +39,16 @@ MonoBehaviour:
       Value: 8.0
     - FieldId: 5
       FieldName: Protein
-      Value: 12
+      Value: 10
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 72
+      Value: 70
     - FieldId: 7
       FieldName: Gula
-      Value: 12
+      Value: 10
     - FieldId: 8
       FieldName: Natrium
-      Value: 1032
+      Value: 1030
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
@@ -56,11 +56,20 @@ MonoBehaviour:
       Value: 
   Approval: 1
   GGLRating: 4
-  GGLReasons: 010000000200000003000000
+  GGLReasons: 0200000003000000
   ExpiryDate:
     day: 14
     month: 11
     year: 2028
   IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 5
+    claimDescription: Reduced salt content
+    isValid: 0
+  - claimType: 8
+    claimDescription: Sehat
+    isValid: 0
+  - claimType: 1
+    claimDescription: Zero calories
+    isValid: 0

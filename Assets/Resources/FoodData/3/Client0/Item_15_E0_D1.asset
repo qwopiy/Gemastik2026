@@ -64,10 +64,4 @@ MonoBehaviour:
     year: 2030
   IsExpired: 0
   IsDefect: 1
-  Claims:
-  - claimType: 1
-    claimDescription: Calorie-free
-    isValid: 0
-  - claimType: 9
-    claimDescription: Tanpa Pengawet
-    isValid: 1
+  Claims: []

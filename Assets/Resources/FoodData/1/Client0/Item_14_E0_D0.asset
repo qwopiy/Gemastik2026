@@ -67,10 +67,4 @@ MonoBehaviour:
     year: 2028
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 9
-    claimDescription: No Preservatives
-    isValid: 1
-  - claimType: 8
-    claimDescription: Good for your health
-    isValid: 0
+  Claims: []

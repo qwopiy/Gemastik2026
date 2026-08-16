@@ -37,7 +37,7 @@ MonoBehaviour:
       Value: 11.0
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 5.6
+      Value: 5.5
     - FieldId: 5
       FieldName: Protein
       Value: 10
@@ -64,13 +64,4 @@ MonoBehaviour:
     year: 2028
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 2
-    claimDescription: Protein-rich
-    isValid: 0
-  - claimType: 6
-    claimDescription: Low in fat
-    isValid: 0
-  - claimType: 7
-    claimDescription: Nutri-Level A
-    isValid: 0
+  Claims: []

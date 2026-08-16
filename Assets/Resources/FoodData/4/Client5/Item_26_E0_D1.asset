@@ -24,13 +24,13 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 50 mL
+      Value: 100 mL
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 12
+      Value: 24
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -44,13 +44,13 @@ MonoBehaviour:
       Value: 0
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 4
+      Value: 8
     - FieldId: 7
       FieldName: Gula
-      Value: 2
+      Value: 4
     - FieldId: 8
       FieldName: Natrium
-      Value: 22
+      Value: 44
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
@@ -65,7 +65,4 @@ MonoBehaviour:
     year: 2029
   IsExpired: 0
   IsDefect: 1
-  Claims:
-  - claimType: 5
-    claimDescription: Rendah Garam
-    isValid: 1
+  Claims: []

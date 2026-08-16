@@ -64,6 +64,6 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 2
-    claimDescription: Protein-rich
-    isValid: 0
+  - claimType: 4
+    claimDescription: Low in sugar
+    isValid: 1

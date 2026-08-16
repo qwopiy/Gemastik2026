@@ -66,4 +66,7 @@ MonoBehaviour:
     year: 2022
   IsExpired: 1
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 1
+    claimDescription: Zero calories
+    isValid: 0

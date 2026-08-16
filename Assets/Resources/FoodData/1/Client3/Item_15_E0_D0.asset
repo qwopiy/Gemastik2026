@@ -37,7 +37,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 1.5
+      Value: 1.6
     - FieldId: 4
       FieldName: Lemak Jenuh
       Value: 0.0
@@ -46,13 +46,13 @@ MonoBehaviour:
       Value: 0
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 5
+      Value: 6
     - FieldId: 7
       FieldName: Gula
       Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 35
+      Value: 36
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
@@ -67,4 +67,10 @@ MonoBehaviour:
     year: 2029
   IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 8
+    claimDescription: Sehat
+    isValid: 0
+  - claimType: 3
+    claimDescription: Low in carbohydrates
+    isValid: 1

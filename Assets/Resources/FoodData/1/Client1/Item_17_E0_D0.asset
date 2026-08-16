@@ -64,7 +64,4 @@ MonoBehaviour:
     year: 2028
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 9
-    claimDescription: 100% Alami
-    isValid: 1
+  Claims: []

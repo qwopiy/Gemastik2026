@@ -22,33 +22,33 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 200 g
+      Value: 20 g
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 760
+      Value: 76
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 18.0
+      Value: 1.8
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 10.0
+      Value: 1.0
     - FieldId: 5
       FieldName: Protein
-      Value: 20
+      Value: 2
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 140
+      Value: 14
     - FieldId: 7
       FieldName: Gula
-      Value: 40
+      Value: 4
     - FieldId: 8
       FieldName: Natrium
-      Value: 540
+      Value: 54
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9

@@ -66,4 +66,7 @@ MonoBehaviour:
     year: 2028
   IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 4
+    claimDescription: Reduced sugar content
+    isValid: 0

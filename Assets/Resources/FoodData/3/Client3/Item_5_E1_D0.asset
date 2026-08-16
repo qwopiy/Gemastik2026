@@ -64,6 +64,12 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 0
   Claims:
-  - claimType: 2
-    claimDescription: High in protein
+  - claimType: 7
+    claimDescription: Nutri-Level C
+    isValid: 0
+  - claimType: 9
+    claimDescription: Preservative-free
+    isValid: 1
+  - claimType: 8
+    claimDescription: Good for your health
     isValid: 0

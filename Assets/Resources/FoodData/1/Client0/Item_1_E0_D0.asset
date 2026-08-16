@@ -64,12 +64,12 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 1
-    claimDescription: Zero calories
+  - claimType: 10
+    claimDescription: 
+    isValid: 1
+  - claimType: 4
+    claimDescription: Rendah Gula
     isValid: 0
   - claimType: 7
     claimDescription: Nutri-Level A
-    isValid: 0
-  - claimType: 8
-    claimDescription: Good for your health
     isValid: 0

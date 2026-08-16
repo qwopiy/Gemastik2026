@@ -63,4 +63,10 @@ MonoBehaviour:
     year: 2024
   IsExpired: 1
   IsDefect: 1
-  Claims: []
+  Claims:
+  - claimType: 3
+    claimDescription: Low in carbohydrates
+    isValid: 1
+  - claimType: 1
+    claimDescription: Zero calories
+    isValid: 0

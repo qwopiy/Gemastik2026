@@ -26,13 +26,13 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 50 mL
+      Value: 25 mL
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 10
+      Value: 5
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -46,7 +46,7 @@ MonoBehaviour:
       Value: 0
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 3
+      Value: 2
     - FieldId: 7
       FieldName: Gula
       Value: 0
@@ -68,9 +68,12 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 0
   Claims:
-  - claimType: 3
-    claimDescription: Rendah Karbohidrat
+  - claimType: 8
+    claimDescription: Good for your health
     isValid: 1
-  - claimType: 6
-    claimDescription: Low in fat
+  - claimType: 10
+    claimDescription: 
     isValid: 1
+  - claimType: 1
+    claimDescription: Calorie-free
+    isValid: 0

@@ -63,13 +63,4 @@ MonoBehaviour:
     year: 2028
   IsExpired: 0
   IsDefect: 1
-  Claims:
-  - claimType: 8
-    claimDescription: Good for your health
-    isValid: 0
-  - claimType: 9
-    claimDescription: Preservative-free
-    isValid: 1
-  - claimType: 5
-    claimDescription: Rendah Garam
-    isValid: 1
+  Claims: []

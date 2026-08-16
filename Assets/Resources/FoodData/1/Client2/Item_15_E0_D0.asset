@@ -64,4 +64,13 @@ MonoBehaviour:
     year: 2029
   IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 5
+    claimDescription: Rendah Garam
+    isValid: 0
+  - claimType: 1
+    claimDescription: Calorie-free
+    isValid: 0
+  - claimType: 10
+    claimDescription: 
+    isValid: 1

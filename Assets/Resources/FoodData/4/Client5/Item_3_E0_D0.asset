@@ -64,6 +64,12 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
+  - claimType: 6
+    claimDescription: Low in fat
+    isValid: 1
   - claimType: 4
-    claimDescription: Rendah Gula
+    claimDescription: Low in sugar
+    isValid: 1
+  - claimType: 10
+    claimDescription: 
     isValid: 1

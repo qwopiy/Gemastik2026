@@ -62,9 +62,12 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 8
-    claimDescription: Sehat untuk badan
-    isValid: 0
-  - claimType: 10
-    claimDescription: 
+  - claimType: 5
+    claimDescription: Reduced salt content
+    isValid: 1
+  - claimType: 3
+    claimDescription: Low in carbohydrates
+    isValid: 1
+  - claimType: 6
+    claimDescription: Low in fat
     isValid: 1

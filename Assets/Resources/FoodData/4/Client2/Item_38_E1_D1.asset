@@ -67,9 +67,9 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 1
   Claims:
-  - claimType: 3
-    claimDescription: Rendah Karbohidrat
+  - claimType: 8
+    claimDescription: Sehat untuk badan
     isValid: 1
-  - claimType: 6
-    claimDescription: Low in fat
-    isValid: 1
+  - claimType: 2
+    claimDescription: Cocok untuk olahraga
+    isValid: 0

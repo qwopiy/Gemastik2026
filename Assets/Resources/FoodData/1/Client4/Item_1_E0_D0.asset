@@ -69,5 +69,8 @@ MonoBehaviour:
   IsDefect: 0
   Claims:
   - claimType: 9
-    claimDescription: Preservative-free
+    claimDescription: No Preservatives
     isValid: 1
+  - claimType: 7
+    claimDescription: Nutri-Level D
+    isValid: 0

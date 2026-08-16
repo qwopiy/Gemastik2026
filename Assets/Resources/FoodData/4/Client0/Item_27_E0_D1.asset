@@ -65,6 +65,6 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 1
   Claims:
-  - claimType: 6
-    claimDescription: Low in fat
-    isValid: 0
+  - claimType: 10
+    claimDescription: 
+    isValid: 1

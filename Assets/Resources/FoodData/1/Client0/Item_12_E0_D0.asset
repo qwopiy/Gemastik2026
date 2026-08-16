@@ -67,4 +67,7 @@ MonoBehaviour:
     year: 2029
   IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 1
+    claimDescription: Tanpa Kalori
+    isValid: 0

@@ -67,4 +67,7 @@ MonoBehaviour:
     year: 2028
   IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 7
+    claimDescription: Nutri-Level D
+    isValid: 0

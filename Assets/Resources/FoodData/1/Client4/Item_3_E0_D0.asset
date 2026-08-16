@@ -40,13 +40,13 @@ MonoBehaviour:
       Value: 1.0
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 0.5
+      Value: 0.6
     - FieldId: 5
       FieldName: Protein
-      Value: 5
+      Value: 6
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 5
+      Value: 6
     - FieldId: 7
       FieldName: Gula
       Value: 0
@@ -68,9 +68,6 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 4
-    claimDescription: Low in sugar
-    isValid: 1
-  - claimType: 6
-    claimDescription: Low in fat
-    isValid: 1
+  - claimType: 2
+    claimDescription: Pembangun Otot!
+    isValid: 0

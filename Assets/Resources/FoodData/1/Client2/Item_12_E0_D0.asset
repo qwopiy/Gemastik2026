@@ -64,6 +64,6 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 10
-    claimDescription: 
-    isValid: 1
+  - claimType: 1
+    claimDescription: Tanpa Kalori
+    isValid: 0

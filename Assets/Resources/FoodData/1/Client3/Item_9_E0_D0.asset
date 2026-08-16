@@ -64,6 +64,9 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 4
-    claimDescription: Low in sugar
+  - claimType: 10
+    claimDescription: 
+    isValid: 1
+  - claimType: 3
+    claimDescription: Reduced carb content
     isValid: 1

@@ -65,9 +65,12 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 3
-    claimDescription: Reduced carb content
+  - claimType: 7
+    claimDescription: Nutri-Level B
     isValid: 0
   - claimType: 5
-    claimDescription: Rendah Garam
+    claimDescription: Reduced salt content
     isValid: 1
+  - claimType: 8
+    claimDescription: Sehat
+    isValid: 0

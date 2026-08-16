@@ -68,4 +68,13 @@ MonoBehaviour:
     year: 2021
   IsExpired: 1
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 8
+    claimDescription: Sehat untuk badan
+    isValid: 0
+  - claimType: 3
+    claimDescription: Reduced carb content
+    isValid: 1
+  - claimType: 9
+    claimDescription: Tanpa Pengawet
+    isValid: 1

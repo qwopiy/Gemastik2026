@@ -29,7 +29,7 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 604
+      Value: 600
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -37,16 +37,16 @@ MonoBehaviour:
       Value: 44.0
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 4.4
+      Value: 4.0
     - FieldId: 5
       FieldName: Protein
       Value: 20
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 32
+      Value: 30
     - FieldId: 7
       FieldName: Gula
-      Value: 4
+      Value: 0
     - FieldId: 8
       FieldName: Natrium
       Value: 260
@@ -64,4 +64,7 @@ MonoBehaviour:
     year: 2029
   IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 2
+    claimDescription: Tinggi Protein
+    isValid: 0

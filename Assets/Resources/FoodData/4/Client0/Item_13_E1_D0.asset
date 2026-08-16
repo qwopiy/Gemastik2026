@@ -23,13 +23,13 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 100 g
+      Value: 10 g
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 130
+      Value: 13
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -40,16 +40,16 @@ MonoBehaviour:
       Value: 0.0
     - FieldId: 5
       FieldName: Protein
-      Value: 10
+      Value: 1
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 30
+      Value: 3
     - FieldId: 7
       FieldName: Gula
       Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 10
+      Value: 1
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
@@ -64,7 +64,4 @@ MonoBehaviour:
     year: 2022
   IsExpired: 1
   IsDefect: 0
-  Claims:
-  - claimType: 9
-    claimDescription: Tanpa Pengawet
-    isValid: 1
+  Claims: []

@@ -63,4 +63,10 @@ MonoBehaviour:
     year: 2027
   IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 9
+    claimDescription: No Preservatives
+    isValid: 1
+  - claimType: 2
+    claimDescription: Pembangun Otot!
+    isValid: 0

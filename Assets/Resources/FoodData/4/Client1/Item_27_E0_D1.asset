@@ -65,11 +65,11 @@ MonoBehaviour:
   IsDefect: 1
   Claims:
   - claimType: 9
-    claimDescription: No Preservatives
+    claimDescription: Preservative-free
     isValid: 1
-  - claimType: 3
-    claimDescription: Reduced carb content
+  - claimType: 6
+    claimDescription: Low in fat
     isValid: 0
-  - claimType: 5
-    claimDescription: Low in salt
-    isValid: 1
+  - claimType: 4
+    claimDescription: Low in sugar
+    isValid: 0

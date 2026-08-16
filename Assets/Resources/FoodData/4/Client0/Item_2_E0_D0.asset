@@ -67,6 +67,3 @@ MonoBehaviour:
   - claimType: 2
     claimDescription: High in protein
     isValid: 0
-  - claimType: 6
-    claimDescription: Low in fat
-    isValid: 1

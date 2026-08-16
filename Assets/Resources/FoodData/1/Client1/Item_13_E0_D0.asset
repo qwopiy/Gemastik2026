@@ -64,6 +64,6 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 7
-    claimDescription: Nutri-Level B
+  - claimType: 3
+    claimDescription: Low in carbohydrates
     isValid: 0

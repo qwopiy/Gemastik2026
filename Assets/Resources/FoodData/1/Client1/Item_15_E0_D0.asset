@@ -65,10 +65,4 @@ MonoBehaviour:
     year: 2029
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 1
-    claimDescription: Calorie-free
-    isValid: 0
-  - claimType: 4
-    claimDescription: Reduced sugar content
-    isValid: 1
+  Claims: []

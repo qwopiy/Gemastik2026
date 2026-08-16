@@ -29,7 +29,7 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 132
+      Value: 130
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -40,16 +40,16 @@ MonoBehaviour:
       Value: 0.0
     - FieldId: 5
       FieldName: Protein
-      Value: 12
+      Value: 10
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 32
+      Value: 30
     - FieldId: 7
       FieldName: Gula
       Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 12
+      Value: 10
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
@@ -64,4 +64,7 @@ MonoBehaviour:
     year: 2028
   IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 9
+    claimDescription: Preservative-free
+    isValid: 1

@@ -65,4 +65,13 @@ MonoBehaviour:
     year: 2029
   IsExpired: 0
   IsDefect: 1
-  Claims: []
+  Claims:
+  - claimType: 9
+    claimDescription: No Preservatives
+    isValid: 1
+  - claimType: 6
+    claimDescription: Rendah Lemak
+    isValid: 1
+  - claimType: 8
+    claimDescription: Sehat untuk badan
+    isValid: 0

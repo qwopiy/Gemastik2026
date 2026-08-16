@@ -66,5 +66,11 @@ MonoBehaviour:
   IsDefect: 0
   Claims:
   - claimType: 2
-    claimDescription: Tinggi Protein
+    claimDescription: Pembangun Otot!
+    isValid: 0
+  - claimType: 1
+    claimDescription: Calorie-free
+    isValid: 0
+  - claimType: 5
+    claimDescription: Rendah Garam
     isValid: 0

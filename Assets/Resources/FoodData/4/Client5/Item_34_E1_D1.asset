@@ -63,7 +63,4 @@ MonoBehaviour:
     year: 2020
   IsExpired: 1
   IsDefect: 1
-  Claims:
-  - claimType: 4
-    claimDescription: Rendah Gula
-    isValid: 1
+  Claims: []

@@ -65,6 +65,12 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 0
   Claims:
-  - claimType: 10
-    claimDescription: 
+  - claimType: 7
+    claimDescription: Nutri-Level C
+    isValid: 1
+  - claimType: 4
+    claimDescription: Rendah Gula
+    isValid: 1
+  - claimType: 5
+    claimDescription: Low in salt
     isValid: 1

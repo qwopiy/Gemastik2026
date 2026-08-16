@@ -63,13 +63,4 @@ MonoBehaviour:
     year: 2027
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 8
-    claimDescription: Sehat untuk badan
-    isValid: 1
-  - claimType: 5
-    claimDescription: Low in salt
-    isValid: 1
-  - claimType: 7
-    claimDescription: Nutri-Level C
-    isValid: 0
+  Claims: []

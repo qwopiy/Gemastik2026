@@ -64,10 +64,4 @@ MonoBehaviour:
     year: 2030
   IsExpired: 0
   IsDefect: 1
-  Claims:
-  - claimType: 2
-    claimDescription: High in protein
-    isValid: 0
-  - claimType: 8
-    claimDescription: Sehat
-    isValid: 0
+  Claims: []

@@ -61,10 +61,4 @@ MonoBehaviour:
     year: 2027
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 8
-    claimDescription: Sehat
-    isValid: 1
-  - claimType: 10
-    claimDescription: 
-    isValid: 1
+  Claims: []

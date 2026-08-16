@@ -63,4 +63,10 @@ MonoBehaviour:
     year: 2027
   IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 9
+    claimDescription: Tanpa Pengawet
+    isValid: 1
+  - claimType: 2
+    claimDescription: High in protein
+    isValid: 1

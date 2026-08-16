@@ -64,6 +64,12 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 8
-    claimDescription: Good for your health
+  - claimType: 6
+    claimDescription: Reduced fat content
+    isValid: 1
+  - claimType: 3
+    claimDescription: Rendah Karbohidrat
+    isValid: 1
+  - claimType: 1
+    claimDescription: Calorie-free
     isValid: 0

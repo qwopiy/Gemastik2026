@@ -64,13 +64,4 @@ MonoBehaviour:
     year: 2029
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 1
-    claimDescription: Zero calories
-    isValid: 0
-  - claimType: 9
-    claimDescription: No Preservatives
-    isValid: 1
-  - claimType: 4
-    claimDescription: Rendah Gula
-    isValid: 0
+  Claims: []

@@ -27,7 +27,7 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 45
+      Value: 46
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -47,7 +47,7 @@ MonoBehaviour:
       Value: 10
     - FieldId: 8
       FieldName: Natrium
-      Value: 5
+      Value: 6
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
@@ -62,4 +62,10 @@ MonoBehaviour:
     year: 2028
   IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 3
+    claimDescription: Rendah Karbohidrat
+    isValid: 1
+  - claimType: 4
+    claimDescription: Reduced sugar content
+    isValid: 0

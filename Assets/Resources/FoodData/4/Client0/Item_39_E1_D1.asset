@@ -25,13 +25,13 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 25 mL
+      Value: 50 mL
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 3
+      Value: 6
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -66,10 +66,4 @@ MonoBehaviour:
     year: 2025
   IsExpired: 1
   IsDefect: 1
-  Claims:
-  - claimType: 9
-    claimDescription: 100% Alami
-    isValid: 1
-  - claimType: 3
-    claimDescription: Reduced carb content
-    isValid: 1
+  Claims: []

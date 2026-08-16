@@ -65,6 +65,6 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 1
   Claims:
-  - claimType: 7
-    claimDescription: Nutri-Level C
-    isValid: 0
+  - claimType: 4
+    claimDescription: Reduced sugar content
+    isValid: 1

@@ -67,9 +67,9 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 6
-    claimDescription: Rendah Lemak
-    isValid: 1
-  - claimType: 1
-    claimDescription: Tanpa Kalori
+  - claimType: 5
+    claimDescription: Rendah Garam
     isValid: 0
+  - claimType: 9
+    claimDescription: Preservative-free
+    isValid: 1

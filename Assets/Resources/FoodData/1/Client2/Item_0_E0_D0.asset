@@ -64,6 +64,6 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 6
-    claimDescription: Rendah Lemak
+  - claimType: 5
+    claimDescription: Low in salt
     isValid: 1

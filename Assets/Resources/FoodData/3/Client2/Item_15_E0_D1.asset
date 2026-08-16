@@ -61,7 +61,4 @@ MonoBehaviour:
     year: 2030
   IsExpired: 0
   IsDefect: 1
-  Claims:
-  - claimType: 5
-    claimDescription: Low in salt
-    isValid: 1
+  Claims: []

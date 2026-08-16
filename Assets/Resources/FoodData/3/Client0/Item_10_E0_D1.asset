@@ -70,6 +70,9 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 1
   Claims:
+  - claimType: 7
+    claimDescription: Nutri-Level D
+    isValid: 0
   - claimType: 4
-    claimDescription: Reduced sugar content
+    claimDescription: Rendah Gula
     isValid: 1

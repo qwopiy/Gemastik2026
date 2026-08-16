@@ -33,19 +33,19 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 7.0
+      Value: 7.2
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 3.0
+      Value: 3.2
     - FieldId: 5
       FieldName: Protein
-      Value: 10
+      Value: 12
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 46
+      Value: 48
     - FieldId: 7
       FieldName: Gula
-      Value: 10
+      Value: 12
     - FieldId: 8
       FieldName: Natrium
       Value: 140
@@ -56,11 +56,20 @@ MonoBehaviour:
       Value: 
   Approval: 1
   GGLRating: 4
-  GGLReasons: 03000000
+  GGLReasons: 0100000003000000
   ExpiryDate:
     day: 5
     month: 6
     year: 2030
   IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 3
+    claimDescription: Low in carbohydrates
+    isValid: 1
+  - claimType: 8
+    claimDescription: Sehat untuk badan
+    isValid: 0
+  - claimType: 2
+    claimDescription: Tinggi Protein
+    isValid: 0

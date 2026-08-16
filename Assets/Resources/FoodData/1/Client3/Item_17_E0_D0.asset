@@ -28,7 +28,7 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 430
+      Value: 432
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -36,10 +36,10 @@ MonoBehaviour:
       Value: 16.0
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 7.0
+      Value: 7.2
     - FieldId: 5
       FieldName: Protein
-      Value: 10
+      Value: 12
     - FieldId: 6
       FieldName: Karbohidrat
       Value: 60
@@ -48,7 +48,7 @@ MonoBehaviour:
       Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 1670
+      Value: 1672
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
@@ -63,7 +63,4 @@ MonoBehaviour:
     year: 2027
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 9
-    claimDescription: Tanpa Pengawet
-    isValid: 1
+  Claims: []

@@ -63,9 +63,12 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 6
-    claimDescription: Reduced fat content
-    isValid: 1
-  - claimType: 9
-    claimDescription: Tanpa Pengawet
+  - claimType: 2
+    claimDescription: Pembangun Otot!
+    isValid: 0
+  - claimType: 4
+    claimDescription: Reduced sugar content
+    isValid: 0
+  - claimType: 5
+    claimDescription: Rendah Garam
     isValid: 1

@@ -63,4 +63,7 @@ MonoBehaviour:
     year: 2029
   IsExpired: 0
   IsDefect: 1
-  Claims: []
+  Claims:
+  - claimType: 4
+    claimDescription: Rendah Gula
+    isValid: 1

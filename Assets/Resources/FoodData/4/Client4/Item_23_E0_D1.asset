@@ -63,10 +63,4 @@ MonoBehaviour:
     year: 2028
   IsExpired: 0
   IsDefect: 1
-  Claims:
-  - claimType: 6
-    claimDescription: Rendah Lemak
-    isValid: 1
-  - claimType: 1
-    claimDescription: Calorie-free
-    isValid: 0
+  Claims: []

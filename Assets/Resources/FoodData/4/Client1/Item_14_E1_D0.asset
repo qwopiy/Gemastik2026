@@ -69,7 +69,4 @@ MonoBehaviour:
     year: 2021
   IsExpired: 1
   IsDefect: 0
-  Claims:
-  - claimType: 4
-    claimDescription: Low in sugar
-    isValid: 1
+  Claims: []

@@ -63,4 +63,7 @@ MonoBehaviour:
     year: 2025
   IsExpired: 1
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 3
+    claimDescription: Reduced carb content
+    isValid: 1

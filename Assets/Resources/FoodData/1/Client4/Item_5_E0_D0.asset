@@ -70,6 +70,6 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 5
-    claimDescription: Rendah Garam
+  - claimType: 4
+    claimDescription: Low in sugar
     isValid: 1

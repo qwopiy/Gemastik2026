@@ -65,12 +65,6 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 0
   Claims:
-  - claimType: 1
-    claimDescription: Zero calories
+  - claimType: 2
+    claimDescription: High in protein
     isValid: 0
-  - claimType: 9
-    claimDescription: No Preservatives
-    isValid: 1
-  - claimType: 4
-    claimDescription: Reduced sugar content
-    isValid: 1

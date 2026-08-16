@@ -69,10 +69,4 @@ MonoBehaviour:
     year: 2030
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 4
-    claimDescription: Rendah Gula
-    isValid: 1
-  - claimType: 7
-    claimDescription: Nutri-Level B
-    isValid: 1
+  Claims: []

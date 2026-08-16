@@ -63,4 +63,10 @@ MonoBehaviour:
     year: 2029
   IsExpired: 0
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 4
+    claimDescription: Reduced sugar content
+    isValid: 0
+  - claimType: 5
+    claimDescription: Rendah Garam
+    isValid: 0

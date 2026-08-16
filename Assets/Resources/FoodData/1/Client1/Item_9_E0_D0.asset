@@ -64,9 +64,9 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 1
-    claimDescription: Tanpa Kalori
-    isValid: 0
-  - claimType: 8
-    claimDescription: Sehat
-    isValid: 0
+  - claimType: 9
+    claimDescription: Tanpa Pengawet
+    isValid: 1
+  - claimType: 10
+    claimDescription: 
+    isValid: 1

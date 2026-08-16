@@ -66,4 +66,10 @@ MonoBehaviour:
     year: 2025
   IsExpired: 1
   IsDefect: 0
-  Claims: []
+  Claims:
+  - claimType: 3
+    claimDescription: Rendah Karbohidrat
+    isValid: 0
+  - claimType: 9
+    claimDescription: No Preservatives
+    isValid: 1

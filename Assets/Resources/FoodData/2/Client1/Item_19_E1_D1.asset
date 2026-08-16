@@ -64,4 +64,7 @@ MonoBehaviour:
     year: 2020
   IsExpired: 1
   IsDefect: 1
-  Claims: []
+  Claims:
+  - claimType: 7
+    claimDescription: Nutri-Level B
+    isValid: 0

@@ -37,22 +37,22 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 1.2
+      Value: 1.0
     - FieldId: 4
       FieldName: Lemak Jenuh
       Value: 0.0
     - FieldId: 5
       FieldName: Protein
-      Value: 8
+      Value: 10
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 8
+      Value: 10
     - FieldId: 7
       FieldName: Gula
       Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 32
+      Value: 30
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
@@ -69,11 +69,5 @@ MonoBehaviour:
   IsDefect: 0
   Claims:
   - claimType: 1
-    claimDescription: Calorie-free
-    isValid: 0
-  - claimType: 8
-    claimDescription: Good for your health
-    isValid: 0
-  - claimType: 6
-    claimDescription: Rendah Lemak
+    claimDescription: Tanpa Kalori
     isValid: 1

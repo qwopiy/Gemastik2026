@@ -65,12 +65,6 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 1
-    claimDescription: Zero calories
-    isValid: 0
-  - claimType: 10
-    claimDescription: 
-    isValid: 1
-  - claimType: 4
-    claimDescription: Reduced sugar content
+  - claimType: 3
+    claimDescription: Low in carbohydrates
     isValid: 1

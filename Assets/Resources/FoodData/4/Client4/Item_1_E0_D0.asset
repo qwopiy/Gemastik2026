@@ -65,6 +65,12 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
+  - claimType: 10
+    claimDescription: 
+    isValid: 1
+  - claimType: 5
+    claimDescription: Low in salt
+    isValid: 1
   - claimType: 4
     claimDescription: Reduced sugar content
     isValid: 1

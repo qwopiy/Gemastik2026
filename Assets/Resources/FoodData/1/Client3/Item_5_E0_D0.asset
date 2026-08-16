@@ -68,6 +68,9 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 6
-    claimDescription: Reduced fat content
+  - claimType: 10
+    claimDescription: 
     isValid: 1
+  - claimType: 1
+    claimDescription: Zero calories
+    isValid: 0

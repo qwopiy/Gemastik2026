@@ -27,18 +27,18 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 200 mL
+      Value: 10 mL
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 40
+      Value: 2
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 4.0
+      Value: 0.2
     - FieldId: 4
       FieldName: Lemak Jenuh
       Value: 0.0
@@ -53,7 +53,7 @@ MonoBehaviour:
       Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 20
+      Value: 1
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
@@ -68,4 +68,10 @@ MonoBehaviour:
     year: 2025
   IsExpired: 1
   IsDefect: 1
-  Claims: []
+  Claims:
+  - claimType: 9
+    claimDescription: Preservative-free
+    isValid: 1
+  - claimType: 4
+    claimDescription: Reduced sugar content
+    isValid: 1

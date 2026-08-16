@@ -70,6 +70,6 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 1
   Claims:
-  - claimType: 1
-    claimDescription: Tanpa Kalori
-    isValid: 0
+  - claimType: 7
+    claimDescription: Nutri-Level D
+    isValid: 1

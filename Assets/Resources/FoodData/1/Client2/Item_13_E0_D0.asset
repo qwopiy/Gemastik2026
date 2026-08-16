@@ -29,27 +29,27 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 436
+      Value: 440
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 13.6
+      Value: 14.0
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 1.6
+      Value: 2.0
     - FieldId: 5
       FieldName: Protein
-      Value: 46
+      Value: 50
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 36
+      Value: 40
     - FieldId: 7
       FieldName: Gula
-      Value: 6
+      Value: 10
     - FieldId: 8
       FieldName: Natrium
-      Value: 16
+      Value: 20
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
@@ -65,6 +65,9 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 9
-    claimDescription: Preservative-free
+  - claimType: 6
+    claimDescription: Low in fat
+    isValid: 1
+  - claimType: 3
+    claimDescription: Rendah Karbohidrat
     isValid: 1

@@ -65,6 +65,9 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 7
-    claimDescription: Nutri-Level B
+  - claimType: 10
+    claimDescription: 
+    isValid: 1
+  - claimType: 5
+    claimDescription: Reduced salt content
     isValid: 1

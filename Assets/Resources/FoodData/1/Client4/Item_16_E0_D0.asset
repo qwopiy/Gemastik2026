@@ -63,10 +63,4 @@ MonoBehaviour:
     year: 2029
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 2
-    claimDescription: Pembangun Otot!
-    isValid: 0
-  - claimType: 5
-    claimDescription: Rendah Garam
-    isValid: 1
+  Claims: []
