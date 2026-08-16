@@ -15,6 +15,7 @@ public class DialogueController : MonoBehaviour
     public AudioClip typingSound;
     public AudioSource audioSource;
 
+    private bool isFirstDialogue = true;
     private int dialogueIndex;
     private ClientController clientController;
     private SpeechBubbleController speechBubbleController;
@@ -75,20 +76,21 @@ public class DialogueController : MonoBehaviour
     {
         ClearTextbox();
         yield return speechBubbleController.ShowSpeechBubble();
-        yield return TypeLinesCoroutine(currentDialogue.GetLine(dialogueIndex));
+        yield return TypeLinesCoroutine(currentDialogue.GetLine(dialogueIndex, isFirstDialogue));
     }
 
     public void EndDialogue()
     {
         StartCoroutine(HideDialogue());
 
-        if (currentDialogue.isFirstDialogue)
+        if (isFirstDialogue)
         {
-            currentDialogue.isFirstDialogue = false;
+            isFirstDialogue = false;
             LevelManager.Instance.TriggerSendFoodEvent();
         } 
         else
         {
+            isFirstDialogue = true;
             DialogueEventManager.Instance.TriggerClientExit();
         }
     }
@@ -122,7 +124,7 @@ public class DialogueController : MonoBehaviour
         lastInputTime = Time.time;
 
 
-        if (textbox.text == currentDialogue.GetLine(dialogueIndex))
+        if (textbox.text == currentDialogue.GetLine(dialogueIndex, isFirstDialogue))
         {
             NextLine();
         }
@@ -130,17 +132,17 @@ public class DialogueController : MonoBehaviour
         {
             StopAllCoroutines();
             StopVoiceClip();
-            textbox.text = currentDialogue.GetLine(dialogueIndex);
+            textbox.text = currentDialogue.GetLine(dialogueIndex, isFirstDialogue);
         }
     }
 
     private void NextLine()
     {
-        if (dialogueIndex < currentDialogue.GetLineCount() - 1)
+        if (dialogueIndex < currentDialogue.GetLineCount(isFirstDialogue) - 1)
         {
             dialogueIndex++;
             ClearTextbox();
-            TypeLines(currentDialogue.GetLine(dialogueIndex));
+            TypeLines(currentDialogue.GetLine(dialogueIndex, isFirstDialogue));
         }
         else
         {
@@ -155,7 +157,7 @@ public class DialogueController : MonoBehaviour
 
     private void SetEndingDialogue()
     {
-        currentDialogue.isFirstDialogue = false;
+        isFirstDialogue = false;
         dialogueIndex = 0;
 
         DialogueEventManager.Instance.TriggerDialogueStart();

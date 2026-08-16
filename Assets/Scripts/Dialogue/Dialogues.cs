@@ -12,9 +12,8 @@ public class Dialogues
     [Header("Dialogue Lines")]
     public List<string> startingLines;
     public List<string> endingLines;
-    public bool isFirstDialogue = true;
 
-    public string GetLine(int index)
+    public string GetLine(int index, bool isFirstDialogue )
     {
         if (index < 0)
             return string.Empty;
@@ -33,7 +32,7 @@ public class Dialogues
         }
     }
 
-    public int GetLineCount()
+    public int GetLineCount(bool isFirstDialogue)
     {
         return isFirstDialogue ? startingLines.Count : endingLines.Count;
     }
