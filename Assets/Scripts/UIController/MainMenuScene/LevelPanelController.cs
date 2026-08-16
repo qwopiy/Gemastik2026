@@ -8,6 +8,11 @@ public class LevelPanelController : MonoBehaviour
     private static readonly int IsOpenHash = Animator.StringToHash("isOpen");
     public List<Animator> panelAnimators;
 
+    private void Start()
+    {
+        HideAllPanels();
+    }
+
     public void ShowLevelPanel(int levelIndex)
     {
         StartCoroutine(ShowLevelPanelCoroutine(levelIndex));

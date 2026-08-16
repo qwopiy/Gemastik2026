@@ -7,14 +7,16 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance;
     [Header("Settings")]
     public int Level = 0;
+    public int TotalClients = 0;
     public List<ClientDataSO> ClientDataList;
-    public List<FoodDataSO> FoodToSpawn;
     [HideInInspector] public List<FoodDataSO> FoodSpawned;
     public GameObjectAnchorSO FoodParent;
     public float delayBetweenClients = 0.5f;
 
     [Header("Debug")]
     public int index = 0;
+    public List<FoodDataSO> FoodToSpawn;
+    public List<int> ClientServedIndex;
 
     public event Action<Dialogues> OnDialogueTriggered;
     public event Action SendFoodEvent;
@@ -75,9 +77,18 @@ public class LevelManager : MonoBehaviour
 
     public void SpawnNextFood()
     {
-        if (index < ClientDataList.Count)
+        if (index < TotalClients)
         {
-            SpawnFood(ClientDataList[index], FoodParent.value.transform);
+            int randomIndex;
+            do
+            {
+                randomIndex = UnityEngine.Random.Range(0, ClientDataList.Count);
+
+            } while (ClientServedIndex.Contains(randomIndex));
+
+            SpawnFood(ClientDataList[randomIndex], FoodParent.value.transform);
+
+            ClientServedIndex.Add(randomIndex);
             index++;
         }
         else
