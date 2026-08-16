@@ -3284,7 +3284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721058af547393b40824bfb527a9c633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FoodItem
-  foodData: {fileID: 11400000, guid: aed251d5eb00a8044844b61954fd5761, type: 2}
+  foodData: {fileID: 11400000, guid: db5df37354b0b0d4fbeaa124f94fb519, type: 2}
 --- !u!114 &886571650648692354
 MonoBehaviour:
   m_ObjectHideFlags: 0
