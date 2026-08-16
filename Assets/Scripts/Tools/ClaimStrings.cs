@@ -26,6 +26,7 @@ public static class ClaimStringsDatabase
 {
     public static List<ClaimStrings> claimStringsList = new()
     {
+        new(ClaimType.None, new List<string> { "Tidak ada klaim", "No claims", "No specific claims" }),
         new(ClaimType.CalorieFree, new List<string> { "Tanpa Kalori", "Calorie-free", "Zero calories" }),
         new(ClaimType.LowTotalFat, new List<string> { "Rendah Lemak", "Low in fat", "Reduced fat content" }),
         new(ClaimType.HighProtein, new List<string> { "Tinggi Protein", "High in protein", "Protein-rich", "Cocok untuk olahraga", "Pembangun Otot!" }),
