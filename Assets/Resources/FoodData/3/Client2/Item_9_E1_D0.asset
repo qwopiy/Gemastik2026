@@ -56,8 +56,8 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 3
-  GGLReasons: 0100000002000000
+  GGLRating: 4
+  GGLReasons: 03000000
   ExpiryDate:
     day: 8
     month: 11
@@ -65,12 +65,12 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 0
   Claims:
-  - claimType: 8
-    claimDescription: Nutri-Level B
+  - claimType: 1
+    claimDescription: Tanpa Kalori
     isValid: 0
-  - claimType: 9
+  - claimType: 8
     claimDescription: Sehat
     isValid: 0
-  - claimType: 8
+  - claimType: 7
     claimDescription: Nutri-Level A
     isValid: 0

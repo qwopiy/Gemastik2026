@@ -56,21 +56,12 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 3
-  GGLReasons: 02000000
+  GGLRating: 4
+  GGLReasons: 0100000003000000
   ExpiryDate:
     day: 9
     month: 1
     year: 2022
   IsExpired: 1
   IsDefect: 0
-  Claims:
-  - claimType: 11
-    claimDescription: 
-    isValid: 1
-  - claimType: 4
-    claimDescription: Sugar-free
-    isValid: 0
-  - claimType: 8
-    claimDescription: Nutri-Level B
-    isValid: 0
+  Claims: []

@@ -55,21 +55,12 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 3
-  GGLReasons: 02000000
+  GGLRating: 4
+  GGLReasons: 0100000003000000
   ExpiryDate:
     day: 16
     month: 3
     year: 2027
   IsExpired: 0
   IsDefect: 1
-  Claims:
-  - claimType: 10
-    claimDescription: 100% Alami
-    isValid: 1
-  - claimType: 3
-    claimDescription: Rendah Karbohidrat
-    isValid: 1
-  - claimType: 4
-    claimDescription: Aman untuk penderita diabetes
-    isValid: 0
+  Claims: []

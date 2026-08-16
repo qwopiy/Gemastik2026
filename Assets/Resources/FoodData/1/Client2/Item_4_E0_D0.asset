@@ -29,7 +29,7 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 130
+      Value: 132
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -40,34 +40,28 @@ MonoBehaviour:
       Value: 0.0
     - FieldId: 5
       FieldName: Protein
-      Value: 10
+      Value: 12
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 30
+      Value: 32
     - FieldId: 7
       FieldName: Gula
       Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 10
+      Value: 12
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 1
-  GGLReasons: 0100000003000000
+  GGLRating: 2
+  GGLReasons: 02000000
   ExpiryDate:
     day: 26
     month: 6
     year: 2028
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 9
-    claimDescription: Sehat
-    isValid: 1
-  - claimType: 5
-    claimDescription: Rendah Gula
-    isValid: 1
+  Claims: []

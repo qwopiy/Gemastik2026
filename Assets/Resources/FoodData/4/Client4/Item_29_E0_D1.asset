@@ -28,18 +28,18 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 25 mL
+      Value: 50 mL
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 5
+      Value: 10
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 0.3
+      Value: 0.6
     - FieldId: 4
       FieldName: Lemak Jenuh
       Value: 0.0
@@ -54,15 +54,15 @@ MonoBehaviour:
       Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 5
+      Value: 10
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 1
-  GGLReasons: 0100000003000000
+  GGLRating: 2
+  GGLReasons: 02000000
   ExpiryDate:
     day: 27
     month: 7
@@ -70,12 +70,12 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 1
   Claims:
-  - claimType: 4
-    claimDescription: Tanpa Gula
-    isValid: 1
-  - claimType: 8
-    claimDescription: Nutri-Level A
-    isValid: 1
   - claimType: 6
-    claimDescription: Rendah Garam
+    claimDescription: Reduced fat content
+    isValid: 1
+  - claimType: 9
+    claimDescription: Tanpa Pengawet
+    isValid: 1
+  - claimType: 3
+    claimDescription: Rendah Karbohidrat
     isValid: 1

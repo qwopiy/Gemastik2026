@@ -26,13 +26,13 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 20 mL
+      Value: 100 mL
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 4
+      Value: 20
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -46,7 +46,7 @@ MonoBehaviour:
       Value: 0
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 1
+      Value: 4
     - FieldId: 7
       FieldName: Gula
       Value: 0
@@ -67,10 +67,4 @@ MonoBehaviour:
     year: 2023
   IsExpired: 1
   IsDefect: 0
-  Claims:
-  - claimType: 2
-    claimDescription: Tinggi Protein
-    isValid: 0
-  - claimType: 11
-    claimDescription: 
-    isValid: 1
+  Claims: []

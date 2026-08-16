@@ -40,7 +40,7 @@ public class LevelCompleteController : MonoBehaviour
     {
         if (isLevel4) 
         {
-            TransitionManager.Instance.GoToScene("EndingScene");
+            TransitionManager.Instance.GoToScene("Ending");
             return;
         }
 

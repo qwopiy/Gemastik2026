@@ -37,7 +37,7 @@ MonoBehaviour:
       Value: 22.0
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 11.0
+      Value: 12.0
     - FieldId: 5
       FieldName: Protein
       Value: 20
@@ -56,21 +56,12 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 3
-  GGLReasons: 02000000
+  GGLRating: 4
+  GGLReasons: 0100000003000000
   ExpiryDate:
     day: 3
     month: 7
     year: 2023
   IsExpired: 1
   IsDefect: 1
-  Claims:
-  - claimType: 8
-    claimDescription: Nutri-Level B
-    isValid: 0
-  - claimType: 1
-    claimDescription: Tanpa Kalori
-    isValid: 0
-  - claimType: 2
-    claimDescription: Tinggi Protein
-    isValid: 1
+  Claims: []

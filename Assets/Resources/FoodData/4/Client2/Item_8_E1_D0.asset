@@ -55,8 +55,8 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 3
-  GGLReasons: 01000000
+  GGLRating: 4
+  GGLReasons: 0200000003000000
   ExpiryDate:
     day: 1
     month: 11
@@ -64,12 +64,12 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 0
   Claims:
-  - claimType: 3
-    claimDescription: Low in carbohydrates
-    isValid: 0
+  - claimType: 10
+    claimDescription: 
+    isValid: 1
   - claimType: 8
-    claimDescription: Nutri-Level A
+    claimDescription: Sehat untuk badan
     isValid: 0
-  - claimType: 7
-    claimDescription: Rendah Lemak
-    isValid: 0
+  - claimType: 2
+    claimDescription: Cocok untuk olahraga
+    isValid: 1

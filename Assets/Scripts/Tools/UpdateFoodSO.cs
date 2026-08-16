@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using static UnityEditor.Progress;
-
 public class UpdateFoodSO : EditorWindow
 {
     private DefaultAsset folderAsset;
@@ -84,12 +82,23 @@ public class UpdateFoodSO : EditorWindow
                 UpdateServingSize(childAsset);
                 SetGGLToSO(childAsset);
                 SetRandomClaimToSO(childAsset);
+
+                #if UNITY_EDITOR
+
+                // 1. Tell Unity this specific asset has changed
+                EditorUtility.SetDirty(childAsset);
+
+                // 2. Force Unity to immediately write the dirty asset out to the file system
+                AssetDatabase.SaveAssetIfDirty(childAsset);
+                #endif
             }
         }
 
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
         //Debug.Log("ScriptableObjects created successfully in " + folderPath);
+
+
     }
 
     private void NormalizeNutrition()
@@ -117,6 +126,15 @@ public class UpdateFoodSO : EditorWindow
             if (childAsset != null)
             {
                 NormalizeNutritionTo100gml(childAsset);
+
+                #if UNITY_EDITOR
+
+                // 1. Tell Unity this specific asset has changed
+                EditorUtility.SetDirty(childAsset);
+
+                // 2. Force Unity to immediately write the dirty asset out to the file system
+                AssetDatabase.SaveAssetIfDirty(childAsset);
+                #endif
             }
         }
 

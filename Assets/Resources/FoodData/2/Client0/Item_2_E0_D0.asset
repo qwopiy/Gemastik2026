@@ -55,8 +55,8 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 2
-  GGLReasons: 03000000
+  GGLRating: 4
+  GGLReasons: 01000000
   ExpiryDate:
     day: 18
     month: 4
@@ -64,12 +64,6 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 6
-    claimDescription: Rendah Garam
-    isValid: 1
-  - claimType: 3
-    claimDescription: Rendah Karbohidrat
+  - claimType: 7
+    claimDescription: Nutri-Level B
     isValid: 0
-  - claimType: 5
-    claimDescription: Reduced sugar content
-    isValid: 1

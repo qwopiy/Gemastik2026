@@ -24,13 +24,13 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 10 mL
+      Value: 50 mL
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 1
+      Value: 5
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -50,25 +50,19 @@ MonoBehaviour:
       Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 1
+      Value: 5
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 1
-  GGLReasons: 03000000
+  GGLRating: 2
+  GGLReasons: 02000000
   ExpiryDate:
     day: 4
     month: 1
     year: 2029
   IsExpired: 0
   IsDefect: 1
-  Claims:
-  - claimType: 10
-    claimDescription: Preservative-free
-    isValid: 1
-  - claimType: 2
-    claimDescription: Tinggi Protein
-    isValid: 0
+  Claims: []

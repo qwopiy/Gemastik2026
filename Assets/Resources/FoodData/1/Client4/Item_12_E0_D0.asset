@@ -40,13 +40,13 @@ MonoBehaviour:
       Value: 1.6
     - FieldId: 5
       FieldName: Protein
-      Value: 46
+      Value: 48
     - FieldId: 6
       FieldName: Karbohidrat
       Value: 36
     - FieldId: 7
       FieldName: Gula
-      Value: 6
+      Value: 8
     - FieldId: 8
       FieldName: Natrium
       Value: 16
@@ -56,8 +56,8 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 2
-  GGLReasons: 02000000
+  GGLRating: 3
+  GGLReasons: 0100000003000000
   ExpiryDate:
     day: 3
     month: 2
@@ -65,6 +65,6 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 3
-    claimDescription: Low in carbohydrates
+  - claimType: 4
+    claimDescription: Rendah Gula
     isValid: 0

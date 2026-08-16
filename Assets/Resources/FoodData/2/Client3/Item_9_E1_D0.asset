@@ -28,7 +28,7 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 57
+      Value: 58
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -39,13 +39,13 @@ MonoBehaviour:
       Value: 1.5
     - FieldId: 5
       FieldName: Protein
-      Value: 2
+      Value: 3
     - FieldId: 6
       FieldName: Karbohidrat
       Value: 8
     - FieldId: 7
       FieldName: Gula
-      Value: 7
+      Value: 8
     - FieldId: 8
       FieldName: Natrium
       Value: 24
@@ -55,8 +55,8 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 2
-  GGLReasons: 02000000
+  GGLRating: 4
+  GGLReasons: 0100000003000000
   ExpiryDate:
     day: 14
     month: 1
@@ -64,12 +64,6 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 0
   Claims:
-  - claimType: 4
-    claimDescription: Sugar-free
-    isValid: 0
-  - claimType: 2
-    claimDescription: High in protein
-    isValid: 0
-  - claimType: 10
-    claimDescription: No Preservatives
+  - claimType: 9
+    claimDescription: 100% Alami
     isValid: 1

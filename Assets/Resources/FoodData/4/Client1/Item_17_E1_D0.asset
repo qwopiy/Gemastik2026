@@ -53,8 +53,8 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 2
-  GGLReasons: 03000000
+  GGLRating: 4
+  GGLReasons: 01000000
   ExpiryDate:
     day: 17
     month: 11
@@ -62,9 +62,6 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 0
   Claims:
-  - claimType: 11
-    claimDescription: 
-    isValid: 1
-  - claimType: 7
-    claimDescription: Low in fat
+  - claimType: 5
+    claimDescription: Rendah Garam
     isValid: 1

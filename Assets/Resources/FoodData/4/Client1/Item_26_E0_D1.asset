@@ -34,19 +34,19 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 29.2
+      Value: 29.0
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 17.2
+      Value: 17.0
     - FieldId: 5
       FieldName: Protein
-      Value: 12
+      Value: 10
     - FieldId: 6
       FieldName: Karbohidrat
       Value: 60
     - FieldId: 7
       FieldName: Gula
-      Value: 52
+      Value: 50
     - FieldId: 8
       FieldName: Natrium
       Value: 140
@@ -56,8 +56,8 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 3
-  GGLReasons: 02000000
+  GGLRating: 4
+  GGLReasons: 0100000003000000
   ExpiryDate:
     day: 14
     month: 10
@@ -65,9 +65,9 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 1
   Claims:
-  - claimType: 6
-    claimDescription: Reduced salt content
+  - claimType: 1
+    claimDescription: Zero calories
     isValid: 0
-  - claimType: 6
-    claimDescription: Reduced salt content
+  - claimType: 4
+    claimDescription: Rendah Gula
     isValid: 0

@@ -64,12 +64,12 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 1
   Claims:
-  - claimType: 4
-    claimDescription: Sugar-free
+  - claimType: 8
+    claimDescription: Good for your health
     isValid: 0
-  - claimType: 2
-    claimDescription: Cocok untuk olahraga
-    isValid: 1
-  - claimType: 3
-    claimDescription: Reduced carb content
+  - claimType: 6
+    claimDescription: Low in fat
+    isValid: 0
+  - claimType: 1
+    claimDescription: Calorie-free
     isValid: 0

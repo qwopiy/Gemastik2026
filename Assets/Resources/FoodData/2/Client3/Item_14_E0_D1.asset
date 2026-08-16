@@ -53,8 +53,8 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 3
-  GGLReasons: 01000000
+  GGLRating: 4
+  GGLReasons: 0200000003000000
   ExpiryDate:
     day: 7
     month: 11
@@ -62,9 +62,6 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 1
   Claims:
-  - claimType: 3
-    claimDescription: Rendah Karbohidrat
-    isValid: 1
-  - claimType: 7
-    claimDescription: Rendah Lemak
+  - claimType: 9
+    claimDescription: No Preservatives
     isValid: 1

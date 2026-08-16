@@ -22,48 +22,45 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 100 g
+      Value: 10 g
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 376
+      Value: 38
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 15.2
+      Value: 1.5
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 6.0
+      Value: 0.6
     - FieldId: 5
       FieldName: Protein
-      Value: 8
+      Value: 1
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 52
+      Value: 5
     - FieldId: 7
       FieldName: Gula
-      Value: 24
+      Value: 3
     - FieldId: 8
       FieldName: Natrium
-      Value: 352
+      Value: 35
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 3
-  GGLReasons: 02000000
+  GGLRating: 4
+  GGLReasons: 0100000003000000
   ExpiryDate:
     day: 13
     month: 3
     year: 2020
   IsExpired: 1
   IsDefect: 1
-  Claims:
-  - claimType: 6
-    claimDescription: Low in salt
-    isValid: 0
+  Claims: []

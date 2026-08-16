@@ -60,18 +60,12 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 1
-  GGLReasons: 0100000003000000
+  GGLRating: 2
+  GGLReasons: 02000000
   ExpiryDate:
     day: 14
     month: 4
     year: 2021
   IsExpired: 1
   IsDefect: 0
-  Claims:
-  - claimType: 8
-    claimDescription: Nutri-Level C
-    isValid: 0
-  - claimType: 1
-    claimDescription: Zero calories
-    isValid: 0
+  Claims: []

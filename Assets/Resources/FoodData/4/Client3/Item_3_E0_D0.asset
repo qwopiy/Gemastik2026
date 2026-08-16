@@ -55,21 +55,12 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 3
-  GGLReasons: 02000000
+  GGLRating: 4
+  GGLReasons: 0100000003000000
   ExpiryDate:
     day: 17
     month: 1
     year: 2029
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 5
-    claimDescription: Rendah Gula
-    isValid: 1
-  - claimType: 9
-    claimDescription: Sehat
-    isValid: 0
-  - claimType: 5
-    claimDescription: Low in sugar
-    isValid: 1
+  Claims: []

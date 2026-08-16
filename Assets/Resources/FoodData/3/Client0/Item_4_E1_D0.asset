@@ -55,8 +55,8 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 3
-  GGLReasons: 02000000
+  GGLRating: 4
+  GGLReasons: 0100000003000000
   ExpiryDate:
     day: 1
     month: 3
@@ -65,5 +65,8 @@ MonoBehaviour:
   IsDefect: 0
   Claims:
   - claimType: 9
-    claimDescription: Sehat untuk badan
+    claimDescription: Preservative-free
+    isValid: 1
+  - claimType: 1
+    claimDescription: Tanpa Kalori
     isValid: 0

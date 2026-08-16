@@ -30,7 +30,7 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 1
+      Value: 0
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -50,7 +50,7 @@ MonoBehaviour:
       Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 1
+      Value: 0
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
@@ -66,12 +66,9 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 1
   Claims:
-  - claimType: 4
-    claimDescription: Sugar-free
-    isValid: 1
-  - claimType: 4
-    claimDescription: Tanpa Gula
-    isValid: 1
-  - claimType: 5
-    claimDescription: Reduced sugar content
+  - claimType: 2
+    claimDescription: Pembangun Otot!
+    isValid: 0
+  - claimType: 3
+    claimDescription: Low in carbohydrates
     isValid: 1

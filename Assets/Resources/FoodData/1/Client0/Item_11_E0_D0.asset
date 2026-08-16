@@ -56,8 +56,8 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 3
-  GGLReasons: 02000000
+  GGLRating: 4
+  GGLReasons: 0100000003000000
   ExpiryDate:
     day: 9
     month: 8
@@ -66,8 +66,8 @@ MonoBehaviour:
   IsDefect: 0
   Claims:
   - claimType: 6
-    claimDescription: Reduced salt content
+    claimDescription: Reduced fat content
     isValid: 0
-  - claimType: 6
-    claimDescription: Reduced salt content
-    isValid: 0
+  - claimType: 9
+    claimDescription: No Preservatives
+    isValid: 1

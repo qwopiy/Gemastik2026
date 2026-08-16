@@ -43,10 +43,10 @@ MonoBehaviour:
       Value: 0
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 43
+      Value: 45
     - FieldId: 7
       FieldName: Gula
-      Value: 3
+      Value: 5
     - FieldId: 8
       FieldName: Natrium
       Value: 5
@@ -56,8 +56,8 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 1
-  GGLReasons: 03000000
+  GGLRating: 3
+  GGLReasons: 01000000
   ExpiryDate:
     day: 9
     month: 6
@@ -65,12 +65,9 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 1
   Claims:
-  - claimType: 3
-    claimDescription: Reduced carb content
-    isValid: 0
-  - claimType: 11
+  - claimType: 10
     claimDescription: 
     isValid: 1
-  - claimType: 7
-    claimDescription: Rendah Lemak
+  - claimType: 5
+    claimDescription: Reduced salt content
     isValid: 1

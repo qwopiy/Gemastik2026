@@ -57,7 +57,7 @@ MonoBehaviour:
       Value: 
   Approval: 1
   GGLRating: 2
-  GGLReasons: 010000000200000003000000
+  GGLReasons: 0200000003000000
   ExpiryDate:
     day: 6
     month: 9
@@ -65,12 +65,9 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 1
   Claims:
-  - claimType: 6
-    claimDescription: Low in salt
+  - claimType: 9
+    claimDescription: Preservative-free
     isValid: 1
-  - claimType: 4
-    claimDescription: Sugar-free
+  - claimType: 7
+    claimDescription: Nutri-Level A
     isValid: 0
-  - claimType: 11
-    claimDescription: 
-    isValid: 1

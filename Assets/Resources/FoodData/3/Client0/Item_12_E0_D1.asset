@@ -62,6 +62,12 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 1
   Claims:
-  - claimType: 1
-    claimDescription: Tanpa Kalori
-    isValid: 0
+  - claimType: 4
+    claimDescription: Low in sugar
+    isValid: 1
+  - claimType: 10
+    claimDescription: 
+    isValid: 1
+  - claimType: 9
+    claimDescription: 100% Alami
+    isValid: 1

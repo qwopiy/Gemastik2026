@@ -26,13 +26,13 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 25 mL
+      Value: 20 mL
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 10
+      Value: 8
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -43,10 +43,10 @@ MonoBehaviour:
       Value: 0.0
     - FieldId: 5
       FieldName: Protein
-      Value: 3
+      Value: 2
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 3
+      Value: 2
     - FieldId: 7
       FieldName: Gula
       Value: 0
@@ -67,10 +67,4 @@ MonoBehaviour:
     year: 2020
   IsExpired: 1
   IsDefect: 0
-  Claims:
-  - claimType: 10
-    claimDescription: Preservative-free
-    isValid: 1
-  - claimType: 4
-    claimDescription: No sugar
-    isValid: 1
+  Claims: []

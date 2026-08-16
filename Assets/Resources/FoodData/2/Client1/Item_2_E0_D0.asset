@@ -46,7 +46,7 @@ MonoBehaviour:
       Value: 0
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 5
+      Value: 6
     - FieldId: 7
       FieldName: Gula
       Value: 0
@@ -68,9 +68,6 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 2
-    claimDescription: Tinggi Protein
-    isValid: 0
-  - claimType: 11
-    claimDescription: 
+  - claimType: 3
+    claimDescription: Low in carbohydrates
     isValid: 1

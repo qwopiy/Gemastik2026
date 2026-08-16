@@ -55,8 +55,8 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 3
-  GGLReasons: 02000000
+  GGLRating: 4
+  GGLReasons: 0100000003000000
   ExpiryDate:
     day: 27
     month: 12
@@ -64,6 +64,9 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 1
   Claims:
-  - claimType: 6
-    claimDescription: Low in salt
+  - claimType: 8
+    claimDescription: Sehat untuk badan
+    isValid: 0
+  - claimType: 2
+    claimDescription: Cocok untuk olahraga
     isValid: 0

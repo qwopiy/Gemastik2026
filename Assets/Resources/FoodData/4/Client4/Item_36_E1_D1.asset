@@ -66,12 +66,9 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 1
   Claims:
-  - claimType: 4
-    claimDescription: Sugar-free
+  - claimType: 3
+    claimDescription: Low in carbohydrates
     isValid: 1
-  - claimType: 4
-    claimDescription: Tanpa Gula
-    isValid: 1
-  - claimType: 5
-    claimDescription: Reduced sugar content
+  - claimType: 1
+    claimDescription: Calorie-free
     isValid: 1

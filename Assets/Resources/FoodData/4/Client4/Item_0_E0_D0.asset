@@ -23,7 +23,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 200 mL
+      Value: 100 mL
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
@@ -65,9 +65,12 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 4
-    claimDescription: Aman untuk penderita diabetes
+  - claimType: 8
+    claimDescription: Good for your health
     isValid: 1
   - claimType: 10
-    claimDescription: No Preservatives
+    claimDescription: 
+    isValid: 1
+  - claimType: 9
+    claimDescription: Preservative-free
     isValid: 1

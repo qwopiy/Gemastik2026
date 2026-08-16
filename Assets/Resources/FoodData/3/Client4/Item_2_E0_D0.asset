@@ -55,8 +55,8 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 2
-  GGLReasons: 03000000
+  GGLRating: 4
+  GGLReasons: 0100000002000000
   ExpiryDate:
     day: 27
     month: 3
@@ -65,8 +65,5 @@ MonoBehaviour:
   IsDefect: 0
   Claims:
   - claimType: 6
-    claimDescription: Reduced salt content
-    isValid: 1
-  - claimType: 3
-    claimDescription: Rendah Karbohidrat
+    claimDescription: Reduced fat content
     isValid: 0

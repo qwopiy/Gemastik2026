@@ -64,6 +64,9 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 1
   Claims:
-  - claimType: 3
-    claimDescription: Reduced carb content
-    isValid: 0
+  - claimType: 10
+    claimDescription: 
+    isValid: 1
+  - claimType: 7
+    claimDescription: Nutri-Level D
+    isValid: 1

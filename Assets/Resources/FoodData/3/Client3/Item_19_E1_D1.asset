@@ -24,7 +24,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 100 mL
+      Value: 25 mL
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
@@ -66,12 +66,9 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 1
   Claims:
-  - claimType: 8
-    claimDescription: Nutri-Level C
-    isValid: 0
   - claimType: 9
-    claimDescription: Good for your health
+    claimDescription: No Preservatives
     isValid: 1
   - claimType: 1
-    claimDescription: Zero calories
+    claimDescription: Tanpa Kalori
     isValid: 1

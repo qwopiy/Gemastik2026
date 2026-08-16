@@ -53,18 +53,12 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 3
-  GGLReasons: 01000000
+  GGLRating: 4
+  GGLReasons: 0200000003000000
   ExpiryDate:
     day: 7
     month: 8
     year: 2027
   IsExpired: 0
   IsDefect: 1
-  Claims:
-  - claimType: 7
-    claimDescription: Low in fat
-    isValid: 0
-  - claimType: 10
-    claimDescription: Tanpa Pengawet
-    isValid: 1
+  Claims: []

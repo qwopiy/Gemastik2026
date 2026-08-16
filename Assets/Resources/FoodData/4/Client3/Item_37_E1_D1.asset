@@ -55,8 +55,8 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 2
-  GGLReasons: 03000000
+  GGLRating: 3
+  GGLReasons: 0100000002000000
   ExpiryDate:
     day: 21
     month: 1
@@ -64,12 +64,9 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 1
   Claims:
-  - claimType: 10
-    claimDescription: Tanpa Pengawet
-    isValid: 1
-  - claimType: 6
-    claimDescription: Low in salt
-    isValid: 1
   - claimType: 7
-    claimDescription: Rendah Lemak
+    claimDescription: Nutri-Level A
+    isValid: 0
+  - claimType: 9
+    claimDescription: 100% Alami
     isValid: 1

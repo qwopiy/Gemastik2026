@@ -65,12 +65,6 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 6
-    claimDescription: Low in salt
-    isValid: 1
-  - claimType: 4
-    claimDescription: Sugar-free
+  - claimType: 2
+    claimDescription: Protein-rich
     isValid: 0
-  - claimType: 11
-    claimDescription: 
-    isValid: 1

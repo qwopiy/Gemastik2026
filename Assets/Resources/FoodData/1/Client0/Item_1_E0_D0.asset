@@ -22,13 +22,13 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 25 mL
+      Value: 100 mL
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 20
+      Value: 80
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -42,10 +42,10 @@ MonoBehaviour:
       Value: 0
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 5
+      Value: 20
     - FieldId: 7
       FieldName: Gula
-      Value: 5
+      Value: 20
     - FieldId: 8
       FieldName: Natrium
       Value: 0
@@ -55,8 +55,8 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 1
-  GGLReasons: 0200000003000000
+  GGLRating: 4
+  GGLReasons: 01000000
   ExpiryDate:
     day: 9
     month: 2
@@ -64,6 +64,12 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 9
+  - claimType: 1
+    claimDescription: Zero calories
+    isValid: 0
+  - claimType: 7
+    claimDescription: Nutri-Level A
+    isValid: 0
+  - claimType: 8
     claimDescription: Good for your health
-    isValid: 1
+    isValid: 0

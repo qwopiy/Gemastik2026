@@ -20,13 +20,13 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 200 g
+      Value: 25 g
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 40
+      Value: 5
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -62,6 +62,6 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 0
   Claims:
-  - claimType: 1
-    claimDescription: Tanpa Kalori
-    isValid: 0
+  - claimType: 10
+    claimDescription: 
+    isValid: 1
