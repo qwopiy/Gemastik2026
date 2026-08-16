@@ -17,13 +17,9 @@ MonoBehaviour:
     speakersSprite: {fileID: -4311121877062469133, guid: 68d0648071e011d4a8e95317c5b847c2, type: 3}
     voiceClip: {fileID: 8300000, guid: 05c9c56614e793f4aa621d2ceb9521b4, type: 3}
     startingLines:
-    - banh.. kamu bukan zombie kan
-    - hehehe maaf maaf, agak sensi saya sama zombie
-    - tapi karna abangnya bukan zombie, tolong dong periksa ini
-    - saya mau makan enak dan sehat
+    - Halo bang~ masih belum berubah jadi zombie kan?
     endingLines:
-    - Ok makasih ya bang~
-    - ingat! jangan jadi zombie
+    - Ok makasih ya bang~ ingat! jangan jadi zombie
   AmountToSpawn: 1
   foodFolder: FoodData/Level3/Client0
   FoodData: []

@@ -17,10 +17,8 @@ MonoBehaviour:
     speakersSprite: {fileID: -3371123368795815966, guid: 114bdc86f9f27164d980a2c307bf6f89, type: 3}
     voiceClip: {fileID: 8300000, guid: 05c9c56614e793f4aa621d2ceb9521b4, type: 3}
     startingLines:
-    - fuahh.. rame banget. Udah kaya dungeon aja ini event
-    - lapar banget habis keliling-keliling...
-    - tolong dong bang periksa ini
-    - saya udah lapar banget, tapi takut ga sehat kalau langsung dimakan
+    - tolong dong bang periksa ini. saya udah lapar banget, tapi takut ga sehat kalau
+      langsung dimakan
     endingLines:
     - makasih ya bang. saya pergi makan dulu ya
   AmountToSpawn: 2

@@ -18,8 +18,6 @@ MonoBehaviour:
     voiceClip: {fileID: 8300000, guid: 05c9c56614e793f4aa621d2ceb9521b4, type: 3}
     startingLines:
     - .......
-    - ??????
-    - '!!!!!!!!'
     endingLines:
     - :| (dia tampaknya senang)
   AmountToSpawn: 1

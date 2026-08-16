@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 764ed81dd90fa714bbd6491cfe947157
+guid: 81e9acecca2a0c249a26aa0efd30b74d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8672492875515090611
-    second: Cover_0
+      213: 8668288246297696276
+    second: Cursor_5_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +57,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 7
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -97,19 +97,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -126,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cover_0
+      name: Cursor_5_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 300
-        height: 400
+        width: 31
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4921d5bdad15a780800000000000000
-      internalID: -8672492875515090611
+      spriteID: 4189443cb32fb4870800000000000000
+      internalID: 8668288246297696276
       vertices: []
       indices: 
       edges: []
@@ -161,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cover_0: -8672492875515090611
+      Cursor_5_0: 8668288246297696276
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

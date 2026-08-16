@@ -17,11 +17,9 @@ MonoBehaviour:
     speakersSprite: {fileID: 6643273998916490862, guid: c1f1446bed189d74aa01f095bb785dab, type: 3}
     voiceClip: {fileID: 8300000, guid: 05c9c56614e793f4aa621d2ceb9521b4, type: 3}
     startingLines:
-    - wleee...
-    - (orang freak. langsung saja periksa. biar cepat selesai)
+    - wleee... (orang freak. langsung saja periksa. biar cepat selesai)
     endingLines:
     - wleee...
-    - (masih aja loh ya)
   AmountToSpawn: 1
   foodFolder: FoodData/Level3/Client0
   FoodData: []

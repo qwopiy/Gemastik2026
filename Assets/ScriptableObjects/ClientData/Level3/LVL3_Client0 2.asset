@@ -18,7 +18,7 @@ MonoBehaviour:
     voiceClip: {fileID: 8300000, guid: 05c9c56614e793f4aa621d2ceb9521b4, type: 3}
     startingLines:
     - Bre tolongin gua dong..
-    - "\u201Ctangan saya keikat. Ini caranya bacanya gimana ya?"
+    - tangan saya keikat. Ini caranya bacanya gimana ya?
     endingLines:
     - Makasih Bre
   AmountToSpawn: 1

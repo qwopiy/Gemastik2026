@@ -17,8 +17,7 @@ MonoBehaviour:
     speakersSprite: {fileID: 8550662613930544025, guid: a37c3bdee1c735a49898122f528864d1, type: 3}
     voiceClip: {fileID: 8300000, guid: 05c9c56614e793f4aa621d2ceb9521b4, type: 3}
     startingLines:
-    - Bre tolongin gua dong..
-    - "\u201Ctangan saya keikat. Ini caranya bacanya gimana ya?"
+    - Bre tolongin gua dong.. tangan saya masih keikat
     endingLines:
     - Makasih Bre
   AmountToSpawn: 1

@@ -17,10 +17,7 @@ MonoBehaviour:
     speakersSprite: {fileID: -3843696458174078936, guid: c6b1b4ba7a2e513469017b92010bfecc, type: 3}
     voiceClip: {fileID: 8300000, guid: 05c9c56614e793f4aa621d2ceb9521b4, type: 3}
     startingLines:
-    - '''Seseorang tidak akan mati selama masih ada yang memegang teguh tekadnya'''
-    - keren ga bang? Itu slogan anime dari Tomath
-    - oh ya, kebetulan saya bawa ini. Tolong dong bang periksa
-    - semoga apa yang saya konsumsi penuh keadilan
+    - Tolong dong bang periksa. semoga apa yang saya konsumsi penuh keadilan
     endingLines:
     - Makasih bang. semoga abang tetap senantiasa di jalan keadilan
   AmountToSpawn: 1
