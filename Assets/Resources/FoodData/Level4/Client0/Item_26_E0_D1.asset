@@ -59,7 +59,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Tepung, Ayam Kampung, Garam
   Approval: 1
   GGLRating: 4
   GGLReasons: 0200000003000000
@@ -74,5 +74,5 @@ MonoBehaviour:
     claimDescription: Pembangun Otot!
     isValid: 0
   - claimType: 10
-    claimDescription: 
+    claimDescription: Mengandung Ayam Kampung
     isValid: 1

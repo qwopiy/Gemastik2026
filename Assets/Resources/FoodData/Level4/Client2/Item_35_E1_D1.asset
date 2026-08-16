@@ -64,9 +64,6 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 1
   Claims:
-  - claimType: 9
-    claimDescription: No Preservatives
-    isValid: 1
   - claimType: 4
     claimDescription: Low in sugar
     isValid: 1

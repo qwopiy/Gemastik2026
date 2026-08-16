@@ -58,7 +58,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Air, Gula, Kacang Almond
   Approval: 1
   GGLRating: 2
   GGLReasons: 02000000

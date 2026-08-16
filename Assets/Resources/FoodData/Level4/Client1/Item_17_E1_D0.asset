@@ -65,9 +65,6 @@ MonoBehaviour:
   - claimType: 8
     claimDescription: Good for your health
     isValid: 0
-  - claimType: 10
-    claimDescription: 
-    isValid: 1
   - claimType: 2
     claimDescription: High in protein
     isValid: 0

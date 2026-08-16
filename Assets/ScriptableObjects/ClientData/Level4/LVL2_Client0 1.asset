@@ -21,5 +21,5 @@ MonoBehaviour:
     endingLines:
     - OK Mister, Thank You very Much
   AmountToSpawn: 1
-  foodFolder: FoodData/Level2/Client0
+  foodFolder: FoodData/Level4/Client1
   FoodData: []

@@ -58,7 +58,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Air, Gula, Almond
   Approval: 1
   GGLRating: 2
   GGLReasons: 02000000
@@ -70,7 +70,7 @@ MonoBehaviour:
   IsDefect: 1
   Claims:
   - claimType: 10
-    claimDescription: 
+    claimDescription: Mengandung Almond Asli
     isValid: 1
   - claimType: 8
     claimDescription: Sehat untuk badan

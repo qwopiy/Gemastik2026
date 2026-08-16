@@ -21,5 +21,5 @@ MonoBehaviour:
     endingLines:
     - Makasih Wak
   AmountToSpawn: 3
-  foodFolder: FoodData/Level2/Client0
+  foodFolder: FoodData/Level4/Client1
   FoodData: []

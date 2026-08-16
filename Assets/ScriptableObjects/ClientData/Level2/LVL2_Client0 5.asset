@@ -23,5 +23,5 @@ MonoBehaviour:
     endingLines:
     - MAKASIH BANG. SAYA PERGI DULU YA
   AmountToSpawn: 2
-  foodFolder: FoodData/Level2/Client0
+  foodFolder: FoodData/Level2/Client3
   FoodData: []

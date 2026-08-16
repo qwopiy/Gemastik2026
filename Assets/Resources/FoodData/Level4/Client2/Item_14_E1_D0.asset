@@ -55,7 +55,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Susu, Strober
   Approval: 1
   GGLRating: 3
   GGLReasons: 01000000

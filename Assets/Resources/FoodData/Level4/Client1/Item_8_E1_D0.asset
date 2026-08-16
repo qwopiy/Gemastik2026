@@ -57,7 +57,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Susu, Oat, Pengawet
   Approval: 1
   GGLRating: 2
   GGLReasons: 02000000
@@ -70,7 +70,7 @@ MonoBehaviour:
   Claims:
   - claimType: 9
     claimDescription: Preservative-free
-    isValid: 1
+    isValid: 0
   - claimType: 1
     claimDescription: Zero calories
     isValid: 1

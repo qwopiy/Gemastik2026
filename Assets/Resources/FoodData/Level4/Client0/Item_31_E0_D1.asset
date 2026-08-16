@@ -55,7 +55,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Air, Lemon, Ekstrak Madu Sintetik
   Approval: 1
   GGLRating: 2
   GGLReasons: 02000000
@@ -73,5 +73,5 @@ MonoBehaviour:
     claimDescription: Low in sugar
     isValid: 1
   - claimType: 10
-    claimDescription: 
-    isValid: 1
+    claimDescription: Dibuat Dengan Madu Murni
+    isValid: 0

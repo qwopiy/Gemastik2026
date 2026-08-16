@@ -54,7 +54,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: 100% Gandum Murni, Gula
   Approval: 1
   GGLRating: 2
   GGLReasons: 02000000
@@ -66,7 +66,7 @@ MonoBehaviour:
   IsDefect: 0
   Claims:
   - claimType: 10
-    claimDescription: 
+    claimDescription: 100% Roti Gandum
     isValid: 1
   - claimType: 5
     claimDescription: Reduced salt content

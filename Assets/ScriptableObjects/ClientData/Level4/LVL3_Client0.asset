@@ -21,5 +21,5 @@ MonoBehaviour:
     endingLines:
     - Makasih ya dek. eh.. tapi saya ga kelihatan buncit kan?
   AmountToSpawn: 2
-  foodFolder: FoodData/Level3/Client0
+  foodFolder: FoodData/Level4/Client2
   FoodData: []

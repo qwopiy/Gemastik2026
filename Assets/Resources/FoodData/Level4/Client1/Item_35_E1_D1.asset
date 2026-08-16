@@ -55,7 +55,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Air, Gula, Ekstrak Lemon, Pengawet Cair
   Approval: 1
   GGLRating: 1
   GGLReasons: 010000000200000003000000
@@ -71,4 +71,4 @@ MonoBehaviour:
     isValid: 1
   - claimType: 9
     claimDescription: Tanpa Pengawet
-    isValid: 1
+    isValid: 0

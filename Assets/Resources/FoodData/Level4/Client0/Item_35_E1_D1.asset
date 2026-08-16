@@ -53,7 +53,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Gula, Air, Ekstrak Melon Sintetik
   Approval: 1
   GGLRating: 2
   GGLReasons: 02000000
@@ -65,5 +65,5 @@ MonoBehaviour:
   IsDefect: 1
   Claims:
   - claimType: 10
-    claimDescription: 
-    isValid: 1
+    claimDescription: Dibuat Dengan Buah Melon Asli
+    isValid: 0

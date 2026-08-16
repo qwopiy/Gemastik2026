@@ -58,7 +58,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Susu, Gula, Potongan Rasberi.
   Approval: 1
   GGLRating: 4
   GGLReasons: 01000000
@@ -70,7 +70,7 @@ MonoBehaviour:
   IsDefect: 0
   Claims:
   - claimType: 10
-    claimDescription: 
+    claimDescription: Dibuat Dengan Rasberi Asli
     isValid: 1
   - claimType: 4
     claimDescription: Low in sugar

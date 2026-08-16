@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b677af556cddcd4a8e36095423a9e8c, type: 3}
   m_Name: Item_22_E0_D1
   m_EditorClassIdentifier: Assembly-CSharp::FoodDataSO
-  FoodId: Roti Coklat Mini Light
+  FoodId: Roti Coklat Mini
   FoodPrefab:
   - {fileID: 4417826435687172446, guid: cfa20d8d44c3e0145824443d41dbdc22, type: 3}
   - {fileID: 4417826435687172446, guid: 01d9a68c6dc5d794a8f84e9df792f978, type: 3}
@@ -54,7 +54,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Tepung, Gula, Buah Kakao
   Approval: 1
   GGLRating: 4
   GGLReasons: 01000000
@@ -66,7 +66,7 @@ MonoBehaviour:
   IsDefect: 1
   Claims:
   - claimType: 10
-    claimDescription: 
+    claimDescription: Terbuat Dari Buah Coklat
     isValid: 1
   - claimType: 4
     claimDescription: Low in sugar

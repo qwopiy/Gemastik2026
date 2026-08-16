@@ -71,6 +71,3 @@ MonoBehaviour:
   - claimType: 7
     claimDescription: Nutri-Level A
     isValid: 1
-  - claimType: 10
-    claimDescription: 
-    isValid: 1

@@ -22,5 +22,5 @@ MonoBehaviour:
     endingLines:
     - Makasih Bre
   AmountToSpawn: 1
-  foodFolder: FoodData/Level3/Client0
+  foodFolder: FoodData/Level3/Client1
   FoodData: []

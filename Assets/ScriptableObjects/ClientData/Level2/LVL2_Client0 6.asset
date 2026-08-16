@@ -23,5 +23,5 @@ MonoBehaviour:
     endingLines:
     - Terima Kasih. Semoga negara ini lebih baik dengan adanya kamu
   AmountToSpawn: 1
-  foodFolder: FoodData/Level2/Client0
+  foodFolder: FoodData/Level2/Client2
   FoodData: []

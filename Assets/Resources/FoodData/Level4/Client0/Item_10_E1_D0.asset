@@ -53,7 +53,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Tepung Terigu, Gula, Garam
   Approval: 1
   GGLRating: 4
   GGLReasons: 0100000003000000

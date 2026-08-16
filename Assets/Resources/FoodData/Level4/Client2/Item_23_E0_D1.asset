@@ -65,9 +65,6 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 1
   Claims:
-  - claimType: 10
-    claimDescription: 
-    isValid: 1
   - claimType: 8
     claimDescription: Sehat
     isValid: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b677af556cddcd4a8e36095423a9e8c, type: 3}
   m_Name: Item_29_E0_D1
   m_EditorClassIdentifier: Assembly-CSharp::FoodDataSO
-  FoodId: Sereal Fruit Loops Crunchy
+  FoodId: Sereal Fruit
   FoodPrefab:
   - {fileID: 4417826435687172446, guid: cfa20d8d44c3e0145824443d41dbdc22, type: 3}
   - {fileID: 4417826435687172446, guid: 01d9a68c6dc5d794a8f84e9df792f978, type: 3}
@@ -53,7 +53,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Tepung, Buah Alami, Pengawet
   Approval: 1
   GGLRating: 4
   GGLReasons: 01000000
@@ -72,4 +72,4 @@ MonoBehaviour:
     isValid: 0
   - claimType: 9
     claimDescription: Tanpa Pengawet
-    isValid: 1
+    isValid: 0

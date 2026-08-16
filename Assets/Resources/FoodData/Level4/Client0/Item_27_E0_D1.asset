@@ -54,7 +54,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Singkong, Garam, Gula, Perasa Balado
   Approval: 1
   GGLRating: 4
   GGLReasons: 010000000200000003000000
@@ -66,5 +66,5 @@ MonoBehaviour:
   IsDefect: 1
   Claims:
   - claimType: 10
-    claimDescription: 
+    claimDescription: 100% Singkong
     isValid: 1
