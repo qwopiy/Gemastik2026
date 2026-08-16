@@ -12,49 +12,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b677af556cddcd4a8e36095423a9e8c, type: 3}
   m_Name: Item_2_E0_D0
   m_EditorClassIdentifier: Assembly-CSharp::FoodDataSO
-  FoodId: Roti Horn Krim Vanilla
+  FoodId: Keripik Kentang Panggang Light
   FoodPrefab:
   - {fileID: 4417826435687172446, guid: a64869e8ddd0d2a4b8a73b3a5cb7d05a, type: 3}
   - {fileID: 4417826435687172446, guid: e3fd86f2d6f260142a6563bcb8e3cc6c, type: 3}
   - {fileID: 4417826435687172446, guid: fc5007ddb69d5e940b26fc430d6029e3, type: 3}
-  - {fileID: 4417826435687172446, guid: cfa20d8d44c3e0145824443d41dbdc22, type: 3}
-  - {fileID: 4417826435687172446, guid: 01d9a68c6dc5d794a8f84e9df792f978, type: 3}
-  - {fileID: 4417826435687172446, guid: e9bc2dcfb5dc2614caa300457d699016, type: 3}
-  - {fileID: 4417826435687172446, guid: a6cfe449969a643458a7aeff1da60ee4, type: 3}
-  - {fileID: 4417826435687172446, guid: 15c19b380b9d7824092ce82eef805943, type: 3}
   - {fileID: 4417826435687172446, guid: 86b025ff64425df41b82c4c3b439d6de, type: 3}
   Components:
   - ComponentType: 0
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 200 g
+      Value: 25 g
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 660
+      Value: 109
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 22.0
+      Value: 3.8
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 11.0
+      Value: 1.0
     - FieldId: 5
       FieldName: Protein
-      Value: 20
+      Value: 3
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 100
+      Value: 17
     - FieldId: 7
       FieldName: Gula
-      Value: 40
+      Value: 2
     - FieldId: 8
       FieldName: Natrium
-      Value: 420
+      Value: 107
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
@@ -62,20 +57,20 @@ MonoBehaviour:
       Value: 
   Approval: 1
   GGLRating: 3
-  GGLReasons: 02000000
+  GGLReasons: 0100000002000000
   ExpiryDate:
-    day: 15
-    month: 7
+    day: 10
+    month: 1
     year: 2028
   IsExpired: 0
   IsDefect: 0
   Claims:
+  - claimType: 4
+    claimDescription: Sugar-free
+    isValid: 0
   - claimType: 8
-    claimDescription: Nutri-Level B
+    claimDescription: Nutri-Level D
     isValid: 0
   - claimType: 1
     claimDescription: Tanpa Kalori
     isValid: 0
-  - claimType: 2
-    claimDescription: Tinggi Protein
-    isValid: 1

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b677af556cddcd4a8e36095423a9e8c, type: 3}
   m_Name: Item_8_E1_D0
   m_EditorClassIdentifier: Assembly-CSharp::FoodDataSO
-  FoodId: Keripik Kentang Balado Pedas
+  FoodId: Oatmeal Instan Rasa Sirup Mapel
   FoodPrefab:
   - {fileID: 4417826435687172446, guid: a64869e8ddd0d2a4b8a73b3a5cb7d05a, type: 3}
   - {fileID: 4417826435687172446, guid: e3fd86f2d6f260142a6563bcb8e3cc6c, type: 3}
@@ -34,48 +34,42 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 108
+      Value: 72
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 6.8
+      Value: 1.0
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 2.8
+      Value: 0.2
     - FieldId: 5
       FieldName: Protein
       Value: 2
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 12
+      Value: 14
     - FieldId: 7
       FieldName: Gula
-      Value: 2
+      Value: 6
     - FieldId: 8
       FieldName: Natrium
-      Value: 188
+      Value: 90
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 3
-  GGLReasons: 01000000
+  GGLRating: 2
+  GGLReasons: 03000000
   ExpiryDate:
-    day: 23
-    month: 4
-    year: 2025
+    day: 1
+    month: 2
+    year: 2020
   IsExpired: 1
   IsDefect: 0
   Claims:
-  - claimType: 7
-    claimDescription: Reduced fat content
-    isValid: 0
-  - claimType: 10
-    claimDescription: Preservative-free
-    isValid: 1
-  - claimType: 6
-    claimDescription: Low in salt
+  - claimType: 2
+    claimDescription: Cocok untuk olahraga
     isValid: 0

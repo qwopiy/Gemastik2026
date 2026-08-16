@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class UpdateFoodSO : EditorWindow
 {
@@ -42,17 +43,17 @@ public class UpdateFoodSO : EditorWindow
             }
         }
 
-        if (GUILayout.Button("Remove Duplicate Claims"))
-        {
-            if (folderAsset != null)
-            {
-                RemoveDuplicateClaims();
-            }
-            else
-            {
-                Debug.LogError("Please assign a folder first!");
-            }
-        }
+        //if (GUILayout.Button("Remove Duplicate Claims"))
+        //{
+        //    if (folderAsset != null)
+        //    {
+        //        RemoveDuplicateClaims();
+        //    }
+        //    else
+        //    {
+        //        Debug.LogError("Please assign a folder first!");
+        //    }
+        //}
     }
 
     private void Process()
@@ -124,53 +125,53 @@ public class UpdateFoodSO : EditorWindow
         //Debug.Log("ScriptableObjects created successfully in " + folderPath);
     }
 
-    private void RemoveDuplicateClaims()
-    {
-        // 1. Get the project-relative path of the folder (e.g., "Assets/MyFolder")
-        string ItemToProcessPath = AssetDatabase.GetAssetPath(folderAsset);
+    //private void RemoveDuplicateClaims()
+    //{
+    //    // 1. Get the project-relative path of the folder (e.g., "Assets/MyFolder")
+    //    string ItemToProcessPath = AssetDatabase.GetAssetPath(folderAsset);
 
-        // 2. Find all assets inside that specific folder path
-        // "t:FoodDataSO" grabs only FoodDataSO assets
-        string[] assetGuids = AssetDatabase.FindAssets("t:FoodDataSO", new[] { ItemToProcessPath });
+    //    // 2. Find all assets inside that specific folder path
+    //    // "t:FoodDataSO" grabs only FoodDataSO assets
+    //    string[] assetGuids = AssetDatabase.FindAssets("t:FoodDataSO", new[] { ItemToProcessPath });
 
-        // 3. Iterate over every file found
-        foreach (string guid in assetGuids)
-        {
-            // 4. Convert the unique ID back into a string path
-            string assetPath = AssetDatabase.GUIDToAssetPath(guid);
+    //    // 3. Iterate over every file found
+    //    foreach (string guid in assetGuids)
+    //    {
+    //        // 4. Convert the unique ID back into a string path
+    //        string assetPath = AssetDatabase.GUIDToAssetPath(guid);
 
-            // 5. Skip the root folder asset itself (AssetDatabase includes it in the search)
-            if (assetPath == ItemToProcessPath) continue;
+    //        // 5. Skip the root folder asset itself (AssetDatabase includes it in the search)
+    //        if (assetPath == ItemToProcessPath) continue;
 
-            // 6. Optional: Load the asset if you need to inspect or modify its properties
-            FoodDataSO childAsset = AssetDatabase.LoadAssetAtPath<FoodDataSO>(assetPath);
+    //        // 6. Optional: Load the asset if you need to inspect or modify its properties
+    //        FoodDataSO childAsset = AssetDatabase.LoadAssetAtPath<FoodDataSO>(assetPath);
 
 
-            if (childAsset != null)
-            {
-                RemoveDuplicateClaimsFromSO(childAsset);
-            }
-        }
+    //        if (childAsset != null)
+    //        {
+    //            RemoveDuplicateClaimsFromSO(childAsset);
+    //        }
+    //    }
 
-        AssetDatabase.SaveAssets();
-        AssetDatabase.Refresh();
-        //Debug.Log("ScriptableObjects created successfully in " + folderPath);
-    }
+    //    AssetDatabase.SaveAssets();
+    //    AssetDatabase.Refresh();
+    //    //Debug.Log("ScriptableObjects created successfully in " + folderPath);
+    //}
 
-    private void RemoveDuplicateClaimsFromSO(FoodDataSO so)
-    {
-        HashSet<ClaimType> uniqueClaimTypes = new HashSet<ClaimType>();
-        List<Claim> uniqueClaims = new List<Claim>();
-        foreach (var claim in so.Claims)
-        {
-            if (!uniqueClaimTypes.Contains(claim.claimType))
-            {
-                uniqueClaimTypes.Add(claim.claimType);
-                uniqueClaims.Add(claim);
-            }
-        }
-        so.Claims = uniqueClaims;
-    }
+    //private void RemoveDuplicateClaimsFromSO(FoodDataSO so)
+    //{
+    //    HashSet<ClaimType> uniqueClaimTypes = new HashSet<ClaimType>();
+    //    List<Claim> uniqueClaims = new List<Claim>();
+    //    foreach (var claim in so.Claims)
+    //    {
+    //        if (!uniqueClaimTypes.Contains(claim.claimType))
+    //        {
+    //            uniqueClaimTypes.Add(claim.claimType);
+    //            uniqueClaims.Add(claim);
+    //        }
+    //    }
+    //    so.Claims = uniqueClaims;
+    //}
     private void NormalizeNutritionTo100gml(FoodDataSO so)
     {
         int validServingSize = 100; // Normalize to 100 ml or g
@@ -277,22 +278,44 @@ public class UpdateFoodSO : EditorWindow
     private void SetRandomClaimToSO(FoodDataSO so)
     {
         so.Claims.Clear(); // Clear existing claims before adding new ones
-        int randomClaimCount = Random.Range(1, 4); // 1 to 3 claims
+        //int randomClaimCount = Random.Range(0, 4); // 0 to 3 claims
+        List<int> weightedRandom = new()
+        {
+            30,
+            30,
+            25,
+            15,
+        };
+
+        int randomNumber = Random.Range(0, 100);
+        int claimCount = 0;
+        for (int i = 0; i < weightedRandom.Count; i++)
+        {
+            int item = weightedRandom[i];
+            if (randomNumber < item)
+            {
+                claimCount = i;
+                break;
+            }
+            randomNumber -= item;
+        }
 
         List<Claim> randomClaims = new();
 
         // prevents duplicate claims by checking if the claim already exists in the list
-        do
+        while (randomClaims.Count < claimCount)
         {
-            int randomClaimType = Random.Range(1, 12); // 1 to 11 
+            int randomClaimType = Random.Range(1, 11); // 1 to 10
             string claimDescription = ClaimStringsDatabase.GetRandomDescription((ClaimType)randomClaimType);
 
             Claim newClaim = new((ClaimType)randomClaimType, claimDescription, CheckValidity(so, (ClaimType)randomClaimType, claimDescription));
-            if (!newClaim.ContainsClaimInList(randomClaims))
+            if (!newClaim.ContainsClaimTypeInList(randomClaims))
             {
                 randomClaims.Add(newClaim);
             }
-        } while (randomClaims.Count < randomClaimCount);
+        } 
+
+        so.Claims = randomClaims;
     }
     private bool CheckValidity(FoodDataSO so, ClaimType claim, string description = "A")
     {
@@ -304,8 +327,6 @@ public class UpdateFoodSO : EditorWindow
                 return float.Parse(so.Components[1].AttributeFields[2].Value) > 10f;
             case ClaimType.LowCarbohydrate:
                 return float.Parse(so.Components[1].AttributeFields[3].Value) < 15f;
-            case ClaimType.SugarFree:
-                return float.Parse(so.Components[1].AttributeFields[4].Value) < 0.5f;
             case ClaimType.LowSugar:
                 return float.Parse(so.Components[1].AttributeFields[4].Value) < 5f;
             case ClaimType.LowSalt:
@@ -355,14 +376,14 @@ public class UpdateFoodSO : EditorWindow
         GGLSticker saltGGL = GetGGL(salt, GGLReason.Salt, servingSize);
         GGLSticker fatGGL = GetGGL(fat, GGLReason.Fat, servingSize);
 
-        GGLSticker minGGL = (GGLSticker)Mathf.Min((int)sugarGGL, Mathf.Min((int)saltGGL, (int)fatGGL));
+        GGLSticker maxGGL = (GGLSticker)Mathf.Max((int)sugarGGL, Mathf.Max((int)saltGGL, (int)fatGGL));
 
         List<GGLReason> reasons = new List<GGLReason>();
-        if (minGGL == sugarGGL) reasons.Add(GGLReason.Sugar);
-        if (minGGL == saltGGL) reasons.Add(GGLReason.Salt);
-        if (minGGL == fatGGL) reasons.Add(GGLReason.Fat);
+        if (maxGGL == sugarGGL) reasons.Add(GGLReason.Sugar);
+        if (maxGGL == saltGGL) reasons.Add(GGLReason.Salt);
+        if (maxGGL == fatGGL) reasons.Add(GGLReason.Fat);
 
-        asset.GGLRating = minGGL;
+        asset.GGLRating = maxGGL;
         asset.GGLReasons = reasons;
     }
 }

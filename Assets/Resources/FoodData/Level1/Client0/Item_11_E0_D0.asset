@@ -59,12 +59,15 @@ MonoBehaviour:
   GGLRating: 3
   GGLReasons: 02000000
   ExpiryDate:
-    day: 28
+    day: 9
     month: 8
-    year: 2030
+    year: 2028
   IsExpired: 0
   IsDefect: 0
   Claims:
+  - claimType: 6
+    claimDescription: Reduced salt content
+    isValid: 0
   - claimType: 6
     claimDescription: Reduced salt content
     isValid: 0

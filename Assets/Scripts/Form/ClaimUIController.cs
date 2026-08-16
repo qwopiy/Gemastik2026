@@ -40,7 +40,6 @@ public class ClaimUIController : MonoBehaviour
             ClaimType.CalorieFree => "Bebas Kalori",
             ClaimType.HighProtein => "Tinggi Protein",
             ClaimType.LowCarbohydrate => "Rendah Karbohidrat",
-            ClaimType.SugarFree => "Bebas Gula",
             ClaimType.LowSugar => "Rendah Gula",
             ClaimType.LowSalt => "Rendah Garam",
             ClaimType.LowTotalFat => "Rendah Lemak Total",

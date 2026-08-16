@@ -13,14 +13,16 @@ MonoBehaviour:
   m_Name: LVL1_Client0
   m_EditorClassIdentifier: Assembly-CSharp::ClientDataSO
   Dialogue:
-    speakersName: BapakDecay
+    speakersName: BapakBapakDecay
     speakersSprite: {fileID: -7049411436805272155, guid: 13951777d9574ad4d8c08c4fb05be346, type: 3}
     voiceClip: {fileID: 8300000, guid: 05c9c56614e793f4aa621d2ceb9521b4, type: 3}
     startingLines:
     - Selamat pagi pak
+    - Saya bapak bapak dari decay
+    - Lupa namaku wok
     endingLines:
-    - 
+    - thanks
     isFirstDialogue: 1
-  AmountToSpawn: 3
+  AmountToSpawn: 1
   foodFolder: FoodData/Level1/Client0
   FoodData: []

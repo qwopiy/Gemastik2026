@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b677af556cddcd4a8e36095423a9e8c, type: 3}
   m_Name: Item_26_E0_D1
   m_EditorClassIdentifier: Assembly-CSharp::FoodDataSO
-  FoodId: Roti Sisir Mentega Gula Sandang
+  FoodId: Mie Instan Goreng Spesial Jumbo
   FoodPrefab:
   - {fileID: 4417826435687172446, guid: a64869e8ddd0d2a4b8a73b3a5cb7d05a, type: 3}
   - {fileID: 4417826435687172446, guid: e3fd86f2d6f260142a6563bcb8e3cc6c, type: 3}
@@ -28,33 +28,33 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 100 g
+      Value: 25 g
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 360
+      Value: 118
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 12.4
+      Value: 5.0
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 6.4
+      Value: 2.3
     - FieldId: 5
       FieldName: Protein
-      Value: 12
+      Value: 3
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 56
+      Value: 15
     - FieldId: 7
       FieldName: Gula
-      Value: 24
+      Value: 3
     - FieldId: 8
       FieldName: Natrium
-      Value: 344
+      Value: 273
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
@@ -62,14 +62,14 @@ MonoBehaviour:
       Value: 
   Approval: 1
   GGLRating: 3
-  GGLReasons: 02000000
+  GGLReasons: 01000000
   ExpiryDate:
-    day: 27
+    day: 13
     month: 3
-    year: 2030
+    year: 2028
   IsExpired: 0
   IsDefect: 1
   Claims:
-  - claimType: 5
-    claimDescription: Reduced sugar content
-    isValid: 0
+  - claimType: 8
+    claimDescription: Nutri-Level C
+    isValid: 1

@@ -111,11 +111,21 @@ public class CursorManager : MonoBehaviour
 
             if (btn != null && btn.interactable)
             {
+                if (Mouse.current.leftButton.wasPressedThisFrame)
+                {
+                    AudioManager.Instance.TriggerClick();
+                }
+
                 // Automatically switches to button cursor if the button is active
                 SetCustomCursor(pointerCursor, topLeftHotSpot);
             }
             else if (draggableObject != null)
             {
+                if (Mouse.current.leftButton.wasPressedThisFrame)
+                {
+                    AudioManager.Instance.TriggerClick();
+                }
+
                 // Switch to drag cursor if the object is draggable
                 if (!Mouse.current.leftButton.isPressed)
                 {

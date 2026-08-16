@@ -7,7 +7,6 @@ public enum ClaimType
     CalorieFree, // < 5 calories per serving
     HighProtein, // > 10g protein per serving
     LowCarbohydrate, // < 15g carbohydrates per serving
-    SugarFree, // < 0.5g sugar per serving
     LowSugar, // < 5g sugar per serving
     LowSalt, // <= 120mg salt per serving
     LowTotalFat, // < 3g of total fat per serving
@@ -29,7 +28,7 @@ public struct Claim
         isValid = isCorrect;
     }
 
-    public bool CompareClaim(Claim thisClaim, Claim otherClaim)
+    public static bool CompareClaim(Claim thisClaim, Claim otherClaim)
     {
         if (thisClaim.claimType == otherClaim.claimType && thisClaim.isValid == otherClaim.isValid)
         {
@@ -38,11 +37,28 @@ public struct Claim
         return false;
     }
 
+    public static bool CompareClaimType(Claim thisClaim, Claim otherClaim)
+    {
+        return thisClaim.claimType == otherClaim.claimType;
+    }
+
     public bool ContainsClaimInList(List<Claim> claimList)
     {
         foreach (Claim claim in claimList)
         {
             if (CompareClaim(claim, this))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public bool ContainsClaimTypeInList(List<Claim> claimList)
+    {
+        foreach (Claim claim in claimList)
+        {
+            if (CompareClaimType(claim, this))
             {
                 return true;
             }

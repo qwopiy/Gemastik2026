@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b677af556cddcd4a8e36095423a9e8c, type: 3}
   m_Name: Item_13_E0_D1
   m_EditorClassIdentifier: Assembly-CSharp::FoodDataSO
-  FoodId: Keripik Rumput Laut Savory
+  FoodId: Mie Instan Goreng Spesial Jumbo
   FoodPrefab:
   - {fileID: 4417826435687172446, guid: a64869e8ddd0d2a4b8a73b3a5cb7d05a, type: 3}
   - {fileID: 4417826435687172446, guid: e3fd86f2d6f260142a6563bcb8e3cc6c, type: 3}
@@ -34,15 +34,15 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 480
+      Value: 470
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 25.0
+      Value: 20.0
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 11.0
+      Value: 9.0
     - FieldId: 5
       FieldName: Protein
       Value: 10
@@ -51,25 +51,25 @@ MonoBehaviour:
       Value: 60
     - FieldId: 7
       FieldName: Gula
-      Value: 0
+      Value: 10
     - FieldId: 8
       FieldName: Natrium
-      Value: 900
+      Value: 1090
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 1
+  GGLRating: 3
   GGLReasons: 01000000
   ExpiryDate:
-    day: 16
-    month: 11
+    day: 12
+    month: 4
     year: 2029
   IsExpired: 0
   IsDefect: 1
   Claims:
-  - claimType: 2
-    claimDescription: Pembangun Otot!
-    isValid: 0
+  - claimType: 8
+    claimDescription: Nutri-Level C
+    isValid: 1
