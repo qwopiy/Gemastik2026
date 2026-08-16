@@ -47,16 +47,16 @@ public class EndingPanelController : MonoBehaviour
 
         endingText += GlobalManager.Instance.CurrentEnding switch
         {
-            Endings.Neutral => "Ending 1: Depresei",
-            Endings.AllMistake => "Ending 2: Perang Dunia",
-            Endings.AllCorrect => "Ending 3: Perdamaian Dunia",
-            Endings.Sugar => "Ending 4: Obesitas + Diabetes",
-            Endings.Salt => "Ending 5: Kegaraman",
-            Endings.Fat => "Ending 6: Struk",
-            Endings.ExpiredOrDefect => "Ending 7: Muntah",
-            Endings.WrongNutritionClaim => "Ending 8: Pembunuh tersembunyi",
-            Endings.WrongCompositionClaim => "Ending 9: Pendek",
-            Endings.PerfectSpeedrunner => "Ending 10: Speedrunner",
+            Endings.Neutral => "Ending Human",
+            Endings.AllMistake => "Ending Let The World Burn",
+            Endings.AllCorrect => "Ending Hope",
+            Endings.Sugar => "Ending Sugar Rush",
+            Endings.Salt => "Ending Gettin Salty",
+            Endings.Fat => "Ending Bad Bad Fat",
+            Endings.ExpiredOrDefect => "Ending I Don't Feel So Good",
+            Endings.WrongNutritionClaim => "Ending The Evil Within",
+            Endings.WrongCompositionClaim => "Ending Are U Sure U Get What U Buy?",
+            Endings.PerfectSpeedrunner => "Ending I'm Speed",
             _ => "Unknown ending."
         };
 

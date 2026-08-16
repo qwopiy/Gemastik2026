@@ -33,6 +33,7 @@ public class LevelCompleteController : MonoBehaviour
         if (corrects == foodAmount)
         {
             logoToChange.sprite = correctAsset;
+            GameDataManager.gameData.levelProgress = Mathf.Max(GameDataManager.gameData.levelProgress, LevelManager.Instance.Level + 1);
         }
         else
         {
@@ -41,6 +42,7 @@ public class LevelCompleteController : MonoBehaviour
     }
     public void Continue()
     {
+        GlobalManager.Instance.CurrentEnding = EndingManager.Instance.currentEnding;
         if (isLevel4) 
         {
             TransitionManager.Instance.GoToScene("Ending");

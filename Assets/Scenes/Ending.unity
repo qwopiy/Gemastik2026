@@ -681,7 +681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7678487743240598673, guid: 5efce7fd0d084cf46a010ca1139df2d4, type: 3}
       propertyPath: CurrentEnding
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8635466969468163271, guid: 5efce7fd0d084cf46a010ca1139df2d4, type: 3}
       propertyPath: m_Name
@@ -1825,9 +1825,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 178234631}
-        m_TargetAssemblyTypeName: LevelCompleteController, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 178234633}
+        m_TargetAssemblyTypeName: EndingPanelController, Assembly-CSharp
+        m_MethodName: GoToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
