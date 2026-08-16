@@ -10,17 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 396512e7fc64e944c881da66c2604f9b, type: 3}
-  m_Name: LVL1_Client0
+  m_Name: LVL3_Client0 3
   m_EditorClassIdentifier: Assembly-CSharp::ClientDataSO
   Dialogue:
-    speakersName: Bin Tang
-    speakersSprite: {fileID: -7049411436805272155, guid: 13951777d9574ad4d8c08c4fb05be346, type: 3}
+    speakersName: Waifu Pair Play
+    speakersSprite: {fileID: -3371123368795815966, guid: 114bdc86f9f27164d980a2c307bf6f89, type: 3}
     voiceClip: {fileID: 8300000, guid: 05c9c56614e793f4aa621d2ceb9521b4, type: 3}
     startingLines:
-    - wah, baru pertama kali ya mas disini, saya baru lihat sekali
-    - yaudah, mumpung ada disini. Tolong periksa ini ya, mas
+    - fuahh.. rame banget. Udah kaya dungeon aja ini event
+    - lapar banget habis keliling-keliling...
+    - tolong dong bang periksa ini
+    - saya udah lapar banget, tapi takut ga sehat kalau langsung dimakan
     endingLines:
-    - Makasih ya mas. Semoga ketemu lagi minggu depan
+    - makasih ya bang. saya pergi makan dulu ya
   AmountToSpawn: 2
-  foodFolder: FoodData/Level1/Client0
+  foodFolder: FoodData/Level3/Client0
   FoodData: []

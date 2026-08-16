@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 396512e7fc64e944c881da66c2604f9b, type: 3}
-  m_Name: LVL1_Client0
+  m_Name: LVL1_Client0 2
   m_EditorClassIdentifier: Assembly-CSharp::ClientDataSO
   Dialogue:
-    speakersName: Bin Tang
-    speakersSprite: {fileID: -7049411436805272155, guid: 13951777d9574ad4d8c08c4fb05be346, type: 3}
+    speakersName: Pisang
+    speakersSprite: {fileID: 1150175596270093533, guid: 3494f099cab82ac40a31b5521a146ba7, type: 3}
     voiceClip: {fileID: 8300000, guid: 05c9c56614e793f4aa621d2ceb9521b4, type: 3}
     startingLines:
-    - wah, baru pertama kali ya mas disini, saya baru lihat sekali
-    - yaudah, mumpung ada disini. Tolong periksa ini ya, mas
+    - saya masih ga bawa pisang. sayangnya
     endingLines:
-    - Makasih ya mas. Semoga ketemu lagi minggu depan
-  AmountToSpawn: 2
+    - Terima Kasih. jangan lupa olahraga
+  AmountToSpawn: 1
   foodFolder: FoodData/Level1/Client0
   FoodData: []

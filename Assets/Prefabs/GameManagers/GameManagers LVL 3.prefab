@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
       propertyPath: TotalClients
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
       propertyPath: FoodDataList.Array.size
@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
       propertyPath: ClientDataList.Array.size
-      value: 2
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
       propertyPath: 'ClientDataList.Array.data[0]'
@@ -31,7 +31,27 @@ PrefabInstance:
     - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
       propertyPath: 'ClientDataList.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: db7afd5163c5190438e81307528822b3, type: 2}
+      objectReference: {fileID: 11400000, guid: 98f62388b702b5c4180aa381cd8a687d, type: 2}
+    - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
+      propertyPath: 'ClientDataList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: a2c69a6b569310544b9cf9572eb6a12d, type: 2}
+    - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
+      propertyPath: 'ClientDataList.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: bf28c5d7c8eb28943a4c2553de9432e3, type: 2}
+    - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
+      propertyPath: 'ClientDataList.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: a5f4b6df82fdb5e4eb245a5c16edd753, type: 2}
+    - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
+      propertyPath: 'ClientDataList.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 870c45062c184c7459d874e1b884ad71, type: 2}
+    - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
+      propertyPath: 'ClientDataList.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 6ac3c8bcb7e7db447a7e5caaa98bee25, type: 2}
     - target: {fileID: 529444065612815448, guid: 26952cfddf5cab64480731da82f64401, type: 3}
       propertyPath: FoodDataList.Array.data[0].foodFolder
       value: FoodData/Level3/Client0
