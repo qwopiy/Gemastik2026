@@ -34,6 +34,7 @@ public class LevelCompleteController : MonoBehaviour
         {
             logoToChange.sprite = correctAsset;
             GameDataManager.gameData.levelProgress = Mathf.Max(GameDataManager.gameData.levelProgress, LevelManager.Instance.Level + 1);
+            GameDataManager.SaveData();
         }
         else
         {
