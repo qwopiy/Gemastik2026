@@ -242,7 +242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8991352566093719809, guid: 26952cfddf5cab64480731da82f64401, type: 3}
       propertyPath: timeLimit
-      value: 480
+      value: 270
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

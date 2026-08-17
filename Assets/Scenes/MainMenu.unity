@@ -803,7 +803,7 @@ PrefabInstance:
     - target: {fileID: 376047903317373607, guid: ac07b94009ba10a4f9e4ac22365ae4af, type: 3}
       propertyPath: endingPages.Array.data[9].pageContentLocked
       value: Selesaikan level 4 dengan tidak mendapat satupun kesalahan dalam kurun
-        waktu kurang dari 8 menit
+        waktu kurang dari 4,5 menit.
       objectReference: {fileID: 0}
     - target: {fileID: 6806878513653357964, guid: ac07b94009ba10a4f9e4ac22365ae4af, type: 3}
       propertyPath: m_Name
@@ -1945,11 +1945,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8821605817967039684, guid: 43c6f4fca4770be439661d2b8b5658c5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 12.0647
+      value: 12.064697
       objectReference: {fileID: 0}
     - target: {fileID: 8821605817967039684, guid: 43c6f4fca4770be439661d2b8b5658c5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -8.6176
+      value: -8.617554
       objectReference: {fileID: 0}
     - target: {fileID: 8821605817967039684, guid: 43c6f4fca4770be439661d2b8b5658c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
