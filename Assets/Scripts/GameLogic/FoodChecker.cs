@@ -63,19 +63,23 @@ public class FoodChecker : MonoBehaviour
 
     private void CheckFood(Transform tr, FoodItem foodInfo, out bool isCorrect)
     {
-        isCorrect = false;
+        bool isGGLCorrect = false;
+        bool isTableCorrect = false;
+        bool isClaimsCorrect = false;
         if (tr != null && LevelManager.Instance.Level >= 0)
         {
-            CompareFoodGGL(tr, foodInfo, out isCorrect);
+            CompareFoodGGL(tr, foodInfo, out isGGLCorrect);
         }
         if (LevelManager.Instance.Level >= 1)
         {
-            CompareFoodTable(tr, foodInfo, out isCorrect);
+            CompareFoodTable(tr, foodInfo, out isTableCorrect);
         }
         if (LevelManager.Instance.Level >= 2)
         {
-            CompareFoodClaims(tr, foodInfo, out isCorrect);
+            CompareFoodClaims(tr, foodInfo, out isClaimsCorrect);
         }
+
+        isCorrect = isGGLCorrect && isTableCorrect && isClaimsCorrect;
     }
 
     private void CompareFoodGGL(Transform tr, FoodItem foodInfo, out bool isCorrect)
