@@ -1246,7 +1246,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5f20a38843450a54ea0adc150aa3dbcf, type: 2}
   - {fileID: 11400000, guid: 337d9e0785a0eba4596caaebf39b38b5, type: 2}
   - {fileID: 11400000, guid: a71046d6c06e5ba45b5092c5fade9b16, type: 2}
-  - {fileID: 11400000, guid: 2e836796a829d1f488d82bc03328bf43, type: 2}
   - {fileID: 11400000, guid: 911832ac5243f6e46a0a7b47797e5bdf, type: 2}
   - {fileID: 11400000, guid: 9b2be2cda2f93e64e95449756a34bb02, type: 2}
   DefectedDataList:
@@ -1264,8 +1263,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 06c8ab4c9a19e3f4dbbb58ec5fc2fc39, type: 2}
   - {fileID: 11400000, guid: 07f42ecd317c7244ea01a06059c6b7db, type: 2}
   - {fileID: 11400000, guid: a1e76536b36125846b03eefcea2d858c, type: 2}
-  - {fileID: 11400000, guid: 78479cb286184c44897258fb76c18824, type: 2}
-  - {fileID: 11400000, guid: 7456f51dcee107445a162b8503b49e73, type: 2}
   - {fileID: 11400000, guid: d7f7482b3c8d478469f8f597ba595113, type: 2}
   - {fileID: 11400000, guid: 6d8f43a4d1942ff418636f0c4e651786, type: 2}
   - {fileID: 11400000, guid: 157651a48dad1724b85dcd2c0e692229, type: 2}
