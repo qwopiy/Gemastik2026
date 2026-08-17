@@ -16,6 +16,7 @@ public class DraggableForm : DraggableObject, IBeginDragHandler
         // If this is the first drag, snap the object to the cursor position
         if (!hasBeenDragged)
         {
+            AudioManager.Instance.TriggerPageFlip();
             compactedForm.gameObject.SetActive(false);
             baseForm.gameObject.SetActive(true);
             hasBeenDragged = true;
@@ -41,6 +42,7 @@ public class DraggableForm : DraggableObject, IBeginDragHandler
 
         if (approval != ApprovalResult.None)
         {
+            AudioManager.Instance.TriggerPageFlip();
             baseForm.gameObject.SetActive(false);
             compactedApprovedForm.gameObject.SetActive(true);
 
