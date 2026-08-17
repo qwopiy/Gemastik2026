@@ -1217,7 +1217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1341099148
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2058,6 +2058,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1041810732220688654, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4305622427916493053, guid: 38912b6af88b5194db2b6e394a42aa69, type: 3}
       propertyPath: m_Name
       value: GameCanvas

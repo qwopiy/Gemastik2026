@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 13c38bdf7eee8844c832b9a3f1e66766
+guid: b7a75ddf08867e24aa1b9ac878692aa4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -247469018105217050
-    second: FreakyBugLogo_0
+      213: -4262036155424577122
+    second: FreakyBug1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FreakyBugLogo_0
+      name: FreakyBug1_0
       rect:
         serializedVersion: 2
-        x: 50
+        x: 102
         y: 0
-        width: 323
-        height: 326
+        width: 644
+        height: 649
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ef7cea3d30d09cf0800000000000000
-      internalID: -247469018105217050
+      spriteID: e99eb08a2b43ad4c0800000000000000
+      internalID: -4262036155424577122
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FreakyBugLogo_0: -247469018105217050
+      FreakyBug1_0: -4262036155424577122
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
