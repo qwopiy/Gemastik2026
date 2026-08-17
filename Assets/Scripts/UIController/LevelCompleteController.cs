@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,6 +7,7 @@ public class LevelCompleteController : MonoBehaviour
 {
 
     public TextMeshProUGUI statText;
+    public TextMeshProUGUI timeText;
     public Image logoToChange;
     public Sprite correctAsset;
     public Sprite wrongAsset;
@@ -28,7 +30,7 @@ public class LevelCompleteController : MonoBehaviour
             foodAmount += LevelManager.Instance.ClientDataList[foodList].AmountToSpawn;
         }
 
-        statText.text = $"Jumlah makanan yang benar: {corrects}/{foodAmount}";
+        statText.text = $"Skor: {corrects}/{foodAmount}";
 
         if (corrects == foodAmount)
         {
@@ -40,6 +42,13 @@ public class LevelCompleteController : MonoBehaviour
         {
             logoToChange.sprite = wrongAsset;
         }
+
+        SetTime();
+    }
+    public void SetTime()
+    {
+        TimeSpan time = TimeSpan.FromSeconds(EndingManager.Instance.elapsedTime);
+        timeText.text = $"Waktu: {time.Minutes}:{time.Seconds:D2}";
     }
     public void Continue()
     {

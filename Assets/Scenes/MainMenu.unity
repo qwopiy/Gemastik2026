@@ -800,6 +800,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 339928863}
     m_Modifications:
+    - target: {fileID: 376047903317373607, guid: ac07b94009ba10a4f9e4ac22365ae4af, type: 3}
+      propertyPath: endingPages.Array.data[9].pageContentLocked
+      value: Selesaikan level 4 dengan tidak mendapat satupun kesalahan dalam kurun
+        waktu kurang dari 8 menit
+      objectReference: {fileID: 0}
     - target: {fileID: 6806878513653357964, guid: ac07b94009ba10a4f9e4ac22365ae4af, type: 3}
       propertyPath: m_Name
       value: EndingBook Variant Variant
