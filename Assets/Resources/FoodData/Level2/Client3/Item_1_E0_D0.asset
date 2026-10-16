@@ -32,7 +32,7 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 26
+      Value: 25
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -40,16 +40,16 @@ MonoBehaviour:
       Value: 1.0
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 0.6
+      Value: 0.5
     - FieldId: 5
       FieldName: Protein
-      Value: 1
+      Value: 0
     - FieldId: 6
       FieldName: Karbohidrat
       Value: 3
     - FieldId: 7
       FieldName: Gula
-      Value: 1
+      Value: 0
     - FieldId: 8
       FieldName: Natrium
       Value: 28
@@ -59,15 +59,12 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 2
-  GGLReasons: 0100000002000000
+  GGLRating: 3
+  GGLReasons: 03000000
   ExpiryDate:
     day: 21
     month: 1
     year: 2030
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 6
-    claimDescription: Reduced salt content
-    isValid: 1
+  Claims: []

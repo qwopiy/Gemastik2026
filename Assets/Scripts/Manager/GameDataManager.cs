@@ -136,5 +136,6 @@ public class GameData
                 perfectSpeedrunnerEndingUnlocked = true;
                 break;
         }
+        GameDataManager.SaveData();
     }
 }

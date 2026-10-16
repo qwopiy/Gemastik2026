@@ -30,7 +30,7 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 8
+      Value: 10
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -44,21 +44,21 @@ MonoBehaviour:
       Value: 0
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 4
+      Value: 0
     - FieldId: 7
       FieldName: Gula
-      Value: 4
+      Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 8
+      Value: 10
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 1
-  GGLReasons: 03000000
+  GGLRating: 2
+  GGLReasons: 02000000
   ExpiryDate:
     day: 4
     month: 9
@@ -66,9 +66,9 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 0
   Claims:
-  - claimType: 10
-    claimDescription: Preservative-free
+  - claimType: 5
+    claimDescription: Rendah Garam
     isValid: 1
-  - claimType: 2
-    claimDescription: Tinggi Protein
-    isValid: 0
+  - claimType: 6
+    claimDescription: Rendah Lemak
+    isValid: 1

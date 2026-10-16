@@ -64,13 +64,4 @@ MonoBehaviour:
     year: 2027
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 3
-    claimDescription: Reduced carb content
-    isValid: 0
-  - claimType: 1
-    claimDescription: Tanpa Kalori
-    isValid: 0
-  - claimType: 1
-    claimDescription: Calorie-free
-    isValid: 0
+  Claims: []

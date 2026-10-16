@@ -58,15 +58,12 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 2
-  GGLReasons: 0200000003000000
+  GGLRating: 3
+  GGLReasons: 01000000
   ExpiryDate:
     day: 26
     month: 9
     year: 2022
   IsExpired: 1
   IsDefect: 0
-  Claims:
-  - claimType: 9
-    claimDescription: Good for your health
-    isValid: 0
+  Claims: []

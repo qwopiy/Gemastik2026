@@ -39,7 +39,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 1.0
+      Value: 1.2
     - FieldId: 4
       FieldName: Lemak Jenuh
       Value: 0.0

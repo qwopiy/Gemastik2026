@@ -65,5 +65,8 @@ MonoBehaviour:
   IsDefect: 0
   Claims:
   - claimType: 8
-    claimDescription: Nutri-Level A
+    claimDescription: Good for your health
+    isValid: 1
+  - claimType: 5
+    claimDescription: Rendah Garam
     isValid: 1

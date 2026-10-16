@@ -33,30 +33,30 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 14.0
+      Value: 14.4
     - FieldId: 4
       FieldName: Lemak Jenuh
       Value: 4.0
     - FieldId: 5
       FieldName: Protein
-      Value: 20
+      Value: 24
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 140
+      Value: 144
     - FieldId: 7
       FieldName: Gula
       Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 380
+      Value: 384
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 1
-  GGLReasons: 01000000
+  GGLRating: 3
+  GGLReasons: 0200000003000000
   ExpiryDate:
     day: 3
     month: 6
@@ -64,6 +64,6 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 1
   Claims:
-  - claimType: 6
+  - claimType: 5
     claimDescription: Low in salt
     isValid: 0

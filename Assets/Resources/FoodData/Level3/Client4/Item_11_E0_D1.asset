@@ -28,21 +28,21 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 390
+      Value: 392
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 3.0
+      Value: 3.2
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 1.0
+      Value: 1.2
     - FieldId: 5
       FieldName: Protein
-      Value: 10
+      Value: 12
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 90
+      Value: 92
     - FieldId: 7
       FieldName: Gula
       Value: 40
@@ -53,10 +53,11 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Jagung, gula, tepung jagung, madu, garam, sirup glukosa, perisa madu,
+        vitamin, mineral dan pengawet makanan.
   Approval: 1
-  GGLRating: 2
-  GGLReasons: 03000000
+  GGLRating: 4
+  GGLReasons: 0100000002000000
   ExpiryDate:
     day: 1
     month: 3
@@ -64,9 +65,6 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 1
   Claims:
-  - claimType: 6
-    claimDescription: Reduced salt content
+  - claimType: 9
+    claimDescription: No Preservatives
     isValid: 1
-  - claimType: 3
-    claimDescription: Rendah Karbohidrat
-    isValid: 0

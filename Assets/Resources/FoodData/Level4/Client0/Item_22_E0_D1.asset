@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b677af556cddcd4a8e36095423a9e8c, type: 3}
   m_Name: Item_22_E0_D1
   m_EditorClassIdentifier: Assembly-CSharp::FoodDataSO
-  FoodId: Roti Coklat Mini Light
+  FoodId: Roti Coklat Mini
   FoodPrefab:
   - {fileID: 4417826435687172446, guid: cfa20d8d44c3e0145824443d41dbdc22, type: 3}
   - {fileID: 4417826435687172446, guid: 01d9a68c6dc5d794a8f84e9df792f978, type: 3}
@@ -23,41 +23,41 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 50 g
+      Value: 25 g
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 140
+      Value: 70
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 3.0
+      Value: 1.5
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 1.0
+      Value: 0.5
     - FieldId: 5
       FieldName: Protein
-      Value: 5
+      Value: 3
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 25
+      Value: 13
     - FieldId: 7
       FieldName: Gula
-      Value: 5
+      Value: 3
     - FieldId: 8
       FieldName: Natrium
-      Value: 85
+      Value: 43
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Tepung, Gula, Buah Kakao
   Approval: 1
-  GGLRating: 3
-  GGLReasons: 010000000200000003000000
+  GGLRating: 4
+  GGLReasons: 01000000
   ExpiryDate:
     day: 28
     month: 3
@@ -65,9 +65,12 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 1
   Claims:
-  - claimType: 2
-    claimDescription: High in protein
-    isValid: 0
-  - claimType: 7
-    claimDescription: Low in fat
+  - claimType: 10
+    claimDescription: Terbuat Dari Buah Coklat
+    isValid: 1
+  - claimType: 4
+    claimDescription: Low in sugar
+    isValid: 1
+  - claimType: 9
+    claimDescription: Preservative-free
     isValid: 1

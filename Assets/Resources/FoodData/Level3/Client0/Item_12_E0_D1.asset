@@ -20,13 +20,13 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 100 g
+      Value: 50 g
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 20
+      Value: 10
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -51,7 +51,9 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Sayuran Kering 40% (Wortel, Daun Bawang, Seledri, Kubis), Garam, Gula,
+        Bawang Putih Bubuk, Bawang Merah Bubuk, Ekstrak Kaldu Sayur, Lada Bubuk,
+        Maltodekstrin, Minyak Nabati.
   Approval: 1
   GGLRating: 1
   GGLReasons: 010000000200000003000000
@@ -62,6 +64,9 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 1
   Claims:
+  - claimType: 9
+    claimDescription: No Preservatives
+    isValid: 1
   - claimType: 1
     claimDescription: Tanpa Kalori
     isValid: 0

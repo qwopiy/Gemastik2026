@@ -53,7 +53,7 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Oat, Gula, Tepung, Pengawet
   Approval: 1
   GGLRating: 4
   GGLReasons: 010000000200000003000000
@@ -64,12 +64,6 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 0
   Claims:
-  - claimType: 4
-    claimDescription: Sugar-free
-    isValid: 0
-  - claimType: 2
-    claimDescription: Cocok untuk olahraga
-    isValid: 1
-  - claimType: 3
-    claimDescription: Reduced carb content
+  - claimType: 9
+    claimDescription: No Preservatives
     isValid: 0

@@ -67,6 +67,12 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 1
   Claims:
-  - claimType: 7
-    claimDescription: Reduced fat content
+  - claimType: 1
+    claimDescription: Calorie-free
     isValid: 1
+  - claimType: 4
+    claimDescription: Reduced sugar content
+    isValid: 1
+  - claimType: 7
+    claimDescription: Nutri-Level C
+    isValid: 0

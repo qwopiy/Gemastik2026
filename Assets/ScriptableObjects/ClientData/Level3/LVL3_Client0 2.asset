@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 396512e7fc64e944c881da66c2604f9b, type: 3}
+  m_Name: LVL3_Client0 2
+  m_EditorClassIdentifier: Assembly-CSharp::ClientDataSO
+  Dialogue:
+    speakersName: Pocong Anantha
+    speakersSprite: {fileID: 8550662613930544025, guid: a37c3bdee1c735a49898122f528864d1, type: 3}
+    voiceClip: {fileID: 8300000, guid: 05c9c56614e793f4aa621d2ceb9521b4, type: 3}
+    startingLines:
+    - Bre tolongin gua dong..
+    - tangan saya keikat. Ini caranya bacanya gimana ya?
+    endingLines:
+    - Makasih Bre
+  AmountToSpawn: 1
+  foodFolder: FoodData/Level3/Client1
+  FoodData: []

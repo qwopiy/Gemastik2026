@@ -65,9 +65,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mauris
-    felis, rhoncus at tortor at, \n\nfringilla pellentesque libero. Cras tempor arcu
-    ut pulvinar egestas. Praesent ac urna sed tellus interdum mattis at a eros. "
+  m_text: "Membaca komposisi merupakan hal penting untuk memastikan apa yang kamu
+    konsumsi. Produk kadang memberi klaim seperti \u201Csusu murni\u201D padahal
+    isinya air dan gula. \u201Cjus buah\u201D padahal isisnya air dan sirup<br><br>Mulai
+    sekarang jangan sampe ketipu lagi ya. Pastikan kamu dapat apa yang kamu beli!\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5aa75c893a0e54d47b74e0db57670e6d, type: 2}
   m_sharedMaterial: {fileID: -5759981759207373237, guid: 5aa75c893a0e54d47b74e0db57670e6d, type: 2}
@@ -94,8 +95,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 13
+  m_fontSizeBase: 13
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2145,10 +2146,13 @@ MonoBehaviour:
     isUnlocked: 0
   - type: 8
     pageTitleTMP: {fileID: 1681926746710639865}
-    pageTitleUnlocked: 
+    pageTitleUnlocked: are u sure u get what u buy?
     pageTitleLocked: Locked
     pageContentTMP: {fileID: 3002091928751712225}
-    pageContentUnlocked: 
+    pageContentUnlocked: "Membaca komposisi merupakan hal penting untuk memastikan
+      apa yang kamu konsumsi. Produk kadang memberi klaim seperti \u201Csusu murni\u201D
+      padahal isinya air dan gula. \u201Cjus buah\u201D padahal isisnya air dan sirup<br><br>Mulai
+      sekarang jangan sampe ketipu lagi ya. Pastikan kamu dapat apa yang kamu beli! "
     pageContentLocked: Selesaikan level 4 dengan hanya mendapat kesalahan terkait
       Klaim, khususnya klaim yang harus diperiksa dari Komposisi
     endingSprite: {fileID: 5374771578933104583, guid: 3169f12e4b5f9a241abae7dabda815e6, type: 3}
@@ -4025,7 +4029,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1930819161910762348, guid: 179a591631193094c8da54e0b7d94722, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2449545432358347435, guid: 179a591631193094c8da54e0b7d94722, type: 3}
       propertyPath: m_Pivot.x

@@ -64,6 +64,12 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 1
   Claims:
-  - claimType: 8
-    claimDescription: Nutri-Level A
+  - claimType: 1
+    claimDescription: Zero calories
     isValid: 1
+  - claimType: 9
+    claimDescription: Tanpa Pengawet
+    isValid: 1
+  - claimType: 7
+    claimDescription: Nutri-Level C
+    isValid: 0

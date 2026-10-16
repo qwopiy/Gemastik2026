@@ -32,48 +32,39 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 13
+      Value: 12
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 0.7
+      Value: 0.8
     - FieldId: 4
       FieldName: Lemak Jenuh
       Value: 0.4
     - FieldId: 5
       FieldName: Protein
-      Value: 1
+      Value: 0
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 1
+      Value: 0
     - FieldId: 7
       FieldName: Gula
-      Value: 1
+      Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 9
+      Value: 8
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 2
-  GGLReasons: 0100000002000000
+  GGLRating: 3
+  GGLReasons: 03000000
   ExpiryDate:
     day: 28
     month: 10
     year: 2023
   IsExpired: 1
   IsDefect: 1
-  Claims:
-  - claimType: 5
-    claimDescription: Low in sugar
-    isValid: 1
-  - claimType: 9
-    claimDescription: Sehat
-    isValid: 0
-  - claimType: 9
-    claimDescription: Sehat
-    isValid: 0
+  Claims: []

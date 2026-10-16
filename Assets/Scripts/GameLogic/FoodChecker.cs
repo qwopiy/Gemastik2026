@@ -15,9 +15,9 @@ public class FoodChecker : MonoBehaviour
     }
     public void CheckFood()
     {
-        if (pendingObjects.Count != LevelManager.Instance.ClientDataList[LevelManager.Instance.index - 1].AmountToSpawn)
+        if (pendingObjects.Count != LevelManager.Instance.ClientDataList[LevelManager.Instance.randomIndex].AmountToSpawn)
         {
-            Debug.LogWarning($"Not all food items have been stamped. Stamped: {pendingObjects.Count}, Expected: {LevelManager.Instance.ClientDataList[LevelManager.Instance.index - 1].AmountToSpawn}");
+            Debug.LogWarning($"Not all food items have been stamped. Stamped: {pendingObjects.Count}, Expected: {LevelManager.Instance.ClientDataList[LevelManager.Instance.randomIndex].AmountToSpawn}");
             return;
         }
 
@@ -63,19 +63,30 @@ public class FoodChecker : MonoBehaviour
 
     private void CheckFood(Transform tr, FoodItem foodInfo, out bool isCorrect)
     {
-        isCorrect = false;
-        if (tr != null && LevelManager.Instance.Level >= 0)
+        bool isGGLCorrect = false;
+        bool isTableCorrect = false;
+        bool isClaimsCorrect = false;
+
+        if (LevelManager.Instance.Level >= 0)
         {
-            CompareFoodGGL(tr, foodInfo, out isCorrect);
+            CompareFoodGGL(tr, foodInfo, out isGGLCorrect);
         }
         if (LevelManager.Instance.Level >= 1)
         {
-            CompareFoodTable(tr, foodInfo, out isCorrect);
+            CompareFoodTable(tr, foodInfo, out isTableCorrect);
         }
         if (LevelManager.Instance.Level >= 2)
         {
-            CompareFoodClaims(tr, foodInfo, out isCorrect);
+            CompareFoodClaims(tr, foodInfo, out isClaimsCorrect);
         }
+
+        isCorrect = LevelManager.Instance.Level switch 
+        { 
+            0 => isGGLCorrect,
+            1 => isGGLCorrect && isTableCorrect,
+            2 => isGGLCorrect && isTableCorrect && isClaimsCorrect,
+            _ => isGGLCorrect && isTableCorrect && isClaimsCorrect
+        };
     }
 
     private void CompareFoodGGL(Transform tr, FoodItem foodInfo, out bool isCorrect)

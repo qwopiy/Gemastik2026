@@ -28,6 +28,7 @@ public class GameStarter : MonoBehaviour
     {
         EndingManager.Instance.ResetEndingData();
 
+        LevelManager.Instance.GetRandomIndex();
         LevelManager.Instance.TriggerLevelStartedEvent();
         DialogueEventManager.Instance.TriggerStartEvent();
     }

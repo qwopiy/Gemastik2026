@@ -55,8 +55,8 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 3
-  GGLReasons: 0200000003000000
+  GGLRating: 4
+  GGLReasons: 01000000
   ExpiryDate:
     day: 4
     month: 2
@@ -64,9 +64,6 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 1
-    claimDescription: Calorie-free
-    isValid: 0
-  - claimType: 2
-    claimDescription: Tinggi Protein
-    isValid: 0
+  - claimType: 6
+    claimDescription: Reduced fat content
+    isValid: 1

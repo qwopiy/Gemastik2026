@@ -26,7 +26,7 @@ public class ClaimUIController : MonoBehaviour
         //    claimOptions.options.Add(new TMP_Dropdown.OptionData(claim.ToString()));
         //}
 
-        for (int i = 0; i < 12; i++)
+        for (int i = 0; i < 11; i++)
         {
             claimOptions.options.Add(new TMP_Dropdown.OptionData(GetClaimTypeStringInIndo(i)));
         }

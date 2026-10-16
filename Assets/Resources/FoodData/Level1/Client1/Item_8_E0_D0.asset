@@ -65,13 +65,4 @@ MonoBehaviour:
     year: 2027
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 8
-    claimDescription: Nutri-Level C
-    isValid: 0
-  - claimType: 9
-    claimDescription: Good for your health
-    isValid: 1
-  - claimType: 1
-    claimDescription: Zero calories
-    isValid: 1
+  Claims: []

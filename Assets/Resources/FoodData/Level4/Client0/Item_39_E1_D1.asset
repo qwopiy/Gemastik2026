@@ -31,7 +31,7 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 5
+      Value: 6
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -66,10 +66,4 @@ MonoBehaviour:
     year: 2025
   IsExpired: 1
   IsDefect: 1
-  Claims:
-  - claimType: 3
-    claimDescription: Reduced carb content
-    isValid: 1
-  - claimType: 6
-    claimDescription: Reduced salt content
-    isValid: 1
+  Claims: []

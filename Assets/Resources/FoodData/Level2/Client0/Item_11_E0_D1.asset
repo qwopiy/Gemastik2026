@@ -60,18 +60,12 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 2
-  GGLReasons: 0200000003000000
+  GGLRating: 4
+  GGLReasons: 01000000
   ExpiryDate:
     day: 21
     month: 5
     year: 2028
   IsExpired: 0
   IsDefect: 1
-  Claims:
-  - claimType: 10
-    claimDescription: 100% Alami
-    isValid: 1
-  - claimType: 6
-    claimDescription: Low in salt
-    isValid: 1
+  Claims: []

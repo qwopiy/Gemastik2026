@@ -22,13 +22,13 @@ MonoBehaviour:
     AttributeFields:
     - FieldId: 0
       FieldName: Takaran Saji
-      Value: 200 g
+      Value: 50 g
     - FieldId: 1
       FieldName: Sajian per Kemasan
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 32
+      Value: 10
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
@@ -42,18 +42,18 @@ MonoBehaviour:
       Value: 0
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 8
+      Value: 0
     - FieldId: 7
       FieldName: Gula
       Value: 0
     - FieldId: 8
       FieldName: Natrium
-      Value: 8
+      Value: 0
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
-      Value: 
+      Value: Air, tepung konjak, pengatur keasaman, penstabil, pengawet makanan
   Approval: 1
   GGLRating: 1
   GGLReasons: 010000000200000003000000
@@ -64,9 +64,12 @@ MonoBehaviour:
   IsExpired: 0
   IsDefect: 0
   Claims:
-  - claimType: 8
-    claimDescription: Nutri-Level B
+  - claimType: 9
+    claimDescription: Tanpa Pengawet
     isValid: 0
-  - claimType: 10
-    claimDescription: Preservative-free
+  - claimType: 2
+    claimDescription: Pembangun Otot!
+    isValid: 0
+  - claimType: 6
+    claimDescription: Rendah Lemak
     isValid: 1

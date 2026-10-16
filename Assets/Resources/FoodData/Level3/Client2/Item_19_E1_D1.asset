@@ -28,35 +28,35 @@ MonoBehaviour:
       Value: 1
     - FieldId: 2
       FieldName: Kalori per Sajian
-      Value: 728
+      Value: 730
   - ComponentType: 1
     AttributeFields:
     - FieldId: 3
       FieldName: Lemak Total
-      Value: 10.4
+      Value: 10.0
     - FieldId: 4
       FieldName: Lemak Jenuh
-      Value: 2.4
+      Value: 2.0
     - FieldId: 5
       FieldName: Protein
-      Value: 24
+      Value: 20
     - FieldId: 6
       FieldName: Karbohidrat
-      Value: 144
+      Value: 140
     - FieldId: 7
       FieldName: Gula
-      Value: 32
+      Value: 30
     - FieldId: 8
       FieldName: Natrium
-      Value: 328
+      Value: 330
   - ComponentType: 2
     AttributeFields:
     - FieldId: 9
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 2
-  GGLReasons: 03000000
+  GGLRating: 4
+  GGLReasons: 01000000
   ExpiryDate:
     day: 19
     month: 3
@@ -64,9 +64,12 @@ MonoBehaviour:
   IsExpired: 1
   IsDefect: 1
   Claims:
-  - claimType: 11
-    claimDescription: 
-    isValid: 1
-  - claimType: 3
-    claimDescription: Low in carbohydrates
+  - claimType: 7
+    claimDescription: Nutri-Level C
+    isValid: 0
+  - claimType: 8
+    claimDescription: Good for your health
+    isValid: 0
+  - claimType: 1
+    claimDescription: Tanpa Kalori
     isValid: 0

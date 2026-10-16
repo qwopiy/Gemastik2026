@@ -67,7 +67,4 @@ MonoBehaviour:
     year: 2030
   IsExpired: 0
   IsDefect: 0
-  Claims:
-  - claimType: 9
-    claimDescription: Sehat untuk badan
-    isValid: 1
+  Claims: []

@@ -59,21 +59,12 @@ MonoBehaviour:
       FieldName: Komposisi
       Value: 
   Approval: 1
-  GGLRating: 2
-  GGLReasons: 0100000002000000
+  GGLRating: 3
+  GGLReasons: 03000000
   ExpiryDate:
     day: 7
     month: 10
     year: 2020
   IsExpired: 1
   IsDefect: 1
-  Claims:
-  - claimType: 5
-    claimDescription: Low in sugar
-    isValid: 1
-  - claimType: 9
-    claimDescription: Sehat
-    isValid: 0
-  - claimType: 9
-    claimDescription: Sehat
-    isValid: 0
+  Claims: []
